@@ -17,4 +17,4 @@ Prediction/Classification is to be done in two ways :
     
 
 
-**&copy; Saurav Saha (SRvSaha),ACS Lab, 2016-17**
+**&copy; Saurav Saha (SRvSaha), ACS Lab, 2016-17**
