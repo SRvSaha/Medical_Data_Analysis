@@ -1,7 +1,5 @@
-# Perdue Pharma Project
-###Winter Internship Project @ ACS Lab, IIT Mandi###
-
-*Duration : 1st Dec'16 to 31st Jan'17*
+#Winter Internship Project @ ACS Lab, IIT Mandi#
+**Duration** : 1st Dec'16 to 31st Jan'17
 ----
 Project to identify from EMR Datasets which patient is likely to buy which medicine using Machine Learning Techniques. Also, what is the chance of the patient in switching from one medicine to other. Even it is to be determined whether the patient is a frequent buyer or not.
 ### Machine Learning###
