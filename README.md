@@ -1,5 +1,5 @@
 #Winter Internship Project @ ACS Lab, IIT Mandi#
-**Duration** : 1st Dec'16 to 31st Jan'17
+**Duration** : `1st Dec'16 to 31st Jan'17`
 ----
 Project to identify from EMR Datasets which patient is likely to buy which medicine using Machine Learning Techniques. Also, what is the chance of the patient in switching from one medicine to other. Even it is to be determined whether the patient is a frequent buyer or not.
 ### Machine Learning###
@@ -16,4 +16,5 @@ Prediction/Classification is to be done in two ways :
    * - [ ]  Decision Tree
     
 
-**&copy; Saurav Saha (SRvSaha), 2016-17**
+
+**&copy; Saurav Saha (SRvSaha),ACS Lab, 2016-17**
