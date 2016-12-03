@@ -1,0 +1,77 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     data
+Instances:    111059
+Attributes:   9
+              ENROLID
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                          Class
+Variable                  opana
+===============================
+ENROLID                       0
+SEX                     -0.4539
+AGEGRP                   -0.021
+REGION                  -0.0213
+Category=outpatients    -7.0828
+refill_count              0.058
+ADMTYP                   0.0467
+EGEOLOC                 -0.0056
+Intercept                0.9772
+
+
+Odds Ratios...
+                          Class
+Variable                  opana
+===============================
+ENROLID                       1
+SEX                      0.6352
+AGEGRP                   0.9792
+REGION                   0.9789
+Category=outpatients     0.0008
+refill_count             1.0598
+ADMTYP                   1.0478
+EGEOLOC                  0.9944
+
+
+Time taken to build model: 3.31 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       69348               62.4425 %
+Incorrectly Classified Instances     41711               37.5575 %
+Kappa statistic                          0.1883
+Mean absolute error                      0.4331
+Root mean squared error                  0.4654
+Relative absolute error                 88.9026 %
+Root relative squared error             94.3026 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.808    0.629    0.640      0.808    0.714      0.199    0.670     0.746     opana
+                 0.371    0.192    0.583      0.371    0.453      0.199    0.670     0.602     butrans
+Weighted Avg.    0.624    0.446    0.616      0.624    0.605      0.199    0.670     0.685     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 52044 12384 |     a = opana
+ 29327 17304 |     b = butrans
+
+
