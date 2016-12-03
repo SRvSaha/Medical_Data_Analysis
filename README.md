@@ -10,10 +10,10 @@ Prediction/Classification is to be done in two ways :
    
 
  * __Weka__
- -  [x]  Linear Regression 
- -  [x]  SVM
- -  [x]  Random Forest
- -  [x]  Decision Tree
+  -  [x]  Linear Regression 
+  -  [x]  SVM
+  -  [x]  Random Forest
+  -  [x]  Decision Tree
     
 
 
