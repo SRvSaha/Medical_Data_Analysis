@@ -1,0 +1,67 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     data
+Instances:    111059
+Attributes:   9
+              Category
+Ignored:
+              ENROLID
+              SEX
+              AGEGRP
+              REGION
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    Classes to clusters evaluation on training data
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 2
+Within cluster sum of squared errors: 0.0
+
+Initial starting points (random):
+
+Cluster 0: inpatients
+Cluster 1: outpatients
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                              Cluster#
+Attribute        Full Data           0           1
+                (111059.0)  (107366.0)    (3693.0)
+==================================================
+Category        inpatients  inpatients outpatients
+
+
+
+
+Time taken to build model (full training data) : 0.22 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      107366 ( 97%)
+1        3693 (  3%)
+
+
+Class attribute: class
+Classes to Clusters:
+
+     0     1  <-- assigned to cluster
+ 64423     5 | opana
+ 42943  3688 | butrans
+
+Cluster 0 <-- opana
+Cluster 1 <-- butrans
+
+Incorrectly clustered instances :	42948.0	 38.6713 %
+
+
