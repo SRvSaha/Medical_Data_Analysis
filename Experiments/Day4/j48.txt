@@ -1,0 +1,754 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     data-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R7
+Instances:    111059
+Attributes:   7
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Category = inpatients
+|   refill_count <= 10
+|   |   SEX <= 1
+|   |   |   refill_count <= 1
+|   |   |   |   AGEGRP <= 1: butrans (34.0/6.0)
+|   |   |   |   AGEGRP > 1: opana (13766.0/5796.0)
+|   |   |   refill_count > 1
+|   |   |   |   refill_count <= 7
+|   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   refill_count <= 5
+|   |   |   |   |   |   |   |   refill_count <= 4: opana (269.0/82.0)
+|   |   |   |   |   |   |   |   refill_count > 4: butrans (63.0/19.0)
+|   |   |   |   |   |   |   refill_count > 5: opana (40.0/2.0)
+|   |   |   |   |   |   AGEGRP > 2: opana (1696.0/471.0)
+|   |   |   |   |   REGION > 1
+|   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   AGEGRP <= 1: butrans (29.0/7.0)
+|   |   |   |   |   |   |   AGEGRP > 1
+|   |   |   |   |   |   |   |   REGION <= 3: opana (6446.0/2167.0)
+|   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   refill_count <= 6
+|   |   |   |   |   |   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1: opana (212.0/76.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (193.0/83.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (175.0/79.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 2: opana (368.0/101.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 3
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 5: opana (100.0/22.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 5: butrans (36.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 4: opana (18.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 4: butrans (15.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (76.0/20.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 5: butrans (23.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 5: opana (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (183.0/82.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: opana (16.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: butrans (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (12.74/3.47)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (18.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (12.19/3.42)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: butrans (22.06/4.31)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 2: butrans (34.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 3
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: opana (4.44/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: butrans (5.56/1.56)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 4: opana (18.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 5: butrans (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (35.0/4.0)
+|   |   |   |   |   |   |   |   |   refill_count > 6: opana (94.0/21.0)
+|   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   refill_count <= 5
+|   |   |   |   |   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 3: opana (253.44/113.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 3: butrans (93.0/41.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 2: opana (1136.83/494.88)
+|   |   |   |   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   |   |   |   refill_count <= 2: butrans (23.0/5.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 2
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 3: opana (14.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 3: butrans (8.0/1.0)
+|   |   |   |   |   |   |   |   refill_count > 5
+|   |   |   |   |   |   |   |   |   REGION <= 2: opana (89.32/38.44)
+|   |   |   |   |   |   |   |   |   REGION > 2: butrans (238.44/94.44)
+|   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   refill_count <= 2: butrans (205.0/95.0)
+|   |   |   |   |   |   |   |   |   refill_count > 2: opana (450.24/151.56)
+|   |   |   |   |   |   |   |   REGION > 2: opana (1714.73/698.12)
+|   |   |   |   refill_count > 7: opana (2612.0/744.0)
+|   |   SEX > 1
+|   |   |   refill_count <= 5
+|   |   |   |   REGION <= 2
+|   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   refill_count <= 2
+|   |   |   |   |   |   |   |   refill_count <= 1: opana (405.0/175.0)
+|   |   |   |   |   |   |   |   refill_count > 1
+|   |   |   |   |   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 1: butrans (9.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 1: opana (132.0/53.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 2: butrans (47.0/15.0)
+|   |   |   |   |   |   |   refill_count > 2: opana (156.0/47.0)
+|   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   AGEGRP <= 1
+|   |   |   |   |   |   |   |   refill_count <= 3
+|   |   |   |   |   |   |   |   |   refill_count <= 1: butrans (7.0/1.0)
+|   |   |   |   |   |   |   |   |   refill_count > 1: opana (39.0/9.0)
+|   |   |   |   |   |   |   |   refill_count > 3: butrans (12.0)
+|   |   |   |   |   |   |   AGEGRP > 1
+|   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   refill_count <= 1: opana (153.4/71.4)
+|   |   |   |   |   |   |   |   |   refill_count > 1: butrans (149.2/59.2)
+|   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (995.97/388.66)
+|   |   |   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   |   |   refill_count <= 4: butrans (207.43/66.14)
+|   |   |   |   |   |   |   |   |   |   refill_count > 4: opana (12.0/3.0)
+|   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   |   refill_count <= 2
+|   |   |   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   |   |   refill_count <= 1
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: butrans (1245.4/592.8)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 4: opana (825.8/379.9)
+|   |   |   |   |   |   |   |   |   refill_count > 1
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: opana (626.6/246.9)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 4: butrans (445.4/211.7)
+|   |   |   |   |   |   |   |   REGION > 1: opana (5213.4/2284.7)
+|   |   |   |   |   |   |   refill_count > 2
+|   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   |   |   |   refill_count <= 4: opana (227.0/92.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 4: butrans (49.0/20.0)
+|   |   |   |   |   |   |   |   |   REGION > 1: butrans (453.0/182.0)
+|   |   |   |   |   |   |   |   AGEGRP > 3: opana (2404.19/989.5)
+|   |   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   refill_count <= 1: butrans (275.3/93.1)
+|   |   |   |   |   |   |   |   refill_count > 1
+|   |   |   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   |   |   refill_count <= 3
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 1: butrans (20.03/8.03)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 1: opana (13.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 2
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 1: opana (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 1: butrans (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 3: butrans (17.0/5.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   |   |   refill_count <= 2: opana (53.07/20.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 2: butrans (96.0/41.0)
+|   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   refill_count <= 1
+|   |   |   |   |   |   |   |   |   REGION <= 1: opana (182.6/81.3)
+|   |   |   |   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: butrans (157.1/58.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 4: opana (67.4/31.2)
+|   |   |   |   |   |   |   |   refill_count > 1
+|   |   |   |   |   |   |   |   |   refill_count <= 4
+|   |   |   |   |   |   |   |   |   |   refill_count <= 3
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 1: opana (88.91/36.4)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: opana (121.0/43.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 2: opana (31.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 2: butrans (24.0/8.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 3
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 1: opana (31.5/14.4)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 1: butrans (33.1/12.0)
+|   |   |   |   |   |   |   |   |   refill_count > 4: opana (69.2/22.0)
+|   |   |   |   REGION > 2
+|   |   |   |   |   AGEGRP <= 1
+|   |   |   |   |   |   REGION <= 3: butrans (81.0/16.0)
+|   |   |   |   |   |   REGION > 3: opana (14.0/5.0)
+|   |   |   |   |   AGEGRP > 1
+|   |   |   |   |   |   refill_count <= 4
+|   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   refill_count <= 2: butrans (5078.3/2323.19)
+|   |   |   |   |   |   |   |   |   refill_count > 2
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: butrans (204.35/86.35)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (454.35/198.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (738.73/344.35)
+|   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   REGION <= 3: butrans (2334.35/1000.35)
+|   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   refill_count <= 2: butrans (759.35/353.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 2
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 4: opana (117.35/35.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 4: butrans (11.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 3: butrans (98.73/38.0)
+|   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   |   |   |   refill_count <= 1
+|   |   |   |   |   |   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 3: opana (4515.13/2152.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: butrans (343.52/160.52)
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2: opana (846.57/389.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 3: butrans (1702.0/837.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 3: opana (602.0/297.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: butrans (116.57/17.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: opana (63.0/16.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4: butrans (47.52/16.0)
+|   |   |   |   |   |   |   |   |   refill_count > 1
+|   |   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 3: butrans (4012.18/1809.61)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 3
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (275.0/125.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (561.0/253.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 4: butrans (822.52/359.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 4: opana (86.09/31.57)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 2
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 4: opana (377.04/148.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (36.57/15.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 4: butrans (32.52/11.52)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 4: opana (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2: opana (55.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (172.52/73.52)
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 4: opana (89.0/36.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 4: butrans (11.61/5.0)
+|   |   |   |   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   |   |   |   refill_count <= 2
+|   |   |   |   |   |   |   |   |   |   refill_count <= 1: butrans (2155.85/949.32)
+|   |   |   |   |   |   |   |   |   |   refill_count > 1
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (107.18/44.12)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: butrans (105.41/37.41)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (112.0/49.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (145.2/71.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 4: butrans (105.0/42.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 4: opana (11.13/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2: butrans (103.53/30.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 4: butrans (80.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 4: opana (9.0)
+|   |   |   |   |   |   |   |   |   refill_count > 2
+|   |   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 3: opana (99.0/44.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: opana (29.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: butrans (47.0/15.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (36.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: opana (138.0/59.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: butrans (120.13/46.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 3: butrans (37.13/14.13)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 3: opana (34.0/14.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 4: opana (148.26/51.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (7.4)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 3
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (53.13/17.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (50.79/18.13)
+|   |   |   |   |   |   refill_count > 4
+|   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1: butrans (70.0/31.0)
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1: opana (214.0/85.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 3: butrans (340.0/160.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 3: opana (139.0/67.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (614.0/264.0)
+|   |   |   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (7.0/1.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: butrans (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 2: opana (29.0/5.0)
+|   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (281.0/132.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 3: opana (23.0/8.0)
+|   |   |   |   |   |   |   |   REGION > 3: butrans (133.0/44.0)
+|   |   |   refill_count > 5
+|   |   |   |   ADMTYP <= 1
+|   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   refill_count <= 6
+|   |   |   |   |   |   |   |   AGEGRP <= 3: butrans (192.34/85.34)
+|   |   |   |   |   |   |   |   AGEGRP > 3: opana (218.0/88.0)
+|   |   |   |   |   |   |   refill_count > 6: opana (1081.35/441.35)
+|   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   refill_count <= 9
+|   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   AGEGRP <= 2: opana (50.0/21.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 2: butrans (93.34/40.34)
+|   |   |   |   |   |   |   |   AGEGRP > 3: opana (157.0/68.0)
+|   |   |   |   |   |   |   refill_count > 9: butrans (41.67/11.0)
+|   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   REGION <= 3: butrans (788.02/369.67)
+|   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   |   |   refill_count <= 6: butrans (48.0/19.0)
+|   |   |   |   |   |   |   |   refill_count > 6: opana (138.0/55.0)
+|   |   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   |   refill_count <= 6: opana (14.0/1.0)
+|   |   |   |   |   |   |   |   refill_count > 6: butrans (10.0/1.0)
+|   |   |   |   ADMTYP > 1
+|   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   ADMTYP <= 2: opana (131.99/17.99)
+|   |   |   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   |   |   refill_count <= 7: opana (24.0/7.0)
+|   |   |   |   |   |   |   |   refill_count > 7
+|   |   |   |   |   |   |   |   |   refill_count <= 8: butrans (13.0/4.0)
+|   |   |   |   |   |   |   |   |   refill_count > 8: opana (8.34/1.34)
+|   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   ADMTYP <= 2: opana (101.0/39.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 2: butrans (12.0/1.0)
+|   |   |   |   |   |   |   |   AGEGRP > 3: opana (349.86/121.72)
+|   |   |   |   |   |   |   ADMTYP > 3: opana (72.45/12.27)
+|   |   |   |   |   REGION > 1
+|   |   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   refill_count <= 9
+|   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   refill_count <= 7
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 6
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: butrans (43.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2: opana (150.0/61.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 6: opana (265.0/71.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 7
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 8
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (67.0/31.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (126.54/43.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 8
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: butrans (14.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2: opana (140.0/55.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   |   refill_count <= 7: butrans (128.0/51.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 7
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 8: opana (41.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 8: butrans (62.0/28.0)
+|   |   |   |   |   |   |   |   refill_count > 9
+|   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (39.0/7.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (43.0/17.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 4: opana (63.0/11.0)
+|   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   refill_count <= 8
+|   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 1: butrans (15.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 1
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 6: opana (48.0/20.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 6: butrans (51.0/20.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 3: opana (71.0/25.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 3: opana (296.54/82.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 4: opana (105.54/38.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 4: butrans (16.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (720.54/254.54)
+|   |   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 7: opana (298.0/128.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 7: butrans (99.54/29.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 6
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 4: butrans (54.0/24.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 4: opana (18.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 6
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 4: opana (114.0/26.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 4: butrans (11.0/4.0)
+|   |   |   |   |   |   |   |   refill_count > 8
+|   |   |   |   |   |   |   |   |   REGION <= 3: opana (632.0/195.0)
+|   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 9: opana (23.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 9: butrans (26.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 9: butrans (24.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 9: opana (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 9: opana (12.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 9: butrans (2.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (131.08/41.08)
+|   |   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   |   ADMTYP <= 3: butrans (199.19/86.05)
+|   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   refill_count <= 9
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: butrans (31.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (39.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 8: opana (41.09/16.09)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 8: butrans (13.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 2: opana (279.19/80.09)
+|   |   |   |   |   |   |   |   |   |   refill_count > 9
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: butrans (21.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2: opana (28.0/12.0)
+|   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 6: opana (29.09/6.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 6: butrans (46.0/20.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (36.19/15.0)
+|   |   |   |   |   |   |   |   AGEGRP > 4: butrans (129.09/55.0)
+|   refill_count > 10
+|   |   refill_count <= 49
+|   |   |   refill_count <= 17
+|   |   |   |   SEX <= 1
+|   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   refill_count <= 14: opana (749.0/113.0)
+|   |   |   |   |   |   |   refill_count > 14
+|   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1: opana (9.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   refill_count <= 15: butrans (36.0/7.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 15
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 16: opana (14.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 16: butrans (8.0/1.0)
+|   |   |   |   |   |   |   |   AGEGRP > 2: opana (381.87/69.0)
+|   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   refill_count <= 16
+|   |   |   |   |   |   |   |   refill_count <= 15
+|   |   |   |   |   |   |   |   |   REGION <= 4: opana (1271.61/348.0)
+|   |   |   |   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: butrans (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 2: opana (54.87/16.0)
+|   |   |   |   |   |   |   |   refill_count > 15
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1: opana (117.0/42.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 3: opana (6.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 3: butrans (13.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: opana (31.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4: butrans (39.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 3: opana (33.0/8.0)
+|   |   |   |   |   |   |   refill_count > 16: opana (169.0/27.0)
+|   |   |   |   |   ADMTYP > 3: opana (433.64/62.0)
+|   |   |   |   SEX > 1
+|   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   AGEGRP <= 3: opana (147.0/20.0)
+|   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   ADMTYP <= 3: opana (389.9/129.0)
+|   |   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   |   refill_count <= 14: opana (38.1/4.0)
+|   |   |   |   |   |   |   |   |   refill_count > 14: butrans (7.0)
+|   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   refill_count <= 12
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: butrans (83.0/19.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 2: opana (133.0/36.0)
+|   |   |   |   |   |   |   |   |   refill_count > 12
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 16: opana (96.0/16.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 16
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: opana (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: butrans (9.0/3.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 14: opana (82.0/25.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 14
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 15: butrans (54.0/23.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 15: opana (124.0/45.0)
+|   |   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   |   refill_count <= 12: opana (410.0/122.0)
+|   |   |   |   |   |   |   |   |   refill_count > 12
+|   |   |   |   |   |   |   |   |   |   refill_count <= 13
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 2: butrans (23.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 2: opana (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 2: opana (55.0/25.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 2: butrans (11.0/3.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 13: opana (451.0/131.0)
+|   |   |   |   |   |   |   AGEGRP > 3: opana (2704.0/772.0)
+|   |   |   |   |   REGION > 3
+|   |   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   refill_count <= 11
+|   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 2: opana (13.5/5.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 2: butrans (4.5/1.5)
+|   |   |   |   |   |   |   |   |   AGEGRP > 2: butrans (46.0/16.0)
+|   |   |   |   |   |   |   |   refill_count > 11
+|   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 14: opana (25.33/4.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 14: butrans (14.0/5.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 1: opana (79.67/27.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   refill_count <= 13: opana (57.0/12.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 13
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 14
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (13.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: opana (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 14
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 15: opana (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 15
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 16: butrans (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: opana (18.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: butrans (8.0/3.0)
+|   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   refill_count <= 15
+|   |   |   |   |   |   |   |   |   |   refill_count <= 12: opana (81.41/32.41)
+|   |   |   |   |   |   |   |   |   |   refill_count > 12
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: butrans (50.0/18.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4: opana (54.0/24.0)
+|   |   |   |   |   |   |   |   |   refill_count > 15: opana (63.0/18.0)
+|   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   refill_count <= 16
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 13
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 12
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: opana (46.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4: butrans (39.51/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 12: butrans (42.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 13: opana (117.0/43.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 3: butrans (41.08/12.0)
+|   |   |   |   |   |   |   |   |   refill_count > 16
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (58.0/11.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 3: opana (15.0/6.0)
+|   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   refill_count <= 16
+|   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   refill_count <= 14: opana (31.83/12.0)
+|   |   |   |   |   |   |   |   |   refill_count > 14: butrans (22.0/5.0)
+|   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   refill_count <= 12
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 11: opana (9.72/1.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 11: butrans (8.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 12: opana (42.45/2.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (81.0/14.0)
+|   |   |   |   |   |   |   refill_count > 16
+|   |   |   |   |   |   |   |   AGEGRP <= 3: butrans (6.0)
+|   |   |   |   |   |   |   |   AGEGRP > 3: opana (13.0/3.0)
+|   |   |   refill_count > 17
+|   |   |   |   SEX <= 1: opana (4505.0/521.0)
+|   |   |   |   SEX > 1
+|   |   |   |   |   refill_count <= 31
+|   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   refill_count <= 26
+|   |   |   |   |   |   |   |   refill_count <= 19: opana (214.0/19.0)
+|   |   |   |   |   |   |   |   refill_count > 19
+|   |   |   |   |   |   |   |   |   refill_count <= 25
+|   |   |   |   |   |   |   |   |   |   REGION <= 1: opana (37.0/3.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 1: butrans (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 20: opana (35.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 20
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 21
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 2: opana (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 2: butrans (32.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 21
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: opana (17.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: butrans (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 2: opana (52.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 4: opana (41.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 23: opana (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 23: butrans (2.0)
+|   |   |   |   |   |   |   |   |   refill_count > 25
+|   |   |   |   |   |   |   |   |   |   REGION <= 1: opana (6.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 1: butrans (29.0/6.0)
+|   |   |   |   |   |   |   refill_count > 26: opana (90.0/1.0)
+|   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   refill_count <= 25
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 20
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 18: opana (15.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 18: butrans (32.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 20: opana (67.11/17.11)
+|   |   |   |   |   |   |   |   |   |   REGION > 1: opana (687.41/173.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1: opana (1479.49/345.89)
+|   |   |   |   |   |   |   |   refill_count > 25
+|   |   |   |   |   |   |   |   |   refill_count <= 27: opana (395.0/45.0)
+|   |   |   |   |   |   |   |   |   refill_count > 27
+|   |   |   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 29
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 28: opana (69.0/18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 28
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1: butrans (27.42/8.42)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 1: butrans (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 1: opana (23.53/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: butrans (7.05/0.05)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 29: opana (118.0/18.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 30: opana (263.0/38.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 30
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: butrans (15.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1: opana (23.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: butrans (14.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4: opana (11.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: opana (8.0)
+|   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   refill_count <= 28
+|   |   |   |   |   |   |   |   |   |   refill_count <= 27
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 4: opana (99.0/16.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 4: butrans (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 27: butrans (21.0/7.0)
+|   |   |   |   |   |   |   |   |   refill_count > 28: opana (36.0)
+|   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   |   |   |   |   refill_count <= 20
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 18: opana (45.0/15.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 18: butrans (65.0/27.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 20
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: opana (175.0/47.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 27
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 21: butrans (9.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 21
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 22: butrans (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 22: opana (47.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1: opana (74.0/16.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 27: butrans (53.0/22.0)
+|   |   |   |   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: opana (48.0/9.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 23
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 19: opana (31.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 19: butrans (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 23: opana (16.0/1.0)
+|   |   |   |   |   refill_count > 31
+|   |   |   |   |   |   ADMTYP <= 2: opana (1869.67/260.0)
+|   |   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   refill_count <= 32
+|   |   |   |   |   |   |   |   |   REGION <= 2: butrans (3.0)
+|   |   |   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: opana (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: butrans (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (2.0)
+|   |   |   |   |   |   |   |   refill_count > 32
+|   |   |   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   |   |   refill_count <= 38: opana (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 38: butrans (7.04/2.04)
+|   |   |   |   |   |   |   |   |   ADMTYP > 3: opana (153.29/10.0)
+|   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (7.0/1.0)
+|   |   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   |   refill_count <= 39: opana (24.0/6.0)
+|   |   |   |   |   |   |   |   |   refill_count > 39: butrans (16.0/4.0)
+|   |   refill_count > 49: opana (2215.0/13.0)
+Category = outpatients: butrans (3693.0/5.0)
+
+Number of Leaves  : 	351
+
+Size of the tree : 	701
+
+
+Time taken to build model: 6.16 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       71318               64.2163 %
+Incorrectly Classified Instances     39741               35.7837 %
+Kappa statistic                          0.2363
+Mean absolute error                      0.4217
+Root mean squared error                  0.4611
+Relative absolute error                 86.5729 %
+Root relative squared error             93.4373 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.792    0.565    0.660      0.792    0.720      0.244    0.689     0.757     opana
+                 0.435    0.208    0.602      0.435    0.505      0.244    0.689     0.625     butrans
+Weighted Avg.    0.642    0.415    0.635      0.642    0.630      0.244    0.689     0.702     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 51011 13417 |     a = opana
+ 26324 20307 |     b = butrans
+
+
