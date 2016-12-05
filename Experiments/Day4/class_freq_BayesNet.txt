@@ -1,0 +1,65 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     data_class_freq
+Instances:    1048575
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              ADMTYP
+              EGEOLOC
+              drug_class
+              refill_freq_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=8 #classindex=7
+Network structure (nodes followed by parents)
+SEX(2): refill_freq_class 
+AGEGRP(2): refill_freq_class 
+REGION(4): refill_freq_class 
+Category(2): refill_freq_class 
+ADMTYP(3): refill_freq_class 
+EGEOLOC(11): refill_freq_class 
+drug_class(2): refill_freq_class 
+refill_freq_class(2): 
+LogScore Bayes: -1297940.133334143
+LogScore BDeu: -1298024.5577191054
+LogScore MDL: -1298062.1826036014
+LogScore ENTROPY: -1297791.8552217796
+LogScore AIC: -1297830.8552217796
+
+
+Time taken to build model: 3.49 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances      988067               94.2295 %
+Incorrectly Classified Instances     60508                5.7705 %
+Kappa statistic                          0.3159
+Mean absolute error                      0.0607
+Root mean squared error                  0.2145
+Relative absolute error                108.7341 %
+Root relative squared error            128.436  %
+Total Number of Instances          1048575     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.523    0.045    0.254      0.523    0.342      0.338    0.953     0.239     F
+                 0.955    0.477    0.985      0.955    0.970      0.338    0.953     0.999     NF
+Weighted Avg.    0.942    0.465    0.964      0.942    0.952      0.338    0.953     0.977     
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+  15747  14377 |      a = F
+  46131 972320 |      b = NF
+
+

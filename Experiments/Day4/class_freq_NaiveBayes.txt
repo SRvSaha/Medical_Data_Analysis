@@ -1,0 +1,187 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     data_class_freq
+Instances:    1048575
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              ADMTYP
+              EGEOLOC
+              drug_class
+              refill_freq_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                  Class
+Attribute             F      NF
+                 (0.03)  (0.97)
+================================
+SEX
+  mean            1.6141  1.6392
+  std. dev.       0.4868  0.4802
+  weight sum       30124   80935
+  precision            1       1
+
+AGEGRP
+  mean            3.8686   3.779
+  std. dev.       1.0088  1.0661
+  weight sum       30124   80935
+  precision            1       1
+
+REGION
+  mean             2.723  2.7234
+  std. dev.       0.9582  0.9484
+  weight sum       30124   80935
+  precision            1       1
+
+Category
+  inpatients     29434.0 77934.0
+  outpatients      692.0  3003.0
+  [total]        30126.0 80937.0
+
+ADMTYP
+  mean            1.8774  1.8926
+  std. dev.       0.8855   0.912
+  weight sum       30056   80771
+  precision            1       1
+
+EGEOLOC
+  mean           34.0471 34.8263
+  std. dev.      17.2648 17.2431
+  weight sum       30124   80935
+  precision       1.8462  1.8462
+
+drug_class
+  opana          22349.0 42081.0
+  butrans         7777.0 38856.0
+  [total]        30126.0 80937.0
+
+
+
+Time taken to build model: 0.58 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances     1018451               97.1271 %
+Incorrectly Classified Instances     30124                2.8729 %
+Kappa statistic                          0     
+Mean absolute error                      0.0556
+Root mean squared error                  0.166 
+Relative absolute error                 99.7005 %
+Root relative squared error             99.3952 %
+Total Number of Instances          1048575     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.721     0.269     F
+                 1.000    1.000    0.971      1.000    0.985      0.000    0.721     0.981     NF
+Weighted Avg.    0.971    0.971    0.943      0.971    0.957      0.000    0.721     0.961     
+
+=== Confusion Matrix ===
+
+       a       b   <-- classified as
+       0   30124 |       a = F
+       0 1018451 |       b = NF
+
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     data_class_freq
+Instances:    1048575
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              ADMTYP
+              EGEOLOC
+              drug_class
+              refill_freq_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                  Class
+Attribute             F      NF
+                 (0.03)  (0.97)
+================================
+SEX
+  mean            1.6141  1.6392
+  std. dev.       0.4868  0.4802
+  weight sum       30124   80935
+  precision            1       1
+
+AGEGRP
+  mean            3.8686   3.779
+  std. dev.       1.0088  1.0661
+  weight sum       30124   80935
+  precision            1       1
+
+REGION
+  mean             2.723  2.7234
+  std. dev.       0.9582  0.9484
+  weight sum       30124   80935
+  precision            1       1
+
+Category
+  inpatients     29434.0 77934.0
+  outpatients      692.0  3003.0
+  [total]        30126.0 80937.0
+
+ADMTYP
+  mean            1.8774  1.8926
+  std. dev.       0.8855   0.912
+  weight sum       30056   80771
+  precision            1       1
+
+EGEOLOC
+  mean           34.0471 34.8263
+  std. dev.      17.2648 17.2431
+  weight sum       30124   80935
+  precision       1.8462  1.8462
+
+drug_class
+  opana          22349.0 42081.0
+  butrans         7777.0 38856.0
+  [total]        30126.0 80937.0
+
+
+
+Time taken to build model: 0.58 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances     1018451               97.1271 %
+Incorrectly Classified Instances     30124                2.8729 %
+Kappa statistic                          0     
+Mean absolute error                      0.0556
+Root mean squared error                  0.166 
+Relative absolute error                 99.7005 %
+Root relative squared error             99.3952 %
+Total Number of Instances          1048575     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.721     0.269     F
+                 1.000    1.000    0.971      1.000    0.985      0.000    0.721     0.981     NF
+Weighted Avg.    0.971    0.971    0.943      0.971    0.957      0.000    0.721     0.961     
+
+=== Confusion Matrix ===
+
+       a       b   <-- classified as
+       0   30124 |       a = F
+       0 1018451 |       b = NF
+
+
