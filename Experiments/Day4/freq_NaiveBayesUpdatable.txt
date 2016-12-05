@@ -1,0 +1,101 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayesUpdateable 
+Relation:     data-weka.filters.unsupervised.attribute.Remove-R1,11-12
+Instances:    1048575
+Attributes:   9
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              drug_class
+              refill_freq_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                  Class
+Attribute             F      NF
+                 (0.03)  (0.97)
+================================
+SEX
+  mean            1.6141  1.6392
+  std. dev.       0.4868  0.4802
+  weight sum       30124   80935
+  precision            1       1
+
+AGEGRP
+  mean            3.8686   3.779
+  std. dev.       1.0088  1.0661
+  weight sum       30124   80935
+  precision            1       1
+
+REGION
+  mean             2.723  2.7234
+  std. dev.       0.9582  0.9484
+  weight sum       30124   80935
+  precision            1       1
+
+Category
+  inpatients     29434.0 77934.0
+  outpatients      692.0  3003.0
+  [total]        30126.0 80937.0
+
+refill_count
+  mean           22.1333  2.5847
+  std. dev.      16.9517  1.5958
+  weight sum       30124   80935
+  precision       1.5968  1.5968
+
+ADMTYP
+  mean            1.8774  1.8926
+  std. dev.       0.8855   0.912
+  weight sum       30056   80771
+  precision            1       1
+
+EGEOLOC
+  mean           34.0471 34.8263
+  std. dev.      17.2648 17.2431
+  weight sum       30124   80935
+  precision       1.8462  1.8462
+
+drug_class
+  opana          22349.0 42081.0
+  butrans         7777.0 38856.0
+  [total]        30126.0 80937.0
+
+
+
+Time taken to build model: 0.59 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances     1046623               99.8138 %
+Incorrectly Classified Instances      1952                0.1862 %
+Kappa statistic                          0.9656
+Mean absolute error                      0.0278
+Root mean squared error                  0.0422
+Relative absolute error                 49.84   %
+Root relative squared error             25.2716 %
+Total Number of Instances          1048575     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.935    0.000    1.000      0.935    0.967      0.966    1.000     1.000     F
+                 1.000    0.065    0.998      1.000    0.999      0.966    1.000     1.000     NF
+Weighted Avg.    0.998    0.063    0.998      0.998    0.998      0.966    1.000     1.000     
+
+=== Confusion Matrix ===
+
+       a       b   <-- classified as
+   28172    1952 |       a = F
+       0 1018451 |       b = NF
+
+
