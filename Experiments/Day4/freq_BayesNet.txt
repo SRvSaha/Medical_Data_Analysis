@@ -1,0 +1,67 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     data-weka.filters.unsupervised.attribute.Remove-R1,11-12
+Instances:    1048575
+Attributes:   9
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              drug_class
+              refill_freq_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=9 #classindex=8
+Network structure (nodes followed by parents)
+SEX(2): refill_freq_class 
+AGEGRP(2): refill_freq_class 
+REGION(4): refill_freq_class 
+Category(2): refill_freq_class 
+refill_count(2): refill_freq_class 
+ADMTYP(3): refill_freq_class 
+EGEOLOC(11): refill_freq_class 
+drug_class(2): refill_freq_class 
+refill_freq_class(2): 
+LogScore Bayes: -1297953.3515037396
+LogScore BDeu: -1298039.493789143
+LogScore MDL: -1298089.812141695
+LogScore ENTROPY: -1297805.6218172163
+LogScore AIC: -1297846.6218172163
+
+
+Time taken to build model: 2.14 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances     1048555               99.9981 %
+Incorrectly Classified Instances        20                0.0019 %
+Kappa statistic                          0.9997
+Mean absolute error                      0.0002
+Root mean squared error                  0.007 
+Relative absolute error                  0.3832 %
+Root relative squared error              4.1658 %
+Total Number of Instances          1048575     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    0.999      1.000    1.000      1.000    1.000     1.000     F
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     NF
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+=== Confusion Matrix ===
+
+       a       b   <-- classified as
+   30124       0 |       a = F
+      20 1018431 |       b = NF
+
+
