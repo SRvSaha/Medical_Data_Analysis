@@ -1,4 +1,4 @@
-ML Algorithm,Correct %,Error %,Features
+ML Algorithm,Correct Classify %,Error %,Features
 SMO(linear),61.33%,79.38%,SEX
 Logistic Regression,62.50%,88.95%,AGE_GROUP
 Decision Tree (j48),69.67%,76.35%,REGION
