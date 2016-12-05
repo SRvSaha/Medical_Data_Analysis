@@ -1,0 +1,59 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.DecisionTable -X 1 -S "weka.attributeSelection.BestFirst -D 1 -N 5"
+Relation:     join_2-weka.filters.unsupervised.attribute.Remove-R1,7-36
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Decision Table:
+
+Number of training instances: 111059
+Number of Rules : 3339
+Non matches covered by Majority class.
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 30
+	Merit of best subset found:   66.542
+Evaluation (for feature selection): CV (leave one out) 
+Feature set: 1,2,3,4,5,7,8
+
+Time taken to build model: 3.59 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       73694               66.3557 %
+Incorrectly Classified Instances     37365               33.6443 %
+Kappa statistic                          0.2886
+Mean absolute error                      0.4136
+Root mean squared error                  0.4527
+Relative absolute error                 84.8957 %
+Root relative squared error             91.7306 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.787    0.507    0.682      0.787    0.731      0.294    0.724     0.788     opana
+                 0.493    0.213    0.626      0.493    0.552      0.294    0.724     0.659     butrans
+Weighted Avg.    0.664    0.383    0.659      0.664    0.656      0.294    0.724     0.734     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 50685 13743 |     a = opana
+ 23622 23009 |     b = butrans
+
