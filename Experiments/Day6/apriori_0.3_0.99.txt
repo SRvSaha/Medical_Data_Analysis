@@ -1,0 +1,9 @@
+python apriori.py -f ../Data/Test/dx_procx_apriori.csv -s 0.3 -c 0.99
+item: ('', '99223') , 0.328
+item: ('99223',) , 0.353
+item: ('', '99232') , 0.392
+item: ('99232',) , 0.421
+item: ('',) , 0.899
+
+------------------------ RULES:
+
