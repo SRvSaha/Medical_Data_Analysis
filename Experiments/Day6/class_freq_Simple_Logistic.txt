@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SimpleLogistic -I 0 -M 500 -H 50 -W 0.0
+Relation:     data_class_freq
+Instances:    1048575
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              ADMTYP
+              EGEOLOC
+              drug_class
+              refill_freq_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SimpleLogistic:
+
+Class 0 :
+-1.86 + 
+[SEX] * -0.24 +
+[AGEGRP] * 0.11 +
+[REGION] * 0.08 +
+[Category=outpatients] * 0.07 +
+[ADMTYP] * 0.01 +
+[EGEOLOC] * -0.01 +
+[drug_class=butrans] * 1.08
+
+Class 1 :
+1.86 + 
+[SEX] * 0.24 +
+[AGEGRP] * -0.11 +
+[REGION] * -0.08 +
+[Category=outpatients] * -0.07 +
+[ADMTYP] * -0.01 +
+[EGEOLOC] * 0.01 +
+[drug_class=butrans] * -1.08
+
+
+Time taken to build model: 161.26 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances     1018452               97.1272 %
+Incorrectly Classified Instances     30123                2.8728 %
+Kappa statistic                          0.0001
+Mean absolute error                      0.0638
+Root mean squared error                  0.1676
+Relative absolute error                114.2338 %
+Root relative squared error            100.3614 %
+Total Number of Instances          1048575     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    1.000      0.000    0.000      0.006    0.630     0.085     F
+                 1.000    1.000    0.971      1.000    0.985      0.006    0.630     0.969     NF
+Weighted Avg.    0.971    0.971    0.972      0.971    0.957      0.006    0.630     0.943     
+
+=== Confusion Matrix ===
+
+       a       b   <-- classified as
+       1   30123 |       a = F
+       0 1018451 |       b = NF
+
+
