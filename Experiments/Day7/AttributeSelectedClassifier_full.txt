@@ -1,0 +1,918 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AttributeSelectedClassifier -E "weka.attributeSelection.CfsSubsetEval -P 1 -E 1" -S "weka.attributeSelection.BestFirst -D 1 -N 5" -W weka.classifiers.trees.J48 -- -C 0.25 -M 2
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AttributeSelectedClassifier:
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 28
+	Merit of best subset found:    0.071
+
+Attribute Subset Evaluator (supervised, Class (nominal): 8 class):
+	CFS Subset Evaluator
+	Including locally predictive attributes
+
+Selected attributes: 1,4,5,7 : 4
+                     SEX
+                     Category
+                     refill_count
+                     EGEOLOC
+
+
+Header of reduced data:
+@relation 'srv-weka.filters.unsupervised.attribute.Remove-V-R1,4-5,7-8'
+
+@attribute SEX numeric
+@attribute Category {inpatients,outpatients}
+@attribute refill_count numeric
+@attribute EGEOLOC numeric
+@attribute class {opana,butrans}
+
+@data
+
+
+Classifier Model
+J48 pruned tree
+------------------
+
+Category = inpatients
+|   refill_count <= 10
+|   |   SEX <= 1
+|   |   |   EGEOLOC <= 44
+|   |   |   |   refill_count <= 7
+|   |   |   |   |   EGEOLOC <= 33
+|   |   |   |   |   |   EGEOLOC <= 28
+|   |   |   |   |   |   |   EGEOLOC <= 23: opana (10226.0/3715.0)
+|   |   |   |   |   |   |   EGEOLOC > 23
+|   |   |   |   |   |   |   |   EGEOLOC <= 24: butrans (32.0/8.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 24
+|   |   |   |   |   |   |   |   |   refill_count <= 6
+|   |   |   |   |   |   |   |   |   |   refill_count <= 4
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 25
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 2: opana (326.0/161.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 2: butrans (58.0/23.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 25
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 3: butrans (73.0/18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 3: opana (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 4: opana (40.0/8.0)
+|   |   |   |   |   |   |   |   |   refill_count > 6
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 25: butrans (19.0/2.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 25
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 27: opana (4.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 27: butrans (4.0)
+|   |   |   |   |   |   EGEOLOC > 28: opana (1735.0/444.0)
+|   |   |   |   |   EGEOLOC > 33
+|   |   |   |   |   |   refill_count <= 5: opana (6625.0/2489.0)
+|   |   |   |   |   |   refill_count > 5
+|   |   |   |   |   |   |   EGEOLOC <= 36: opana (276.0/106.0)
+|   |   |   |   |   |   |   EGEOLOC > 36
+|   |   |   |   |   |   |   |   EGEOLOC <= 43
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 41
+|   |   |   |   |   |   |   |   |   |   refill_count <= 6
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 38: butrans (70.0/27.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 38: opana (32.0/10.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 6
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 38: opana (57.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 38: butrans (8.0/2.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 41
+|   |   |   |   |   |   |   |   |   |   refill_count <= 6
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 42: opana (16.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 42: butrans (30.0/11.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 6: butrans (28.0/7.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 43: opana (100.0/33.0)
+|   |   |   |   refill_count > 7
+|   |   |   |   |   refill_count <= 8
+|   |   |   |   |   |   EGEOLOC <= 32
+|   |   |   |   |   |   |   EGEOLOC <= 19: opana (299.0/67.0)
+|   |   |   |   |   |   |   EGEOLOC > 19
+|   |   |   |   |   |   |   |   EGEOLOC <= 23: butrans (23.0/2.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 23: opana (31.0/11.0)
+|   |   |   |   |   |   EGEOLOC > 32: opana (413.0/51.0)
+|   |   |   |   |   refill_count > 8: opana (1077.0/282.0)
+|   |   |   EGEOLOC > 44
+|   |   |   |   EGEOLOC <= 49
+|   |   |   |   |   refill_count <= 1
+|   |   |   |   |   |   EGEOLOC <= 46: opana (46.0/17.0)
+|   |   |   |   |   |   EGEOLOC > 46: butrans (1979.0/889.0)
+|   |   |   |   |   refill_count > 1
+|   |   |   |   |   |   EGEOLOC <= 48: opana (753.0/339.0)
+|   |   |   |   |   |   EGEOLOC > 48
+|   |   |   |   |   |   |   refill_count <= 3: butrans (842.0/397.0)
+|   |   |   |   |   |   |   refill_count > 3
+|   |   |   |   |   |   |   |   refill_count <= 9
+|   |   |   |   |   |   |   |   |   refill_count <= 8
+|   |   |   |   |   |   |   |   |   |   refill_count <= 7
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 6: opana (486.0/214.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 6: butrans (90.0/37.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 7: opana (75.0/30.0)
+|   |   |   |   |   |   |   |   |   refill_count > 8: butrans (81.0/28.0)
+|   |   |   |   |   |   |   |   refill_count > 9: opana (60.0/23.0)
+|   |   |   |   EGEOLOC > 49
+|   |   |   |   |   EGEOLOC <= 57
+|   |   |   |   |   |   EGEOLOC <= 55
+|   |   |   |   |   |   |   EGEOLOC <= 53
+|   |   |   |   |   |   |   |   refill_count <= 6
+|   |   |   |   |   |   |   |   |   refill_count <= 4: opana (700.0/248.0)
+|   |   |   |   |   |   |   |   |   refill_count > 4: butrans (64.0/24.0)
+|   |   |   |   |   |   |   |   refill_count > 6: opana (106.0/21.0)
+|   |   |   |   |   |   |   EGEOLOC > 53
+|   |   |   |   |   |   |   |   refill_count <= 1: butrans (124.0/38.0)
+|   |   |   |   |   |   |   |   refill_count > 1
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 54: butrans (131.0/58.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 54
+|   |   |   |   |   |   |   |   |   |   refill_count <= 9: opana (15.0/2.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 9: butrans (3.0)
+|   |   |   |   |   |   EGEOLOC > 55
+|   |   |   |   |   |   |   refill_count <= 8: opana (619.0/79.0)
+|   |   |   |   |   |   |   refill_count > 8
+|   |   |   |   |   |   |   |   refill_count <= 9: butrans (19.0/8.0)
+|   |   |   |   |   |   |   |   refill_count > 9: opana (4.0)
+|   |   |   |   |   EGEOLOC > 57
+|   |   |   |   |   |   EGEOLOC <= 62
+|   |   |   |   |   |   |   EGEOLOC <= 61
+|   |   |   |   |   |   |   |   refill_count <= 5
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 58
+|   |   |   |   |   |   |   |   |   |   refill_count <= 1: butrans (79.0/33.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 1
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 3: opana (36.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 3: butrans (42.0/17.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 58
+|   |   |   |   |   |   |   |   |   |   refill_count <= 3
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 59: butrans (27.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 59
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 1: opana (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 1: butrans (3.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 3: opana (2.0)
+|   |   |   |   |   |   |   |   refill_count > 5
+|   |   |   |   |   |   |   |   |   refill_count <= 9: butrans (19.0)
+|   |   |   |   |   |   |   |   |   refill_count > 9: opana (5.0)
+|   |   |   |   |   |   |   EGEOLOC > 61: opana (2148.0/881.0)
+|   |   |   |   |   |   EGEOLOC > 62
+|   |   |   |   |   |   |   refill_count <= 6
+|   |   |   |   |   |   |   |   refill_count <= 1
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 64: opana (91.0/40.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 64: butrans (242.0/104.0)
+|   |   |   |   |   |   |   |   refill_count > 1: butrans (310.0/116.0)
+|   |   |   |   |   |   |   refill_count > 6
+|   |   |   |   |   |   |   |   EGEOLOC <= 64: butrans (18.0/4.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 64
+|   |   |   |   |   |   |   |   |   refill_count <= 9
+|   |   |   |   |   |   |   |   |   |   refill_count <= 8: opana (19.0/1.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 8: butrans (11.0/3.0)
+|   |   |   |   |   |   |   |   |   refill_count > 9: opana (11.0)
+|   |   SEX > 1
+|   |   |   refill_count <= 5
+|   |   |   |   EGEOLOC <= 33
+|   |   |   |   |   EGEOLOC <= 32
+|   |   |   |   |   |   EGEOLOC <= 23
+|   |   |   |   |   |   |   EGEOLOC <= 11
+|   |   |   |   |   |   |   |   refill_count <= 1: butrans (1448.0/617.0)
+|   |   |   |   |   |   |   |   refill_count > 1
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 5: opana (715.0/302.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 5: butrans (566.0/257.0)
+|   |   |   |   |   |   |   EGEOLOC > 11
+|   |   |   |   |   |   |   |   EGEOLOC <= 13: opana (3502.0/1482.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 13
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 19
+|   |   |   |   |   |   |   |   |   |   refill_count <= 3
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 16: butrans (1057.0/510.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 16: opana (2968.0/1302.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 1
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 18
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 16: opana (780.0/314.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 17
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 2: butrans (266.0/126.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 2: opana (176.0/74.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 17: butrans (536.0/250.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 18: opana (865.0/339.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 3
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 17: butrans (217.0/99.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 17: opana (242.0/107.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 4
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 16: opana (154.0/65.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 18
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 17: butrans (110.0/51.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 17: opana (101.0/47.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 18: butrans (157.0/68.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 19
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 20
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 4: butrans (362.0/142.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 4: opana (43.0/16.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 20
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 2: opana (280.0/114.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 2
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 22
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 3: opana (25.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 3: butrans (17.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 22
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 3: butrans (35.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 3: opana (43.0/19.0)
+|   |   |   |   |   |   EGEOLOC > 23
+|   |   |   |   |   |   |   refill_count <= 3
+|   |   |   |   |   |   |   |   refill_count <= 2: butrans (1002.0/427.0)
+|   |   |   |   |   |   |   |   refill_count > 2
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 24: butrans (15.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 24
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 25: opana (101.0/26.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 25
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 28: butrans (26.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 28: opana (48.0/13.0)
+|   |   |   |   |   |   |   refill_count > 3: butrans (234.0/55.0)
+|   |   |   |   |   EGEOLOC > 32: opana (2329.0/921.0)
+|   |   |   |   EGEOLOC > 33
+|   |   |   |   |   EGEOLOC <= 48
+|   |   |   |   |   |   EGEOLOC <= 34
+|   |   |   |   |   |   |   refill_count <= 4
+|   |   |   |   |   |   |   |   refill_count <= 3: butrans (2269.0/910.0)
+|   |   |   |   |   |   |   |   refill_count > 3: opana (181.0/82.0)
+|   |   |   |   |   |   |   refill_count > 4: butrans (137.0/35.0)
+|   |   |   |   |   |   EGEOLOC > 34
+|   |   |   |   |   |   |   EGEOLOC <= 36
+|   |   |   |   |   |   |   |   refill_count <= 4
+|   |   |   |   |   |   |   |   |   refill_count <= 3: opana (1631.0/658.0)
+|   |   |   |   |   |   |   |   |   refill_count > 3: butrans (117.0/52.0)
+|   |   |   |   |   |   |   |   refill_count > 4: opana (157.0/31.0)
+|   |   |   |   |   |   |   EGEOLOC > 36
+|   |   |   |   |   |   |   |   EGEOLOC <= 42
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 39
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 38
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 37
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 1: opana (936.0/431.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 1: butrans (768.0/352.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 37
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 1: butrans (739.0/312.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 2: opana (170.0/79.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 2: butrans (228.0/100.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 4: opana (47.0/16.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 38: opana (163.0/47.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 39
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 41
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 2: butrans (706.0/251.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 2
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 4: opana (195.0/92.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 4: butrans (70.0/30.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 41
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 3: butrans (658.0/278.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 3: opana (63.0/23.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 4: butrans (71.0/23.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 42
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 44
+|   |   |   |   |   |   |   |   |   |   refill_count <= 4
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 43
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 1: butrans (318.0/135.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 3: opana (222.0/78.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 3: butrans (56.0/25.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 43: opana (1404.0/614.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 4: opana (126.0/34.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 44
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 47: butrans (1098.0/455.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 47
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 3: opana (766.0/334.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 3
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 4: butrans (64.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 4: opana (57.0/27.0)
+|   |   |   |   |   EGEOLOC > 48
+|   |   |   |   |   |   EGEOLOC <= 52: butrans (6858.0/2726.0)
+|   |   |   |   |   |   EGEOLOC > 52
+|   |   |   |   |   |   |   EGEOLOC <= 57
+|   |   |   |   |   |   |   |   EGEOLOC <= 53: opana (634.0/279.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 53
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 54: butrans (275.0/61.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 54: opana (892.0/189.0)
+|   |   |   |   |   |   |   EGEOLOC > 57
+|   |   |   |   |   |   |   |   EGEOLOC <= 63
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 61: butrans (344.0/112.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 61
+|   |   |   |   |   |   |   |   |   |   refill_count <= 3
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 1: opana (1802.0/889.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 1: butrans (714.0/324.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 2: opana (330.0/137.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 3: butrans (628.0/263.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 63
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 64
+|   |   |   |   |   |   |   |   |   |   refill_count <= 2: butrans (206.0/49.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 2
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 4: butrans (69.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 4: opana (13.0/2.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 64
+|   |   |   |   |   |   |   |   |   |   refill_count <= 1: butrans (414.0/199.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 1
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 2: butrans (192.0/27.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 2
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 3: opana (84.0/27.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 3: butrans (80.0/28.0)
+|   |   |   refill_count > 5
+|   |   |   |   EGEOLOC <= 63
+|   |   |   |   |   EGEOLOC <= 44
+|   |   |   |   |   |   EGEOLOC <= 24
+|   |   |   |   |   |   |   EGEOLOC <= 18
+|   |   |   |   |   |   |   |   EGEOLOC <= 1
+|   |   |   |   |   |   |   |   |   refill_count <= 6: opana (49.0/19.0)
+|   |   |   |   |   |   |   |   |   refill_count > 6: butrans (102.0/43.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 1
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 4: opana (158.0/42.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 4
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 16
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 13
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 11
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 6: butrans (12.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 6: opana (34.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 9: opana (53.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 9: butrans (101.0/40.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 11: opana (691.0/247.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 13
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 6: opana (85.0/32.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 6: butrans (288.0/111.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 16: opana (721.0/255.0)
+|   |   |   |   |   |   |   EGEOLOC > 18
+|   |   |   |   |   |   |   |   refill_count <= 8
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 22
+|   |   |   |   |   |   |   |   |   |   refill_count <= 7
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 19: butrans (204.0/96.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 19
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 20: butrans (38.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 20
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 6: butrans (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 6: opana (5.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 7
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 19: butrans (165.0/46.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 19: opana (18.0/1.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 22: butrans (44.0/8.0)
+|   |   |   |   |   |   |   |   refill_count > 8
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 22: opana (133.0/42.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 22: butrans (12.0/3.0)
+|   |   |   |   |   |   EGEOLOC > 24
+|   |   |   |   |   |   |   EGEOLOC <= 33
+|   |   |   |   |   |   |   |   EGEOLOC <= 32
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 25: opana (242.0/66.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 25
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 28
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 7: opana (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 7
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 27: butrans (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 27
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 8: butrans (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 8: opana (2.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 28
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 7: butrans (22.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 7: opana (54.0/14.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 32: opana (483.0/124.0)
+|   |   |   |   |   |   |   EGEOLOC > 33
+|   |   |   |   |   |   |   |   EGEOLOC <= 35
+|   |   |   |   |   |   |   |   |   refill_count <= 7
+|   |   |   |   |   |   |   |   |   |   refill_count <= 6
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 34: butrans (100.0/41.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 34: opana (32.0/10.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 6: butrans (79.0/25.0)
+|   |   |   |   |   |   |   |   |   refill_count > 7: opana (238.0/100.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 35
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 36: opana (207.0/44.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 36
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 43
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 6: opana (260.0/75.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 6
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 39
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 8: opana (238.0/86.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 37
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 9: butrans (24.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 9: opana (43.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 37: opana (57.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 39
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 41
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 8: butrans (69.0/16.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 8: opana (41.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 41
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 42: opana (138.0/41.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 42
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 7: opana (39.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 7: butrans (69.0/23.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 43: opana (255.0/74.0)
+|   |   |   |   |   EGEOLOC > 44
+|   |   |   |   |   |   EGEOLOC <= 55
+|   |   |   |   |   |   |   EGEOLOC <= 53
+|   |   |   |   |   |   |   |   EGEOLOC <= 46: butrans (25.0/8.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 46
+|   |   |   |   |   |   |   |   |   refill_count <= 7
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 48: opana (191.0/67.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 48
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 49
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 6: butrans (312.0/148.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 6: opana (154.0/69.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 49
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 6: opana (113.0/41.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 6: butrans (39.0/13.0)
+|   |   |   |   |   |   |   |   |   refill_count > 7
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 48: butrans (155.0/52.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 48
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 8
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 49: butrans (192.0/84.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 49: opana (42.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 8
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 52: opana (359.0/153.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 52
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 9: butrans (38.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 9: opana (16.0/3.0)
+|   |   |   |   |   |   |   EGEOLOC > 53: butrans (61.0/15.0)
+|   |   |   |   |   |   EGEOLOC > 55
+|   |   |   |   |   |   |   EGEOLOC <= 57: opana (186.0/21.0)
+|   |   |   |   |   |   |   EGEOLOC > 57
+|   |   |   |   |   |   |   |   refill_count <= 6: butrans (189.0/86.0)
+|   |   |   |   |   |   |   |   refill_count > 6: opana (478.0/179.0)
+|   |   |   |   EGEOLOC > 63
+|   |   |   |   |   EGEOLOC <= 64: butrans (68.0/8.0)
+|   |   |   |   |   EGEOLOC > 64
+|   |   |   |   |   |   refill_count <= 7
+|   |   |   |   |   |   |   refill_count <= 6: opana (33.0/15.0)
+|   |   |   |   |   |   |   refill_count > 6: butrans (26.0/7.0)
+|   |   |   |   |   |   refill_count > 7
+|   |   |   |   |   |   |   refill_count <= 8: opana (33.0/6.0)
+|   |   |   |   |   |   |   refill_count > 8: butrans (47.0/19.0)
+|   refill_count > 10
+|   |   refill_count <= 49
+|   |   |   refill_count <= 17
+|   |   |   |   EGEOLOC <= 58
+|   |   |   |   |   EGEOLOC <= 55
+|   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   EGEOLOC <= 19
+|   |   |   |   |   |   |   |   EGEOLOC <= 16
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 13: opana (537.0/99.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 13
+|   |   |   |   |   |   |   |   |   |   refill_count <= 14: opana (67.0/15.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 14
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 15: butrans (37.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 15
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 16: opana (16.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 16: butrans (27.0/9.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 16: opana (649.0/64.0)
+|   |   |   |   |   |   |   EGEOLOC > 19
+|   |   |   |   |   |   |   |   EGEOLOC <= 38
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 36
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 20
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 16
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 12
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 11: butrans (11.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 11: opana (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 12: butrans (14.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 16: opana (3.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 20
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 24
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 23: opana (27.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 23: butrans (9.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 24: opana (523.0/140.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 36
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 37
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 13: opana (30.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 13
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 14: butrans (56.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 14: opana (26.0/8.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 37: opana (104.0/43.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 38
+|   |   |   |   |   |   |   |   |   refill_count <= 15: opana (687.0/131.0)
+|   |   |   |   |   |   |   |   |   refill_count > 15
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 48: opana (86.0/15.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 48
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 16
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 49: butrans (45.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 49: opana (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 16: opana (23.0/8.0)
+|   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   EGEOLOC <= 47
+|   |   |   |   |   |   |   |   EGEOLOC <= 34
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 19
+|   |   |   |   |   |   |   |   |   |   refill_count <= 15: opana (1533.0/450.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 15
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 16: opana (303.0/45.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 16
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 11
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 1: butrans (22.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 1: opana (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 4: butrans (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 11
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 18
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 17: opana (102.0/19.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 17: butrans (25.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 18: opana (84.0/11.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 19
+|   |   |   |   |   |   |   |   |   |   refill_count <= 13
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 11
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 32
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 20: opana (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 20
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 24: butrans (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 24: opana (29.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 32: opana (133.0/39.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 11
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 32
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 12: butrans (86.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 12
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 25: opana (20.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 25: butrans (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 32
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 33: opana (85.0/33.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 33: butrans (89.0/33.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 13
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 16
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 33
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 22
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 20
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 14: butrans (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 14: opana (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 20: opana (12.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 22: opana (215.0/35.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 33
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 14: opana (39.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 14
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 15: butrans (38.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 15: opana (28.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 16
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 28: butrans (53.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 28: opana (79.0/17.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 34
+|   |   |   |   |   |   |   |   |   refill_count <= 15: opana (980.0/188.0)
+|   |   |   |   |   |   |   |   |   refill_count > 15
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 41
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 16
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 39
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 35: opana (25.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 35
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 37: butrans (47.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 37: opana (20.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 39: butrans (13.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 16: opana (66.0/9.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 41: opana (117.0/11.0)
+|   |   |   |   |   |   |   EGEOLOC > 47
+|   |   |   |   |   |   |   |   EGEOLOC <= 49
+|   |   |   |   |   |   |   |   |   refill_count <= 16
+|   |   |   |   |   |   |   |   |   |   refill_count <= 12
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 11
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 48: butrans (38.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 48: opana (123.0/29.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 11: opana (165.0/70.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 12
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 48
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 13: butrans (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 13: opana (22.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 48: butrans (298.0/132.0)
+|   |   |   |   |   |   |   |   |   refill_count > 16: opana (85.0/21.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 49
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 53: opana (177.0/37.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 53
+|   |   |   |   |   |   |   |   |   |   refill_count <= 12: butrans (7.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 12
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 54
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 13: opana (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 13: butrans (14.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 54: opana (3.0)
+|   |   |   |   |   EGEOLOC > 55
+|   |   |   |   |   |   EGEOLOC <= 57: opana (175.0/5.0)
+|   |   |   |   |   |   EGEOLOC > 57
+|   |   |   |   |   |   |   refill_count <= 13
+|   |   |   |   |   |   |   |   refill_count <= 12: opana (35.0/7.0)
+|   |   |   |   |   |   |   |   refill_count > 12: butrans (4.0)
+|   |   |   |   |   |   |   refill_count > 13: opana (19.0/1.0)
+|   |   |   |   EGEOLOC > 58
+|   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   EGEOLOC <= 63: opana (220.0/57.0)
+|   |   |   |   |   |   EGEOLOC > 63
+|   |   |   |   |   |   |   refill_count <= 13
+|   |   |   |   |   |   |   |   EGEOLOC <= 64: butrans (21.0/1.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 64
+|   |   |   |   |   |   |   |   |   refill_count <= 12: opana (5.0/1.0)
+|   |   |   |   |   |   |   |   |   refill_count > 12: butrans (8.0/2.0)
+|   |   |   |   |   |   |   refill_count > 13: opana (17.0/1.0)
+|   |   |   |   |   SEX > 1
+|   |   |   |   |   |   refill_count <= 11: butrans (107.0/35.0)
+|   |   |   |   |   |   refill_count > 11
+|   |   |   |   |   |   |   refill_count <= 12: opana (77.0/34.0)
+|   |   |   |   |   |   |   refill_count > 12: butrans (406.0/175.0)
+|   |   |   refill_count > 17
+|   |   |   |   SEX <= 1
+|   |   |   |   |   refill_count <= 30
+|   |   |   |   |   |   refill_count <= 19: opana (731.0/66.0)
+|   |   |   |   |   |   refill_count > 19
+|   |   |   |   |   |   |   EGEOLOC <= 41
+|   |   |   |   |   |   |   |   EGEOLOC <= 39
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 34
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 25
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 25
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 5: opana (102.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 23
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 11
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 9: butrans (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 9: opana (18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 11: opana (412.0/61.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 23
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 24
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 8: opana (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 12: butrans (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 12: opana (13.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 24: butrans (31.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 16: opana (48.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 25
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 28: opana (199.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 28
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 18
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 17: opana (65.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 17: butrans (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 18: opana (50.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 25
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 27
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 24
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 33: opana (68.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 33
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 23
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 22: butrans (18.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 22: opana (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 23: butrans (16.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 24: opana (65.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 27
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 28: butrans (37.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 28: opana (48.0/6.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 34: opana (219.0/15.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 39
+|   |   |   |   |   |   |   |   |   refill_count <= 25
+|   |   |   |   |   |   |   |   |   |   refill_count <= 24
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 21: butrans (14.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 21: opana (3.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 24: butrans (31.0/8.0)
+|   |   |   |   |   |   |   |   |   refill_count > 25
+|   |   |   |   |   |   |   |   |   |   refill_count <= 28: opana (23.0/4.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 28: butrans (5.0/1.0)
+|   |   |   |   |   |   |   EGEOLOC > 41
+|   |   |   |   |   |   |   |   EGEOLOC <= 44: opana (235.0/8.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 44
+|   |   |   |   |   |   |   |   |   refill_count <= 21: opana (153.0/9.0)
+|   |   |   |   |   |   |   |   |   refill_count > 21
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 49
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 47
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 24: butrans (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 24: opana (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 47
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 48: opana (24.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 48
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 23
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 22: opana (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 22: butrans (23.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 23
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 29: opana (61.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 29: butrans (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 49: opana (270.0/34.0)
+|   |   |   |   |   refill_count > 30
+|   |   |   |   |   |   EGEOLOC <= 16: opana (306.0/7.0)
+|   |   |   |   |   |   EGEOLOC > 16
+|   |   |   |   |   |   |   EGEOLOC <= 59
+|   |   |   |   |   |   |   |   refill_count <= 40: opana (737.0/42.0)
+|   |   |   |   |   |   |   |   refill_count > 40
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 18
+|   |   |   |   |   |   |   |   |   |   refill_count <= 41: butrans (14.0/1.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 41: opana (15.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 18: opana (261.0/23.0)
+|   |   |   |   |   |   |   EGEOLOC > 59
+|   |   |   |   |   |   |   |   refill_count <= 44: opana (105.0/13.0)
+|   |   |   |   |   |   |   |   refill_count > 44: butrans (8.0/1.0)
+|   |   |   |   SEX > 1
+|   |   |   |   |   refill_count <= 31
+|   |   |   |   |   |   EGEOLOC <= 44
+|   |   |   |   |   |   |   EGEOLOC <= 37
+|   |   |   |   |   |   |   |   EGEOLOC <= 33
+|   |   |   |   |   |   |   |   |   refill_count <= 29
+|   |   |   |   |   |   |   |   |   |   refill_count <= 28
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 23
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 12
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 18: opana (53.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 18
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 20
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 19
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 8: opana (22.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 11: butrans (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 11: opana (20.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 19
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 4: butrans (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 4: opana (32.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 20
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 22: opana (52.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 22
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 1: opana (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 1: butrans (14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 5: opana (16.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 12
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 18
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 28
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 18: opana (68.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 18: butrans (54.0/19.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 28: opana (37.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 18
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 21: opana (459.0/74.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 21
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 24: opana (205.0/39.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 24
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 28: butrans (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 28
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 22: opana (21.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 22: butrans (26.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 23: opana (676.0/108.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 28
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 20
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 8: opana (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 8
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 13: butrans (16.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 13
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 16: opana (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 16: butrans (34.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 20: opana (25.0/2.0)
+|   |   |   |   |   |   |   |   |   refill_count > 29
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 16: opana (66.0/6.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 16
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 17
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 30: opana (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 30: butrans (4.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 17: opana (77.0/8.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 33
+|   |   |   |   |   |   |   |   |   refill_count <= 26
+|   |   |   |   |   |   |   |   |   |   refill_count <= 24
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 35
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 19
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 18
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 34: butrans (30.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 34: opana (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 18: opana (22.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 19
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 23
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 20: butrans (32.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 20
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 34
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 21: opana (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 21: butrans (27.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 34: opana (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 23: opana (5.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 35
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 36: opana (74.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 36
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 20: opana (30.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 20: butrans (22.0/9.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 24
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 35: opana (12.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 35
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 36: butrans (41.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 36: opana (4.0)
+|   |   |   |   |   |   |   |   |   refill_count > 26
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 34
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 29: opana (38.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 29: butrans (23.0/9.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 34: opana (86.0/6.0)
+|   |   |   |   |   |   |   EGEOLOC > 37
+|   |   |   |   |   |   |   |   EGEOLOC <= 42: opana (470.0/41.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 42
+|   |   |   |   |   |   |   |   |   refill_count <= 30: opana (205.0/39.0)
+|   |   |   |   |   |   |   |   |   refill_count > 30: butrans (19.0/7.0)
+|   |   |   |   |   |   EGEOLOC > 44
+|   |   |   |   |   |   |   refill_count <= 28
+|   |   |   |   |   |   |   |   refill_count <= 18
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 63: opana (136.0/20.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 63: butrans (17.0/6.0)
+|   |   |   |   |   |   |   |   refill_count > 18
+|   |   |   |   |   |   |   |   |   refill_count <= 27
+|   |   |   |   |   |   |   |   |   |   refill_count <= 23
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 64
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 49
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 20
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 47: opana (22.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 47
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 19: opana (50.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 19
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 48: butrans (16.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 48: opana (44.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 20
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 47
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 22
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 46
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 21: opana (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 21: butrans (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 46: butrans (32.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 22: opana (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 47
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 22: opana (121.0/48.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 22: butrans (53.0/22.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 49
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 19
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 58
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 55
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 54: opana (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 54: butrans (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 55: opana (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 58: butrans (19.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 19: opana (208.0/54.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 64: opana (52.0/6.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 23
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 64
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 48
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 25
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 47: opana (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 47: butrans (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 25: opana (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 48
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 52: opana (130.0/15.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 52
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 25: opana (56.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   refill_count > 25
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 55: butrans (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 55: opana (47.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 64
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 26: opana (26.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 26: butrans (12.0/4.0)
+|   |   |   |   |   |   |   |   |   refill_count > 27
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 53: opana (20.0/1.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 53
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 63: butrans (30.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 63: opana (2.0)
+|   |   |   |   |   |   |   refill_count > 28
+|   |   |   |   |   |   |   |   EGEOLOC <= 52
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 49: opana (83.0/15.0)
+|   |   |   |   |   |   |   |   |   EGEOLOC > 49
+|   |   |   |   |   |   |   |   |   |   refill_count <= 29: butrans (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   refill_count > 29: opana (13.0/4.0)
+|   |   |   |   |   |   |   |   EGEOLOC > 52
+|   |   |   |   |   |   |   |   |   refill_count <= 29: opana (67.0/2.0)
+|   |   |   |   |   |   |   |   |   refill_count > 29
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 63
+|   |   |   |   |   |   |   |   |   |   |   refill_count <= 30
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 55: butrans (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 55: opana (14.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   refill_count > 30: opana (22.0/1.0)
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 63: butrans (3.0)
+|   |   |   |   |   refill_count > 31: opana (2101.0/307.0)
+|   |   refill_count > 49: opana (2215.0/13.0)
+Category = outpatients: butrans (3693.0/5.0)
+
+Number of Leaves  : 	414
+
+Size of the tree : 	827
+
+
+Time taken to build model: 5.48 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       73875               66.5187 %
+Incorrectly Classified Instances     37184               33.4813 %
+Kappa statistic                          0.2921
+Mean absolute error                      0.4068
+Root mean squared error                  0.4528
+Relative absolute error                 83.5101 %
+Root relative squared error             91.7541 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.788    0.504    0.683      0.788    0.732      0.297    0.720     0.782     opana
+                 0.496    0.212    0.628      0.496    0.554      0.297    0.720     0.657     butrans
+Weighted Avg.    0.665    0.382    0.660      0.665    0.657      0.297    0.720     0.730     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 50745 13683 |     a = opana
+ 23501 23130 |     b = butrans
+
