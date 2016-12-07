@@ -1,0 +1,49 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.Bagging -P 100 -S 1 -num-slots 1 -I 10 -W weka.classifiers.trees.REPTree -- -M 2 -V 0.001 -N 3 -S 1 -L -1 -I 0.0
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bagging with 10 iterations and base learner
+
+weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 1 -L -1 -I 0.0
+
+Time taken to build model: 10.71 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       78284               70.4887 %
+Incorrectly Classified Instances     32775               29.5113 %
+Kappa statistic                          0.3832
+Mean absolute error                      0.3699
+Root mean squared error                  0.4292
+Relative absolute error                 75.922  %
+Root relative squared error             86.9735 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.793    0.416    0.725      0.793    0.757      0.386    0.783     0.839     opana
+                 0.584    0.207    0.671      0.584    0.624      0.386    0.783     0.729     butrans
+Weighted Avg.    0.705    0.329    0.702      0.705    0.701      0.386    0.783     0.793     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 51066 13362 |     a = opana
+ 19413 27218 |     b = butrans
+
