@@ -1,0 +1,46 @@
+Attributes:   8,Test Mode,Predicting Class,ML Algorithm,Correct Classify %,Error %
+              SEX,10-fold Cross Validation,Class Drug : Butrans/Opana,Random Forest,71.32%,70.17%
+              AGEGRP,,,Ibk,70.90%,69.34%
+              REGION,,,Decision Tree (j48),69.67%,76.35%
+              Category,,,Decision Table,66.36%,84.90%
+              refill_count,,,Kstar,65.83%,90.86%
+              ADMTYP,,,BayesNet,64.51%,85.96%
+              EGEOLOC,,,Logistic Regression,62.50%,88.95%
+              class,,,Simple Logistic,62.47%,89.13%
+,,,SGD,61.35%,79.33%
+,,,SMO(linear),61.33%,79.38%
+,,,Voted Perceptron,60.77%,80.53%
+,,,Multilayer Perceptron,60.06%,90.62%
+,,,SGD Text,58.01%,100.00%
+,,,ZeroR(BASELINE),58.01%,100.00%
+,,,Naive Bayes Multinomial Text,58.01%,86.19%
+,,,Naive Bayes,55.53%,90.36%
+,,,Naive Bayes Updatable,55.53%,90.36%
+,,,LWL,,
+,,,AdaBoostM1,,
+,,,AttributeSelectedClassfier,,
+,,,Bagging,,
+,,,ClassificationVsRegression,,
+,,,CVParameterSelection,,
+,,,FilteredClasssifier,,
+,,,IterativeClassifierOptimizer,,
+,,,LogitBoost,,
+,,,MultiClassClassifier,,
+,,,MultiClassClassifierUpdatable,,
+,,,MultiScheme,,
+,,,RandomCommittee,,
+,,,RandomizableFilteredClassifier,,
+,,,RandomSubspace,,
+,,,Stacking,,
+,,,Vote,,
+,,,WeightedInstancesHandlerWrapper,,
+,,,InputMappedClassifier,,
+,,,SerializedClassifier,,
+,,,Jrip,,
+,,,OneR,,
+,,,PART,,
+,,,Decision Stump,,
+,,,Hoeffding Tree,,
+,,,LMT,,
+,,,Random Tree,,
+,,,REP Tree,,
