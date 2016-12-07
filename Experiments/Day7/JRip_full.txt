@@ -1,0 +1,59 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(refill_count <= 6) and (Category = outpatients) => class=butrans (2897.0/5.0)
+(refill_count <= 5) and (SEX >= 2) and (EGEOLOC >= 34) => class=butrans (26952.0/12585.0)
+(refill_count <= 9) and (SEX >= 2) and (EGEOLOC <= 32) and (REGION >= 2) and (AGEGRP <= 2) => class=butrans (1990.0/815.0)
+(refill_count <= 10) and (SEX >= 2) and (ADMTYP <= 1) and (EGEOLOC <= 11) => class=butrans (1067.0/478.0)
+(refill_count <= 9) and (EGEOLOC >= 46) and (REGION <= 3) and (AGEGRP >= 5) and (refill_count >= 6) => class=butrans (578.0/220.0)
+(refill_count <= 10) and (SEX >= 2) and (ADMTYP <= 1) and (EGEOLOC >= 19) and (REGION <= 2) and (EGEOLOC >= 20) => class=butrans (693.0/286.0)
+ => class=opana (76882.0/26843.0)
+
+Number of Rules : 7
+
+
+Time taken to build model: 9.77 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       70156               63.17   %
+Incorrectly Classified Instances     40903               36.83   %
+Kappa statistic                          0.2216
+Mean absolute error                      0.4519
+Root mean squared error                  0.4758
+Relative absolute error                 92.7696 %
+Root relative squared error             96.397  %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.758    0.543    0.659      0.758    0.705      0.225    0.622     0.655     opana
+                 0.457    0.242    0.578      0.457    0.510      0.225    0.622     0.573     butrans
+Weighted Avg.    0.632    0.416    0.625      0.632    0.623      0.225    0.622     0.621     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 48833 15595 |     a = opana
+ 25308 21323 |     b = butrans
+
