@@ -17,6 +17,23 @@ Attributes:   8,Test Mode,Predicting Class,ML Algorithm,Correct Classify %,Error
 ,,,Naive Bayes,55.53%,90.36%
 ,,,Naive Bayes Updatable,55.53%,90.36%
 ,,,LWL,61.33%,91.36%
+,,,AdaBoostM1,61.33%,93.69%
+,,,AttributeSelectedClassfier,66.52%,83.51%
+,,,Bagging,70.49%,75.92%
+,,,ClassificationViaRegression,65.78%,84.42%
+,,,CVParameterSelection,58.01%,100.00%
+,,,FilteredClasssifier,66.06%,84.94%
+,,,IterativeClassifierOptimizer,62.42%,88.68%
+,,,LogitBoost,62.42%,88.68%
+,,,MultiClassClassifier,62.50%,88.95%
+,,,MultiClassClassifierUpdatable,61.35%,79.33%
+,,,MultiScheme,58.01%,100.00%
+,,,RandomCommittee,71.32%,69.00%
+,,,RandomizableCommitteeFilteredClassifier,70.83%,69.64%
+,,,RandomSubspace,66.22%,89.90%
+,,,Stacking,58.01%,100.00%
+,,,Vote,58.01%,100.00%
+,,,WeightedInstancesHandlerWrapper,58.01%,100.00%
 ,,,InputMappedClassifier,58.01%,100.00%
 ,,,Jrip,63.17%,92.77%
 ,,,OneR,61.33%,79.38%
