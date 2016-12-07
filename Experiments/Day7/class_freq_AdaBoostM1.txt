@@ -1,0 +1,280 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AdaBoostM1 -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation:     data_class_freq
+Instances:    1048575
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              ADMTYP
+              EGEOLOC
+              drug_class
+              refill_freq_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AdaBoostM1: Base classifiers and their weights: 
+
+Decision Stump
+
+Classifications
+
+drug_class = opana : NF
+drug_class != opana : NF
+drug_class is missing : NF
+
+Class distributions
+
+drug_class = opana
+F	NF	
+0.3468678214440926	0.6531321785559073	
+drug_class != opana
+F	NF	
+0.1667560206729429	0.8332439793270571	
+drug_class is missing
+F	NF	
+0.0	1.0	
+
+
+Weight: 3.52
+
+Decision Stump
+
+Classifications
+
+drug_class = opana : F
+drug_class != opana : F
+drug_class is missing : NF
+
+Class distributions
+
+drug_class = opana
+F	NF	
+0.9472440492573292	0.05275595074267081	
+drug_class != opana
+F	NF	
+0.8712348338692233	0.12876516613077665	
+drug_class is missing
+F	NF	
+0.0	1.0	
+
+
+Weight: 3.18
+
+Decision Stump
+
+Classifications
+
+drug_class = butrans : NF
+drug_class != butrans : NF
+drug_class is missing : NF
+
+Class distributions
+
+drug_class = butrans
+F	NF	
+0.2187317634064046	0.7812682365935953	
+drug_class != butrans
+F	NF	
+0.4262632817435556	0.5737367182564445	
+drug_class is missing
+F	NF	
+0.0	1.0	
+
+
+Weight: 1.04
+
+Decision Stump
+
+Classifications
+
+drug_class = opana : F
+drug_class != opana : NF
+drug_class is missing : NF
+
+Class distributions
+
+drug_class = opana
+F	NF	
+0.6785387751888968	0.32146122481110323	
+drug_class != opana
+F	NF	
+0.4430249718309061	0.5569750281690938	
+drug_class is missing
+F	NF	
+0.0	1.0	
+
+
+Weight: 0.82
+
+Decision Stump
+
+Classifications
+
+drug_class = butrans : F
+drug_class != butrans : NF
+drug_class is missing : NF
+
+Class distributions
+
+drug_class = butrans
+F	NF	
+0.6446623346115803	0.35533766538841977	
+drug_class != butrans
+F	NF	
+0.4806377543865012	0.5193622456134989	
+drug_class is missing
+F	NF	
+0.0	1.0	
+
+
+Weight: 0.47
+
+Decision Stump
+
+Classifications
+
+drug_class = opana : F
+drug_class != opana : F
+drug_class is missing : NF
+
+Class distributions
+
+drug_class = opana
+F	NF	
+0.5980388078451577	0.4019611921548424	
+drug_class != opana
+F	NF	
+0.5301808466697426	0.4698191533302574	
+drug_class is missing
+F	NF	
+0.0	1.0	
+
+
+Weight: 0.46
+
+Decision Stump
+
+Classifications
+
+drug_class = opana : NF
+drug_class != opana : NF
+drug_class is missing : NF
+
+Class distributions
+
+drug_class = opana
+F	NF	
+0.4832442589530425	0.5167557410469575	
+drug_class != opana
+F	NF	
+0.414964915466917	0.5850350845330831	
+drug_class is missing
+F	NF	
+0.0	1.0	
+
+
+Weight: 0.31
+
+Decision Stump
+
+Classifications
+
+drug_class = opana : F
+drug_class != opana : NF
+drug_class is missing : NF
+
+Class distributions
+
+drug_class = opana
+F	NF	
+0.5605015437602273	0.43949845623977285	
+drug_class != opana
+F	NF	
+0.4916927693212148	0.5083072306787852	
+drug_class is missing
+F	NF	
+0.0	1.0	
+
+
+Weight: 0.29
+
+Decision Stump
+
+Classifications
+
+drug_class = butrans : F
+drug_class != butrans : NF
+drug_class is missing : NF
+
+Class distributions
+
+drug_class = butrans
+F	NF	
+0.5641138980888006	0.4358861019111994	
+drug_class != butrans
+F	NF	
+0.4880249425637775	0.5119750574362225	
+drug_class is missing
+F	NF	
+0.0	1.0	
+
+
+Weight: 0.23
+
+Decision Stump
+
+Classifications
+
+AGEGRP <= 2.5 : NF
+AGEGRP > 2.5 : F
+AGEGRP is missing : NF
+
+Class distributions
+
+AGEGRP <= 2.5
+F	NF	
+0.45996659845830984	0.5400334015416901	
+AGEGRP > 2.5
+F	NF	
+0.5435541660981826	0.45644583390181737	
+AGEGRP is missing
+F	NF	
+0.0	1.0	
+
+
+Weight: 0.27
+
+Number of performed Iterations: 10
+
+
+Time taken to build model: 11.18 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances     1018451               97.1271 %
+Incorrectly Classified Instances     30124                2.8729 %
+Kappa statistic                          0     
+Mean absolute error                      0.0409
+Root mean squared error                  0.1418
+Relative absolute error                 73.2158 %
+Root relative squared error             84.8942 %
+Total Number of Instances          1048575     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.970     0.338     F
+                 1.000    1.000    0.971      1.000    0.985      0.000    0.970     0.999     NF
+Weighted Avg.    0.971    0.971    0.943      0.971    0.957      0.000    0.970     0.980     
+
+=== Confusion Matrix ===
+
+       a       b   <-- classified as
+       0   30124 |       a = F
+       0 1018451 |       b = NF
+
