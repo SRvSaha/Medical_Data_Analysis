@@ -1,0 +1,280 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AdaBoostM1 -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AdaBoostM1: Base classifiers and their weights: 
+
+Decision Stump
+
+Classifications
+
+Category = outpatients : butrans
+Category != outpatients : opana
+Category is missing : opana
+
+Class distributions
+
+Category = outpatients
+opana	butrans	
+0.0013539128080151638	0.9986460871919849	
+Category != outpatients
+opana	butrans	
+0.6000316673807351	0.39996833261926495	
+Category is missing
+opana	butrans	
+0.5801240781926723	0.41987592180732763	
+
+
+Weight: 0.46
+
+Decision Stump
+
+Classifications
+
+refill_count <= 10.5 : butrans
+refill_count > 10.5 : opana
+refill_count is missing : butrans
+
+Class distributions
+
+refill_count <= 10.5
+opana	butrans	
+0.4202813219891363	0.5797186780108636	
+refill_count > 10.5
+opana	butrans	
+0.6968330136535179	0.303166986346482	
+refill_count is missing
+opana	butrans	
+0.4729847563012066	0.5270152436987933	
+
+
+Weight: 0.41
+
+Decision Stump
+
+Classifications
+
+Category = outpatients : butrans
+Category != outpatients : opana
+Category is missing : opana
+
+Class distributions
+
+Category = outpatients
+opana	butrans	
+0.0030292300973370125	0.996970769902663	
+Category != outpatients
+opana	butrans	
+0.5509291248348125	0.4490708751651875	
+Category is missing
+opana	butrans	
+0.5377011320373168	0.4622988679626831	
+
+
+Weight: 0.25
+
+Decision Stump
+
+Classifications
+
+Category = outpatients : butrans
+Category != outpatients : butrans
+Category is missing : butrans
+
+Class distributions
+
+Category = outpatients
+opana	butrans	
+0.003878746289100628	0.9961212537108993	
+Category != outpatients
+opana	butrans	
+0.4890941044130182	0.5109058955869817	
+Category is missing
+opana	butrans	
+0.4786573693380868	0.5213426306619133	
+
+
+Weight: 0.09
+
+Decision Stump
+
+Classifications
+
+Category = inpatients : opana
+Category != inpatients : butrans
+Category is missing : opana
+
+Class distributions
+
+Category = inpatients
+opana	butrans	
+0.5104464611693433	0.4895535388306568	
+Category != inpatients
+opana	butrans	
+0.00422318073707707	0.9957768192629229	
+Category is missing
+opana	butrans	
+0.5000000000002379	0.4999999999997621	
+
+
+Weight: 0.08
+
+Decision Stump
+
+Classifications
+
+Category = inpatients : butrans
+Category != inpatients : butrans
+Category is missing : butrans
+
+Class distributions
+
+Category = inpatients
+opana	butrans	
+0.48997611617958026	0.5100238838204197	
+Category != inpatients
+opana	butrans	
+0.004581933491021981	0.995418066508978	
+Category is missing
+opana	butrans	
+0.4803498180635874	0.5196501819364125	
+
+
+Weight: 0.08
+
+Decision Stump
+
+Classifications
+
+Category = outpatients : butrans
+Category != outpatients : opana
+Category is missing : butrans
+
+Class distributions
+
+Category = outpatients
+opana	butrans	
+0.004954952070993532	0.9950450479290065	
+Category != outpatients
+opana	butrans	
+0.5096338885073329	0.4903661114926671	
+Category is missing
+opana	butrans	
+0.4999999999993107	0.5000000000006892	
+
+
+Weight: 0.08
+
+Decision Stump
+
+Classifications
+
+Category = outpatients : butrans
+Category != outpatients : butrans
+Category is missing : butrans
+
+Class distributions
+
+Category = outpatients
+opana	butrans	
+0.005342182007159696	0.9946578179928403	
+Category != outpatients
+opana	butrans	
+0.4907271632477892	0.5092728367522108	
+Category is missing
+opana	butrans	
+0.48179558575562226	0.5182044142443778	
+
+
+Weight: 0.07
+
+Decision Stump
+
+Classifications
+
+Category = inpatients : opana
+Category != inpatients : butrans
+Category is missing : butrans
+
+Class distributions
+
+Category = inpatients
+opana	butrans	
+0.508937612402043	0.49106238759795695	
+Category != inpatients
+opana	butrans	
+0.0057435668590454	0.9942564331409546	
+Category is missing
+opana	butrans	
+0.4999999999994221	0.5000000000005779	
+
+
+Weight: 0.07
+
+Decision Stump
+
+Classifications
+
+Category = inpatients : butrans
+Category != inpatients : butrans
+Category is missing : butrans
+
+Class distributions
+
+Category = inpatients
+opana	butrans	
+0.4913744688516409	0.5086255311483591	
+Category != inpatients
+opana	butrans	
+0.006159048235348866	0.9938409517646511	
+Category is missing
+opana	butrans	
+0.483045076013445	0.516954923986555	
+
+
+Weight: 0.07
+
+Number of performed Iterations: 10
+
+
+Time taken to build model: 2.23 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       68111               61.3287 %
+Incorrectly Classified Instances     42948               38.6713 %
+Kappa statistic                          0.0905
+Mean absolute error                      0.4564
+Root mean squared error                  0.4732
+Relative absolute error                 93.6857 %
+Root relative squared error             95.8817 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.921    0.600      1.000    0.750      0.217    0.617     0.683     opana
+                 0.079    0.000    0.999      0.079    0.147      0.217    0.617     0.540     butrans
+Weighted Avg.    0.613    0.534    0.767      0.613    0.497      0.217    0.617     0.623     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 64423     5 |     a = opana
+ 42943  3688 |     b = butrans
+
