@@ -1,0 +1,194 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.IterativeClassifierOptimizer -W weka.classifiers.meta.LogitBoost -L 50 -P 1 -E 1 -I 1 -F 10 -R 1 -metric RMSE -S 1 -- -P 100 -L -1.7976931348623157E308 -H 1.0 -Z 3.0 -O 1 -E 1 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump -batch-size
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Best value found: 0.465489276938924
+Best number of iterations found: 10
+
+
+
+LogitBoost: Base classifiers and their weights: 
+
+Iteration 1
+	Class 1 (class=opana)
+
+Decision Stump
+
+Classifications
+
+Category = inpatients : 0.40012666952294024
+Category != inpatients : -1.9945843487679393
+Category is missing : 0.32049631277068946
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 2
+	Class 1 (class=opana)
+
+Decision Stump
+
+Classifications
+
+refill_count <= 10.5 : -0.22810031332607564
+refill_count > 10.5 : 0.8011761718924991
+refill_count is missing : -0.011314953924581497
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 3
+	Class 1 (class=opana)
+
+Decision Stump
+
+Classifications
+
+SEX <= 1.5 : 0.30125157996921414
+SEX > 1.5 : -0.13892980873564373
+SEX is missing : 0.022311508907568056
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 4
+	Class 1 (class=opana)
+
+Decision Stump
+
+Classifications
+
+refill_count <= 31.5 : -0.030847207330017525
+refill_count > 31.5 : 0.8226082121033949
+refill_count is missing : 0.003690460047627663
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 5
+	Class 1 (class=opana)
+
+Decision Stump
+
+Classifications
+
+EGEOLOC <= 45.0 : 0.11368253964544009
+EGEOLOC > 45.0 : -0.21653583927246342
+EGEOLOC is missing : 0.0075741353797241385
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 6
+	Class 1 (class=opana)
+
+Decision Stump
+
+Classifications
+
+Category = inpatients : 0.01892718229927029
+Category != inpatients : -1.1669829351950232
+Category is missing : 0.0014118677625159747
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 7
+	Class 1 (class=opana)
+
+Decision Stump
+
+Classifications
+
+refill_count <= 49.5 : -0.015187762908588913
+refill_count > 49.5 : 1.042866451459346
+refill_count is missing : -0.005675019492217476
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 8
+	Class 1 (class=opana)
+
+Decision Stump
+
+Classifications
+
+Category = outpatients : -1.0302389597400812
+Category != outpatients : 0.008960009774991699
+Category is missing : 0.0028873475568050137
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 9
+	Class 1 (class=opana)
+
+Decision Stump
+
+Classifications
+
+refill_count <= 2.5 : -0.07392926123187672
+refill_count > 2.5 : 0.07824885670992954
+refill_count is missing : -0.001996814969320132
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 10
+	Class 1 (class=opana)
+
+Decision Stump
+
+Classifications
+
+ADMTYP <= 1.5 : -0.09422722629858274
+ADMTYP > 1.5 : 0.05377971361910457
+ADMTYP is missing : 0.1570691553940013
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+Number of performed iterations: 10
+
+
+Time taken to build model: 14.42 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       69325               62.4218 %
+Incorrectly Classified Instances     41734               37.5782 %
+Kappa statistic                          0.1869
+Mean absolute error                      0.432 
+Root mean squared error                  0.4655
+Relative absolute error                 88.6832 %
+Root relative squared error             94.3167 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.811    0.633    0.639      0.811    0.714      0.199    0.670     0.744     opana
+                 0.367    0.189    0.584      0.367    0.450      0.199    0.670     0.604     butrans
+Weighted Avg.    0.624    0.447    0.616      0.624    0.604      0.199    0.670     0.685     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 52222 12206 |     a = opana
+ 29528 17103 |     b = butrans
+
