@@ -1,0 +1,51 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.KStar -B 20 -M a
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+KStar Beta Verion (0.1b).
+Copyright (c) 1995-97 by Len Trigg (trigg@cs.waikato.ac.nz).
+Java port to Weka by Abdelaziz Mahoui (am14@cs.waikato.ac.nz).
+
+KStar options : -B 20 -M a 
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       73114               65.8335 %
+Incorrectly Classified Instances     37945               34.1665 %
+Kappa statistic                          0.2616
+Mean absolute error                      0.4428
+Root mean squared error                  0.4606
+Relative absolute error                 90.885  %
+Root relative squared error             93.3166 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.837    0.588    0.663      0.837    0.740      0.277    0.720     0.786     opana
+                 0.412    0.163    0.646      0.412    0.503      0.277    0.720     0.652     butrans
+Weighted Avg.    0.658    0.410    0.656      0.658    0.640      0.277    0.720     0.730     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 53925 10503 |     a = opana
+ 27442 19189 |     b = butrans
+

@@ -1,0 +1,64 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=8 #classindex=7
+Network structure (nodes followed by parents)
+SEX(2): class 
+AGEGRP(3): class 
+REGION(3): class 
+Category(2): class 
+refill_count(8): class 
+ADMTYP(4): class 
+EGEOLOC(23): class 
+class(2): 
+LogScore Bayes: -957043.298669387
+LogScore BDeu: -957285.9095221602
+LogScore MDL: -957257.8417071009
+LogScore ENTROPY: -956810.5557575823
+LogScore AIC: -956887.5557575823
+
+
+Time taken to build model: 0.92 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       71639               64.5054 %
+Incorrectly Classified Instances     39420               35.4946 %
+Kappa statistic                          0.2457
+Mean absolute error                      0.4188
+Root mean squared error                  0.46  
+Relative absolute error                 85.9601 %
+Root relative squared error             93.2084 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.783    0.546    0.665      0.783    0.719      0.252    0.697     0.766     opana
+                 0.454    0.217    0.603      0.454    0.518      0.252    0.697     0.634     butrans
+Weighted Avg.    0.645    0.408    0.639      0.645    0.635      0.252    0.697     0.710     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 50466 13962 |     a = opana
+ 25458 21173 |     b = butrans
+

@@ -1,0 +1,94 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayesUpdateable 
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                  Class
+Attribute         opana butrans
+                 (0.58)  (0.42)
+================================
+SEX
+  mean            1.5887  1.6927
+  std. dev.       0.4921  0.4614
+  weight sum       64428   46631
+  precision            1       1
+
+AGEGRP
+  mean            3.8029  3.8038
+  std. dev.       1.0378  1.0705
+  weight sum       64428   46631
+  precision            1       1
+
+REGION
+  mean            2.6806  2.7823
+  std. dev.       0.9663  0.9265
+  weight sum       64428   46631
+  precision            1       1
+
+Category
+  inpatients     64424.0 42944.0
+  outpatients        6.0  3689.0
+  [total]        64430.0 46633.0
+
+refill_count
+  mean           10.1648  4.7401
+  std. dev.      15.0742  6.2402
+  weight sum       64428   46631
+  precision       1.5968  1.5968
+
+ADMTYP
+  mean            1.9076  1.8622
+  std. dev.       0.9032  0.9066
+  weight sum       64279   46548
+  precision            1       1
+
+EGEOLOC
+  mean           33.6285 35.9778
+  std. dev.      17.1323  17.325
+  weight sum       64428   46631
+  precision       1.8462  1.8462
+
+
+
+Time taken to build model: 0.12 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       61668               55.5272 %
+Incorrectly Classified Instances     49391               44.4728 %
+Kappa statistic                          0.1775
+Mean absolute error                      0.4402
+Root mean squared error                  0.493 
+Relative absolute error                 90.3596 %
+Root relative squared error             99.8927 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.329    0.132    0.775      0.329    0.462      0.226    0.663     0.738     opana
+                 0.868    0.671    0.484      0.868    0.621      0.226    0.663     0.597     butrans
+Weighted Avg.    0.555    0.358    0.653      0.555    0.529      0.226    0.663     0.679     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 21171 43257 |     a = opana
+  6134 40497 |     b = butrans
+

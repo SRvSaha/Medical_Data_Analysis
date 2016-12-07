@@ -1,0 +1,60 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+Squared loss (linear regression)
+
+class = 
+
+         0.1099 (normalized) SEX
+ +       0.0175 (normalized) AGEGRP
+ +       0.0225 (normalized) REGION
+ +       2.4488 (normalized) Category=outpatients
+ +      -1.9091 (normalized) refill_count
+ +       0.0058 (normalized) ADMTYP
+ +       0.1582 (normalized) EGEOLOC
+ -       1.05  
+
+Time taken to build model: 8.74 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       68139               61.3539 %
+Incorrectly Classified Instances     42920               38.6461 %
+Kappa statistic                          0.0937
+Mean absolute error                      0.3865
+Root mean squared error                  0.6217
+Relative absolute error                 79.3293 %
+Root relative squared error            125.9598 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.994    0.912    0.601      0.994    0.749      0.205    0.541     0.601     opana
+                 0.088    0.006    0.910      0.088    0.161      0.205    0.541     0.463     butrans
+Weighted Avg.    0.614    0.532    0.731      0.614    0.502      0.205    0.541     0.543     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 64019   409 |     a = opana
+ 42511  4120 |     b = butrans
+

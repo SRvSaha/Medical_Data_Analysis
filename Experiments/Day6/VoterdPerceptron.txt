@@ -1,0 +1,47 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.VotedPerceptron -I 1 -E 1.0 -S 1 -M 10000
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+VotedPerceptron: Number of perceptrons=10000
+
+Time taken to build model: 5 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       67487               60.7668 %
+Incorrectly Classified Instances     43572               39.2332 %
+Kappa statistic                          0.1702
+Mean absolute error                      0.3923
+Root mean squared error                  0.6263
+Relative absolute error                 80.5334 %
+Root relative squared error            126.8998 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.739    0.574    0.640      0.739    0.686      0.173    0.584     0.626     opana
+                 0.426    0.261    0.542      0.426    0.477      0.173    0.600     0.485     butrans
+Weighted Avg.    0.608    0.442    0.599      0.608    0.598      0.173    0.591     0.567     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 47611 16817 |     a = opana
+ 26755 19876 |     b = butrans
+

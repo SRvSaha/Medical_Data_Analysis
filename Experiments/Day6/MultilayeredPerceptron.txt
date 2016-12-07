@@ -1,0 +1,107 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    0.03860205969185925
+    Node 2    -3.7306684570806112
+    Node 3    0.5248398242712639
+    Node 4    4.717739319813394
+    Node 5    1.0134759504341775
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -0.03860205969185917
+    Node 2    3.730668457080612
+    Node 3    -0.5248398242712633
+    Node 4    -4.7177393198133935
+    Node 5    -1.0134759504341777
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    10.054897239632357
+    Attrib SEX    0.11729325202327757
+    Attrib AGEGRP    -0.2419966826454642
+    Attrib REGION    -8.857702934186221
+    Attrib Category=outpatients    15.09405192266653
+    Attrib refill_count    -0.9750779131145653
+    Attrib ADMTYP    -0.2927100335009697
+    Attrib EGEOLOC    14.865946542748759
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -10.92301470401333
+    Attrib SEX    -32.71071189278913
+    Attrib AGEGRP    -3.6496573124470606
+    Attrib REGION    29.828266141261963
+    Attrib Category=outpatients    10.779138946522652
+    Attrib refill_count    14.000882694660419
+    Attrib ADMTYP    0.41178424281037385
+    Attrib EGEOLOC    -33.19400650480365
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    6.482791076165656
+    Attrib SEX    -0.6968317119607995
+    Attrib AGEGRP    -0.8913050925131804
+    Attrib REGION    -14.01677958107035
+    Attrib Category=outpatients    -7.677767529888548
+    Attrib refill_count    20.7873355741855
+    Attrib ADMTYP    0.6537619649375905
+    Attrib EGEOLOC    17.45384806117971
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    21.717029121560017
+    Attrib SEX    -0.6927124895644493
+    Attrib AGEGRP    -0.49937241020314516
+    Attrib REGION    -2.4227769919550717
+    Attrib Category=outpatients    -23.42042747708652
+    Attrib refill_count    48.908769116333
+    Attrib ADMTYP    0.5712740123695557
+    Attrib EGEOLOC    -1.1249142124659424
+Class opana
+    Input
+    Node 0
+Class butrans
+    Input
+    Node 1
+
+
+Time taken to build model: 53.21 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       66704               60.0618 %
+Incorrectly Classified Instances     44355               39.9382 %
+Kappa statistic                          0.2001
+Mean absolute error                      0.4415
+Root mean squared error                  0.4711
+Relative absolute error                 90.6203 %
+Root relative squared error             95.4603 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.590    0.385    0.679      0.590    0.632      0.202    0.657     0.735     opana
+                 0.615    0.410    0.521      0.615    0.564      0.202    0.657     0.590     butrans
+Weighted Avg.    0.601    0.395    0.613      0.601    0.603      0.202    0.657     0.674     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 38038 26390 |     a = opana
+ 17965 28666 |     b = butrans
+

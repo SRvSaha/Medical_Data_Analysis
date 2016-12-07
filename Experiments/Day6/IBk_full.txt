@@ -1,0 +1,49 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       78737               70.8966 %
+Incorrectly Classified Instances     32322               29.1034 %
+Kappa statistic                          0.3944
+Mean absolute error                      0.3378
+Root mean squared error                  0.4392
+Relative absolute error                 69.337  %
+Root relative squared error             88.9807 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.785    0.395    0.733      0.785    0.758      0.396    0.781     0.829     opana
+                 0.605    0.215    0.670      0.605    0.636      0.396    0.781     0.710     butrans
+Weighted Avg.    0.709    0.320    0.706      0.709    0.706      0.396    0.781     0.779     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 50545 13883 |     a = opana
+ 18439 28192 |     b = butrans
+

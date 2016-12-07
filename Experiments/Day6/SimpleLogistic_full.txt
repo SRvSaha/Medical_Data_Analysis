@@ -1,0 +1,64 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SimpleLogistic -I 0 -M 500 -H 50 -W 0.0
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SimpleLogistic:
+
+Class 0 :
+0.45 + 
+[SEX] * -0.22 +
+[Category=outpatients] * -3.13 +
+[refill_count] * 0.03 +
+[ADMTYP] * 0.02 +
+[EGEOLOC] * -0
+
+Class 1 :
+-0.45 + 
+[SEX] * 0.22 +
+[Category=outpatients] * 3.13 +
+[refill_count] * -0.03 +
+[ADMTYP] * -0.02 +
+[EGEOLOC] * 0   
+
+
+Time taken to build model: 14.57 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       69382               62.4731 %
+Incorrectly Classified Instances     41677               37.5269 %
+Kappa statistic                          0.1845
+Mean absolute error                      0.4342
+Root mean squared error                  0.4656
+Relative absolute error                 89.1293 %
+Root relative squared error             94.3391 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.822    0.648    0.637      0.822    0.718      0.198    0.669     0.745     opana
+                 0.352    0.178    0.589      0.352    0.441      0.198    0.669     0.601     butrans
+Weighted Avg.    0.625    0.450    0.617      0.625    0.601      0.198    0.669     0.685     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 52947 11481 |     a = opana
+ 30196 16435 |     b = butrans
+

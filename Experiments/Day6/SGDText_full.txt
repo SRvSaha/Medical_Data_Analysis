@@ -1,0 +1,55 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGDText -F 0 -L 0.01 -R 1.0E-4 -E 500 -P 0 -M 3.0 -min-coeff 0.001 -norm 1.0 -lnorm 2.0 -stopwords-handler weka.core.stopwords.Null -tokenizer "weka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\"" -stemmer weka.core.stemmers.NullStemmer -S 1
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SGDText:
+
+Loss function: Hinge loss (SVM)
+
+Dictionary size: 0
+
+class = 
+
+ -       0.99  
+
+Time taken to build model: 6.4 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       64428               58.0124 %
+Incorrectly Classified Instances     46631               41.9876 %
+Kappa statistic                          0     
+Mean absolute error                      0.4199
+Root mean squared error                  0.648 
+Relative absolute error                 86.1884 %
+Root relative squared error            131.2924 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.580      1.000    0.734      0.000    0.500     0.580     opana
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.420     butrans
+Weighted Avg.    0.580    0.580    0.337      0.580    0.426      0.000    0.500     0.513     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 64428     0 |     a = opana
+ 46631     0 |     b = butrans
+

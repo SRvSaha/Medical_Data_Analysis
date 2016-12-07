@@ -1,0 +1,57 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayesMultinomialText -P 0 -M 3.0 -norm 1.0 -lnorm 2.0 -stopwords-handler weka.core.stopwords.Null -tokenizer "weka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\"" -stemmer weka.core.stemmers.NullStemmer
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Dictionary size: 0
+
+The independent frequency of a class
+--------------------------------------
+opana	64429.0
+butrans	46632.0
+
+The frequency of a word given the class
+-----------------------------------------
+      opana	    butrans	
+
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       64428               58.0124 %
+Incorrectly Classified Instances     46631               41.9876 %
+Kappa statistic                          0     
+Mean absolute error                      0.4872
+Root mean squared error                  0.4935
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.580      1.000    0.734      0.000    0.500     0.580     opana
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.420     butrans
+Weighted Avg.    0.580    0.580    0.337      0.580    0.426      0.000    0.500     0.513     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 64428     0 |     a = opana
+ 46631     0 |     b = butrans
+
