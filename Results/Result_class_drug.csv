@@ -29,7 +29,7 @@ Attributes:   8,Test Mode,Predicting Class,ML Algorithm,Correct Classify %,Error
 ,,,MultiClassClassifierUpdatable,61.35%,79.33%
 ,,,MultiScheme,58.01%,100.00%
 ,,,RandomCommittee,71.32%,69.00%
-,,,RandomizableFilteredClassifier,70.83%,69.64%
+,,,RandomizableCommittee,FilteredClassifier,70.83%,69.64%
 ,,,RandomSubspace,66.22%,89.90%
 ,,,Stacking,58.01%,100.00%
 ,,,Vote,58.01%,100.00%
