@@ -16,7 +16,7 @@ Attributes:   8,Test Mode,Predicting Class,ML Algorithm,Correct Classify %,Error
 ,,,Naive Bayes Multinomial Text,58.01%,86.19%
 ,,,Naive Bayes,55.53%,90.36%
 ,,,Naive Bayes Updatable,55.53%,90.36%
-,,,LWL,70.17%,73.06%
+,,,LWL,61.33%,91.36%
 ,,,AdaBoostM1,61.33%,93.69%
 ,,,AttributeSelectedClassfier,66.52%,83.51%
 ,,,Bagging,70.49%,75.92%
