@@ -4,7 +4,7 @@ Attributes:   8,Test Mode ,Prediction Class,ML Algorithm,Correct Classified %,Er
               REGION,,NF : Non-Frequent,Logistic Regression,97.1272 %,96.535  %
               Category,,,Decision Table,97.1498 %,71.4311 %
               ADMTYP,,,Multilayer Perceptron,97.1271 %,71.3631 %
-              EGEOLOC,,,Voted Perceptron,,
+              EGEOLOC,,,Voted Perceptron,97.0859 %,52.218  %
               drug_class,,,SMO(linear),97.1271 %,51.478  %
               refill_freq_class,,,SGD,97.1271 %,51.478  %
 ,,,Simple Logistic,97.1272 %,114.2338 %
