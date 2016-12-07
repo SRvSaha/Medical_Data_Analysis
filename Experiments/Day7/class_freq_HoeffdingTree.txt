@@ -1,0 +1,163 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.HoeffdingTree -L 2 -S 1 -E 1.0E-7 -H 0.05 -M 0.01 -G 200.0 -N 0.0
+Relation:     data_class_freq
+Instances:    1048575
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              ADMTYP
+              EGEOLOC
+              drug_class
+              refill_freq_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+drug_class = opana: 
+|   AGEGRP <= 2.273: 
+|   |   ADMTYP <= 4.273: 
+|   |   |   EGEOLOC <= 9.545: NF (255.500) NB1 NB adaptive1
+|   |   |   EGEOLOC > 9.545: 
+|   |   |   |   AGEGRP <= 1.091: NF (126.000) NB2 NB adaptive2
+|   |   |   |   AGEGRP > 1.091: 
+|   |   |   |   |   ADMTYP <= 3.182: 
+|   |   |   |   |   |   SEX <= 1.364: NF (336.660) NB3 NB adaptive3
+|   |   |   |   |   |   SEX > 1.364: 
+|   |   |   |   |   |   |   REGION <= 1.364: NF (182.500) NB4 NB adaptive4
+|   |   |   |   |   |   |   REGION > 1.364: NF (288.500) NB5 NB adaptive5
+|   |   |   |   |   ADMTYP > 3.182: NF (787.778) NB6 NB adaptive6
+|   |   ADMTYP > 4.273: NF (55.449) NB7 NB adaptive7
+|   AGEGRP > 2.273: 
+|   |   AGEGRP <= 3.545: 
+|   |   |   EGEOLOC <= 14.545: NF (1204.859) NB8 NB adaptive8
+|   |   |   EGEOLOC > 14.545: 
+|   |   |   |   EGEOLOC <= 20.455: 
+|   |   |   |   |   REGION <= 2.182: NF (1137.000) NB9 NB adaptive9
+|   |   |   |   |   REGION > 2.182: F (67.000) NB10 NB adaptive10
+|   |   |   |   EGEOLOC > 20.455: 
+|   |   |   |   |   SEX <= 1.364: 
+|   |   |   |   |   |   EGEOLOC <= 28.636: NF (97.500) NB11 NB adaptive11
+|   |   |   |   |   |   EGEOLOC > 28.636: 
+|   |   |   |   |   |   |   REGION <= 2.182: NF (70.500) NB12 NB adaptive12
+|   |   |   |   |   |   |   REGION > 2.182: NF (968.500) NB13 NB adaptive13
+|   |   |   |   |   SEX > 1.364: 
+|   |   |   |   |   |   EGEOLOC <= 26.818: F (96.500) NB14 NB adaptive14
+|   |   |   |   |   |   EGEOLOC > 26.818: NF (2262.000) NB15 NB adaptive15
+|   |   AGEGRP > 3.545: 
+|   |   |   EGEOLOC <= 54.818: 
+|   |   |   |   EGEOLOC <= 8.455: NF (1243.500) NB16 NB adaptive16
+|   |   |   |   EGEOLOC > 8.455: 
+|   |   |   |   |   ADMTYP <= 2.636: 
+|   |   |   |   |   |   REGION <= 3.182: 
+|   |   |   |   |   |   |   REGION <= 1.182: 
+|   |   |   |   |   |   |   |   EGEOLOC <= 16.273: 
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 11.182: F (170.500) NB17 NB adaptive17
+|   |   |   |   |   |   |   |   |   EGEOLOC > 11.182: NF (924.000) NB18 NB adaptive18
+|   |   |   |   |   |   |   |   EGEOLOC > 16.273: F (153.631) NB19 NB adaptive19
+|   |   |   |   |   |   |   REGION > 1.182: 
+|   |   |   |   |   |   |   |   EGEOLOC <= 15.636: NF (146.589) NB20 NB adaptive20
+|   |   |   |   |   |   |   |   EGEOLOC > 15.636: 
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1.091: 
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 49.636: 
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 2.636: NF (806.954) NB21 NB adaptive21
+|   |   |   |   |   |   |   |   |   |   |   REGION > 2.636: 
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 19.000: NF (73.000) NB22 NB adaptive22
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 19.000: NF (911.000) NB23 NB adaptive23
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 49.636: F (90.799) NB24 NB adaptive24
+|   |   |   |   |   |   |   |   |   ADMTYP > 1.091: 
+|   |   |   |   |   |   |   |   |   |   SEX <= 1.364: NF (2031.249) NB25 NB adaptive25
+|   |   |   |   |   |   |   |   |   |   SEX > 1.364: 
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4.545: NF (1320.869) NB26 NB adaptive26
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4.545: NF (888.131) NB27 NB adaptive27
+|   |   |   |   |   |   REGION > 3.182: 
+|   |   |   |   |   |   |   REGION <= 4.182: 
+|   |   |   |   |   |   |   |   EGEOLOC <= 34.909: F (64.500) NB28 NB adaptive28
+|   |   |   |   |   |   |   |   EGEOLOC > 34.909: 
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 37.636: F (42.500) NB29 NB adaptive29
+|   |   |   |   |   |   |   |   |   EGEOLOC > 37.636: NF (239.000) NB30 NB adaptive30
+|   |   |   |   |   |   |   REGION > 4.182: F (192.514) NB31 NB adaptive31
+|   |   |   |   |   ADMTYP > 2.636: 
+|   |   |   |   |   |   ADMTYP <= 3.091: F (47.000) NB32 NB adaptive32
+|   |   |   |   |   |   ADMTYP > 3.091: 
+|   |   |   |   |   |   |   ADMTYP <= 4.091: NF (1278.000) NB33 NB adaptive33
+|   |   |   |   |   |   |   ADMTYP > 4.091: NF (65.000) NB34 NB adaptive34
+|   |   |   EGEOLOC > 54.818: 
+|   |   |   |   REGION <= 2.182: NF (56.000) NB35 NB adaptive35
+|   |   |   |   REGION > 2.182: 
+|   |   |   |   |   REGION <= 3.091: NF (260.500) NB36 NB adaptive36
+|   |   |   |   |   REGION > 3.091: 
+|   |   |   |   |   |   REGION <= 4.091: NF (1981.000) NB37 NB adaptive37
+|   |   |   |   |   |   REGION > 4.091: F (88.500) NB38 NB adaptive38
+drug_class = butrans: 
+|   EGEOLOC <= 8.455: NF (1757.000) NB39 NB adaptive39
+|   EGEOLOC > 8.455: 
+|   |   EGEOLOC <= 65.727: 
+|   |   |   AGEGRP <= 2.273: 
+|   |   |   |   AGEGRP <= 1.091: NF (129.000) NB40 NB adaptive40
+|   |   |   |   AGEGRP > 1.091: 
+|   |   |   |   |   REGION <= 2.455: NF (1694.227) NB41 NB adaptive41
+|   |   |   |   |   REGION > 2.455: 
+|   |   |   |   |   |   ADMTYP <= 4.273: NF (1883.716) NB42 NB adaptive42
+|   |   |   |   |   |   ADMTYP > 4.273: NF (31.284) NB43 NB adaptive43
+|   |   |   AGEGRP > 2.273: 
+|   |   |   |   EGEOLOC <= 35.545: 
+|   |   |   |   |   ADMTYP <= 2.636: 
+|   |   |   |   |   |   REGION <= 1.727: 
+|   |   |   |   |   |   |   AGEGRP <= 3.182: NF (423.000) NB44 NB adaptive44
+|   |   |   |   |   |   |   AGEGRP > 3.182: NF (1481.000) NB45 NB adaptive45
+|   |   |   |   |   |   REGION > 1.727: 
+|   |   |   |   |   |   |   SEX <= 1.455: NF (1464.544) NB46 NB adaptive46
+|   |   |   |   |   |   |   SEX > 1.455: 
+|   |   |   |   |   |   |   |   EGEOLOC <= 26.273: NF (1805.983) NB47 NB adaptive47
+|   |   |   |   |   |   |   |   EGEOLOC > 26.273: NF (1046.017) NB48 NB adaptive48
+|   |   |   |   |   ADMTYP > 2.636: NF (1097.613) NB49 NB adaptive49
+|   |   |   |   EGEOLOC > 35.545: 
+|   |   |   |   |   REGION <= 3.182: 
+|   |   |   |   |   |   REGION <= 2.818: NF (101.772) NB50 NB adaptive50
+|   |   |   |   |   |   REGION > 2.818: 
+|   |   |   |   |   |   |   EGEOLOC <= 50.182: 
+|   |   |   |   |   |   |   |   ADMTYP <= 2.455: 
+|   |   |   |   |   |   |   |   |   SEX <= 1.364: NF (1200.651) NB51 NB adaptive51
+|   |   |   |   |   |   |   |   |   SEX > 1.364: NF (2633.349) NB52 NB adaptive52
+|   |   |   |   |   |   |   |   ADMTYP > 2.455: NF (1002.343) NB53 NB adaptive53
+|   |   |   |   |   |   |   EGEOLOC > 50.182: NF (36.677) NB54 NB adaptive54
+|   |   |   |   |   REGION > 3.182: 
+|   |   |   |   |   |   EGEOLOC <= 40.455: NF (177.000) NB55 NB adaptive55
+|   |   |   |   |   |   EGEOLOC > 40.455: 
+|   |   |   |   |   |   |   REGION <= 4.091: 
+|   |   |   |   |   |   |   |   ADMTYP <= 2.818: NF (2121.895) NB56 NB adaptive56
+|   |   |   |   |   |   |   |   ADMTYP > 2.818: NF (330.105) NB57 NB adaptive57
+|   |   |   |   |   |   |   REGION > 4.091: NF (829.500) NB58 NB adaptive58
+|   |   EGEOLOC > 65.727: NF (159.267) NB59 NB adaptive59
+
+Time taken to build model: 2.16 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances     1018297               97.1125 %
+Incorrectly Classified Instances     30278                2.8875 %
+Kappa statistic                          0.0413
+Mean absolute error                      0.0674
+Root mean squared error                  0.1456
+Relative absolute error                120.7806 %
+Root relative squared error             87.1387 %
+Total Number of Instances          1048575     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.023    0.001    0.450      0.023    0.044      0.097    0.968     0.353     F
+                 0.999    0.977    0.972      0.999    0.985      0.097    0.968     0.999     NF
+Weighted Avg.    0.971    0.949    0.957      0.971    0.958      0.097    0.968     0.980     
+
+=== Confusion Matrix ===
+
+       a       b   <-- classified as
+     696   29428 |       a = F
+     850 1017601 |       b = NF
+
