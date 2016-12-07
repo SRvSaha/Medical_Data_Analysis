@@ -11,7 +11,7 @@ Attributes:   8,Test Mode,Predicting Class,ML Algorithm,Correct Classify %,Error
 ,,,SMO(linear),61.33%,79.38%
 ,,,Voted Perceptron,60.77%,80.53%
 ,,,Multilayer Perceptron,60.06%,90.62%
-,,,SGD Text,58.01%,100.00%
+,,,SGD Text,58.01%,86.19%
 ,,,ZeroR(BASELINE),58.01%,100.00%
 ,,,Naive Bayes Multinomial Text,58.01%,86.19%
 ,,,Naive Bayes,55.53%,90.36%
