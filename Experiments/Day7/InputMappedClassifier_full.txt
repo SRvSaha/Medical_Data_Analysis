@@ -1,0 +1,62 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.rules.ZeroR
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+ZeroR predicts class value: opana
+Attribute mappings:
+
+Model attributes        	    Incoming attributes
+------------------------	    ----------------
+(numeric) SEX           	--> 1 (numeric) SEX
+(numeric) AGEGRP        	--> 2 (numeric) AGEGRP
+(numeric) REGION        	--> 3 (numeric) REGION
+(nominal) Category      	--> 4 (nominal) Category
+(numeric) refill_count  	--> 5 (numeric) refill_count
+(numeric) ADMTYP        	--> 6 (numeric) ADMTYP
+(numeric) EGEOLOC       	--> 7 (numeric) EGEOLOC
+(nominal) class         	--> 8 (nominal) class
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       64428               58.0124 %
+Incorrectly Classified Instances     46631               41.9876 %
+Kappa statistic                          0     
+Mean absolute error                      0.4872
+Root mean squared error                  0.4935
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.580      1.000    0.734      0.000    0.500     0.580     opana
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.420     butrans
+Weighted Avg.    0.580    0.580    0.337      0.580    0.426      0.000    0.500     0.513     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 64428     0 |     a = opana
+ 46631     0 |     b = butrans
+
