@@ -1,0 +1,70 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.RandomizableFilteredClassifier -S 1 -F "weka.filters.unsupervised.attribute.RandomProjection -N 10 -R 42 -D Sparse1" -W weka.classifiers.lazy.IBk -- -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomizableFilteredClassifier using weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\"" on data filtered through weka.filters.unsupervised.attribute.RandomProjection -N 10 -R -189920459 -D Sparse1
+
+Filtered Header
+@relation srv-weka.filters.supervised.attribute.NominalToBinary-weka.filters.unsupervised.attribute.RandomProjection-N10-R-189920459-DSparse1
+
+@attribute K1 numeric
+@attribute K2 numeric
+@attribute K3 numeric
+@attribute K4 numeric
+@attribute K5 numeric
+@attribute K6 numeric
+@attribute K7 numeric
+@attribute K8 numeric
+@attribute K9 numeric
+@attribute K10 numeric
+@attribute class {opana,butrans}
+
+@data
+
+
+Classifier Model
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.09 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       78663               70.8299 %
+Incorrectly Classified Instances     32396               29.1701 %
+Kappa statistic                          0.393 
+Mean absolute error                      0.3392
+Root mean squared error                  0.4387
+Relative absolute error                 69.6381 %
+Root relative squared error             88.8837 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.784    0.397    0.732      0.784    0.757      0.394    0.781     0.829     opana
+                 0.603    0.216    0.669      0.603    0.635      0.394    0.781     0.711     butrans
+Weighted Avg.    0.708    0.321    0.706      0.708    0.706      0.394    0.781     0.780     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 50527 13901 |     a = opana
+ 18495 28136 |     b = butrans
+
