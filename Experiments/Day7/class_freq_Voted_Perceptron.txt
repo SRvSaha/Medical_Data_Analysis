@@ -1,0 +1,47 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.VotedPerceptron -I 1 -E 1.0 -S 1 -M 10000
+Relation:     data_class_freq
+Instances:    1048575
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              ADMTYP
+              EGEOLOC
+              drug_class
+              refill_freq_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+VotedPerceptron: Number of perceptrons=10000
+
+Time taken to build model: 68.28 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances     1018018               97.0859 %
+Incorrectly Classified Instances     30557                2.9141 %
+Kappa statistic                          0.0058
+Mean absolute error                      0.0291
+Root mean squared error                  0.1707
+Relative absolute error                 52.218  %
+Root relative squared error            102.1948 %
+Total Number of Instances          1048575     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.004    0.001    0.166      0.004    0.007      0.021    0.502     0.029     F
+                 0.999    0.996    0.971      0.999    0.985      0.021    0.502     0.971     NF
+Weighted Avg.    0.971    0.968    0.948      0.971    0.957      0.021    0.502     0.944     
+
+=== Confusion Matrix ===
+
+       a       b   <-- classified as
+     108   30016 |       a = F
+     541 1017910 |       b = NF
+
