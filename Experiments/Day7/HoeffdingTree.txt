@@ -1,0 +1,161 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.HoeffdingTree -L 2 -S 1 -E 1.0E-7 -H 0.05 -M 0.01 -G 200.0 -N 0.0
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+AGEGRP <= 1.364: opana (204.500) NB1 NB adaptive1
+AGEGRP > 1.364: 
+|   refill_count <= 21.000: 
+|   |   AGEGRP <= 2.273: 
+|   |   |   refill_count <= 10.091: 
+|   |   |   |   EGEOLOC <= 9.545: butrans (291.000) NB2 NB adaptive2
+|   |   |   |   EGEOLOC > 9.545: 
+|   |   |   |   |   refill_count <= 5.091: 
+|   |   |   |   |   |   EGEOLOC <= 25.455: opana (1033.152) NB3 NB adaptive3
+|   |   |   |   |   |   EGEOLOC > 25.455: 
+|   |   |   |   |   |   |   Category = inpatients: 
+|   |   |   |   |   |   |   |   REGION <= 2.818: butrans (49.853) NB4 NB adaptive4
+|   |   |   |   |   |   |   |   REGION > 2.818: butrans (509.147) NB5 NB adaptive5
+|   |   |   |   |   |   |   Category = outpatients: butrans (137.000) NB6 NB adaptive6
+|   |   |   |   |   refill_count > 5.091: 
+|   |   |   |   |   |   REGION <= 1.364: opana (138.500) NB7 NB adaptive7
+|   |   |   |   |   |   REGION > 1.364: opana (461.500) NB8 NB adaptive8
+|   |   |   refill_count > 10.091: opana (1251.033) NB9 NB adaptive9
+|   |   AGEGRP > 2.273: 
+|   |   |   Category = inpatients: 
+|   |   |   |   refill_count <= 4.091: 
+|   |   |   |   |   REGION <= 4.273: 
+|   |   |   |   |   |   AGEGRP <= 3.364: 
+|   |   |   |   |   |   |   EGEOLOC <= 9.455: butrans (247.500) NB10 NB adaptive10
+|   |   |   |   |   |   |   EGEOLOC > 9.455: 
+|   |   |   |   |   |   |   |   SEX <= 1.364: 
+|   |   |   |   |   |   |   |   |   refill_count <= 2.091: opana (1383.968) NB11 NB adaptive11
+|   |   |   |   |   |   |   |   |   refill_count > 2.091: opana (397.032) NB12 NB adaptive12
+|   |   |   |   |   |   |   |   SEX > 1.364: 
+|   |   |   |   |   |   |   |   |   refill_count <= 2.636: 
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 2.818: opana (1495.051) NB13 NB adaptive13
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 2.818: butrans (312.070) NB14 NB adaptive14
+|   |   |   |   |   |   |   |   |   refill_count > 2.636: opana (675.667) NB15 NB adaptive15
+|   |   |   |   |   |   AGEGRP > 3.364: 
+|   |   |   |   |   |   |   SEX <= 1.364: 
+|   |   |   |   |   |   |   |   EGEOLOC <= 35.909: 
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 6.727: 
+|   |   |   |   |   |   |   |   |   |   REGION <= 1.182: opana (202.000) NB16 NB adaptive16
+|   |   |   |   |   |   |   |   |   |   REGION > 1.182: butrans (45.000) NB17 NB adaptive17
+|   |   |   |   |   |   |   |   |   EGEOLOC > 6.727: 
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 9.545: butrans (75.500) NB18 NB adaptive18
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 9.545: 
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 3.182: 
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count <= 2.091: opana (501.621) NB19 NB adaptive19
+|   |   |   |   |   |   |   |   |   |   |   |   refill_count > 2.091: opana (137.379) NB20 NB adaptive20
+|   |   |   |   |   |   |   |   |   |   |   REGION > 3.182: opana (94.326) NB21 NB adaptive21
+|   |   |   |   |   |   |   |   EGEOLOC > 35.909: 
+|   |   |   |   |   |   |   |   |   REGION <= 2.909: butrans (88.490) NB22 NB adaptive22
+|   |   |   |   |   |   |   |   |   REGION > 2.909: 
+|   |   |   |   |   |   |   |   |   |   refill_count <= 2.364: 
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 62.364: butrans (513.163) NB23 NB adaptive23
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 62.364: butrans (53.837) NB24 NB adaptive24
+|   |   |   |   |   |   |   |   |   |   refill_count > 2.364: opana (588.714) NB25 NB adaptive25
+|   |   |   |   |   |   |   SEX > 1.364: 
+|   |   |   |   |   |   |   |   REGION <= 2.091: 
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 4.727: 
+|   |   |   |   |   |   |   |   |   |   REGION <= 1.091: butrans (118.000) NB26 NB adaptive26
+|   |   |   |   |   |   |   |   |   |   REGION > 1.091: opana (82.500) NB27 NB adaptive27
+|   |   |   |   |   |   |   |   |   EGEOLOC > 4.727: 
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 4.545: 
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 9.636: opana (81.500) NB28 NB adaptive28
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 9.636: opana (731.500) NB29 NB adaptive29
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 4.545: 
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 12.273: opana (211.000) NB30 NB adaptive30
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 12.273: 
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 1.091: 
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 17.455: opana (227.000) NB31 NB adaptive31
+|   |   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 17.455: butrans (36.500) NB32 NB adaptive32
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 1.091: opana (315.413) NB33 NB adaptive33
+|   |   |   |   |   |   |   |   REGION > 2.091: 
+|   |   |   |   |   |   |   |   |   EGEOLOC <= 6.818: butrans (83.000) NB34 NB adaptive34
+|   |   |   |   |   |   |   |   |   EGEOLOC > 6.818: 
+|   |   |   |   |   |   |   |   |   |   refill_count <= 2.364: 
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 28.545: opana (62.500) NB35 NB adaptive35
+|   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 28.545: 
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC <= 46.455: butrans (1548.946) NB36 NB adaptive36
+|   |   |   |   |   |   |   |   |   |   |   |   EGEOLOC > 46.455: butrans (1881.054) NB37 NB adaptive37
+|   |   |   |   |   |   |   |   |   |   refill_count > 2.364: butrans (1598.698) NB38 NB adaptive38
+|   |   |   |   |   REGION > 4.273: butrans (607.343) NB39 NB adaptive39
+|   |   |   |   refill_count > 4.091: 
+|   |   |   |   |   SEX <= 1.364: 
+|   |   |   |   |   |   ADMTYP <= 2.455: 
+|   |   |   |   |   |   |   EGEOLOC <= 10.455: opana (170.000) NB40 NB adaptive40
+|   |   |   |   |   |   |   EGEOLOC > 10.455: 
+|   |   |   |   |   |   |   |   refill_count <= 13.727: opana (1985.183) NB41 NB adaptive41
+|   |   |   |   |   |   |   |   refill_count > 13.727: opana (912.817) NB42 NB adaptive42
+|   |   |   |   |   |   ADMTYP > 2.455: opana (1040.326) NB43 NB adaptive43
+|   |   |   |   |   SEX > 1.364: 
+|   |   |   |   |   |   refill_count <= 13.727: 
+|   |   |   |   |   |   |   EGEOLOC <= 16.909: 
+|   |   |   |   |   |   |   |   EGEOLOC <= 2.364: opana (192.000) NB44 NB adaptive44
+|   |   |   |   |   |   |   |   EGEOLOC > 2.364: opana (960.000) NB45 NB adaptive45
+|   |   |   |   |   |   |   EGEOLOC > 16.909: 
+|   |   |   |   |   |   |   |   REGION <= 1.727: opana (59.993) NB46 NB adaptive46
+|   |   |   |   |   |   |   |   REGION > 1.727: 
+|   |   |   |   |   |   |   |   |   REGION <= 3.636: 
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 57.909: opana (1989.000) NB47 NB adaptive47
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 57.909: butrans (42.536) NB48 NB adaptive48
+|   |   |   |   |   |   |   |   |   REGION > 3.636: 
+|   |   |   |   |   |   |   |   |   |   EGEOLOC <= 35.909: opana (80.500) NB49 NB adaptive49
+|   |   |   |   |   |   |   |   |   |   EGEOLOC > 35.909: opana (490.500) NB50 NB adaptive50
+|   |   |   |   |   |   refill_count > 13.727: 
+|   |   |   |   |   |   |   EGEOLOC <= 59.182: opana (2099.352) NB51 NB adaptive51
+|   |   |   |   |   |   |   EGEOLOC > 59.182: opana (115.648) NB52 NB adaptive52
+|   |   |   Category = outpatients: butrans (2921.000) NB53 NB adaptive53
+|   refill_count > 21.000: 
+|   |   refill_count <= 37.636: 
+|   |   |   Category = inpatients: 
+|   |   |   |   EGEOLOC <= 9.545: opana (252.773) NB54 NB adaptive54
+|   |   |   |   EGEOLOC > 9.545: opana (2672.227) NB55 NB adaptive55
+|   |   |   Category = outpatients: butrans (114.000) NB56 NB adaptive56
+|   |   refill_count > 37.636: 
+|   |   |   refill_count <= 48.909: opana (1216.717) NB57 NB adaptive57
+|   |   |   refill_count > 48.909: opana (2115.283) NB58 NB adaptive58
+
+Time taken to build model: 0.66 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       70175               63.1871 %
+Incorrectly Classified Instances     40884               36.8129 %
+Kappa statistic                          0.2044
+Mean absolute error                      0.43  
+Root mean squared error                  0.4719
+Relative absolute error                 88.2754 %
+Root relative squared error             95.6234 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.814    0.620    0.645      0.814    0.720      0.217    0.666     0.725     opana
+                 0.380    0.186    0.597      0.380    0.464      0.217    0.666     0.590     butrans
+Weighted Avg.    0.632    0.438    0.625      0.632    0.612      0.217    0.666     0.669     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 52462 11966 |     a = opana
+ 28918 17713 |     b = butrans
+
