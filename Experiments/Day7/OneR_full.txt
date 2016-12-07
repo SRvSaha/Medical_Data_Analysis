@@ -1,0 +1,51 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.OneR -B 6
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Category:
+	inpatients	-> opana
+	outpatients	-> butrans
+(68111/111059 instances correct)
+
+
+Time taken to build model: 0.2 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       68111               61.3287 %
+Incorrectly Classified Instances     42948               38.6713 %
+Kappa statistic                          0.0905
+Mean absolute error                      0.3867
+Root mean squared error                  0.6219
+Relative absolute error                 79.3811 %
+Root relative squared error            126.0009 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.921    0.600      1.000    0.750      0.217    0.540     0.600     opana
+                 0.079    0.000    0.999      0.079    0.147      0.217    0.540     0.466     butrans
+Weighted Avg.    0.613    0.534    0.767      0.613    0.497      0.217    0.540     0.544     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 64423     5 |     a = opana
+ 42943  3688 |     b = butrans
+
