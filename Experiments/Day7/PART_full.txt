@@ -1,0 +1,3371 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -M 2 -C 0.25 -Q 1
+Relation:     srv
+Instances:    111059
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              EGEOLOC
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+Category = outpatients: butrans (3693.0/5.0)
+
+refill_count > 10 AND
+refill_count > 49 AND
+refill_count > 62: opana (1066.0)
+
+refill_count > 10 AND
+refill_count > 31 AND
+refill_count > 49 AND
+SEX <= 1 AND
+refill_count <= 60: opana (490.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+refill_count > 31 AND
+refill_count > 49 AND
+EGEOLOC > 17 AND
+SEX > 1 AND
+ADMTYP > 1 AND
+REGION <= 3 AND
+EGEOLOC <= 43: opana (164.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+refill_count > 31 AND
+refill_count > 49 AND
+REGION > 3: opana (136.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+SEX <= 1 AND
+AGEGRP <= 3 AND
+EGEOLOC <= 11: opana (144.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+refill_count > 31 AND
+refill_count > 52 AND
+SEX > 1: opana (226.0/4.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+SEX <= 1 AND
+refill_count > 30 AND
+EGEOLOC <= 59 AND
+ADMTYP > 1 AND
+ADMTYP <= 3 AND
+REGION > 1 AND
+refill_count <= 46 AND
+REGION > 2: opana (370.0/18.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+SEX <= 1 AND
+AGEGRP <= 3 AND
+AGEGRP <= 2 AND
+REGION > 2 AND
+ADMTYP > 1 AND
+refill_count <= 28: opana (158.0/1.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+SEX <= 1 AND
+refill_count > 30 AND
+ADMTYP > 1 AND
+REGION <= 1: opana (137.99/2.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+SEX <= 1 AND
+refill_count > 46 AND
+EGEOLOC <= 53: opana (153.01/1.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+SEX <= 1 AND
+AGEGRP <= 3 AND
+refill_count <= 20 AND
+refill_count <= 19 AND
+AGEGRP > 2 AND
+EGEOLOC <= 42 AND
+ADMTYP > 1: opana (88.69)
+
+refill_count > 10 AND
+refill_count > 17 AND
+refill_count > 31 AND
+EGEOLOC <= 4 AND
+refill_count > 33: opana (108.0/1.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+SEX <= 1 AND
+AGEGRP <= 3 AND
+AGEGRP <= 2 AND
+REGION > 1 AND
+refill_count > 21 AND
+REGION <= 2: opana (77.0/2.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+SEX <= 1 AND
+ADMTYP > 1 AND
+refill_count <= 20 AND
+REGION > 1 AND
+EGEOLOC <= 59 AND
+EGEOLOC <= 47 AND
+REGION > 2 AND
+AGEGRP > 3 AND
+AGEGRP <= 4: opana (114.54)
+
+refill_count > 10 AND
+refill_count > 17 AND
+refill_count > 31 AND
+ADMTYP > 1 AND
+ADMTYP <= 2 AND
+EGEOLOC > 53: opana (230.0/8.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+SEX <= 1 AND
+refill_count > 25 AND
+refill_count <= 26: opana (147.0/5.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+refill_count > 31 AND
+EGEOLOC <= 49 AND
+SEX <= 1 AND
+refill_count <= 40 AND
+refill_count > 32 AND
+refill_count > 35 AND
+REGION > 1 AND
+REGION <= 2: opana (121.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+EGEOLOC <= 44 AND
+EGEOLOC > 41 AND
+ADMTYP <= 3 AND
+refill_count <= 42 AND
+REGION > 2 AND
+SEX <= 1 AND
+refill_count > 18 AND
+AGEGRP > 3 AND
+EGEOLOC > 42 AND
+EGEOLOC > 43: opana (108.0/6.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+AGEGRP > 1 AND
+EGEOLOC <= 44 AND
+EGEOLOC > 41 AND
+ADMTYP <= 3 AND
+refill_count > 42: opana (92.0/1.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+AGEGRP > 1 AND
+SEX <= 1 AND
+AGEGRP <= 3 AND
+AGEGRP <= 2 AND
+EGEOLOC > 18 AND
+REGION > 2: opana (105.0/8.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+AGEGRP > 1 AND
+EGEOLOC <= 44 AND
+AGEGRP <= 2 AND
+REGION <= 1 AND
+refill_count <= 32 AND
+SEX > 1 AND
+EGEOLOC <= 11: opana (48.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+AGEGRP > 1 AND
+EGEOLOC <= 44 AND
+refill_count > 29 AND
+ADMTYP > 3 AND
+refill_count > 33: opana (158.3/7.0)
+
+refill_count > 10 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 55 AND
+SEX <= 1: opana (141.0/2.0)
+
+refill_count > 10 AND
+refill_count > 17 AND
+AGEGRP > 1 AND
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+AGEGRP <= 3 AND
+EGEOLOC <= 43 AND
+EGEOLOC <= 39 AND
+REGION > 2: opana (109.31/5.0)
+
+refill_count > 10 AND
+EGEOLOC <= 47 AND
+refill_count > 17 AND
+EGEOLOC <= 44 AND
+EGEOLOC > 37 AND
+REGION > 2 AND
+refill_count <= 42 AND
+refill_count <= 23 AND
+EGEOLOC <= 39 AND
+EGEOLOC <= 38 AND
+refill_count <= 22: opana (59.0/2.0)
+
+refill_count > 10 AND
+EGEOLOC <= 47 AND
+refill_count > 17 AND
+EGEOLOC <= 44 AND
+EGEOLOC > 41 AND
+ADMTYP > 3: opana (64.0)
+
+refill_count > 10 AND
+EGEOLOC <= 47 AND
+refill_count > 26 AND
+AGEGRP <= 2 AND
+refill_count <= 43 AND
+EGEOLOC > 11 AND
+EGEOLOC <= 42: opana (169.0/2.0)
+
+refill_count > 10 AND
+EGEOLOC <= 47 AND
+refill_count > 17 AND
+ADMTYP <= 2 AND
+refill_count > 29 AND
+AGEGRP > 2 AND
+SEX <= 1 AND
+AGEGRP > 3 AND
+refill_count <= 39 AND
+ADMTYP <= 1: opana (173.0/10.0)
+
+refill_count > 9 AND
+EGEOLOC <= 46 AND
+refill_count > 15 AND
+EGEOLOC > 41 AND
+ADMTYP <= 3 AND
+REGION > 2 AND
+refill_count <= 30 AND
+refill_count > 24: opana (128.0/3.0)
+
+refill_count > 9 AND
+EGEOLOC <= 46 AND
+refill_count > 15 AND
+ADMTYP > 1 AND
+REGION <= 1 AND
+EGEOLOC > 12 AND
+ADMTYP <= 2 AND
+AGEGRP > 3 AND
+SEX > 1: opana (142.0/11.0)
+
+refill_count > 9 AND
+EGEOLOC <= 46 AND
+refill_count > 15 AND
+ADMTYP > 1 AND
+refill_count > 35 AND
+AGEGRP > 2 AND
+EGEOLOC <= 33 AND
+EGEOLOC > 22: opana (90.0)
+
+refill_count > 9 AND
+EGEOLOC <= 46 AND
+REGION <= 3 AND
+refill_count > 15 AND
+EGEOLOC <= 19 AND
+ADMTYP > 1 AND
+refill_count <= 16: opana (292.0/21.0)
+
+refill_count > 7 AND
+refill_count > 17 AND
+refill_count > 48 AND
+REGION > 2: opana (47.0/1.0)
+
+refill_count > 7 AND
+refill_count > 17 AND
+SEX <= 1 AND
+refill_count <= 22 AND
+AGEGRP <= 4 AND
+AGEGRP > 2 AND
+ADMTYP <= 3 AND
+REGION <= 1: opana (79.0)
+
+refill_count > 7 AND
+refill_count > 17 AND
+ADMTYP <= 2 AND
+ADMTYP > 1 AND
+REGION <= 2 AND
+EGEOLOC <= 26 AND
+SEX <= 1 AND
+refill_count <= 41 AND
+EGEOLOC > 18 AND
+EGEOLOC <= 25 AND
+refill_count <= 33 AND
+AGEGRP > 3: opana (148.0)
+
+refill_count > 7 AND
+refill_count > 17 AND
+ADMTYP <= 2 AND
+ADMTYP > 1 AND
+refill_count > 34 AND
+SEX > 1 AND
+REGION <= 3 AND
+EGEOLOC > 37 AND
+refill_count <= 38: opana (54.0)
+
+refill_count > 7 AND
+refill_count > 17 AND
+ADMTYP <= 2 AND
+ADMTYP > 1 AND
+refill_count > 36 AND
+SEX <= 1 AND
+refill_count > 41: opana (26.0)
+
+refill_count > 7 AND
+refill_count > 17 AND
+ADMTYP <= 2 AND
+ADMTYP > 1 AND
+REGION <= 2 AND
+EGEOLOC <= 26 AND
+SEX > 1 AND
+refill_count > 18 AND
+REGION > 1: opana (710.94/121.0)
+
+refill_count > 7 AND
+refill_count > 10 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 55 AND
+AGEGRP <= 4: opana (134.0/5.0)
+
+refill_count > 7 AND
+SEX <= 1 AND
+ADMTYP > 3 AND
+EGEOLOC <= 63 AND
+EGEOLOC > 41 AND
+REGION <= 3: opana (213.5/15.0)
+
+refill_count > 7 AND
+EGEOLOC <= 44 AND
+refill_count > 9 AND
+EGEOLOC > 38 AND
+EGEOLOC <= 39 AND
+refill_count > 15: opana (88.0)
+
+refill_count > 7 AND
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+AGEGRP <= 3 AND
+EGEOLOC <= 43 AND
+EGEOLOC > 16 AND
+EGEOLOC <= 18 AND
+refill_count > 10 AND
+ADMTYP > 1 AND
+ADMTYP <= 3: opana (130.0/2.0)
+
+refill_count > 6 AND
+refill_count > 10 AND
+EGEOLOC <= 47 AND
+EGEOLOC > 41 AND
+REGION > 2 AND
+refill_count > 11 AND
+ADMTYP > 3 AND
+refill_count <= 19: opana (48.0)
+
+refill_count > 6 AND
+refill_count > 16 AND
+SEX <= 1 AND
+refill_count <= 45 AND
+EGEOLOC > 58 AND
+AGEGRP <= 3: opana (86.0/2.0)
+
+refill_count > 6 AND
+refill_count > 10 AND
+EGEOLOC <= 48 AND
+AGEGRP > 2 AND
+refill_count > 25 AND
+refill_count <= 27 AND
+REGION <= 2 AND
+AGEGRP <= 3: opana (56.0)
+
+refill_count > 6 AND
+refill_count > 10 AND
+EGEOLOC <= 48 AND
+refill_count > 31 AND
+AGEGRP > 2 AND
+SEX > 1 AND
+refill_count <= 40 AND
+refill_count > 37 AND
+refill_count > 38 AND
+AGEGRP > 3: opana (56.0/4.0)
+
+refill_count > 6 AND
+refill_count > 10 AND
+EGEOLOC <= 48 AND
+AGEGRP > 2 AND
+SEX <= 1 AND
+EGEOLOC <= 25 AND
+refill_count <= 34 AND
+EGEOLOC > 7 AND
+EGEOLOC > 20 AND
+AGEGRP > 4: opana (50.0/2.0)
+
+refill_count > 6 AND
+refill_count > 10 AND
+EGEOLOC <= 48 AND
+AGEGRP > 2 AND
+refill_count > 31 AND
+SEX > 1 AND
+refill_count <= 33 AND
+REGION > 2 AND
+ADMTYP <= 2 AND
+ADMTYP > 1: opana (73.0)
+
+refill_count > 6 AND
+refill_count > 10 AND
+EGEOLOC <= 48 AND
+AGEGRP > 2 AND
+SEX <= 1 AND
+EGEOLOC <= 19 AND
+EGEOLOC > 18 AND
+refill_count > 13 AND
+refill_count <= 14: opana (56.0)
+
+refill_count > 6 AND
+refill_count > 10 AND
+EGEOLOC <= 48 AND
+EGEOLOC > 34 AND
+REGION <= 2 AND
+EGEOLOC > 41: opana (47.0/1.0)
+
+refill_count > 6 AND
+refill_count > 10 AND
+EGEOLOC <= 48 AND
+AGEGRP > 2 AND
+SEX <= 1 AND
+EGEOLOC <= 19 AND
+EGEOLOC > 7 AND
+REGION <= 1 AND
+ADMTYP <= 3 AND
+AGEGRP <= 4 AND
+refill_count <= 23 AND
+refill_count <= 15 AND
+ADMTYP > 1: opana (59.46/3.0)
+
+refill_count > 6 AND
+refill_count > 16 AND
+SEX <= 1 AND
+refill_count <= 45 AND
+AGEGRP > 2 AND
+REGION > 3 AND
+ADMTYP <= 3 AND
+ADMTYP > 1 AND
+REGION > 4 AND
+refill_count <= 23: opana (18.0)
+
+refill_count > 6 AND
+refill_count > 16 AND
+SEX <= 1 AND
+refill_count <= 45 AND
+AGEGRP > 2 AND
+AGEGRP <= 4 AND
+refill_count <= 23 AND
+ADMTYP <= 3 AND
+AGEGRP <= 3 AND
+ADMTYP <= 1: opana (84.0/6.0)
+
+refill_count > 6 AND
+refill_count > 17 AND
+ADMTYP <= 2 AND
+SEX <= 1 AND
+REGION > 3 AND
+ADMTYP > 1 AND
+refill_count <= 22: opana (55.0/2.0)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+refill_count > 9 AND
+REGION <= 3 AND
+EGEOLOC > 41 AND
+refill_count > 11 AND
+refill_count <= 23 AND
+AGEGRP <= 4 AND
+refill_count > 19 AND
+EGEOLOC > 43: opana (48.0)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+refill_count > 9 AND
+REGION <= 3 AND
+EGEOLOC > 34 AND
+EGEOLOC <= 36 AND
+refill_count <= 24 AND
+AGEGRP <= 2 AND
+refill_count > 10 AND
+ADMTYP <= 3: opana (69.0/1.0)
+
+refill_count > 6 AND
+refill_count > 17 AND
+REGION <= 1 AND
+EGEOLOC > 12 AND
+AGEGRP <= 3 AND
+ADMTYP <= 2: opana (76.0/3.0)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+refill_count > 9 AND
+EGEOLOC > 41 AND
+refill_count > 11 AND
+refill_count <= 23 AND
+AGEGRP <= 4 AND
+refill_count <= 16 AND
+refill_count > 12 AND
+ADMTYP > 1 AND
+SEX > 1: opana (90.0/1.0)
+
+refill_count > 6 AND
+refill_count > 17 AND
+AGEGRP > 3 AND
+refill_count > 46 AND
+AGEGRP > 4: opana (33.0/1.0)
+
+refill_count > 6 AND
+refill_count > 17 AND
+AGEGRP > 3 AND
+REGION <= 3 AND
+EGEOLOC > 34 AND
+EGEOLOC <= 35: opana (67.0/4.0)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+ADMTYP > 3 AND
+EGEOLOC <= 11 AND
+EGEOLOC > 5: opana (29.0)
+
+refill_count > 6 AND
+refill_count > 16 AND
+SEX <= 1 AND
+refill_count <= 45 AND
+AGEGRP > 3 AND
+refill_count <= 19 AND
+AGEGRP <= 4 AND
+EGEOLOC <= 33: opana (111.46/1.0)
+
+refill_count > 6 AND
+refill_count > 17 AND
+AGEGRP > 3 AND
+REGION <= 3 AND
+EGEOLOC > 35 AND
+ADMTYP > 3 AND
+refill_count > 19 AND
+EGEOLOC > 47: opana (42.06)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+ADMTYP > 3: opana (672.38/151.0)
+
+refill_count > 6 AND
+refill_count > 17 AND
+ADMTYP <= 2 AND
+SEX <= 1 AND
+REGION > 3 AND
+REGION <= 4 AND
+AGEGRP > 4 AND
+EGEOLOC > 53 AND
+refill_count <= 33 AND
+EGEOLOC <= 64 AND
+refill_count > 26: opana (58.0/3.0)
+
+refill_count > 6 AND
+EGEOLOC <= 47 AND
+refill_count > 9 AND
+AGEGRP > 3 AND
+refill_count > 42 AND
+EGEOLOC > 36: opana (44.8)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+refill_count > 9 AND
+AGEGRP > 3 AND
+EGEOLOC > 34 AND
+refill_count <= 24 AND
+refill_count > 17 AND
+EGEOLOC <= 42 AND
+ADMTYP > 1 AND
+EGEOLOC > 37: opana (147.0/3.0)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+refill_count > 9 AND
+EGEOLOC <= 19 AND
+SEX <= 1 AND
+AGEGRP > 2 AND
+EGEOLOC > 11 AND
+AGEGRP > 3 AND
+refill_count <= 37 AND
+REGION <= 1 AND
+ADMTYP <= 1 AND
+AGEGRP <= 4 AND
+refill_count <= 24: opana (57.23/2.0)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+refill_count > 9 AND
+REGION <= 3 AND
+EGEOLOC <= 19 AND
+EGEOLOC <= 1 AND
+refill_count > 10 AND
+SEX <= 1: opana (24.0)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+refill_count > 9 AND
+REGION <= 3 AND
+AGEGRP > 2 AND
+EGEOLOC <= 33 AND
+REGION > 2 AND
+EGEOLOC <= 13 AND
+AGEGRP > 4: opana (24.0)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+refill_count > 9 AND
+REGION <= 3 AND
+AGEGRP > 2 AND
+EGEOLOC <= 33 AND
+REGION > 2 AND
+refill_count <= 25 AND
+refill_count > 24: opana (34.0/1.0)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+refill_count > 9 AND
+REGION <= 3 AND
+EGEOLOC <= 19 AND
+refill_count <= 13 AND
+EGEOLOC > 17 AND
+AGEGRP > 4 AND
+refill_count > 12: opana (58.0/2.0)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+AGEGRP <= 1 AND
+refill_count <= 16: opana (32.0)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+refill_count > 9 AND
+REGION <= 3 AND
+AGEGRP > 2 AND
+EGEOLOC <= 33 AND
+REGION > 2 AND
+refill_count > 28 AND
+AGEGRP <= 4 AND
+SEX > 1: opana (31.0)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+EGEOLOC <= 19 AND
+AGEGRP > 2 AND
+EGEOLOC > 12 AND
+AGEGRP > 3 AND
+refill_count <= 37 AND
+ADMTYP > 1 AND
+EGEOLOC > 18: opana (131.0/12.0)
+
+refill_count > 6 AND
+refill_count > 10 AND
+EGEOLOC <= 53 AND
+AGEGRP > 2 AND
+ADMTYP <= 2 AND
+EGEOLOC > 52 AND
+AGEGRP <= 4 AND
+SEX > 1 AND
+refill_count <= 14: opana (58.0/2.0)
+
+refill_count > 6 AND
+refill_count > 17 AND
+ADMTYP <= 2 AND
+ADMTYP <= 1 AND
+EGEOLOC > 11 AND
+SEX > 1: opana (1821.3/497.42)
+
+refill_count > 5 AND
+EGEOLOC <= 47 AND
+refill_count > 9 AND
+EGEOLOC <= 19 AND
+refill_count <= 12 AND
+EGEOLOC > 17 AND
+EGEOLOC > 18 AND
+SEX > 1 AND
+AGEGRP > 2: opana (212.0/22.0)
+
+refill_count > 5 AND
+EGEOLOC <= 47 AND
+SEX <= 1 AND
+AGEGRP <= 3 AND
+refill_count <= 14 AND
+EGEOLOC > 41 AND
+refill_count > 7 AND
+EGEOLOC <= 46: opana (129.0/4.0)
+
+refill_count > 5 AND
+REGION <= 1 AND
+ADMTYP > 1 AND
+AGEGRP <= 2 AND
+refill_count <= 7 AND
+SEX > 1 AND
+ADMTYP <= 2: opana (88.0/7.0)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+EGEOLOC <= 19 AND
+AGEGRP > 2 AND
+EGEOLOC > 12 AND
+AGEGRP > 4 AND
+ADMTYP > 1 AND
+REGION > 1 AND
+refill_count <= 17: opana (141.0/16.0)
+
+refill_count > 6 AND
+EGEOLOC <= 44 AND
+refill_count > 9 AND
+REGION <= 1 AND
+AGEGRP <= 2 AND
+refill_count <= 24 AND
+SEX > 1: opana (72.0/3.0)
+
+SEX <= 1 AND
+EGEOLOC <= 46 AND
+refill_count > 1 AND
+AGEGRP <= 4 AND
+REGION <= 3 AND
+AGEGRP > 2 AND
+ADMTYP > 1 AND
+refill_count <= 23 AND
+REGION <= 1 AND
+refill_count > 2 AND
+AGEGRP <= 3 AND
+EGEOLOC <= 12 AND
+EGEOLOC > 7: opana (69.6/1.0)
+
+refill_count > 6 AND
+EGEOLOC <= 47 AND
+SEX <= 1 AND
+REGION <= 1 AND
+ADMTYP > 1 AND
+EGEOLOC > 12 AND
+AGEGRP > 2: opana (145.0/23.0)
+
+SEX <= 1 AND
+EGEOLOC <= 46 AND
+refill_count > 1 AND
+AGEGRP <= 4 AND
+REGION <= 3 AND
+AGEGRP > 2 AND
+ADMTYP > 1 AND
+refill_count <= 23: opana (3865.29/1054.59)
+
+refill_count > 6 AND
+refill_count > 10 AND
+EGEOLOC <= 58 AND
+AGEGRP > 3 AND
+AGEGRP <= 4 AND
+refill_count <= 11 AND
+EGEOLOC <= 37 AND
+ADMTYP <= 3 AND
+SEX > 1 AND
+ADMTYP <= 1 AND
+REGION <= 4: opana (53.0/3.0)
+
+refill_count > 6 AND
+refill_count > 10 AND
+EGEOLOC <= 58 AND
+AGEGRP > 3 AND
+AGEGRP <= 4 AND
+EGEOLOC <= 18 AND
+ADMTYP > 1 AND
+SEX > 1 AND
+EGEOLOC > 17 AND
+refill_count <= 14: opana (55.0/3.0)
+
+refill_count > 6 AND
+refill_count > 16 AND
+ADMTYP <= 2 AND
+refill_count > 36 AND
+refill_count <= 40 AND
+SEX > 1 AND
+refill_count <= 38: opana (48.0)
+
+refill_count > 6 AND
+refill_count > 10 AND
+EGEOLOC <= 58 AND
+SEX <= 1 AND
+EGEOLOC > 41 AND
+AGEGRP <= 4 AND
+ADMTYP > 1 AND
+EGEOLOC > 47 AND
+ADMTYP <= 3 AND
+EGEOLOC <= 53 AND
+refill_count > 12 AND
+AGEGRP > 2 AND
+REGION <= 3 AND
+AGEGRP > 3: opana (87.0/12.0)
+
+refill_count > 6 AND
+EGEOLOC <= 47 AND
+refill_count > 9 AND
+AGEGRP > 3 AND
+EGEOLOC > 34 AND
+refill_count <= 20 AND
+SEX > 1 AND
+ADMTYP > 1 AND
+ADMTYP <= 3 AND
+EGEOLOC <= 42 AND
+EGEOLOC > 37 AND
+EGEOLOC <= 41 AND
+REGION <= 4 AND
+refill_count <= 14 AND
+refill_count > 13: opana (40.0)
+
+refill_count > 6 AND
+refill_count > 16 AND
+SEX <= 1 AND
+AGEGRP > 2 AND
+refill_count <= 45 AND
+ADMTYP <= 1 AND
+AGEGRP <= 4 AND
+AGEGRP > 3: opana (346.0/88.0)
+
+refill_count > 6 AND
+EGEOLOC <= 47 AND
+refill_count > 9 AND
+AGEGRP > 2 AND
+REGION <= 1 AND
+refill_count > 25 AND
+refill_count <= 28 AND
+ADMTYP <= 3: opana (56.0)
+
+refill_count > 6 AND
+EGEOLOC <= 47 AND
+EGEOLOC > 28 AND
+EGEOLOC <= 33 AND
+refill_count <= 27 AND
+refill_count > 7 AND
+refill_count <= 11 AND
+EGEOLOC > 32 AND
+ADMTYP > 1 AND
+SEX > 1 AND
+AGEGRP <= 4: opana (194.0/21.0)
+
+refill_count > 6 AND
+AGEGRP > 1 AND
+refill_count > 10 AND
+EGEOLOC <= 58 AND
+SEX <= 1 AND
+EGEOLOC > 49 AND
+AGEGRP <= 2: opana (21.0)
+
+refill_count > 6 AND
+AGEGRP > 1 AND
+EGEOLOC <= 47 AND
+refill_count > 9 AND
+AGEGRP > 3 AND
+EGEOLOC > 34 AND
+refill_count <= 20 AND
+SEX > 1 AND
+ADMTYP > 1 AND
+refill_count <= 13 AND
+AGEGRP <= 4: opana (148.0/22.0)
+
+refill_count > 6 AND
+AGEGRP > 1 AND
+refill_count > 16 AND
+refill_count <= 19 AND
+AGEGRP <= 2 AND
+SEX > 1 AND
+EGEOLOC <= 18: opana (40.0)
+
+refill_count > 6 AND
+AGEGRP > 1 AND
+SEX <= 1 AND
+EGEOLOC <= 33 AND
+ADMTYP <= 1 AND
+AGEGRP > 2 AND
+EGEOLOC > 9: opana (967.63/260.0)
+
+refill_count > 5 AND
+EGEOLOC <= 63 AND
+refill_count > 10 AND
+EGEOLOC <= 53 AND
+AGEGRP > 2 AND
+ADMTYP > 1 AND
+REGION <= 1 AND
+AGEGRP <= 4 AND
+EGEOLOC <= 4 AND
+refill_count > 18: opana (23.0)
+
+SEX <= 1 AND
+AGEGRP <= 1 AND
+EGEOLOC > 44: butrans (25.0)
+
+SEX <= 1 AND
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+AGEGRP <= 3 AND
+EGEOLOC > 32 AND
+EGEOLOC <= 33 AND
+refill_count <= 3 AND
+refill_count <= 1: opana (265.0/55.0)
+
+refill_count > 5 AND
+EGEOLOC <= 63 AND
+refill_count > 10 AND
+EGEOLOC <= 53 AND
+AGEGRP > 2 AND
+ADMTYP > 1 AND
+REGION <= 1 AND
+AGEGRP <= 4 AND
+AGEGRP > 3 AND
+ADMTYP <= 3 AND
+SEX <= 1 AND
+EGEOLOC > 9 AND
+refill_count > 27: opana (4.0)
+
+refill_count > 5 AND
+EGEOLOC <= 63 AND
+refill_count > 10 AND
+EGEOLOC <= 53 AND
+AGEGRP > 2 AND
+ADMTYP > 1 AND
+REGION <= 1 AND
+AGEGRP <= 4 AND
+refill_count <= 16 AND
+AGEGRP <= 3 AND
+ADMTYP <= 2: opana (36.0/1.0)
+
+refill_count > 5 AND
+EGEOLOC <= 63 AND
+refill_count > 10 AND
+EGEOLOC <= 53 AND
+AGEGRP > 2 AND
+AGEGRP > 3 AND
+ADMTYP > 1 AND
+EGEOLOC <= 12 AND
+ADMTYP > 3 AND
+refill_count <= 14 AND
+EGEOLOC <= 5: opana (20.07)
+
+refill_count > 5 AND
+EGEOLOC <= 63 AND
+refill_count > 10 AND
+EGEOLOC <= 53 AND
+AGEGRP > 2 AND
+AGEGRP > 3 AND
+ADMTYP > 1 AND
+ADMTYP <= 2 AND
+refill_count <= 21 AND
+REGION > 3 AND
+refill_count > 11 AND
+refill_count > 13 AND
+REGION > 4 AND
+refill_count <= 18 AND
+refill_count <= 17 AND
+SEX > 1 AND
+EGEOLOC <= 26: opana (37.0/7.0)
+
+refill_count > 5 AND
+EGEOLOC <= 63 AND
+refill_count > 10 AND
+EGEOLOC <= 53 AND
+AGEGRP > 2 AND
+EGEOLOC > 34 AND
+EGEOLOC <= 36 AND
+ADMTYP <= 2 AND
+refill_count <= 19 AND
+refill_count <= 16 AND
+refill_count <= 15 AND
+AGEGRP <= 4 AND
+SEX > 1: opana (88.0/8.0)
+
+SEX <= 1 AND
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+EGEOLOC > 34 AND
+EGEOLOC <= 36 AND
+EGEOLOC > 35 AND
+ADMTYP <= 3 AND
+ADMTYP > 1 AND
+refill_count > 6 AND
+AGEGRP > 4 AND
+refill_count <= 14: opana (61.0/2.0)
+
+SEX <= 1 AND
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+AGEGRP <= 3 AND
+EGEOLOC > 32 AND
+EGEOLOC <= 33 AND
+refill_count > 3: opana (189.0/3.0)
+
+refill_count > 5 AND
+EGEOLOC <= 63 AND
+refill_count > 16 AND
+REGION > 2 AND
+refill_count <= 19 AND
+REGION <= 3 AND
+SEX > 1 AND
+AGEGRP <= 3 AND
+EGEOLOC > 47 AND
+EGEOLOC > 48 AND
+refill_count <= 17: opana (45.0/1.0)
+
+SEX <= 1 AND
+AGEGRP <= 1 AND
+EGEOLOC <= 41 AND
+ADMTYP <= 3 AND
+refill_count <= 2 AND
+EGEOLOC > 11 AND
+REGION > 1 AND
+refill_count > 1: butrans (9.0/1.0)
+
+SEX <= 1 AND
+EGEOLOC <= 44 AND
+EGEOLOC > 34 AND
+EGEOLOC <= 36 AND
+EGEOLOC > 35 AND
+ADMTYP <= 3 AND
+AGEGRP <= 2 AND
+refill_count <= 6: opana (80.0/12.0)
+
+SEX <= 1 AND
+EGEOLOC <= 44 AND
+EGEOLOC > 34 AND
+EGEOLOC <= 36 AND
+EGEOLOC > 35 AND
+refill_count <= 4: opana (522.41/131.41)
+
+refill_count > 5 AND
+EGEOLOC <= 63 AND
+refill_count > 10 AND
+SEX <= 1 AND
+EGEOLOC > 41 AND
+refill_count <= 15 AND
+AGEGRP <= 2 AND
+EGEOLOC > 55: opana (27.0)
+
+refill_count > 5 AND
+EGEOLOC <= 63 AND
+refill_count > 16 AND
+REGION > 2 AND
+refill_count <= 19 AND
+REGION <= 3 AND
+ADMTYP <= 2 AND
+EGEOLOC <= 36 AND
+refill_count > 18: opana (49.0/2.0)
+
+refill_count > 5 AND
+EGEOLOC <= 63 AND
+refill_count > 10 AND
+EGEOLOC <= 58 AND
+AGEGRP > 3 AND
+ADMTYP > 1 AND
+EGEOLOC <= 17 AND
+AGEGRP <= 4 AND
+ADMTYP <= 2 AND
+SEX > 1: opana (244.05/54.79)
+
+refill_count > 5 AND
+AGEGRP <= 1 AND
+EGEOLOC > 17 AND
+EGEOLOC <= 48: butrans (22.0)
+
+refill_count > 5 AND
+EGEOLOC <= 63 AND
+refill_count > 15 AND
+SEX > 1 AND
+AGEGRP <= 4: opana (2090.51/722.25)
+
+SEX <= 1 AND
+EGEOLOC <= 62 AND
+EGEOLOC > 55 AND
+EGEOLOC <= 57 AND
+refill_count > 1 AND
+refill_count <= 8 AND
+refill_count <= 5 AND
+ADMTYP <= 3 AND
+ADMTYP <= 1: opana (101.41/7.0)
+
+SEX <= 1 AND
+REGION <= 1 AND
+EGEOLOC > 11 AND
+refill_count <= 4 AND
+refill_count > 1 AND
+AGEGRP > 3: opana (409.64/98.0)
+
+SEX <= 1 AND
+EGEOLOC <= 62 AND
+refill_count > 7 AND
+ADMTYP > 3 AND
+AGEGRP > 4 AND
+refill_count <= 32: opana (17.05)
+
+SEX <= 1 AND
+EGEOLOC <= 44 AND
+EGEOLOC > 38 AND
+REGION <= 3 AND
+EGEOLOC <= 39 AND
+AGEGRP <= 4: opana (129.0/16.0)
+
+SEX <= 1 AND
+EGEOLOC <= 62 AND
+refill_count > 7 AND
+REGION > 3 AND
+AGEGRP > 2 AND
+AGEGRP <= 3 AND
+refill_count <= 8: opana (41.17/3.0)
+
+SEX <= 1 AND
+EGEOLOC <= 62 AND
+refill_count > 9 AND
+EGEOLOC > 41 AND
+AGEGRP <= 4 AND
+AGEGRP > 2 AND
+REGION > 3 AND
+AGEGRP <= 3 AND
+EGEOLOC > 59: opana (32.0/1.0)
+
+SEX <= 1 AND
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+ADMTYP > 2 AND
+EGEOLOC > 11 AND
+EGEOLOC > 42 AND
+refill_count > 1 AND
+refill_count <= 3: opana (26.0)
+
+SEX <= 1 AND
+EGEOLOC <= 62 AND
+refill_count > 10 AND
+EGEOLOC > 41 AND
+AGEGRP > 2 AND
+AGEGRP <= 4 AND
+ADMTYP <= 3 AND
+ADMTYP > 1 AND
+EGEOLOC > 48 AND
+EGEOLOC <= 59 AND
+refill_count <= 20: opana (87.0/4.0)
+
+SEX <= 1 AND
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+ADMTYP > 2 AND
+EGEOLOC > 11 AND
+EGEOLOC > 42 AND
+refill_count <= 2: opana (151.22/36.0)
+
+SEX <= 1 AND
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+REGION <= 1 AND
+EGEOLOC > 11 AND
+refill_count <= 3: opana (1658.0/568.0)
+
+refill_count > 5 AND
+EGEOLOC <= 47 AND
+EGEOLOC > 34 AND
+refill_count > 11 AND
+refill_count <= 13 AND
+AGEGRP > 2 AND
+ADMTYP > 1 AND
+refill_count > 12 AND
+EGEOLOC > 36: opana (98.47/7.0)
+
+refill_count > 5 AND
+refill_count > 16 AND
+REGION > 2 AND
+refill_count <= 45 AND
+EGEOLOC <= 37 AND
+refill_count <= 19 AND
+ADMTYP > 1 AND
+ADMTYP <= 3 AND
+REGION <= 4 AND
+refill_count <= 17: opana (57.0/4.0)
+
+refill_count > 5 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 55 AND
+refill_count <= 8: opana (236.0/17.0)
+
+SEX <= 1 AND
+EGEOLOC <= 62 AND
+AGEGRP <= 1 AND
+EGEOLOC > 20: opana (8.0)
+
+SEX <= 1 AND
+EGEOLOC <= 62 AND
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+AGEGRP > 2 AND
+AGEGRP <= 3 AND
+EGEOLOC > 39 AND
+ADMTYP > 1: opana (205.0/39.0)
+
+refill_count > 5 AND
+EGEOLOC <= 48 AND
+EGEOLOC > 34 AND
+EGEOLOC <= 36 AND
+EGEOLOC > 35 AND
+ADMTYP <= 3 AND
+SEX > 1 AND
+AGEGRP > 2 AND
+ADMTYP > 1 AND
+refill_count > 7 AND
+AGEGRP > 4: opana (87.0/18.0)
+
+SEX <= 1 AND
+EGEOLOC <= 62 AND
+EGEOLOC > 49 AND
+REGION <= 3: opana (40.0/5.0)
+
+SEX <= 1 AND
+EGEOLOC <= 62 AND
+refill_count > 1 AND
+refill_count > 23 AND
+AGEGRP > 4 AND
+refill_count <= 24 AND
+REGION <= 4: opana (45.0)
+
+EGEOLOC <= 44 AND
+refill_count > 5 AND
+EGEOLOC > 34 AND
+SEX > 1 AND
+refill_count <= 29 AND
+ADMTYP > 1 AND
+EGEOLOC <= 39 AND
+EGEOLOC > 38 AND
+ADMTYP <= 2: opana (46.0/5.0)
+
+SEX <= 1 AND
+EGEOLOC <= 62 AND
+EGEOLOC <= 33 AND
+EGEOLOC > 28 AND
+AGEGRP > 2 AND
+refill_count <= 27 AND
+ADMTYP > 1 AND
+ADMTYP <= 3 AND
+AGEGRP > 4 AND
+EGEOLOC > 32: opana (307.06/83.0)
+
+EGEOLOC <= 44 AND
+refill_count > 5 AND
+EGEOLOC > 34 AND
+EGEOLOC <= 36 AND
+EGEOLOC > 35 AND
+SEX > 1: opana (204.0/50.0)
+
+SEX <= 1 AND
+EGEOLOC <= 62 AND
+EGEOLOC > 49 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 55 AND
+refill_count <= 7 AND
+AGEGRP > 2 AND
+refill_count > 1 AND
+ADMTYP <= 3 AND
+EGEOLOC <= 56 AND
+refill_count <= 2: opana (34.0)
+
+SEX <= 1 AND
+EGEOLOC <= 62 AND
+EGEOLOC > 49 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 55 AND
+refill_count <= 7 AND
+refill_count > 2 AND
+ADMTYP <= 3 AND
+EGEOLOC > 56: opana (32.0/2.0)
+
+EGEOLOC <= 44 AND
+refill_count > 5 AND
+EGEOLOC > 41 AND
+SEX > 1: opana (770.0/261.0)
+
+SEX <= 1 AND
+EGEOLOC <= 62 AND
+EGEOLOC <= 46 AND
+REGION <= 3 AND
+ADMTYP <= 1 AND
+AGEGRP <= 4 AND
+refill_count > 1 AND
+AGEGRP <= 3 AND
+AGEGRP > 2: opana (567.08/174.0)
+
+EGEOLOC <= 33 AND
+EGEOLOC > 32 AND
+refill_count > 6 AND
+SEX > 1 AND
+ADMTYP <= 1 AND
+AGEGRP > 3: opana (128.49/19.0)
+
+SEX <= 1 AND
+EGEOLOC <= 62 AND
+EGEOLOC > 49 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 55 AND
+refill_count <= 7 AND
+refill_count <= 3 AND
+AGEGRP > 2 AND
+AGEGRP <= 4 AND
+refill_count <= 1: opana (132.0/17.0)
+
+EGEOLOC <= 33 AND
+EGEOLOC > 32 AND
+REGION > 4 AND
+AGEGRP > 3 AND
+AGEGRP > 4 AND
+refill_count > 1: opana (20.0)
+
+EGEOLOC <= 33 AND
+EGEOLOC > 32 AND
+SEX <= 1 AND
+ADMTYP <= 3 AND
+AGEGRP > 2 AND
+AGEGRP <= 4 AND
+refill_count <= 5: opana (283.88/75.88)
+
+EGEOLOC <= 33 AND
+REGION <= 4 AND
+AGEGRP > 2 AND
+SEX <= 1 AND
+EGEOLOC <= 19 AND
+REGION <= 2 AND
+refill_count > 27 AND
+EGEOLOC <= 17: opana (34.0)
+
+EGEOLOC <= 33 AND
+REGION <= 4 AND
+EGEOLOC > 28 AND
+refill_count > 8 AND
+refill_count <= 10: opana (52.0/4.0)
+
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+REGION <= 3 AND
+EGEOLOC <= 19 AND
+refill_count <= 14 AND
+refill_count > 11 AND
+REGION > 1: opana (32.0)
+
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+REGION <= 3 AND
+refill_count <= 13 AND
+EGEOLOC <= 19 AND
+refill_count > 5 AND
+EGEOLOC <= 18 AND
+ADMTYP <= 3 AND
+EGEOLOC <= 11 AND
+ADMTYP > 1: opana (38.03/5.0)
+
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+REGION <= 3 AND
+refill_count <= 13 AND
+EGEOLOC <= 19 AND
+refill_count > 5 AND
+ADMTYP > 3: opana (43.6/7.11)
+
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+ADMTYP <= 1 AND
+AGEGRP <= 4 AND
+EGEOLOC <= 22 AND
+refill_count > 1: opana (702.05/227.0)
+
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+SEX <= 1 AND
+AGEGRP > 2 AND
+AGEGRP <= 3 AND
+EGEOLOC <= 5 AND
+ADMTYP > 1 AND
+ADMTYP <= 2 AND
+REGION <= 2: butrans (15.0/3.0)
+
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+SEX <= 1 AND
+AGEGRP > 2 AND
+AGEGRP <= 3 AND
+EGEOLOC <= 25 AND
+EGEOLOC > 17: opana (313.0/89.0)
+
+EGEOLOC <= 44 AND
+refill_count > 5 AND
+REGION <= 1 AND
+ADMTYP > 3 AND
+refill_count <= 7: opana (64.28/7.2)
+
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+SEX <= 1 AND
+EGEOLOC > 34 AND
+ADMTYP > 3 AND
+AGEGRP <= 2 AND
+refill_count > 2 AND
+refill_count <= 5: opana (54.0/5.0)
+
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+refill_count > 6 AND
+REGION <= 1 AND
+ADMTYP > 1 AND
+AGEGRP > 3 AND
+ADMTYP > 3 AND
+EGEOLOC <= 12 AND
+ADMTYP <= 4 AND
+refill_count > 13: opana (18.09/1.09)
+
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+EGEOLOC <= 18 AND
+AGEGRP > 2 AND
+ADMTYP <= 2 AND
+EGEOLOC > 11 AND
+refill_count > 24 AND
+AGEGRP > 3 AND
+refill_count <= 29 AND
+refill_count > 28: butrans (13.0)
+
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+refill_count > 6 AND
+EGEOLOC <= 5 AND
+REGION <= 1 AND
+AGEGRP > 3 AND
+AGEGRP <= 4 AND
+ADMTYP > 1 AND
+EGEOLOC > 1: opana (33.0/3.0)
+
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+EGEOLOC <= 18 AND
+AGEGRP > 2 AND
+ADMTYP <= 2 AND
+EGEOLOC > 11 AND
+REGION <= 2 AND
+ADMTYP > 1: opana (6178.54/2493.81)
+
+refill_count > 8 AND
+EGEOLOC <= 63 AND
+ADMTYP <= 1 AND
+SEX <= 1 AND
+AGEGRP <= 2 AND
+REGION <= 3: opana (34.37/5.0)
+
+refill_count > 8 AND
+EGEOLOC <= 63 AND
+ADMTYP <= 1 AND
+SEX <= 1 AND
+EGEOLOC > 34 AND
+REGION > 3 AND
+REGION <= 4: opana (218.4/68.0)
+
+refill_count > 8 AND
+EGEOLOC <= 53 AND
+EGEOLOC > 34 AND
+AGEGRP <= 2 AND
+refill_count <= 9 AND
+ADMTYP <= 2: opana (77.0/4.0)
+
+refill_count > 9 AND
+EGEOLOC <= 58 AND
+AGEGRP > 2 AND
+ADMTYP <= 2 AND
+SEX <= 1 AND
+EGEOLOC > 34 AND
+REGION > 3 AND
+AGEGRP > 4 AND
+refill_count <= 16 AND
+EGEOLOC <= 53: opana (26.0)
+
+refill_count > 9 AND
+EGEOLOC <= 58 AND
+AGEGRP > 2 AND
+ADMTYP <= 2 AND
+ADMTYP <= 1 AND
+AGEGRP <= 4 AND
+REGION <= 2 AND
+REGION > 1 AND
+refill_count > 10 AND
+AGEGRP > 3 AND
+refill_count > 12: opana (68.0/16.0)
+
+SEX <= 1 AND
+EGEOLOC > 62 AND
+refill_count > 13 AND
+refill_count <= 18: opana (18.0/1.0)
+
+SEX <= 1 AND
+EGEOLOC > 62 AND
+AGEGRP > 4 AND
+EGEOLOC <= 64 AND
+refill_count > 1: butrans (54.0/11.0)
+
+SEX <= 1 AND
+EGEOLOC > 62 AND
+AGEGRP > 4 AND
+EGEOLOC > 64 AND
+refill_count <= 6: butrans (155.0/46.0)
+
+SEX <= 1 AND
+EGEOLOC > 49 AND
+EGEOLOC <= 53 AND
+refill_count > 2 AND
+EGEOLOC <= 52 AND
+refill_count <= 3: opana (65.0/5.0)
+
+SEX <= 1 AND
+EGEOLOC > 49 AND
+EGEOLOC <= 62 AND
+refill_count > 24 AND
+AGEGRP > 3 AND
+EGEOLOC > 57 AND
+AGEGRP <= 4: opana (16.0/1.0)
+
+SEX <= 1 AND
+EGEOLOC > 49 AND
+EGEOLOC <= 62 AND
+AGEGRP <= 2 AND
+refill_count > 7 AND
+refill_count <= 13 AND
+ADMTYP > 1 AND
+refill_count <= 8 AND
+ADMTYP <= 3 AND
+EGEOLOC > 53: butrans (16.0/1.0)
+
+SEX <= 1 AND
+EGEOLOC > 49 AND
+EGEOLOC <= 62 AND
+AGEGRP <= 2 AND
+refill_count > 8 AND
+refill_count > 13: butrans (13.0)
+
+SEX <= 1 AND
+EGEOLOC > 49 AND
+EGEOLOC <= 62 AND
+AGEGRP <= 2 AND
+refill_count > 3 AND
+refill_count <= 5: opana (85.0/18.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+EGEOLOC <= 48 AND
+ADMTYP > 3 AND
+refill_count > 4 AND
+AGEGRP > 4 AND
+refill_count <= 5 AND
+REGION > 1: opana (34.0/3.0)
+
+SEX <= 1 AND
+EGEOLOC > 49 AND
+EGEOLOC <= 62 AND
+AGEGRP <= 2 AND
+ADMTYP > 1 AND
+EGEOLOC > 59 AND
+ADMTYP > 3: opana (118.68/33.0)
+
+refill_count > 9 AND
+EGEOLOC <= 58 AND
+AGEGRP > 2 AND
+ADMTYP <= 2 AND
+ADMTYP > 1 AND
+AGEGRP > 4 AND
+SEX > 1 AND
+EGEOLOC <= 1 AND
+refill_count > 15: opana (28.0/1.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+EGEOLOC <= 44 AND
+EGEOLOC > 41 AND
+refill_count > 11 AND
+ADMTYP <= 1 AND
+refill_count <= 16 AND
+EGEOLOC > 42 AND
+refill_count <= 14: opana (16.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+EGEOLOC <= 48 AND
+refill_count > 7 AND
+EGEOLOC > 34 AND
+ADMTYP <= 1: opana (443.0/152.0)
+
+SEX <= 1 AND
+EGEOLOC > 49 AND
+EGEOLOC <= 62 AND
+EGEOLOC <= 53 AND
+refill_count > 6 AND
+AGEGRP <= 3: opana (21.0/1.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+EGEOLOC <= 44 AND
+EGEOLOC > 41 AND
+AGEGRP > 4 AND
+ADMTYP <= 1 AND
+EGEOLOC > 42 AND
+EGEOLOC > 43: opana (146.0/55.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+EGEOLOC <= 44 AND
+EGEOLOC > 41 AND
+AGEGRP > 4 AND
+ADMTYP <= 1 AND
+refill_count > 5 AND
+EGEOLOC > 42: butrans (10.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+EGEOLOC <= 44 AND
+EGEOLOC > 41 AND
+AGEGRP > 4 AND
+ADMTYP <= 1 AND
+refill_count > 1: opana (53.0/10.0)
+
+SEX <= 1 AND
+REGION > 3 AND
+ADMTYP <= 3 AND
+AGEGRP <= 2 AND
+EGEOLOC > 8 AND
+refill_count <= 1 AND
+EGEOLOC > 55: opana (226.57/63.0)
+
+EGEOLOC <= 44 AND
+EGEOLOC > 43 AND
+ADMTYP > 3 AND
+AGEGRP <= 3 AND
+refill_count <= 3 AND
+refill_count <= 2: opana (72.0/10.0)
+
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+refill_count <= 10 AND
+REGION <= 3 AND
+refill_count <= 4 AND
+refill_count > 1 AND
+EGEOLOC <= 4 AND
+AGEGRP > 3 AND
+refill_count <= 3 AND
+refill_count > 2 AND
+ADMTYP <= 3: opana (25.76/3.0)
+
+refill_count > 9 AND
+REGION <= 3 AND
+refill_count > 28 AND
+refill_count <= 29: opana (27.0/2.0)
+
+EGEOLOC <= 44 AND
+EGEOLOC > 43 AND
+refill_count > 4 AND
+ADMTYP <= 2 AND
+ADMTYP > 1 AND
+refill_count <= 15 AND
+AGEGRP > 4 AND
+refill_count <= 13: opana (54.0/11.0)
+
+EGEOLOC > 44 AND
+REGION <= 3 AND
+REGION <= 2 AND
+AGEGRP <= 4 AND
+refill_count > 2: opana (22.0/1.0)
+
+EGEOLOC > 44 AND
+REGION <= 3 AND
+refill_count > 10 AND
+AGEGRP <= 2 AND
+ADMTYP > 1 AND
+EGEOLOC > 47 AND
+EGEOLOC > 48 AND
+ADMTYP <= 2 AND
+refill_count <= 12: opana (29.3/2.0)
+
+EGEOLOC > 44 AND
+REGION <= 3 AND
+refill_count > 10 AND
+EGEOLOC <= 48 AND
+ADMTYP > 2 AND
+refill_count <= 13: butrans (12.0/1.0)
+
+EGEOLOC > 44 AND
+REGION <= 3 AND
+refill_count > 10 AND
+EGEOLOC <= 48 AND
+refill_count > 11 AND
+AGEGRP > 2 AND
+refill_count <= 16 AND
+refill_count <= 15 AND
+SEX > 1 AND
+refill_count <= 12: opana (39.0/4.0)
+
+EGEOLOC > 44 AND
+REGION <= 3 AND
+refill_count > 10 AND
+EGEOLOC <= 48 AND
+EGEOLOC > 46 AND
+refill_count > 11 AND
+AGEGRP > 2 AND
+SEX <= 1 AND
+refill_count <= 35 AND
+ADMTYP > 1 AND
+AGEGRP > 3 AND
+EGEOLOC > 47: opana (25.0/2.0)
+
+refill_count > 13 AND
+SEX > 1 AND
+AGEGRP <= 2 AND
+REGION <= 3 AND
+ADMTYP > 1 AND
+EGEOLOC > 16: opana (51.0/3.0)
+
+EGEOLOC > 44 AND
+REGION <= 3 AND
+refill_count <= 10 AND
+SEX > 1 AND
+ADMTYP > 2 AND
+EGEOLOC <= 46 AND
+ADMTYP > 3 AND
+refill_count <= 1: butrans (25.0/2.0)
+
+EGEOLOC > 44 AND
+REGION <= 3 AND
+refill_count <= 10 AND
+SEX > 1 AND
+EGEOLOC > 48 AND
+refill_count <= 5 AND
+ADMTYP > 3 AND
+refill_count > 1 AND
+refill_count <= 2: butrans (105.0/22.0)
+
+EGEOLOC > 44 AND
+REGION <= 3 AND
+refill_count > 10 AND
+EGEOLOC <= 47 AND
+EGEOLOC <= 46: opana (15.0/1.0)
+
+EGEOLOC > 44 AND
+REGION <= 3 AND
+refill_count <= 10 AND
+SEX > 1 AND
+EGEOLOC > 48 AND
+refill_count <= 5 AND
+ADMTYP <= 1 AND
+refill_count <= 2 AND
+AGEGRP <= 3 AND
+AGEGRP <= 2 AND
+refill_count <= 1: butrans (153.0/45.0)
+
+EGEOLOC > 44 AND
+REGION <= 3 AND
+refill_count <= 10 AND
+SEX > 1 AND
+EGEOLOC > 48 AND
+refill_count <= 5 AND
+ADMTYP <= 1 AND
+refill_count <= 2: butrans (1449.0/525.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+REGION > 3 AND
+refill_count > 2 AND
+refill_count <= 3 AND
+EGEOLOC > 56 AND
+ADMTYP > 1 AND
+ADMTYP <= 3: opana (96.0/11.0)
+
+EGEOLOC <= 39 AND
+EGEOLOC > 38 AND
+SEX > 1 AND
+refill_count > 3 AND
+REGION <= 4 AND
+refill_count <= 7: opana (32.0/2.0)
+
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+refill_count <= 4 AND
+REGION <= 3 AND
+refill_count > 1 AND
+ADMTYP > 3 AND
+refill_count <= 2 AND
+EGEOLOC <= 20 AND
+REGION > 1 AND
+AGEGRP <= 3: opana (30.0/5.0)
+
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+refill_count <= 4 AND
+REGION <= 3 AND
+refill_count > 3 AND
+EGEOLOC > 18 AND
+EGEOLOC <= 22 AND
+AGEGRP > 3: opana (40.0/2.0)
+
+EGEOLOC <= 44 AND
+REGION > 3 AND
+SEX > 1 AND
+EGEOLOC <= 11 AND
+refill_count <= 1 AND
+AGEGRP <= 3 AND
+AGEGRP > 2: butrans (81.0/15.0)
+
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+refill_count > 10 AND
+AGEGRP <= 3 AND
+refill_count > 11 AND
+ADMTYP > 1 AND
+EGEOLOC > 11 AND
+EGEOLOC <= 17: butrans (40.0/2.0)
+
+refill_count > 13 AND
+ADMTYP > 1 AND
+EGEOLOC > 24 AND
+EGEOLOC <= 25 AND
+refill_count <= 14: opana (45.0)
+
+EGEOLOC <= 44 AND
+SEX <= 1 AND
+refill_count <= 4 AND
+REGION <= 3 AND
+EGEOLOC > 34 AND
+refill_count > 3 AND
+ADMTYP <= 1 AND
+EGEOLOC > 38: opana (45.0/9.0)
+
+EGEOLOC <= 39 AND
+EGEOLOC > 34 AND
+EGEOLOC <= 35 AND
+AGEGRP > 2 AND
+ADMTYP > 1 AND
+refill_count <= 4 AND
+ADMTYP <= 3 AND
+refill_count <= 2: opana (257.0/66.0)
+
+EGEOLOC > 62 AND
+refill_count > 15 AND
+AGEGRP > 4 AND
+ADMTYP > 1 AND
+refill_count > 17: opana (57.0/5.0)
+
+EGEOLOC > 62 AND
+EGEOLOC <= 64 AND
+SEX > 1 AND
+ADMTYP > 3 AND
+refill_count > 3: butrans (16.67/0.27)
+
+EGEOLOC > 62 AND
+AGEGRP <= 2 AND
+SEX > 1 AND
+ADMTYP <= 2 AND
+refill_count <= 3: butrans (179.0/30.0)
+
+EGEOLOC <= 33 AND
+EGEOLOC > 31 AND
+ADMTYP > 3 AND
+SEX <= 1: opana (100.44/26.02)
+
+EGEOLOC <= 33 AND
+EGEOLOC > 32 AND
+SEX > 1 AND
+ADMTYP > 1 AND
+AGEGRP > 3 AND
+AGEGRP <= 4 AND
+refill_count > 6 AND
+refill_count <= 13 AND
+refill_count <= 9: opana (31.0/4.0)
+
+EGEOLOC <= 33 AND
+EGEOLOC > 32 AND
+SEX > 1 AND
+ADMTYP > 1 AND
+refill_count <= 1 AND
+AGEGRP > 2 AND
+AGEGRP > 3: opana (506.68/178.0)
+
+SEX <= 1 AND
+EGEOLOC <= 19 AND
+refill_count > 13 AND
+refill_count <= 19: opana (43.01/5.0)
+
+SEX <= 1 AND
+EGEOLOC <= 44 AND
+refill_count > 10 AND
+REGION <= 2 AND
+REGION > 1: butrans (36.0/6.0)
+
+SEX <= 1 AND
+EGEOLOC <= 44 AND
+REGION <= 3 AND
+refill_count <= 4 AND
+EGEOLOC > 34 AND
+EGEOLOC <= 37 AND
+AGEGRP <= 2 AND
+refill_count <= 3 AND
+refill_count <= 1: opana (111.0/28.0)
+
+SEX <= 1 AND
+EGEOLOC <= 18 AND
+EGEOLOC > 13 AND
+REGION > 2 AND
+REGION > 4: butrans (12.0/1.0)
+
+SEX <= 1 AND
+EGEOLOC <= 18 AND
+EGEOLOC > 13 AND
+refill_count > 5 AND
+refill_count <= 7: opana (47.0/9.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+AGEGRP <= 4 AND
+refill_count > 3 AND
+REGION > 4 AND
+refill_count <= 12: opana (36.0/2.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+REGION > 4 AND
+AGEGRP <= 4 AND
+refill_count > 2: butrans (21.0/2.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+AGEGRP <= 4 AND
+REGION > 4 AND
+refill_count > 1 AND
+ADMTYP > 1 AND
+EGEOLOC > 18: butrans (11.94/2.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+AGEGRP <= 4 AND
+ADMTYP <= 1 AND
+EGEOLOC <= 18: opana (350.54/131.23)
+
+REGION <= 1 AND
+EGEOLOC > 12 AND
+SEX > 1 AND
+AGEGRP <= 2 AND
+ADMTYP <= 3 AND
+AGEGRP > 1 AND
+refill_count > 1: opana (141.0/27.0)
+
+EGEOLOC > 62 AND
+EGEOLOC <= 64 AND
+SEX > 1 AND
+refill_count <= 15 AND
+ADMTYP > 3 AND
+refill_count <= 1 AND
+AGEGRP <= 2: butrans (9.0)
+
+EGEOLOC > 62 AND
+EGEOLOC <= 64 AND
+AGEGRP > 2 AND
+AGEGRP <= 3 AND
+refill_count > 1 AND
+refill_count <= 4: butrans (51.0/1.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+REGION > 3 AND
+REGION <= 4 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 54 AND
+refill_count <= 8 AND
+refill_count > 4: opana (13.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+REGION > 3 AND
+REGION <= 4 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 54 AND
+refill_count <= 6 AND
+AGEGRP <= 4 AND
+EGEOLOC <= 55: opana (7.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+REGION > 3 AND
+REGION <= 4 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 55 AND
+refill_count <= 6 AND
+refill_count <= 3 AND
+AGEGRP > 4: opana (149.0/33.0)
+
+ADMTYP > 2 AND
+refill_count <= 2 AND
+AGEGRP <= 4 AND
+ADMTYP <= 3 AND
+AGEGRP > 2 AND
+REGION > 1 AND
+REGION <= 3 AND
+REGION > 2 AND
+refill_count <= 1 AND
+EGEOLOC > 37 AND
+EGEOLOC > 39: butrans (46.05/13.05)
+
+SEX <= 1 AND
+EGEOLOC <= 44 AND
+refill_count <= 4 AND
+AGEGRP > 2 AND
+REGION <= 3 AND
+REGION > 2 AND
+refill_count > 3 AND
+ADMTYP > 1 AND
+EGEOLOC <= 33: opana (10.0)
+
+refill_count > 9 AND
+EGEOLOC > 63 AND
+EGEOLOC <= 64 AND
+refill_count <= 13: butrans (48.33/6.73)
+
+refill_count > 9 AND
+REGION > 4 AND
+refill_count > 10 AND
+refill_count > 14 AND
+ADMTYP <= 3 AND
+AGEGRP <= 4: butrans (15.0/2.0)
+
+refill_count > 9 AND
+AGEGRP > 2 AND
+REGION <= 3 AND
+SEX > 1 AND
+REGION > 2 AND
+EGEOLOC <= 47 AND
+EGEOLOC > 37 AND
+EGEOLOC <= 44 AND
+refill_count <= 15 AND
+EGEOLOC <= 39: opana (50.0/5.0)
+
+refill_count > 9 AND
+AGEGRP > 2 AND
+SEX <= 1: opana (957.56/432.0)
+
+EGEOLOC > 44 AND
+REGION <= 3 AND
+refill_count <= 10 AND
+SEX > 1 AND
+AGEGRP > 4 AND
+ADMTYP > 3 AND
+EGEOLOC > 48: butrans (96.06/28.0)
+
+EGEOLOC > 44 AND
+REGION <= 3 AND
+refill_count <= 10 AND
+SEX > 1 AND
+refill_count > 1 AND
+EGEOLOC > 58 AND
+ADMTYP > 1: butrans (21.0/1.0)
+
+EGEOLOC > 44 AND
+EGEOLOC <= 54 AND
+REGION > 4 AND
+EGEOLOC <= 52 AND
+SEX > 1 AND
+refill_count > 5: opana (30.0)
+
+EGEOLOC > 44 AND
+EGEOLOC <= 54 AND
+EGEOLOC > 53 AND
+SEX > 1 AND
+AGEGRP > 2: butrans (291.0/60.0)
+
+ADMTYP > 2 AND
+refill_count <= 2 AND
+AGEGRP <= 4 AND
+SEX > 1 AND
+refill_count <= 1 AND
+REGION <= 3 AND
+EGEOLOC > 11 AND
+AGEGRP > 2 AND
+REGION <= 1: butrans (119.31/35.13)
+
+REGION <= 1 AND
+EGEOLOC > 11 AND
+refill_count > 14 AND
+AGEGRP > 4: butrans (19.67/3.0)
+
+REGION <= 1 AND
+EGEOLOC > 11 AND
+SEX > 1 AND
+ADMTYP > 3 AND
+refill_count > 1 AND
+EGEOLOC <= 12 AND
+refill_count <= 4: opana (46.82/9.41)
+
+REGION <= 1 AND
+refill_count > 11 AND
+AGEGRP > 3 AND
+ADMTYP <= 3 AND
+AGEGRP > 4 AND
+refill_count <= 14: opana (63.44/13.0)
+
+REGION <= 1 AND
+EGEOLOC > 11 AND
+SEX > 1 AND
+EGEOLOC > 12 AND
+AGEGRP <= 3 AND
+EGEOLOC <= 13 AND
+AGEGRP <= 2 AND
+AGEGRP > 1 AND
+refill_count <= 6: opana (113.0/38.0)
+
+AGEGRP <= 2 AND
+AGEGRP <= 1 AND
+refill_count <= 6 AND
+EGEOLOC > 16 AND
+EGEOLOC <= 42 AND
+refill_count > 1: butrans (61.0/1.0)
+
+ADMTYP > 2 AND
+refill_count <= 2 AND
+AGEGRP <= 4 AND
+REGION > 1 AND
+REGION <= 3 AND
+refill_count <= 1 AND
+SEX > 1 AND
+REGION <= 2 AND
+EGEOLOC > 18 AND
+ADMTYP > 3 AND
+EGEOLOC <= 20: butrans (158.3/38.1)
+
+EGEOLOC <= 33 AND
+refill_count > 23 AND
+EGEOLOC <= 8: opana (11.0)
+
+EGEOLOC <= 33 AND
+EGEOLOC > 32 AND
+AGEGRP <= 2 AND
+refill_count <= 1: opana (197.0/53.0)
+
+AGEGRP <= 2 AND
+AGEGRP <= 1 AND
+EGEOLOC <= 12 AND
+refill_count <= 4 AND
+ADMTYP <= 3: butrans (21.0)
+
+EGEOLOC <= 19 AND
+AGEGRP > 2 AND
+REGION <= 2 AND
+refill_count <= 3 AND
+refill_count > 2 AND
+EGEOLOC > 18 AND
+AGEGRP > 3: opana (356.0/93.0)
+
+AGEGRP <= 2 AND
+AGEGRP <= 1 AND
+EGEOLOC <= 16 AND
+SEX > 1: opana (62.0/2.0)
+
+AGEGRP <= 2 AND
+AGEGRP <= 1 AND
+refill_count <= 6 AND
+REGION <= 2 AND
+SEX <= 1 AND
+ADMTYP > 3: butrans (6.0)
+
+AGEGRP <= 2 AND
+SEX > 1 AND
+EGEOLOC <= 17 AND
+REGION > 1 AND
+refill_count <= 1 AND
+EGEOLOC <= 16 AND
+ADMTYP > 1 AND
+ADMTYP <= 2: butrans (207.65/14.0)
+
+EGEOLOC > 44 AND
+EGEOLOC <= 52 AND
+refill_count <= 5 AND
+SEX > 1 AND
+refill_count > 1 AND
+refill_count <= 4 AND
+AGEGRP <= 2 AND
+ADMTYP > 1 AND
+REGION <= 3 AND
+refill_count <= 3 AND
+AGEGRP > 1 AND
+ADMTYP <= 2: butrans (251.0/67.0)
+
+refill_count > 37 AND
+refill_count <= 45 AND
+EGEOLOC > 37: opana (17.0)
+
+EGEOLOC <= 18 AND
+EGEOLOC > 11 AND
+REGION > 4: opana (33.0/2.0)
+
+EGEOLOC <= 19 AND
+AGEGRP > 2 AND
+REGION <= 2 AND
+refill_count <= 3 AND
+REGION > 1 AND
+EGEOLOC <= 16 AND
+ADMTYP <= 2 AND
+AGEGRP > 3 AND
+AGEGRP <= 4: opana (252.0/73.0)
+
+SEX <= 1 AND
+refill_count > 8 AND
+AGEGRP > 2 AND
+ADMTYP > 1 AND
+EGEOLOC > 34 AND
+EGEOLOC > 48: butrans (102.42/29.42)
+
+EGEOLOC > 62 AND
+EGEOLOC <= 64 AND
+AGEGRP > 3 AND
+refill_count > 15 AND
+refill_count <= 16: opana (10.0)
+
+EGEOLOC > 62 AND
+EGEOLOC <= 64 AND
+AGEGRP > 3 AND
+AGEGRP <= 4 AND
+refill_count <= 4 AND
+refill_count <= 3 AND
+SEX > 1: butrans (67.0/14.0)
+
+SEX <= 1 AND
+EGEOLOC <= 46 AND
+refill_count <= 2 AND
+AGEGRP > 2 AND
+REGION <= 3 AND
+EGEOLOC > 41 AND
+AGEGRP > 3 AND
+AGEGRP > 4 AND
+refill_count <= 1 AND
+ADMTYP > 1: opana (247.0/86.0)
+
+EGEOLOC > 52 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 55 AND
+refill_count > 3 AND
+ADMTYP > 1 AND
+refill_count <= 15: opana (143.68/4.0)
+
+SEX <= 1 AND
+EGEOLOC <= 44 AND
+refill_count <= 2 AND
+ADMTYP <= 1 AND
+refill_count > 1 AND
+REGION > 4 AND
+EGEOLOC <= 19: butrans (19.12/3.12)
+
+SEX <= 1 AND
+EGEOLOC <= 18 AND
+refill_count <= 3 AND
+refill_count > 1 AND
+refill_count <= 2 AND
+AGEGRP <= 2 AND
+REGION <= 1: opana (28.0/1.0)
+
+ADMTYP > 2 AND
+refill_count <= 2 AND
+AGEGRP <= 3 AND
+EGEOLOC <= 9 AND
+EGEOLOC > 5 AND
+SEX > 1: butrans (41.0/3.0)
+
+REGION <= 1 AND
+EGEOLOC > 11 AND
+SEX > 1: opana (1769.29/763.79)
+
+SEX <= 1 AND
+EGEOLOC <= 44 AND
+refill_count <= 2 AND
+ADMTYP <= 1 AND
+refill_count > 1 AND
+REGION > 2: opana (381.0/142.91)
+
+SEX <= 1 AND
+EGEOLOC <= 18 AND
+refill_count <= 3 AND
+AGEGRP > 4 AND
+refill_count > 1 AND
+REGION <= 2 AND
+refill_count <= 2 AND
+ADMTYP <= 3 AND
+REGION <= 1 AND
+EGEOLOC <= 7 AND
+EGEOLOC <= 5: opana (70.0/25.0)
+
+SEX <= 1 AND
+REGION > 3 AND
+refill_count > 6 AND
+REGION <= 4 AND
+ADMTYP > 3 AND
+refill_count > 7: opana (14.01/1.0)
+
+ADMTYP > 2 AND
+ADMTYP <= 3 AND
+AGEGRP > 2 AND
+REGION > 1 AND
+EGEOLOC <= 36 AND
+REGION > 2 AND
+refill_count <= 10 AND
+REGION <= 4 AND
+EGEOLOC > 33: butrans (45.26/3.22)
+
+SEX <= 1 AND
+ADMTYP <= 3 AND
+EGEOLOC <= 16 AND
+EGEOLOC > 13 AND
+refill_count <= 1: opana (181.4/43.0)
+
+EGEOLOC > 52 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 55 AND
+AGEGRP > 4 AND
+EGEOLOC <= 56: opana (138.0/23.0)
+
+SEX <= 1 AND
+REGION > 3 AND
+EGEOLOC <= 53 AND
+AGEGRP <= 2 AND
+ADMTYP <= 1 AND
+refill_count <= 5: opana (39.4/3.0)
+
+ADMTYP > 2 AND
+refill_count <= 2 AND
+AGEGRP <= 2 AND
+SEX > 1 AND
+refill_count > 1 AND
+REGION <= 2 AND
+ADMTYP <= 3: butrans (45.05/10.05)
+
+EGEOLOC > 39 AND
+EGEOLOC <= 52 AND
+REGION <= 2 AND
+EGEOLOC <= 49 AND
+refill_count > 1: opana (25.0/1.0)
+
+EGEOLOC > 39 AND
+EGEOLOC <= 52 AND
+refill_count <= 4 AND
+REGION > 4 AND
+SEX > 1 AND
+refill_count <= 1: opana (12.0)
+
+EGEOLOC > 39 AND
+EGEOLOC <= 52 AND
+REGION > 4 AND
+EGEOLOC <= 41: butrans (15.0/1.0)
+
+EGEOLOC > 39 AND
+EGEOLOC <= 52 AND
+refill_count <= 4 AND
+EGEOLOC > 48 AND
+SEX > 1 AND
+refill_count > 1 AND
+AGEGRP > 3 AND
+ADMTYP <= 3 AND
+refill_count > 2 AND
+ADMTYP > 1 AND
+AGEGRP <= 4: butrans (224.0/62.0)
+
+AGEGRP > 4 AND
+EGEOLOC > 19 AND
+REGION <= 2 AND
+EGEOLOC <= 26 AND
+SEX <= 1: butrans (249.0/86.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+refill_count > 8 AND
+AGEGRP > 4 AND
+EGEOLOC <= 38 AND
+ADMTYP > 1: butrans (37.0/6.0)
+
+SEX <= 1 AND
+refill_count > 7 AND
+EGEOLOC > 33 AND
+EGEOLOC <= 39 AND
+ADMTYP > 1: opana (47.0/4.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+AGEGRP <= 4 AND
+refill_count > 3 AND
+ADMTYP > 3 AND
+EGEOLOC <= 53 AND
+refill_count > 4 AND
+refill_count <= 6: opana (31.03/1.0)
+
+ADMTYP > 2 AND
+refill_count <= 2 AND
+REGION > 2 AND
+REGION <= 3 AND
+refill_count <= 1 AND
+AGEGRP <= 4 AND
+SEX > 1 AND
+EGEOLOC > 32 AND
+EGEOLOC <= 34: butrans (155.43/43.43)
+
+EGEOLOC > 37 AND
+EGEOLOC <= 52 AND
+REGION > 4 AND
+refill_count <= 7 AND
+SEX <= 1 AND
+AGEGRP > 2: opana (33.59/12.59)
+
+EGEOLOC > 37 AND
+EGEOLOC <= 52 AND
+REGION > 4 AND
+refill_count <= 7 AND
+EGEOLOC > 38 AND
+EGEOLOC <= 46 AND
+AGEGRP > 2: opana (15.0)
+
+EGEOLOC > 37 AND
+EGEOLOC <= 52 AND
+refill_count <= 4 AND
+SEX > 1 AND
+REGION > 3 AND
+refill_count > 3 AND
+EGEOLOC > 44 AND
+AGEGRP > 2 AND
+ADMTYP <= 1: butrans (21.0/4.0)
+
+EGEOLOC > 37 AND
+EGEOLOC <= 52 AND
+refill_count <= 4 AND
+SEX > 1 AND
+REGION > 3 AND
+REGION <= 4 AND
+refill_count > 3 AND
+AGEGRP <= 2: butrans (20.0/1.0)
+
+EGEOLOC > 37 AND
+EGEOLOC <= 52 AND
+refill_count <= 4 AND
+SEX > 1 AND
+REGION > 3 AND
+refill_count <= 2 AND
+REGION <= 4 AND
+refill_count > 1 AND
+AGEGRP > 2: butrans (147.0/43.0)
+
+EGEOLOC > 37 AND
+REGION <= 3 AND
+REGION <= 2 AND
+AGEGRP > 4: butrans (17.0/1.0)
+
+EGEOLOC > 37 AND
+REGION <= 3 AND
+EGEOLOC > 48 AND
+EGEOLOC > 49 AND
+AGEGRP <= 4 AND
+ADMTYP <= 2 AND
+AGEGRP <= 3: opana (14.0/1.0)
+
+EGEOLOC > 37 AND
+REGION <= 3 AND
+EGEOLOC > 48 AND
+EGEOLOC > 49 AND
+AGEGRP > 4: opana (14.0)
+
+EGEOLOC > 37 AND
+REGION <= 3 AND
+EGEOLOC > 48 AND
+AGEGRP > 4 AND
+refill_count > 20 AND
+refill_count <= 25: opana (24.0/1.0)
+
+EGEOLOC > 37 AND
+REGION <= 3 AND
+EGEOLOC > 48 AND
+refill_count > 14 AND
+AGEGRP > 2 AND
+AGEGRP > 3 AND
+AGEGRP > 4: butrans (82.48/21.48)
+
+EGEOLOC > 37 AND
+REGION <= 3 AND
+refill_count > 10 AND
+refill_count <= 11 AND
+AGEGRP <= 2 AND
+ADMTYP <= 3: butrans (12.18/1.18)
+
+EGEOLOC > 37 AND
+REGION <= 3 AND
+refill_count > 10 AND
+refill_count <= 11 AND
+AGEGRP <= 4 AND
+EGEOLOC > 48: opana (95.03/20.0)
+
+EGEOLOC > 37 AND
+REGION <= 3 AND
+EGEOLOC > 48 AND
+ADMTYP > 2 AND
+refill_count <= 4 AND
+SEX > 1 AND
+ADMTYP > 3 AND
+AGEGRP <= 2: butrans (119.0/36.0)
+
+EGEOLOC > 37 AND
+REGION <= 3 AND
+EGEOLOC > 48 AND
+AGEGRP > 4 AND
+refill_count <= 10 AND
+refill_count > 5 AND
+SEX > 1: butrans (291.94/101.0)
+
+EGEOLOC <= 37 AND
+EGEOLOC > 34 AND
+AGEGRP <= 2 AND
+ADMTYP <= 2 AND
+EGEOLOC > 35 AND
+refill_count <= 2 AND
+ADMTYP > 1 AND
+refill_count <= 1: opana (187.0/33.0)
+
+EGEOLOC > 62 AND
+refill_count > 1 AND
+refill_count <= 2 AND
+AGEGRP > 3 AND
+EGEOLOC > 64 AND
+SEX > 1: butrans (108.0/13.0)
+
+AGEGRP <= 2 AND
+EGEOLOC > 64 AND
+SEX <= 1 AND
+refill_count <= 6 AND
+refill_count > 1 AND
+refill_count <= 3: butrans (25.0/1.0)
+
+REGION > 3 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 55 AND
+ADMTYP <= 2 AND
+ADMTYP <= 1: opana (239.36/46.0)
+
+refill_count > 5 AND
+EGEOLOC > 24 AND
+REGION <= 2 AND
+refill_count <= 11 AND
+EGEOLOC <= 25 AND
+refill_count > 6 AND
+AGEGRP <= 3 AND
+refill_count > 8 AND
+refill_count <= 10: opana (61.0/13.0)
+
+SEX <= 1 AND
+ADMTYP <= 3 AND
+REGION <= 1 AND
+EGEOLOC > 12 AND
+refill_count <= 4: opana (12.0/4.0)
+
+SEX <= 1 AND
+ADMTYP <= 3 AND
+REGION > 3 AND
+refill_count > 6 AND
+REGION <= 4 AND
+ADMTYP > 1 AND
+EGEOLOC <= 52 AND
+refill_count > 7: opana (15.0)
+
+SEX <= 1 AND
+ADMTYP <= 3 AND
+REGION <= 1 AND
+EGEOLOC > 12 AND
+ADMTYP > 1 AND
+refill_count <= 5: butrans (12.0/1.0)
+
+SEX <= 1 AND
+ADMTYP <= 3 AND
+REGION <= 1 AND
+refill_count > 6 AND
+EGEOLOC > 4 AND
+refill_count <= 7: opana (11.68/2.0)
+
+SEX <= 1 AND
+ADMTYP <= 3 AND
+REGION <= 1 AND
+EGEOLOC > 12 AND
+AGEGRP > 3: butrans (31.0/11.0)
+
+SEX <= 1 AND
+ADMTYP <= 3 AND
+REGION <= 1 AND
+refill_count > 4 AND
+EGEOLOC > 5 AND
+refill_count <= 7: opana (32.11/7.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+AGEGRP <= 4 AND
+refill_count > 6 AND
+EGEOLOC <= 34: opana (25.0/4.0)
+
+AGEGRP <= 2 AND
+REGION <= 2 AND
+EGEOLOC > 25 AND
+SEX > 1 AND
+refill_count > 1: butrans (25.0)
+
+SEX <= 1 AND
+refill_count > 4 AND
+ADMTYP > 3 AND
+REGION <= 1 AND
+EGEOLOC > 7: butrans (34.0/4.0)
+
+SEX <= 1 AND
+refill_count > 5 AND
+AGEGRP > 4 AND
+ADMTYP <= 1 AND
+refill_count <= 7 AND
+EGEOLOC > 36 AND
+refill_count <= 6: butrans (73.0/18.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+AGEGRP <= 4 AND
+EGEOLOC > 63 AND
+refill_count > 1 AND
+EGEOLOC <= 64: butrans (49.0/11.0)
+
+SEX <= 1 AND
+EGEOLOC > 61 AND
+EGEOLOC <= 64 AND
+AGEGRP <= 4 AND
+refill_count > 6 AND
+EGEOLOC <= 63 AND
+AGEGRP > 3: opana (40.0/6.0)
+
+SEX <= 1 AND
+AGEGRP > 3 AND
+AGEGRP <= 4 AND
+EGEOLOC > 59 AND
+EGEOLOC <= 63: opana (525.0/215.0)
+
+EGEOLOC > 37 AND
+REGION <= 3 AND
+refill_count <= 4 AND
+EGEOLOC > 48 AND
+ADMTYP > 2 AND
+AGEGRP > 2 AND
+refill_count > 1 AND
+AGEGRP > 3 AND
+refill_count > 3: butrans (30.0/2.0)
+
+EGEOLOC > 37 AND
+REGION <= 3 AND
+refill_count <= 4 AND
+EGEOLOC > 48 AND
+SEX > 1 AND
+refill_count > 1 AND
+refill_count <= 3 AND
+ADMTYP > 2 AND
+AGEGRP <= 3 AND
+refill_count > 2 AND
+AGEGRP > 2: butrans (35.0/14.0)
+
+EGEOLOC > 37 AND
+REGION <= 3 AND
+refill_count <= 4 AND
+EGEOLOC > 48 AND
+SEX > 1 AND
+refill_count > 1 AND
+refill_count <= 3 AND
+ADMTYP > 2 AND
+ADMTYP <= 3 AND
+refill_count <= 2: butrans (32.0/9.0)
+
+EGEOLOC > 37 AND
+REGION <= 3 AND
+refill_count <= 4 AND
+EGEOLOC > 48 AND
+SEX > 1 AND
+AGEGRP > 4: butrans (958.0/394.0)
+
+AGEGRP <= 2 AND
+refill_count <= 1 AND
+REGION > 4 AND
+SEX > 1: butrans (63.35/15.0)
+
+SEX <= 1 AND
+EGEOLOC <= 46 AND
+refill_count > 5 AND
+ADMTYP > 3: opana (28.17/12.05)
+
+ADMTYP <= 1 AND
+EGEOLOC > 53 AND
+EGEOLOC <= 61 AND
+AGEGRP <= 2: butrans (58.5/11.0)
+
+SEX <= 1 AND
+EGEOLOC <= 43 AND
+refill_count > 5 AND
+ADMTYP > 1 AND
+refill_count > 9 AND
+EGEOLOC > 12: butrans (10.0)
+
+SEX <= 1 AND
+EGEOLOC <= 43 AND
+AGEGRP > 2 AND
+refill_count > 5 AND
+ADMTYP > 1 AND
+EGEOLOC <= 42 AND
+refill_count > 8 AND
+EGEOLOC <= 41: opana (10.0/2.0)
+
+SEX <= 1 AND
+EGEOLOC <= 43 AND
+refill_count > 5 AND
+AGEGRP > 3 AND
+EGEOLOC > 38 AND
+refill_count > 6: butrans (14.0/1.0)
+
+SEX <= 1 AND
+EGEOLOC <= 43 AND
+AGEGRP > 2 AND
+REGION > 3 AND
+EGEOLOC > 34: butrans (16.0/1.0)
+
+SEX <= 1 AND
+EGEOLOC <= 43 AND
+AGEGRP > 2 AND
+refill_count <= 2 AND
+EGEOLOC > 42 AND
+refill_count <= 1 AND
+AGEGRP <= 4: opana (30.0/6.0)
+
+SEX <= 1 AND
+EGEOLOC <= 42 AND
+AGEGRP > 2 AND
+refill_count <= 5 AND
+EGEOLOC > 34 AND
+ADMTYP <= 3 AND
+ADMTYP > 1 AND
+refill_count > 3 AND
+EGEOLOC <= 39 AND
+refill_count <= 4: opana (22.42/7.0)
+
+SEX <= 1 AND
+EGEOLOC <= 42 AND
+AGEGRP > 2 AND
+refill_count <= 3: opana (4478.58/2081.88)
+
+refill_count > 5 AND
+EGEOLOC > 24 AND
+EGEOLOC > 63 AND
+EGEOLOC <= 64 AND
+SEX > 1 AND
+ADMTYP <= 1 AND
+AGEGRP > 3: butrans (18.0/1.0)
+
+refill_count > 5 AND
+EGEOLOC > 24 AND
+SEX > 1 AND
+ADMTYP > 1 AND
+EGEOLOC <= 38 AND
+EGEOLOC > 34 AND
+refill_count <= 14 AND
+refill_count > 11 AND
+ADMTYP <= 3 AND
+ADMTYP <= 2 AND
+refill_count > 13: opana (14.0)
+
+refill_count > 5 AND
+EGEOLOC > 24 AND
+SEX > 1 AND
+ADMTYP > 1 AND
+EGEOLOC <= 38 AND
+EGEOLOC > 34 AND
+refill_count <= 13 AND
+refill_count > 7 AND
+ADMTYP <= 3 AND
+refill_count <= 8 AND
+AGEGRP > 2: opana (42.0/3.0)
+
+refill_count > 5 AND
+EGEOLOC <= 24 AND
+EGEOLOC > 22 AND
+EGEOLOC > 23: butrans (27.0)
+
+refill_count > 5 AND
+EGEOLOC > 24 AND
+SEX > 1 AND
+ADMTYP > 1 AND
+refill_count <= 10 AND
+REGION <= 2 AND
+AGEGRP <= 3 AND
+refill_count > 6: opana (50.0/4.0)
+
+REGION > 3 AND
+ADMTYP > 1 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 55 AND
+EGEOLOC > 56 AND
+refill_count > 1 AND
+refill_count <= 10 AND
+refill_count <= 2 AND
+AGEGRP <= 4: opana (30.0/2.0)
+
+refill_count > 5 AND
+REGION > 2 AND
+REGION > 4 AND
+ADMTYP > 3 AND
+refill_count > 7 AND
+refill_count > 10: opana (9.18/2.0)
+
+refill_count > 5 AND
+EGEOLOC > 24 AND
+SEX > 1 AND
+ADMTYP > 1 AND
+refill_count <= 10 AND
+ADMTYP <= 2 AND
+REGION <= 2 AND
+refill_count > 8: opana (52.0/12.0)
+
+REGION <= 3 AND
+EGEOLOC > 33 AND
+EGEOLOC <= 34 AND
+ADMTYP <= 3 AND
+refill_count > 13 AND
+AGEGRP > 4 AND
+refill_count <= 14: opana (28.0/1.0)
+
+refill_count > 14 AND
+EGEOLOC <= 4 AND
+refill_count <= 22 AND
+refill_count <= 16 AND
+AGEGRP > 4: butrans (21.0/2.0)
+
+refill_count > 14 AND
+REGION <= 3 AND
+EGEOLOC > 48 AND
+SEX > 1 AND
+AGEGRP <= 3: butrans (32.0/6.0)
+
+refill_count > 14 AND
+refill_count <= 16 AND
+EGEOLOC > 63 AND
+EGEOLOC > 64: butrans (20.0/4.0)
+
+refill_count > 14 AND
+refill_count <= 16 AND
+REGION <= 1 AND
+ADMTYP <= 3: opana (28.0/4.0)
+
+refill_count > 14 AND
+REGION <= 1 AND
+refill_count <= 24 AND
+EGEOLOC > 8: butrans (10.0)
+
+refill_count > 14 AND
+EGEOLOC <= 5 AND
+refill_count > 22: butrans (11.0)
+
+refill_count > 14: opana (790.53/332.0)
+
+REGION <= 3 AND
+EGEOLOC > 33 AND
+EGEOLOC <= 34 AND
+ADMTYP <= 3 AND
+AGEGRP > 4 AND
+SEX > 1 AND
+ADMTYP <= 1 AND
+refill_count <= 4 AND
+refill_count <= 3: butrans (302.0/104.0)
+
+REGION <= 3 AND
+EGEOLOC > 37 AND
+EGEOLOC <= 42 AND
+SEX > 1 AND
+refill_count > 10 AND
+refill_count <= 13 AND
+AGEGRP > 3: opana (22.0/2.0)
+
+REGION <= 3 AND
+EGEOLOC > 37 AND
+EGEOLOC <= 42 AND
+SEX > 1 AND
+EGEOLOC > 39 AND
+AGEGRP > 4 AND
+refill_count > 1 AND
+refill_count <= 3: butrans (197.0/45.0)
+
+REGION <= 3 AND
+EGEOLOC > 44 AND
+EGEOLOC <= 46 AND
+AGEGRP > 2 AND
+SEX > 1: butrans (211.0/80.0)
+
+REGION <= 3 AND
+EGEOLOC > 48 AND
+refill_count <= 3 AND
+ADMTYP > 3 AND
+AGEGRP > 2 AND
+refill_count > 1 AND
+SEX <= 1 AND
+refill_count <= 2: butrans (58.0/14.0)
+
+REGION > 3 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 55 AND
+AGEGRP > 4 AND
+refill_count <= 2 AND
+refill_count <= 1: opana (36.0/6.0)
+
+REGION <= 3 AND
+EGEOLOC <= 4 AND
+AGEGRP > 4 AND
+ADMTYP <= 3 AND
+EGEOLOC > 1 AND
+SEX > 1: opana (256.0/74.0)
+
+REGION <= 1 AND
+AGEGRP > 4 AND
+refill_count > 4 AND
+refill_count <= 9 AND
+SEX > 1 AND
+EGEOLOC > 7: opana (36.0/3.0)
+
+REGION <= 1 AND
+AGEGRP > 4 AND
+EGEOLOC > 9 AND
+refill_count <= 7 AND
+ADMTYP > 1 AND
+refill_count <= 3: butrans (120.64/32.0)
+
+REGION <= 1 AND
+AGEGRP > 4 AND
+EGEOLOC > 9 AND
+refill_count <= 7 AND
+ADMTYP <= 1: butrans (79.28/12.0)
+
+REGION <= 3 AND
+EGEOLOC > 48 AND
+refill_count <= 3 AND
+SEX > 1 AND
+refill_count > 1 AND
+refill_count <= 2: butrans (502.0/196.0)
+
+EGEOLOC <= 8 AND
+EGEOLOC > 5 AND
+ADMTYP <= 2 AND
+EGEOLOC <= 7 AND
+ADMTYP > 1 AND
+REGION <= 2 AND
+SEX > 1: butrans (108.48/28.0)
+
+ADMTYP <= 1 AND
+REGION > 4 AND
+SEX <= 1 AND
+refill_count > 6: butrans (9.0)
+
+ADMTYP <= 1 AND
+AGEGRP > 4 AND
+refill_count > 7 AND
+REGION > 3 AND
+REGION <= 4 AND
+EGEOLOC <= 63 AND
+SEX > 1: opana (124.0/37.0)
+
+refill_count > 11 AND
+ADMTYP > 1 AND
+ADMTYP <= 3 AND
+REGION <= 2 AND
+refill_count <= 12 AND
+EGEOLOC > 19: butrans (60.0/1.0)
+
+refill_count > 12 AND
+EGEOLOC > 58 AND
+AGEGRP > 3: butrans (101.0/17.0)
+
+ADMTYP <= 1 AND
+refill_count > 10 AND
+AGEGRP <= 2 AND
+REGION > 3: opana (27.37/3.0)
+
+ADMTYP <= 1 AND
+EGEOLOC > 53 AND
+SEX > 1 AND
+refill_count > 3 AND
+AGEGRP <= 4 AND
+EGEOLOC > 59: butrans (352.61/144.61)
+
+ADMTYP <= 1 AND
+AGEGRP > 4 AND
+refill_count > 4 AND
+REGION > 3 AND
+SEX > 1 AND
+refill_count <= 5 AND
+REGION <= 4: butrans (43.0/3.0)
+
+REGION > 3 AND
+refill_count > 13 AND
+REGION <= 4 AND
+EGEOLOC > 52 AND
+EGEOLOC <= 63: opana (34.0/6.0)
+
+REGION > 3 AND
+ADMTYP > 1 AND
+ADMTYP <= 2 AND
+SEX > 1 AND
+REGION <= 4 AND
+EGEOLOC <= 57 AND
+EGEOLOC > 54 AND
+AGEGRP <= 3 AND
+EGEOLOC > 55: opana (80.0/13.0)
+
+refill_count <= 1 AND
+ADMTYP > 2 AND
+REGION > 4 AND
+EGEOLOC > 1: opana (16.0/1.0)
+
+refill_count <= 1 AND
+ADMTYP > 2 AND
+AGEGRP <= 4 AND
+REGION > 1 AND
+REGION <= 3 AND
+SEX > 1 AND
+REGION > 2 AND
+EGEOLOC > 35 AND
+EGEOLOC <= 43 AND
+EGEOLOC > 42 AND
+AGEGRP <= 2: butrans (19.0)
+
+ADMTYP <= 1 AND
+AGEGRP > 4 AND
+refill_count > 2 AND
+SEX > 1 AND
+refill_count <= 10 AND
+refill_count > 6 AND
+EGEOLOC > 16 AND
+EGEOLOC > 20 AND
+refill_count > 8: butrans (85.0/23.0)
+
+refill_count <= 1 AND
+ADMTYP > 2 AND
+AGEGRP <= 4 AND
+REGION > 1 AND
+REGION <= 3 AND
+SEX > 1 AND
+REGION <= 2 AND
+EGEOLOC <= 16: butrans (99.0/32.0)
+
+refill_count <= 1 AND
+EGEOLOC <= 23 AND
+EGEOLOC <= 8 AND
+REGION <= 1 AND
+ADMTYP <= 2 AND
+AGEGRP > 2: butrans (268.41/85.0)
+
+EGEOLOC <= 33 AND
+EGEOLOC > 32 AND
+refill_count > 3 AND
+refill_count <= 5 AND
+AGEGRP > 4: opana (94.0/23.0)
+
+EGEOLOC <= 19 AND
+refill_count <= 2 AND
+AGEGRP > 2 AND
+REGION > 4 AND
+AGEGRP > 3 AND
+AGEGRP > 4 AND
+ADMTYP > 1: butrans (57.49/21.0)
+
+EGEOLOC <= 19 AND
+refill_count <= 2 AND
+AGEGRP > 2 AND
+REGION <= 4 AND
+ADMTYP > 1 AND
+REGION <= 1 AND
+refill_count <= 1 AND
+EGEOLOC > 5: opana (178.05/54.05)
+
+ADMTYP > 2 AND
+refill_count <= 2 AND
+refill_count <= 1 AND
+AGEGRP <= 4 AND
+SEX <= 1 AND
+REGION > 1 AND
+REGION > 2: butrans (381.58/161.25)
+
+AGEGRP > 4 AND
+REGION > 4 AND
+SEX <= 1 AND
+EGEOLOC <= 1 AND
+refill_count <= 4: butrans (11.0/2.0)
+
+AGEGRP > 4 AND
+REGION > 4 AND
+ADMTYP > 1 AND
+ADMTYP <= 3 AND
+EGEOLOC <= 1 AND
+refill_count <= 12 AND
+SEX > 1: butrans (46.16/23.0)
+
+AGEGRP > 4 AND
+REGION > 4 AND
+ADMTYP > 1 AND
+SEX > 1: butrans (28.95/5.0)
+
+REGION > 3 AND
+ADMTYP > 1 AND
+REGION > 4 AND
+AGEGRP <= 2 AND
+refill_count <= 3 AND
+EGEOLOC <= 20 AND
+ADMTYP <= 2: opana (26.35/3.0)
+
+ADMTYP <= 1 AND
+refill_count > 7 AND
+REGION <= 2 AND
+refill_count <= 13 AND
+EGEOLOC > 17 AND
+EGEOLOC > 25 AND
+refill_count <= 9: butrans (11.0)
+
+AGEGRP > 4 AND
+EGEOLOC <= 19 AND
+refill_count <= 2 AND
+ADMTYP > 1 AND
+refill_count > 1 AND
+ADMTYP > 3 AND
+EGEOLOC > 18: opana (20.0/1.0)
+
+AGEGRP > 4 AND
+ADMTYP <= 1 AND
+refill_count > 7 AND
+REGION > 3 AND
+refill_count <= 11 AND
+REGION <= 4 AND
+SEX <= 1 AND
+refill_count <= 8 AND
+EGEOLOC <= 63: butrans (24.0/11.0)
+
+AGEGRP > 4 AND
+ADMTYP <= 1 AND
+refill_count > 7 AND
+refill_count <= 8: opana (93.0/32.0)
+
+AGEGRP > 4 AND
+ADMTYP <= 1 AND
+refill_count > 2 AND
+SEX > 1 AND
+refill_count <= 8 AND
+refill_count > 6 AND
+EGEOLOC > 16 AND
+EGEOLOC > 18 AND
+REGION <= 3: butrans (69.0/16.0)
+
+refill_count > 5 AND
+REGION > 2 AND
+SEX > 1 AND
+REGION > 4 AND
+refill_count <= 13 AND
+refill_count > 6 AND
+ADMTYP <= 2 AND
+refill_count <= 7 AND
+AGEGRP > 2: butrans (36.0/7.0)
+
+refill_count > 5 AND
+REGION > 2 AND
+SEX > 1 AND
+refill_count <= 10 AND
+ADMTYP <= 2 AND
+ADMTYP > 1 AND
+REGION > 3 AND
+AGEGRP > 3 AND
+refill_count > 6 AND
+AGEGRP > 4 AND
+EGEOLOC <= 63: opana (151.0/29.0)
+
+AGEGRP > 4 AND
+EGEOLOC <= 19 AND
+refill_count <= 2 AND
+ADMTYP > 1 AND
+ADMTYP <= 3 AND
+REGION > 2 AND
+EGEOLOC > 12: opana (12.0)
+
+AGEGRP > 4 AND
+EGEOLOC <= 19 AND
+refill_count <= 2 AND
+ADMTYP > 1 AND
+ADMTYP <= 3 AND
+refill_count <= 1: opana (283.64/110.34)
+
+AGEGRP > 4 AND
+SEX > 1 AND
+EGEOLOC > 19 AND
+EGEOLOC <= 34 AND
+refill_count <= 8 AND
+refill_count > 4 AND
+REGION > 2 AND
+EGEOLOC > 33: butrans (73.0/15.0)
+
+AGEGRP > 4 AND
+SEX > 1 AND
+EGEOLOC > 19 AND
+EGEOLOC <= 32 AND
+EGEOLOC > 25 AND
+REGION > 2 AND
+ADMTYP > 1: butrans (65.0/15.0)
+
+AGEGRP > 4 AND
+SEX > 1: butrans (8229.77/4014.7)
+
+refill_count > 1 AND
+EGEOLOC <= 5 AND
+SEX <= 1 AND
+AGEGRP <= 2 AND
+EGEOLOC > 1: opana (19.0/1.0)
+
+AGEGRP <= 2 AND
+REGION > 4 AND
+EGEOLOC > 27: opana (23.0/3.0)
+
+AGEGRP <= 2 AND
+REGION <= 2 AND
+EGEOLOC > 22 AND
+SEX > 1 AND
+refill_count > 3 AND
+ADMTYP <= 2: butrans (49.0/8.0)
+
+refill_count > 1 AND
+REGION > 2 AND
+ADMTYP > 3 AND
+EGEOLOC <= 44 AND
+REGION <= 4 AND
+SEX <= 1 AND
+EGEOLOC > 37: opana (19.0/2.0)
+
+refill_count > 1 AND
+REGION > 2 AND
+EGEOLOC <= 33 AND
+refill_count > 2 AND
+REGION <= 3 AND
+SEX <= 1 AND
+refill_count <= 7: opana (41.0/10.0)
+
+SEX > 1 AND
+AGEGRP <= 2 AND
+REGION <= 2 AND
+EGEOLOC > 24 AND
+refill_count <= 2: butrans (121.0/39.0)
+
+SEX > 1 AND
+EGEOLOC <= 37 AND
+EGEOLOC > 34 AND
+refill_count > 4 AND
+EGEOLOC <= 36 AND
+refill_count <= 5: opana (123.0/19.0)
+
+SEX <= 1 AND
+refill_count <= 1 AND
+REGION <= 3 AND
+ADMTYP > 1 AND
+REGION > 2 AND
+EGEOLOC > 42 AND
+ADMTYP <= 3: butrans (1175.89/526.89)
+
+ADMTYP > 2 AND
+refill_count <= 2 AND
+refill_count <= 1 AND
+ADMTYP <= 3 AND
+AGEGRP > 2 AND
+REGION <= 2 AND
+REGION > 1: butrans (42.08/12.04)
+
+ADMTYP > 2 AND
+refill_count <= 2 AND
+refill_count <= 1 AND
+ADMTYP <= 3 AND
+AGEGRP <= 2: butrans (434.19/193.04)
+
+SEX > 1 AND
+refill_count > 5 AND
+REGION > 2 AND
+refill_count <= 8 AND
+AGEGRP > 2 AND
+AGEGRP <= 3 AND
+EGEOLOC <= 44 AND
+refill_count > 6 AND
+REGION <= 3 AND
+EGEOLOC <= 38 AND
+ADMTYP <= 3 AND
+refill_count > 7: opana (47.0/8.0)
+
+SEX > 1 AND
+EGEOLOC <= 33 AND
+EGEOLOC > 27 AND
+ADMTYP > 1 AND
+AGEGRP <= 3 AND
+EGEOLOC <= 32 AND
+AGEGRP > 2: opana (54.0/11.0)
+
+REGION > 3 AND
+refill_count > 11 AND
+EGEOLOC > 35 AND
+EGEOLOC <= 56 AND
+refill_count <= 13: opana (29.49)
+
+: opana (32286.23/16032.64)
+
+Number of Rules  : 	404
+
+
+Time taken to build model: 79.76 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       71998               64.8286 %
+Incorrectly Classified Instances     39061               35.1714 %
+Kappa statistic                          0.2674
+Mean absolute error                      0.4007
+Root mean squared error                  0.4512
+Relative absolute error                 82.259  %
+Root relative squared error             91.4254 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.735    0.472    0.683      0.735    0.708      0.269    0.719     0.789     opana
+                 0.528    0.265    0.591      0.528    0.558      0.269    0.719     0.654     butrans
+Weighted Avg.    0.648    0.385    0.644      0.648    0.645      0.269    0.719     0.732     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 47357 17071 |     a = opana
+ 21990 24641 |     b = butrans
+
