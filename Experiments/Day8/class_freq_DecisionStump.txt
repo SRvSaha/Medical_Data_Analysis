@@ -1,0 +1,66 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.DecisionStump 
+Relation:     data_class_freq
+Instances:    1048575
+Attributes:   8
+              SEX
+              AGEGRP
+              REGION
+              Category
+              ADMTYP
+              EGEOLOC
+              drug_class
+              refill_freq_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Decision Stump
+
+Classifications
+
+drug_class = opana : NF
+drug_class != opana : NF
+drug_class is missing : NF
+
+Class distributions
+
+drug_class = opana
+F	NF	
+0.3468678214440926	0.6531321785559073	
+drug_class != opana
+F	NF	
+0.1667560206729429	0.8332439793270571	
+drug_class is missing
+F	NF	
+0.0	1.0	
+
+
+Time taken to build model: 0.73 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances     1018451               97.1271 %
+Incorrectly Classified Instances     30124                2.8729 %
+Kappa statistic                          0     
+Mean absolute error                      0.0402
+Root mean squared error                  0.1418
+Relative absolute error                 72.0318 %
+Root relative squared error             84.8729 %
+Total Number of Instances          1048575     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.969     0.331     F
+                 1.000    1.000    0.971      1.000    0.985      0.000    0.969     0.999     NF
+Weighted Avg.    0.971    0.971    0.943      0.971    0.957      0.000    0.969     0.980     
+
+=== Confusion Matrix ===
+
+       a       b   <-- classified as
+       0   30124 |       a = F
+       0 1018451 |       b = NF
+
