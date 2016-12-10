@@ -8,7 +8,7 @@ for making decisions in Association Rule Validation obtained by
 Apriori Algorithm.
 
 Requirements : 1. Python 3
-               2. NumPy
+
 Usage :
 
     $python3 male_female_ratio.py <DATASET.csv>
@@ -16,24 +16,35 @@ Usage :
     DATASET.csv : The file where the Male/Female are searched for.
 """
 
-import sys
-import numpy as np
 
-if(len(sys.argv) > 1):
-    in_data = sys.argv[1]
-    with open(in_data) as f:
-        data_items = []
+def male_female_ratio(in_file):
+    """
+    The function finds the male:female ratio in the dataset.
+
+    The duplicate values of Enroll ID are removed from it after
+    that the value of the male:female is calculated.
+
+    """
+    # if(len(sys.argv) > 1):
+    #     in_data = sys.argv[1]
+    with open(in_file) as f:
+        data_items = {}
         for line in f:
-            data_items.append(line.strip().split(',')[:-1])
-        data_items = np.array(data_items)
-else:
-    print("Please pass the dataset as argument :\
-        $python3 male_female_ratio.py <DATASET.csv>")
+            list = line.strip().split(',')
+            if list[0] not in data_items.keys():
+                data_items[list[0]] = list[1]
+    # else:
+    #     print("Please pass the dataset as argument :\
+    #         $python3 male_female_ratio.py <DATASET.csv>")
 
-count_male = count_female = 0
-for item in data_items[:, 0]:
-    if(item == '1'):
-        count_male += 1
-    else:
-        count_female += 1
-print(count_male / count_female)
+    # # print(data_items)
+    count_male = count_female = 0
+    for item in data_items.values():
+        if(item == '1'):
+            count_male += 1
+        else:
+            count_female += 1
+    return count_male / count_female
+
+# if __name__ == '__main__':
+    # print(male_female_ratio())
