@@ -20,11 +20,12 @@ Usage :
 
 import sys
 import numpy as np
+import male_female_ratio as r
 
 if(len(sys.argv) > 2):
     in_data = sys.argv[1]
     in_query = sys.argv[2]
-    support = sys.argv[3]
+    # support = sys.argv[3]
     with open(in_data) as f:
         data_items = []
         for line in f:
@@ -39,27 +40,38 @@ else:
     print("Please pass the files as argument :\
              python <filename>.py datafile queryfile support")
 valid = []
+dic = []
+out_file = open("filtered_dataset.csv", 'w')
 for query in queries:
     count_male = 0
     count_female = 0
+    count = 0
     # ratio = count_male / count_female
     for item in data_items:
         # print(query, [1 if i in item[1:] else 0 for i in query])
         if all([1 if i in item[1:] else 0 for i in query]):
+            count += 1
             if(item[0] == '1'):
                 count_male += 1
             else:
                 count_female += 1
         # print(count_male, count_female)
     if(count_male != 0 and count_female != 0):
+        ratio = count_male / count_female
+        # print(ratio)
+        if(abs(count_male / count_female - r.male_female_ratio(sys.argv[3])) * 100 <= 6):
+            valid.append(("True", query, ratio * 100, count))
+            for item in data_items:
+                if all(1 if i in item[1:] else 0 for i in query):
+                    out_file.write(",".join(item) + "\n")
+    #     else:
+    #         valid.append("False")
+    #     # print(count_male / count_female)
+    #     # valid.append(count_male / count_female)
+    # else:
+    #     valid.append("False")
 
-        if(abs(count_male / count_female - float(support)) <= 0.05):
-            valid.append("True")
-        else:
-            valid.append("False")
-        # print(count_male / count_female)
-        # valid.append(count_male / count_female)
-    else:
-        valid.append("False")
-
-print(valid)
+out_file.close()
+# print(valid)
+# print(queries)
+print()
