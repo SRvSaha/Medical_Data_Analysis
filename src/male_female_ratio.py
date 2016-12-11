@@ -1,3 +1,13 @@
+#
+#   @author      : SRvSaha
+#   Filename     : male_female_ratio.py
+#   Timestamp    : 14:56 11-December-2016 (Sunday)
+#   Description  : Male:Female Ratio Count in DataSet by removing duplicates.
+#
+
+#! /usr/bin/env python
+
+
 """
 Male:Female Ratio Count in DataSet.
 
