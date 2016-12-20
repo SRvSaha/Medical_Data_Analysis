@@ -1,0 +1,35 @@
+===============
+What is kdb+ ?
+===============
+
+kdb+ is a high-performance column-oriented database designed, developed and marketed by Kx Systems with in-memory capabilities for storing and processing large amount of time-series data. The most important feature of kdb+ is that the commonly accessed data is cached into the main memory thereby speeding up access time manifold in comparison to traditional disk access for data. Financial institutions use kdb+ to analyze time series data such as stock or commodity exchange data. The database has also been used for other time-sensitive data applications including energy trading, telecommunications, sensor data, log data, and machine and network usage monitoring.
+
+
+===========
+Why kdb+ ?
+===========
+
+The most crucial reasons why kdb+ is used widely in financial sectors, high frequency trading, time-sensitive data applications are :
+a. It's a proprietary software and so highly stable and reliable.
+
+b. It also supports SQL like queries using q-SQL which is a big advantage for the
+   non-programmers as they don't need to learn kdb+ and the intricacies of it's internal working.
+
+c. It has an in-memory component called the RDB(real time database) which holds the current day's data.
+   The historical data is stored in the historical database(HDB). The in-memory component makes it possible
+   for kdb+ to deal with billions of real-time data entries which is the most important factor in financial institutions to deal with stock market data, commodity exchange data etc.
+
+d. It also uses the map-reduce like constructs to manage and high performance querying speed of very
+   large datasets(HDB).
+
+e. Though it is built in q programming language yet it includes interfaces for all the popular languages
+   as in C/C++, Java, C# and Python.
+
+f. Since it is an columnar database(each column of data is stored sequentially in memory) so one of the
+   major benefits is that data can be highly compressed which permits the columnar operations like - MIN, MAX, COUNT etc. to be performed very rapidly. Also since column oriented DBMS are self indexing, it uses less disk space as compared to relational DBMS containing the same data.
+
+g. In addition to providing incredibly fast query response times, in-memory analytics can reduce or
+   eliminate the need for data indexing and storing pre-aggregated data in OLAP cubes or aggregate tables.  This reduces IT costs and allows faster implementation of Business Intelligence and analytic applications.
+
+h. It is based on vectors of ordered lists. This ordered concept allows kdb+ to provide unique time-series
+   joins that would be be extremely difficult in other variations of SQL which is based on set theory.
