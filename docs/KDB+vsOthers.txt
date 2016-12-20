@@ -2,14 +2,22 @@
 What is kdb+ ?
 ===============
 
-kdb+ is a high-performance column-oriented database designed, developed and marketed by Kx Systems with in-memory capabilities for storing and processing large amount of time-series data. The most important feature of kdb+ is that the commonly accessed data is cached into the main memory thereby speeding up access time manifold in comparison to traditional disk access for data. Financial institutions use kdb+ to analyze time series data such as stock or commodity exchange data. The database has also been used for other time-sensitive data applications including energy trading, telecommunications, sensor data, log data, and machine and network usage monitoring.
+kdb+ is a high-performance column-oriented database designed, developed and marketed by Kx Systems with
+in-memory capabilities for storing and processing large amount of time-series data. The most important
+feature of kdb+ is that the commonly accessed data is cached into the main memory thereby speeding up
+access time manifold in comparison to traditional disk access for data. Financial institutions use kdb+ to
+analyze time series data such as stock or commodity exchange data. The database has also been used for
+other time-sensitive data applications including energy trading, telecommunications, sensor data, log data,
+and machine and network usage monitoring.
 
 
 ===========
 Why kdb+ ?
 ===========
 
-The most crucial reasons why kdb+ is used widely in financial sectors, high frequency trading, time-sensitive data applications are :
+The most crucial reasons why kdb+ is used widely in financial sectors, high frequency trading,
+time-sensitive data applications are :
+
 a. It's a proprietary software and so highly stable and reliable.
 
 b. It also supports SQL like queries using q-SQL which is a big advantage for the
