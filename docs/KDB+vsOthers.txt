@@ -1,6 +1,6 @@
-===============
-What is kdb+ ?
-===============
+================
+ What is kdb+ ?
+================
 
 kdb+ is a high-performance column-oriented database designed, developed and marketed by Kx Systems with
 in-memory capabilities for storing and processing large amount of time-series data. The most important
@@ -10,14 +10,18 @@ analyze time series data such as stock or commodity exchange data. The database 
 other time-sensitive data applications including energy trading, telecommunications, sensor data, log data,
 and machine and network usage monitoring. The enterprise features of kdb+ facilitate collaboration at scale
 between stakeholders whilst reducing costs and overheads as well as boosting productivity. kdb+ is ideally
-suited for cloud deployment and Platform/Data As A Service type applications.kdb+ can do everything that is
-required for an initiative of this wide ranging ambition – data capture, cleansing, storage, logging,
+suited for cloud deployment and Platform/Data As A Service type applications. kdb+ can do everything that
+is required for an initiative of this wide ranging ambition – data capture, cleansing, storage, logging,
 event processing, analytics and the operation and maintenance of real time and historical databases.
+With native 64-bit architecture — essential for managing today’s massive data volumes — kdb+ enables
+performance to scale linearly: as the number of CPUs increases, built-in multi-core processing and
+multi-threading means that applications can take advantage of multiple cores without having to write
+special thread-aware code.
 
 
-===========
-Why kdb+ ?
-===========
+============
+ Why kdb+ ?
+============
 
 The most crucial reasons why kdb+ is used widely in financial sectors, high frequency trading,
 time-sensitive data applications are :
@@ -34,7 +38,7 @@ c. It has an in-memory component called the RDB(real time database) which holds 
    in-databases analysis, from both a real-time and historical perspective.
 
 d. It also uses the map-reduce like constructs to manage and high performance querying speed of very
-   large datasets(HDB).
+   large datasets(HDB) and low-latency.
 
 e. Though it is built in q programming language yet it includes interfaces for all the popular languages
    as in C/C++, Java, C# and Python.
@@ -54,25 +58,44 @@ h. It is based on vectors of ordered lists. This ordered concept allows kdb+ to 
 
 i. It has built-in parallelism and compression technique for data.
 
-j. It has support out of the box for HTTP & WebSockets, JSON, in-memory key-value stores, ODBC, JDBC,
-   in-memory time-series databases, APIs allowing for the most rigorous compute and integration requirements.
+j. It has support out of the box for HTTP & WebSockets, JSON, in-memory key-value stores, ODBC and JDBC
+   facilitate interoperability with applications such as Excel, in-memory time-series databases, APIs
+   allowing for the most rigorous compute and integration requirements to major external systems and
+   modules.
 
 k. High precision nanosecond timestamps, time ordered querying, uniquely performant aggregation across
    flexibly-defined time buckets, coupled with time-based table joins of unparalleled speed, allows kdb+ to
    stand alone in time-series analytics.
 
-l. It doesn't need any special hardware requirements and runs on macOS, Windows, Linux, Solaris and
-   even the standard commodity servers/hardware without compromising performance.
+l. It stores database as ordinary native files, so doesn't need any special hardware requirements and
+   runs on macOS, Windows, Linux, Solaris and even the standard commodity servers/hardware without
+   compromising performance.
 
-m. It is seamlessly scalable upto many petabytes of data in distributed architectures such as cluster, grid,
-   cloud computing.
+m. It is seamlessly scalable upto many petabytes of data in large scale distributed architectures such as
+   cluster, grid, cloud computing.
 
 n. The ability of kdb+ to store any size column and any number of columns makes it an ideal solution for
    the large data volumes required.
 
-=======================
-How powerful is kdb+ ?
-=======================
+o. It has an extremely small footprint, which makes installation and maintenance fast and straightforward.
+
+p. It has built-in administrative tools which include web-server, file operations, and communications.
+
+q. Application-level handling of enterprise-level characteristics: Security, high-availability failover,
+   transaction logging, and capacity planning enables kdb+ to fit easily with existing operations.
+
+r. Efficient query distribution : With support for parallel access to large partitioned historical
+   databases, queries can be farmed out  to multiple cores/machines.
+
+s. It implements a hybrid in-memory/disk architecture that is optimized to use whatever resources
+   are available which, in our view is a better solution i.e, main memory for real-time analysis
+   and disk for historical data analysis as in stream processing.
+
+t. It's native support for temporal and bi-temporal features is a rare capability amongst all databases.
+
+========================
+ How powerful is kdb+ ?
+========================
 
 Some of the results of experiments conducted by researchers and analysts are depicted here to bring to
 picture the power of kdb+. These performance metrics are tested in commodity hardware unless explicitly
@@ -103,3 +126,39 @@ i. kdb+ delivers a performance increase of up to 2.8x on the latest Intel® arch
    (Intel Xeon E7-8890), compared to Intel systems that are a few years old (Intel Xeon E7-4890) which
    reveals the fact the kdb+ and Kx Systems has better support for better and latest hardwares.
 
+===============================================
+ Why should I learn q ? Why not SQL for kdb+ ?
+===============================================
+
+One of the major concerns for adopting kdb+ is that one needs to learn q programming language to deal with
+kdb+ . Since learning a new language has it's own steep-leaning-curve, Kx Systems has built the q language
+keeping in mind the similarity with SQL and also extending capabilities of dealing with real-time database.
+
+kdb+ comes with its built-in functional vector processing programming language that is known as q.
+It incorporates a superset of standard SQL which is extended for time-series analysis and offers many
+advantages over the standard version. Anyone familiar with SQL can learn q in a matter of days and be able
+to quickly write her own ad-hoc queries.
+
+Advantages of q :
+---------------
+
+a. Minimization of data traffic : Because q can operate on data directly, there is no need to first read
+   data, then export to an external routine for analysis. Event processing can be done immediately, as data
+   is received.
+
+b. Virtually unlimited scalability : Lists, dictionaries, and tables are primitive data types, and the
+   core primitives are designed for database operations — for example, doing arithmetic on tables.
+   An operation can work just as easily on a million records, as on a single record.
+
+c. Built-in time data types : Queries are highly optimized for time-series data.
+
+d. Optimized performance : Data attributes such as sorted, parted, grouped, and unique can be applied to
+   columns.
+
+e. Query recognizability : q has database queries that are similar to counterparts in SQL, as well as
+   functionality that goes far beyond traditional SQL.
+
+f. Immediate feedback : The q interactive environment provides immediate feedback for rapid development.
+
+g. Only a few lines of code : The brevity of data structures is actually one of the attributes that gives
+   q its ability to express concisely what would take many lines in other languages.
