@@ -46,7 +46,8 @@ f. Since it is an columnar database(each column of data is stored sequentially i
 
 g. In addition to providing incredibly fast query response times, in-memory analytics can reduce or
    eliminate the need for data indexing and storing pre-aggregated data in OLAP (Online Analytical
-   Processing) cubes or aggregate tables.  This reduces IT costs and allows faster implementation of Business Intelligence and analytic applications.
+   Processing) cubes or aggregate tables.  This reduces IT costs and allows faster implementation of
+   Business Intelligence and analytic applications.
 
 h. It is based on vectors of ordered lists. This ordered concept allows kdb+ to provide unique time-series
    joins that would be be extremely difficult in other variations of SQL which is based on set theory.
@@ -73,8 +74,9 @@ n. The ability of kdb+ to store any size column and any number of columns makes 
 How powerful is kdb+ ?
 =======================
 
-Some of the results experiments conducted by researchers and analysts are depicted here to bring to picture
-the power of kdb+. These performance metrics are tested in commodity hardware.
+Some of the results of experiments conducted by researchers and analysts are depicted here to bring to
+picture the power of kdb+. These performance metrics are tested in commodity hardware unless explicitly
+mentioned about the hardware specifications.
 
 a. Single inserts, updates, joins and selects – millions per second per core. Consistent performance with
    10s of billions of inserts per day.
@@ -100,3 +102,4 @@ h. kdb+ is 40 to 400 times faster than traditional VCF analysis (Genomic Analysi
 i. kdb+ delivers a performance increase of up to 2.8x on the latest Intel® architecture
    (Intel Xeon E7-8890), compared to Intel systems that are a few years old (Intel Xeon E7-4890) which
    reveals the fact the kdb+ and Kx Systems has better support for better and latest hardwares.
+
