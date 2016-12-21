@@ -1,0 +1,68 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     data-weka.filters.unsupervised.attribute.Remove-R1,6,8,11-12
+Instances:    1048575
+Attributes:   7
+              SEX
+              AGEGRP
+              REGION
+              Category
+              ADMTYP
+              drug_class
+              refill_freq_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: F, NF
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0001 * (normalized) SEX
+ +       0      * (normalized) AGEGRP
+ +      -0.0008 * (normalized) REGION
+ +       0.0001 * (normalized) Category=outpatients
+ +      -0.0007 * (normalized) ADMTYP
+ +      -0.0002 * (normalized) drug_class=butrans
+ +       1.0007
+
+Number of kernel evaluations: 1607550033 (35.558% cached)
+
+
+
+Time taken to build model: 530.3 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances     1018451               97.1271 %
+Incorrectly Classified Instances     30124                2.8729 %
+Kappa statistic                          0     
+Mean absolute error                      0.0287
+Root mean squared error                  0.1695
+Relative absolute error                 51.478  %
+Root relative squared error            101.4681 %
+Total Number of Instances          1048575     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.029     F
+                 1.000    1.000    0.971      1.000    0.985      0.000    0.500     0.971     NF
+Weighted Avg.    0.971    0.971    0.943      0.971    0.957      0.000    0.500     0.944     
+
+=== Confusion Matrix ===
+
+       a       b   <-- classified as
+       0   30124 |       a = F
+       0 1018451 |       b = NF
+
+
