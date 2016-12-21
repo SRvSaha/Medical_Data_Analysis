@@ -167,8 +167,56 @@ g. Only a few lines of code : The brevity of data structures is actually one of 
  Handling Big Data : kdb+ or Hadoop ?
 ======================================
 
-The Apache Hadoop and Kx technologies are at their best when used to solve Big Data analytics. So which
-one is the best? Put simply, there is no “one-size-fits-all” answer to the question “which is best?”
+The Apache Hadoop and Kx technologies are at their best when used to solve Big Data analytics. kdb+ also
+uses MapReduce functionality internally to deal with big data as done by Hadoop.So which one is the best?
+Put simply, there is no “one-size-fits-all” answer to the question “which is best?”
 
 kdb+ : high-performance, columnar-oriented database combining a functional vector processing language
        called q. This made it easy to rapidly compute massive amounts of time-series, streaming data.
+       Created with financial institutions in mind, the database was developed as a central repository to store time series data that supports real-time analysis of billions of records.
+
+Hadoop : By Hadoop we mean the Hadoop Ecosystem consisting of HDFS, YARN, MapReduce, HBase, Hive, Pig etc.
+         It was derived from a need to allow use cases such as web searches/queries to run significantly
+         quicker than ever before. A big problem at that time (early 2000) was a finite amount of
+         capability within existing server infrastructures. Specific key elements of this contribution were MapReduce and GFS from Google which resulted in Apache Hadoop.
+
+
+kdb+ : It's especially optimized for trading market tick data, for real-time, intra-day databases and
+       ticker plants. This model was highly adaptive to any form of time-series streaming and historical
+       data.
+
+Hadoop : The elegance of the Apache Hadoop approach is that it allows a construct such as a keyword search
+         or sort to work extremely quickly and has drastic improvement in fetching query results in search-
+         engines.
+
+
+kdb+ : kdb+ has an in-memory component called the RDB(real time database) which holds the current day's
+       data. The historical data is stored in the historical database(HDB).
+
+Hadoop :  Hadoop does not have any real time component. It uses the HDFS(Hadoop File System) to store the
+          data. Hadoop doesn't have any concept of in-memory computation. However, Apache HBase, a
+          key-value NoSQL databases which runs on the top of HDFS supports real-time querying of Big Data.
+
+
+kdb+ : q-SQL is a SQL like language to query the kdb+ database which operates directly on the data.
+
+Hadoop :  In the Hadoop world, the corresponding language is Hive which allows business or analyst folks
+          to query the database without prior knowledge of Hadoop's HDFS.
+
+
+kdb+ : kdb+ stores data as hybrid structure i.e, the real-time database in stored in RAM whereas the
+       historical database is stored in disk. Since in-memory access if faster, performance is good
+       in real-time and time-series analysis.
+
+Hadoop : Hadoop stores data in hard disk of the cluster as HDFS and brings computation to data. Speed
+        of disk access and computation directly at the data node of cluster has trade-off. So, parallel
+        processing is achieved in Hadoop compensating the slower speed of access the disks compared to
+        memory.
+
+kdb+ : kdb+ is a proprietary software by Kx Systems so the initial setup cost with be significant.
+
+Hadoop : Apache Hadoop, on the other hand, is an open-source software framework by Apache Software
+         Foundation licensed under Apache License 2.0, so the entry cost of set-up is nil leaving aside
+         the hardware cost for cluster.
+
+
