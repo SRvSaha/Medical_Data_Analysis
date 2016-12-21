@@ -58,10 +58,10 @@ h. It is based on vectors of ordered lists. This ordered concept allows kdb+ to 
 
 i. It has built-in parallelism and compression technique for data.
 
-j. It has support out of the box for HTTP & WebSockets, JSON, in-memory key-value stores, ODBC and JDBC
-   facilitate interoperability with applications such as Excel, in-memory time-series databases, APIs
-   allowing for the most rigorous compute and integration requirements to major external systems and
-   modules.
+j. It has support out of the box for HTTP & WebSockets to build real-time web application, JSON,
+   in-memory key-value stores, ODBC and JDBC facilitate interoperability with applications such as Excel,
+   in-memory time-series databases, APIs allowing for the most rigorous compute and integration
+   requirements to major external systems and modules.
 
 k. High precision nanosecond timestamps, time ordered querying, uniquely performant aggregation across
    flexibly-defined time buckets, coupled with time-based table joins of unparalleled speed, allows kdb+ to
@@ -162,3 +162,13 @@ f. Immediate feedback : The q interactive environment provides immediate feedbac
 
 g. Only a few lines of code : The brevity of data structures is actually one of the attributes that gives
    q its ability to express concisely what would take many lines in other languages.
+
+======================================
+ Handling Big Data : kdb+ or Hadoop ?
+======================================
+
+The Apache Hadoop and Kx technologies are at their best when used to solve Big Data analytics. So which
+one is the best? Put simply, there is no “one-size-fits-all” answer to the question “which is best?”
+
+kdb+ : high-performance, columnar-oriented database combining a functional vector processing language
+       called q. This made it easy to rapidly compute massive amounts of time-series, streaming data.
