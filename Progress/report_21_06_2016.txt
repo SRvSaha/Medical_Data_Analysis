@@ -1,0 +1,100 @@
+                                        =================================
+                                         Progress Report till 21-12-2016
+                                        =================================
+
+                                     Project : Medical Data Analysis
+                                     Intern  : Saurav Saha, NIT Mizoram
+                                     Period  : 1st Dec'16 - present
+                                     Guide   : Dr. Varun Dutt & Miss Shruti Kaushik
+                                     Applied Cognitive Science Lab, IIT Mandi
+                                 =====================================================
+
+Work done till date :
+
+**Contents**
+============
+[1]. Machine Learning Analysis using Weka
+[2]. Frequent Itemsets ( Apriori Algorithm ) and Cross-Validation using Male to Female ratio.
+[3]. Analysis and Report on why kdb+ is better for medical data analysis in comparison to other databases.
+
+**Description**
+===============
+
+[1]. Machine Learning Analysis using Weka : The given dataset consisting of EMR (Electronic Medical Record)
+     records in CSV(comma separated values) format is analyzed using Unsupervised Machine Learning
+     Technique with 10-fold cross validation. Classification/Prediction is done on the basis of 2 classes :
+
+     a. Predicting Drug Class - Butrans/Opana
+     b. Predicting Type of Patient - Frequent Buyer/ Non-Frequent Buyer
+
+     a. Predicting Drug Class - For the classification of Drug Class, I have taken into account 6 features
+        to identify which drug ( Butrans or Opana ) a patient is likely to opt for.
+        Features :
+                    i. SEX
+                    ii. AGE_GROUP
+                    iii. REGION
+                    iv. CATAGORY
+                    v. REFILL_COUNT
+                    vi. ADMISSION_TYPE
+        Statistical analysis is done for 4 Machine Learning Algorithms using Weka :
+            i. Random Forest : 64.32% correctly identified.
+            ii. Decision Forest (j48) : 64.22% correctly identified.
+            iii. Logistic Regression : 62.03% correctly identified.
+            iv. SMO(Linear) : 61.33% correctly identified.
+
+        Baseline metric was 58.0124 % as majority class was Opana (64428/111059).
+
+     b. Predicting Frequent/Non-frequent Buyer : To predict whether a patient is a Frequent Buyer (F) or
+        Non-Frequent Buyer (NF), I used 6 features as follows :
+            Features :
+                        i. SEX
+                        ii. AGE_GROUP
+                        iii. REGION
+                        iv. CATAGORY
+                        v. CLASS_DRUG
+                        vi. ADMISSION_TYPE
+        Firstly, I found out the mean of the refill count from our entire dataset which came out to be
+        7.67. So, I've tagged all those patient as Frequent Buyer (F) whose REFILL_COUNT is greater than
+        or equal to the mean, and the others I've tagged as Non-Frequent Buyer (NF).
+
+        After this, using those 4 machine learning algorithms in Weka, I have done statistical analysis
+        about the correctness. Almost all the algorithms gave ~97% accuracy since the baseline was 97%
+        as maximum patients were falling in the NF category (1018451/1048575).
+
+        TODO : Add the percentages after re-evaluation. Cross-validation of the algorithms are in progress.
+
+            i. Random Forest :
+            ii. Decision Forest (j48) :
+            iii. Logistic Regression :
+            iv. SMO(Linear) : 97.1271 %
+
+[2]. Frequent Itemsets ( Apriori Algorithm ) and Cross-Validation using Male to Female ratio : We've used
+     the Apriori Algorithm for finding out the frequent itemsets which appear together in our dataset.
+     Since our dataset had 15 diagnosis codes and 15 procedure codes, so using Apriori Algorithm I filtered
+     out those itemsets who occur together frequently in the dataset given a support and a confidence value.
+     After lots of analysis, I figured out that overall 15 rules are generated with a support value of 0.01
+     and confidence score of 0.99. So, to validate these rules with our original dataset i.e, the filter out
+     the rules which reflect our original data in dataset I have taken into account the ENROLL_ID & SEX attributes in the dataset. I've written up a script in Python that could give me the ratio of Male to
+     Female patients after removing the duplicated ENROL_IDs.
+
+     Male:Female Ratio of Original Dataset came out to be : 0.61408
+
+     To cross-validate the rules obtained I've written another Python script that takes the rules one by
+     one as input and checks for the Male:Female ratio in original dataset. If the ratio Male:Female
+     reflected by the rule has upto 9% error I've accepted it and concluded that the rule is perfectly
+     reflecting our dataset.
+
+     So, after doing this, I've obtained 2 rules finally at ~8.5% error rate :
+        (99232, V6284) => ('') [Confidence : 99.5%] & (99223, V6284) => ('') [Confidence : 99.7%]
+
+     With these 2 rules, finally 2470 results were obtained from our dataset that are frequent.
+
+[3]. Analysis and Report on why kdb+ is better for medical data analysis in comparison to other databases :
+     I've prepared a report on kdb+ after doing lots of analysis from various resources as to why is kdb+
+     used when there are a bunch of other scalable open source databases out there in the market. Also, in
+     the report comparative analysis of kdb+ is done with the most popular databases like MongoDB, NoSQL,
+     and Hadoop since we're dealing with Big Datasets.
+
+
+                                        ===============================
+
