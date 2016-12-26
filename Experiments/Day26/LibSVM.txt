@@ -1,0 +1,48 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LibSVM -S 0 -K 2 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.001 -P 0.1 -model /home/srvsaha/Downloads -seed 1
+Relation:     data-weka.filters.unsupervised.attribute.Remove-R1,8,10-12
+Instances:    1048575
+Attributes:   7
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              drug_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+LibSVM wrapper, original code by Yasser EL-Manzalawy (= WLSVM)
+
+Time taken to build model: 2059.1 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       70067               63.0899 %
+Incorrectly Classified Instances     40992               36.9101 %
+Kappa statistic                          0.2078
+Mean absolute error                      0.3691
+Root mean squared error                  0.6075
+Relative absolute error                 75.7658 %
+Root relative squared error            123.0982 %
+Total Number of Instances           111059     
+Ignored Class Unknown Instances             937516     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.796    0.597    0.648      0.796    0.714      0.217    0.408     0.053     opana
+                 0.403    0.204    0.588      0.403    0.478      0.217    0.695     0.264     butrans
+Weighted Avg.    0.631    0.432    0.623      0.631    0.615      0.217    0.528     0.141     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 51284 13144 |     a = opana
+ 27848 18783 |     b = butrans
+
+
