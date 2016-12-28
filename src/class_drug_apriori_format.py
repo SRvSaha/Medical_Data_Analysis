@@ -6,7 +6,7 @@
 #
 
 """
-Sepatation of Class Drugs into different files by removing duplicates and
+Separation of Class Drugs into different files by removing duplicates and
 spaces.
 
 The script separates butrans and opana drug in two different files after
