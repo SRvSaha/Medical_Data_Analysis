@@ -5,7 +5,7 @@
 #   Description  : Male:Female Ratio Count in DataSet by removing duplicates.
 #
 
-#! /usr/bin/env python
+#!/usr/bin/env python
 
 
 """
@@ -38,9 +38,11 @@ def male_female_ratio(in_file):
 
     """
     with open(in_file) as f:
+        # dictionary is used to store key-values
         data_items = {}
         for line in f:
             list = line.strip().split(',')
+            # For removing the duplicates
             if list[0] not in data_items.keys():
                 data_items[list[0]] = list[1]
 
@@ -52,5 +54,7 @@ def male_female_ratio(in_file):
             count_female += 1
     return count_male / count_female
 
+# If the module is imported then this block of codes are not executed.
+# Else when run in a standalone way, it is used.
 if __name__ == '__main__':
     print(male_female_ratio(sys.argv[1]))

@@ -63,6 +63,7 @@ def runApriori(data_iter, minSupport, minConfidence):
      - items (tuple, support)
      - rules ((pretuple, posttuple), confidence)
     """
+    print "Running.."
     itemSet, transactionList = getItemSetTransactionList(data_iter)
 
     freqSet = defaultdict(int)
@@ -120,8 +121,8 @@ def printResults(items, rules):
     print "\n------------------------ RULES:"
     for rule, confidence in sorted(rules, key=lambda (rule, confidence): confidence):
         pre, post = rule
-        print "Rule: %s ==> %s , %.3f" % (str(pre), str(post), confidence)
-
+        #print "Rule: %s ==> %s , %.3f, %.3f" % (str(pre), str(post), support, confidence)
+        print "%s %s " % (str(pre), str(post))
 
 def dataFromFile(fname):
         """Function which reads from the file and yields a generator"""
