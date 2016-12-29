@@ -1,0 +1,30 @@
+=================================
+ k-fold cross-validation in weka
+=================================
+
+Since we're using 10 fold cross-validation for our data, so here is the scenerio described in layman terms.
+Basically we are doing supervised learning in our dataset using cross-validation.
+(Source : StackOverflow)
+
+So, here is the scenario again: you have 100 labeled data
+
+Use training set
+
+-    weka will take 100 labeled data
+-   it will apply an algorithm to build a classifier from these 100 data
+-   it applies that classifier AGAIN on these 100 data
+-   it provides you with the performance of the classifier (applied to the same 100 data from which it was developed)
+
+Use 10 fold CV
+
+    Weka takes 100 labeled data
+
+-   it produces 10 equal sized sets. Each set is divided into two groups: 90 labeled data are used for training and 10 labeled
+    data are used for testing.
+
+-   it produces a classifier with an algorithm from 90 labeled data and applies that on the 10 testing data for set 1.
+
+-   It does the same thing for set 2 to 10 and produces 9 more classifiers
+
+-   it averages the performance of the 10 classifiers produced from 10 equal sized (90 training and 10 testing) sets
+
