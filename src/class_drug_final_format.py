@@ -55,6 +55,7 @@ if len(sys.argv) == 4:
         butrans = sorted(butrans, key=lambda x: int(x.split(',')[0]))
         opana = sorted(opana, key=lambda x: int(x.split(',')[0]))
     header = 'ENROLL_ID,SEX,AGEGRP,REGION,REFILL_COUNT,ADMTYP,'
+    # header = 'SEX,AGEGRP,REGION,REFILL_COUNT,ADMTYP,'
     f_butrans.write(header + ','.join(codes_butrans) + ',Class_Drug\n')
     f_opana.write(header + ','.join(codes_opana) + ',Class_Drug\n')
     for record in butrans:
@@ -63,6 +64,8 @@ if len(sys.argv) == 4:
         #     print(record[0],record[-3])
         # Adding ENROLL_ID and removing CATAGORY
         output = ','.join(record[:4]) + ',' + record[5] + ',' + record[-3]
+        # Without ENROL_ID
+        # output = ','.join(record[1:4]) + ',' + record[5] + ',' + record[-3]
         for code in codes_butrans:
             if code in record[6:-3]:
                 output += ',1'
@@ -74,6 +77,8 @@ if len(sys.argv) == 4:
         # if int(record[-3]) > 5:
         #     print(record[-3])
         output = ','.join(record[:4]) + ',' + record[5] + ',' + record[-3]
+        # Without ENROL_ID
+        # output = ','.join(record[1:4]) + ',' + record[5] + ',' + record[-3]
         for code in codes_opana:
             if code in record[6:-3]:
                 output += ',1'

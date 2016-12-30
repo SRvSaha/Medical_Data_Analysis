@@ -66,7 +66,7 @@ else:
 valid = []
 dic = []
 # out_file is the output file.
-out_file = open("butrans_frequent_dataset.csv", 'w')
+out_file = open("both_butrans_opana_frequent_dataset.csv", 'w')
 for query in queries:
     # For every rule/query, male and female count are resetted to 0
     count_male = 0
@@ -97,8 +97,8 @@ for query in queries:
         # 3rd argument is sex_enrol_id file to calculate male_female_ratio
         # through the module imported as r
         # 8.5% is the overall error acceptable
-        if(abs(ratio - r.male_female_ratio(sys.argv[3])) * 100 <= 6.5):
-            valid.append(("True", query, ratio * 100))
+        if(abs(ratio - r.male_female_ratio(sys.argv[3])) * 100 <= 10):
+            valid.append((query, ratio * 100))
             for item in data_items:
                 # For creating csv file from numpy array for which rule matched
                 # the original male:female ratio in dataset.

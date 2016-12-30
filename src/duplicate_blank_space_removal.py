@@ -23,11 +23,14 @@ import sys
 if len(sys.argv) == 2:
     output = set()
     with open(sys.argv[1]) as f:
-        for line in f.readlines()[1:]:
-            line = [item for item in line.split(',') if item != '']
-            output.add(','.join(line))
+        # for line in f.readlines()[1:]:
+        for line in f.readlines():
+            # line = [item for item in line.split(',') if item != '']
+            # output.add(','.join(line))
+            output.add(line)
         output = sorted(output, key=(lambda x: x.split(',')[0]))
-    with open("both_butrans_opana_apriori_full.csv",'w') as f:
+    # with open("both_butrans_opana_apriori_full.csv", 'w') as f:
+    with open("both_butrans_opana_without_duplicates.csv", 'w') as f:
         f.writelines(output)
         print("Output Successful :)")
 else:
