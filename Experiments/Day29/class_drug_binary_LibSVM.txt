@@ -1,0 +1,52 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LibSVM -S 0 -K 2 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.001 -P 0.1 -model /home/srvsaha/Medical_Data_Analysis/Data/Test -seed 1
+Relation:     join_opana_butrans_final
+Instances:    110331
+Attributes:   12
+              SEX
+              AGEGRP
+              REGION
+              REFILL+AF8-COUNT
+              ADMTYP
+              Total Knee Arthrolplasty
+              OSTEOARTHROSIS secondary lower leg
+              Removal of Foreign Body from Eye
+              Total Knee Replacement
+              OSTEOARTHROSIS primary lower leg
+              OSTEOARTHROSIS generalized lower leg
+              Class+AF8-Drug
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+LibSVM wrapper, original code by Yasser EL-Manzalawy (= WLSVM)
+
+Time taken to build model: 3222.54 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       68461               62.0506 %
+Incorrectly Classified Instances     41870               37.9494 %
+Kappa statistic                          0.2144
+Mean absolute error                      0.3795
+Root mean squared error                  0.616 
+Relative absolute error                 77.8906 %
+Root relative squared error            124.8124 %
+Total Number of Instances           110331     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.695    0.483    0.665      0.695    0.680      0.215    0.606     0.639     opana
+                 0.517    0.305    0.551      0.517    0.534      0.215    0.606     0.488     butrans
+Weighted Avg.    0.621    0.408    0.618      0.621    0.619      0.215    0.606     0.576     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 44485 19502 |     a = opana
+ 22368 23976 |     b = butrans
+
+

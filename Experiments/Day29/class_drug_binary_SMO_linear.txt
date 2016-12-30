@@ -1,0 +1,78 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     join_opana_butrans_final
+Instances:    110331
+Attributes:   12
+              SEX
+              AGEGRP
+              REGION
+              REFILL+AF8-COUNT
+              ADMTYP
+              Total Knee Arthrolplasty
+              OSTEOARTHROSIS secondary lower leg
+              Removal of Foreign Body from Eye
+              Total Knee Replacement
+              OSTEOARTHROSIS primary lower leg
+              OSTEOARTHROSIS generalized lower leg
+              Class+AF8-Drug
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: opana, butrans
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0009 * (normalized) SEX
+ +       0.0003 * (normalized) AGEGRP
+ +       0.0006 * (normalized) REGION
+ +      -0.0081 * (normalized) REFILL+AF8-COUNT
+ +       0.001  * (normalized) ADMTYP
+ +      -0.0002 * (normalized) Total Knee Arthrolplasty
+ +       0.0001 * (normalized) OSTEOARTHROSIS secondary lower leg
+ +       0.0001 * (normalized) Removal of Foreign Body from Eye
+ +       1.9985 * (normalized) Total Knee Replacement
+ +       2.001  * (normalized) OSTEOARTHROSIS primary lower leg
+ +      -2.0007 * (normalized) OSTEOARTHROSIS generalized lower leg
+ -       1.0005
+
+Number of kernel evaluations: 599752765 (38.59% cached)
+
+
+
+Time taken to build model: 168.12 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       65125               59.0269 %
+Incorrectly Classified Instances     45206               40.9731 %
+Kappa statistic                          0.0313
+Mean absolute error                      0.4097
+Root mean squared error                  0.6401
+Relative absolute error                 84.0965 %
+Root relative squared error            129.6893 %
+Total Number of Instances           110331     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.993    0.966    0.587      0.993    0.738      0.100    0.514     0.587     opana
+                 0.034    0.007    0.783      0.034    0.065      0.100    0.514     0.432     butrans
+Weighted Avg.    0.590    0.563    0.669      0.590    0.455      0.100    0.514     0.522     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 63552   435 |     a = opana
+ 44771  1573 |     b = butrans
+
+
