@@ -1,0 +1,285 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AdaBoostM1 -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation:     join_opana_butrans_final
+Instances:    110331
+Attributes:   12
+              SEX
+              AGEGRP
+              REGION
+              REFILL+AF8-COUNT
+              ADMTYP
+              Total Knee Arthrolplasty
+              OSTEOARTHROSIS secondary lower leg
+              Removal of Foreign Body from Eye
+              Total Knee Replacement
+              OSTEOARTHROSIS primary lower leg
+              OSTEOARTHROSIS generalized lower leg
+              Class+AF8-Drug
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AdaBoostM1: Base classifiers and their weights: 
+
+Decision Stump
+
+Classifications
+
+REFILL+AF8-COUNT <= 10.5 : opana
+REFILL+AF8-COUNT > 10.5 : opana
+REFILL+AF8-COUNT is missing : opana
+
+Class distributions
+
+REFILL+AF8-COUNT <= 10.5
+opana	butrans	
+0.5274870160393474	0.47251298396065256	
+REFILL+AF8-COUNT > 10.5
+opana	butrans	
+0.7779989613986498	0.22200103860135018	
+REFILL+AF8-COUNT is missing
+opana	butrans	
+0.5799548630937814	0.4200451369062186	
+
+
+Weight: 0.32
+
+Decision Stump
+
+Classifications
+
+REFILL+AF8-COUNT <= 10.5 : butrans
+REFILL+AF8-COUNT > 10.5 : opana
+REFILL+AF8-COUNT is missing : opana
+
+Class distributions
+
+REFILL+AF8-COUNT <= 10.5
+opana	butrans	
+0.44706682361625183	0.5529331763837481	
+REFILL+AF8-COUNT > 10.5
+opana	butrans	
+0.7173703852691775	0.2826296147308225	
+REFILL+AF8-COUNT is missing
+opana	butrans	
+0.5000000000002605	0.4999999999997396	
+
+
+Weight: 0.34
+
+Decision Stump
+
+Classifications
+
+OSTEOARTHROSIS generalized lower leg <= 0.5 : opana
+OSTEOARTHROSIS generalized lower leg > 0.5 : opana
+OSTEOARTHROSIS generalized lower leg is missing : opana
+
+Class distributions
+
+OSTEOARTHROSIS generalized lower leg <= 0.5
+opana	butrans	
+0.5465980188276629	0.45340198117233715	
+OSTEOARTHROSIS generalized lower leg > 0.5
+opana	butrans	
+1.000000000002284	-2.2840371793444027E-12	
+OSTEOARTHROSIS generalized lower leg is missing
+opana	butrans	
+0.5533374105162981	0.4466625894837019	
+
+
+Weight: 0.21
+
+Decision Stump
+
+Classifications
+
+OSTEOARTHROSIS generalized lower leg <= 0.5 : butrans
+OSTEOARTHROSIS generalized lower leg > 0.5 : opana
+OSTEOARTHROSIS generalized lower leg is missing : opana
+
+Class distributions
+
+OSTEOARTHROSIS generalized lower leg <= 0.5
+opana	butrans	
+0.49319293471128334	0.5068070652887166	
+OSTEOARTHROSIS generalized lower leg > 0.5
+opana	butrans	
+1.0000000000069136	-6.913437261859772E-12	
+OSTEOARTHROSIS generalized lower leg is missing
+opana	butrans	
+0.5000000000007678	0.49999999999923206	
+
+
+Weight: 0.05
+
+Decision Stump
+
+Classifications
+
+OSTEOARTHROSIS generalized lower leg <= 0.5 : opana
+OSTEOARTHROSIS generalized lower leg > 0.5 : opana
+OSTEOARTHROSIS generalized lower leg is missing : opana
+
+Class distributions
+
+OSTEOARTHROSIS generalized lower leg <= 0.5
+opana	butrans	
+0.5066266335787358	0.49337336642126417	
+OSTEOARTHROSIS generalized lower leg > 0.5
+opana	butrans	
+0.9999999999955212	4.4787939046797254E-12	
+OSTEOARTHROSIS generalized lower leg is missing
+opana	butrans	
+0.5130799155432827	0.4869200844567172	
+
+
+Weight: 0.05
+
+Decision Stump
+
+Classifications
+
+OSTEOARTHROSIS generalized lower leg <= 0.5 : butrans
+OSTEOARTHROSIS generalized lower leg > 0.5 : opana
+OSTEOARTHROSIS generalized lower leg is missing : opana
+
+Class distributions
+
+OSTEOARTHROSIS generalized lower leg <= 0.5
+opana	butrans	
+0.49354447988627737	0.5064555201137226	
+OSTEOARTHROSIS generalized lower leg > 0.5
+opana	butrans	
+0.9999999999966279	3.3721103153513405E-12	
+OSTEOARTHROSIS generalized lower leg is missing
+opana	butrans	
+0.5000000000004671	0.4999999999995329	
+
+
+Weight: 0.05
+
+Decision Stump
+
+Classifications
+
+REFILL+AF8-COUNT <= 31.5 : butrans
+REFILL+AF8-COUNT > 31.5 : opana
+REFILL+AF8-COUNT is missing : opana
+
+Class distributions
+
+REFILL+AF8-COUNT <= 31.5
+opana	butrans	
+0.49976006132142864	0.5002399386785713	
+REFILL+AF8-COUNT > 31.5
+opana	butrans	
+0.8224809965468489	0.1775190034531511	
+REFILL+AF8-COUNT is missing
+opana	butrans	
+0.512429602918868	0.48757039708113203	
+
+
+Weight: 0.05
+
+Decision Stump
+
+Classifications
+
+OSTEOARTHROSIS generalized lower leg <= 0.5 : opana
+OSTEOARTHROSIS generalized lower leg > 0.5 : opana
+OSTEOARTHROSIS generalized lower leg is missing : opana
+
+Class distributions
+
+OSTEOARTHROSIS generalized lower leg <= 0.5
+opana	butrans	
+0.5181982917429577	0.48180170825704227	
+OSTEOARTHROSIS generalized lower leg > 0.5
+opana	butrans	
+0.9999999999918016	8.1984321737272E-12	
+OSTEOARTHROSIS generalized lower leg is missing
+opana	butrans	
+0.5243242770530497	0.4756757229469503	
+
+
+Weight: 0.1
+
+Decision Stump
+
+Classifications
+
+OSTEOARTHROSIS generalized lower leg <= 0.5 : butrans
+OSTEOARTHROSIS generalized lower leg > 0.5 : opana
+OSTEOARTHROSIS generalized lower leg is missing : butrans
+
+Class distributions
+
+OSTEOARTHROSIS generalized lower leg <= 0.5
+opana	butrans	
+0.4938631485268882	0.5061368514731117	
+OSTEOARTHROSIS generalized lower leg > 0.5
+opana	butrans	
+0.9999999999983856	1.614423612956974E-12	
+OSTEOARTHROSIS generalized lower leg is missing
+opana	butrans	
+0.4999999999989273	0.5000000000010726	
+
+
+Weight: 0.05
+
+Decision Stump
+
+Classifications
+
+OSTEOARTHROSIS generalized lower leg <= 0.5 : opana
+OSTEOARTHROSIS generalized lower leg > 0.5 : opana
+OSTEOARTHROSIS generalized lower leg is missing : opana
+
+Class distributions
+
+OSTEOARTHROSIS generalized lower leg <= 0.5
+opana	butrans	
+0.505989817002635	0.49401018299736493	
+OSTEOARTHROSIS generalized lower leg > 0.5
+opana	butrans	
+1.0000000000052762	-5.276203330410208E-12	
+OSTEOARTHROSIS generalized lower leg is missing
+opana	butrans	
+0.5118378212395542	0.4881621787604458	
+
+
+Weight: 0.05
+
+Number of performed Iterations: 10
+
+
+Time taken to build model: 4.32 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       63987               57.9955 %
+Incorrectly Classified Instances     46344               42.0045 %
+Kappa statistic                          0     
+Mean absolute error                      0.472 
+Root mean squared error                  0.483 
+Relative absolute error                 96.8872 %
+Root relative squared error             97.8662 %
+Total Number of Instances           110331     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.580      1.000    0.734      0.000    0.596     0.690     opana
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.596     0.475     butrans
+Weighted Avg.    0.580    0.580    0.336      0.580    0.426      0.000    0.596     0.600     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 63987     0 |     a = opana
+ 46344     0 |     b = butrans
+
+

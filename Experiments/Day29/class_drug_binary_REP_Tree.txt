@@ -1,0 +1,1669 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 1 -L -1 -I 0.0
+Relation:     join_opana_butrans_final
+Instances:    110331
+Attributes:   12
+              SEX
+              AGEGRP
+              REGION
+              REFILL+AF8-COUNT
+              ADMTYP
+              Total Knee Arthrolplasty
+              OSTEOARTHROSIS secondary lower leg
+              Removal of Foreign Body from Eye
+              Total Knee Replacement
+              OSTEOARTHROSIS primary lower leg
+              OSTEOARTHROSIS generalized lower leg
+              Class+AF8-Drug
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+REPTree
+============
+
+REFILL+AF8-COUNT < 10.5
+|   OSTEOARTHROSIS generalized lower leg < 0.5
+|   |   OSTEOARTHROSIS primary lower leg < 0.5
+|   |   |   SEX < 1.5
+|   |   |   |   REFILL+AF8-COUNT < 1.5
+|   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   AGEGRP < 1.5 : butrans (23/4) [8/1]
+|   |   |   |   |   |   AGEGRP >= 1.5
+|   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (894/328) [470/186]
+|   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   REGION < 1.5 : opana (156/53) [86/28]
+|   |   |   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5 : opana (234/109) [129/63]
+|   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : butrans (4/1) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5 : opana (488/213) [268/115]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty < 0.5 : opana (936/361) [453/168]
+|   |   |   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty >= 0.5 : butrans (13/6) [5/2]
+|   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : opana (332/154) [176/80]
+|   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (160/72) [89/43]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : opana (347/145) [208/83]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 1.5 : opana (2179/934) [1089/489]
+|   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg >= 0.5 : opana (12/3) [4/0]
+|   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5 : butrans (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5 : opana (5/1) [1/1]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (18/4) [9/5]
+|   |   |   |   |   |   |   |   |   REGION >= 3.5 : opana (620/238) [313/122]
+|   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty < 0.5 : opana (213/78) [135/64]
+|   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty >= 0.5 : butrans (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5 : opana (325/161) [139/60]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5 : butrans (587/281) [271/120]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : opana (6/3) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : opana (233/118) [102/47]
+|   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement >= 0.5 : butrans (4/1) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg >= 0.5 : butrans (23/8) [12/5]
+|   |   |   |   |   |   |   |   |   |   REGION >= 4.5 : opana (3/0) [0/0]
+|   |   |   |   |   ADMTYP >= 2.5
+|   |   |   |   |   |   REGION < 1.5 : opana (384/155) [197/78]
+|   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg < 0.5
+|   |   |   |   |   |   |   |   ADMTYP < 4.5
+|   |   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5 : butrans (7/3) [7/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5 : opana (47/16) [26/10]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5 : opana (13/4) [9/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5 : butrans (91/30) [38/18]
+|   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5 : butrans (469/187) [217/86]
+|   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : opana (31/13) [21/5]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5 : butrans (140/40) [68/27]
+|   |   |   |   |   |   |   |   |   REGION >= 4.5
+|   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : butrans (15/2) [6/0]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (5/2) [2/0]
+|   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (7/1) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : butrans (100/49) [49/20]
+|   |   |   |   |   |   |   |   ADMTYP >= 4.5 : opana (2/0) [0/0]
+|   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg >= 0.5
+|   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   REGION < 3.5 : opana (11/3) [0/0]
+|   |   |   |   |   |   |   |   |   REGION >= 3.5 : butrans (4/1) [2/0]
+|   |   |   |   |   |   |   |   REGION >= 4.5 : opana (2/0) [2/2]
+|   |   |   |   REFILL+AF8-COUNT >= 1.5
+|   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   REFILL+AF8-COUNT < 7.5
+|   |   |   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5
+|   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (51/13) [13/2]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5 : butrans (166/77) [81/38]
+|   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : opana (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (102/25) [42/10]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5
+|   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 5.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5 : opana (62/18) [25/4]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5 : opana (45/22) [22/8]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5 : butrans (45/14) [18/5]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 5.5 : opana (20/1) [14/1]
+|   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5 : opana (221/31) [104/23]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 6.5 : opana (34/3) [22/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 6.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (4/0) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (10/1) [6/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 5.5 : butrans (4/0) [5/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 5.5 : opana (20/5) [11/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (41/12) [26/14]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : butrans (4/1) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5 : opana (112/9) [58/5]
+|   |   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   |   ADMTYP < 3.5
+|   |   |   |   |   |   |   |   |   |   AGEGRP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (7/0) [6/0]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (10/5) [2/0]
+|   |   |   |   |   |   |   |   |   |   AGEGRP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg < 0.5 : opana (564/221) [280/106]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg >= 0.5 : butrans (3/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (975/281) [492/156]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (35/17) [23/10]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : opana (222/74) [125/37]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5 : opana (478/199) [257/102]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : butrans (17/8) [7/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : opana (4/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5 : opana (642/164) [319/87]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 6.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 5.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (118/53) [50/17]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5 : opana (36/8) [15/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (28/12) [14/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (52/22) [25/7]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (181/67) [74/25]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 5.5 : opana (343/109) [186/60]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 6.5 : opana (256/109) [123/42]
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (7/0) [4/0]
+|   |   |   |   |   |   |   |   |   ADMTYP >= 3.5
+|   |   |   |   |   |   |   |   |   |   AGEGRP < 1.5 : butrans (4/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   AGEGRP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 6.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (33/9) [19/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5 : opana (24/7) [12/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5 : butrans (7/2) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5 : butrans (29/10) [22/6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (26/6) [6/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : butrans (24/9) [12/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5 : opana (54/16) [28/13]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5 : butrans (69/34) [32/13]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5 : opana (57/21) [26/9]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 6.5 : butrans (24/9) [6/2]
+|   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement >= 0.5 : opana (2/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : butrans (3/0) [1/0]
+|   |   |   |   |   |   |   REFILL+AF8-COUNT >= 7.5
+|   |   |   |   |   |   |   |   AGEGRP < 1.5 : opana (21/0) [4/0]
+|   |   |   |   |   |   |   |   AGEGRP >= 1.5
+|   |   |   |   |   |   |   |   |   ADMTYP < 3.5 : opana (782/206) [390/101]
+|   |   |   |   |   |   |   |   |   ADMTYP >= 3.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 8.5 : opana (26/5) [20/3]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 8.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (19/6) [8/1]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5 : opana (21/10) [7/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5 : butrans (15/4) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5 : opana (30/9) [13/4]
+|   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   REFILL+AF8-COUNT < 6.5
+|   |   |   |   |   |   |   |   ADMTYP < 3.5
+|   |   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (180/76) [95/40]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (184/89) [84/39]
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (7/0) [2/1]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (46/17) [36/17]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5 : opana (155/26) [85/20]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : butrans (3/1) [2/0]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 5.5 : opana (56/12) [41/14]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 5.5 : butrans (18/5) [10/4]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : butrans (82/28) [45/21]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (102/46) [66/25]
+|   |   |   |   |   |   |   |   |   REGION >= 4.5 : butrans (58/22) [26/13]
+|   |   |   |   |   |   |   |   ADMTYP >= 3.5
+|   |   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (22/7) [7/3]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : opana (11/2) [7/3]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (8/3) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : butrans (12/2) [6/3]
+|   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (27/8) [16/6]
+|   |   |   |   |   |   |   |   |   REGION >= 4.5 : opana (70/30) [30/12]
+|   |   |   |   |   |   |   REFILL+AF8-COUNT >= 6.5
+|   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 8.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 7.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (3/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : butrans (4/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 7.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (15/6) [6/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : opana (10/2) [4/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (26/6) [17/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (60/12) [29/6]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 8.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : butrans (11/4) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (4/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (12/5) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (14/4) [9/1]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5 : opana (20/2) [13/1]
+|   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9 : butrans (4/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9 : opana (2/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5 : butrans (3/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5 : opana (17/6) [13/5]
+|   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : butrans (2/0) [1/1]
+|   |   |   |   |   |   |   |   REGION >= 4.5 : opana (26/2) [16/0]
+|   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5 : opana (108/17) [42/8]
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5 : butrans (5/1) [4/0]
+|   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   ADMTYP < 3.5 : opana (229/105) [106/49]
+|   |   |   |   |   |   |   |   ADMTYP >= 3.5
+|   |   |   |   |   |   |   |   |   ADMTYP < 4.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 7.5 : opana (140/26) [63/12]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 7.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5 : butrans (19/9) [9/4]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5 : opana (12/1) [6/1]
+|   |   |   |   |   |   |   |   |   ADMTYP >= 4.5 : butrans (2/0) [0/0]
+|   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 7.5
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg < 0.5
+|   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (102/49) [44/11]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : butrans (105/36) [43/18]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5 : opana (486/218) [274/114]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5 : opana (448/169) [203/73]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 5.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (119/45) [49/24]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : butrans (166/77) [80/30]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5 : opana (344/142) [163/72]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty >= 0.5 : opana (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 5.5 : butrans (209/98) [122/63]
+|   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5 : opana (254/99) [122/36]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 4.5 : opana (84/25) [47/17]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 4.5 : butrans (3/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : opana (2/0) [6/3]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5 : opana (115/52) [55/30]
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg >= 0.5
+|   |   |   |   |   |   |   |   |   |   REGION < 2.5 : butrans (14/1) [5/1]
+|   |   |   |   |   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty < 0.5 : butrans (5/2) [5/2]
+|   |   |   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty >= 0.5 : opana (6/2) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5 : butrans (22/5) [6/3]
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 7.5 : opana (509/161) [248/71]
+|   |   |   |   |   |   |   ADMTYP >= 2.5
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 7.5
+|   |   |   |   |   |   |   |   |   |   Total Knee Replacement < 0.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 5.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5 : butrans (166/61) [57/22]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5 : opana (27/10) [11/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5 : butrans (26/9) [21/11]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5 : butrans (3/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5 : opana (18/7) [9/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5 : butrans (20/1) [16/2]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : butrans (25/10) [10/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : opana (14/3) [9/2]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 5.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : butrans (44/10) [17/7]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : opana (16/7) [8/3]
+|   |   |   |   |   |   |   |   |   |   Total Knee Replacement >= 0.5 : opana (6/2) [2/1]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 7.5 : butrans (43/8) [28/11]
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5 : opana (11/3) [7/3]
+|   |   |   SEX >= 1.5
+|   |   |   |   REFILL+AF8-COUNT < 5.5
+|   |   |   |   |   ADMTYP < 3.5
+|   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5
+|   |   |   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 1.5 : opana (50/15) [13/4]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5 : butrans (7/2) [4/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5 : opana (8/3) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5 : butrans (273/127) [109/47]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5 : opana (34/11) [19/8]
+|   |   |   |   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (239/76) [119/35]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 1.5 : butrans (347/124) [205/88]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5 : opana (144/55) [92/38]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 1.5 : opana (21/6) [14/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 1.5 : butrans (75/27) [38/18]
+|   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 1.5 : butrans (260/98) [137/58]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 1.5 : opana (238/101) [135/32]
+|   |   |   |   |   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 1.5 : opana (261/104) [133/66]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 1.5 : butrans (51/14) [24/6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (428/183) [242/94]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg >= 0.5 : opana (3/2) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : butrans (2/0) [2/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement >= 0.5 : opana (6/1) [2/1]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5 : butrans (136/51) [53/30]
+|   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 1.5 : butrans (25/3) [9/1]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 1.5 : opana (27/13) [13/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 1.5 : butrans (11/1) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5 : opana (4/0) [4/0]
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5
+|   |   |   |   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (13/1) [7/1]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (46/11) [26/11]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (11/3) [6/2]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (9/3) [9/3]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : butrans (32/7) [12/6]
+|   |   |   |   |   |   |   |   |   REGION >= 1.5 : butrans (317/108) [137/49]
+|   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5
+|   |   |   |   |   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 1.5 : butrans (865/422) [466/222]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 1.5 : opana (423/198) [184/91]
+|   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement >= 0.5 : opana (5/0) [1/1]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : butrans (21/3) [9/2]
+|   |   |   |   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 1.5 : butrans (355/165) [190/89]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 1.5 : opana (191/91) [103/36]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (791/326) [421/192]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : opana (766/338) [349/132]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (635/300) [290/137]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5
+|   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5 : opana (161/34) [95/26]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 1.5 : opana (30/7) [13/8]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 1.5 : butrans (49/17) [16/7]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5 : opana (94/28) [40/16]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (331/139) [155/71]
+|   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5 : opana (74/32) [37/10]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : butrans (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 1.5 : opana (136/44) [80/32]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5 : opana (137/64) [72/38]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 1.5 : butrans (3/1) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 1.5 : opana (6/0) [4/2]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 1.5 : opana (213/102) [87/36]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 1.5 : butrans (259/114) [137/60]
+|   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : butrans (109/32) [60/23]
+|   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 1.5
+|   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : butrans (5173/2547) [2573/1222]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (636/284) [306/132]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : butrans (913/439) [474/201]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (14/5) [9/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : butrans (39/16) [20/8]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : butrans (15/4) [9/0]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (34/13) [23/11]
+|   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (10/3) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : butrans (26/5) [20/7]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (2/0) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : butrans (11/4) [4/1]
+|   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement < 0.5 : butrans (1026/420) [474/192]
+|   |   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement >= 0.5 : opana (7/2) [5/2]
+|   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement < 0.5 : opana (10/3) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement >= 0.5 : butrans (15/7) [7/2]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5 : butrans (880/434) [475/226]
+|   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : opana (11/4) [8/3]
+|   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg >= 0.5 : butrans (21/7) [12/2]
+|   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (326/138) [158/74]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg < 0.5 : butrans (374/164) [199/83]
+|   |   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg >= 0.5 : opana (3/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : opana (2/2) [2/0]
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 1.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5
+|   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 1.5 : butrans (11/0) [4/0]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (136/67) [77/29]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : butrans (1113/497) [548/241]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement >= 0.5 : opana (4/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg >= 0.5 : butrans (14/2) [4/2]
+|   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : opana (359/170) [179/72]
+|   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (518/175) [262/100]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5 : butrans (386/186) [183/83]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (5/2) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (931/418) [511/231]
+|   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : butrans (12/2) [7/2]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : butrans (441/159) [234/84]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5
+|   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (7/3) [4/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (2/1) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5 : butrans (8/0) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (147/52) [74/26]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : butrans (289/126) [139/55]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5 : butrans (328/156) [169/76]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5 : opana (89/33) [48/14]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (348/152) [148/66]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : opana (544/260) [275/132]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5 : butrans (563/235) [239/96]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5 : butrans (163/79) [85/41]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (9/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5 : butrans (459/164) [220/72]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (8/1) [7/2]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5 : butrans (463/217) [224/85]
+|   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (101/33) [47/16]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : butrans (201/84) [119/58]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (184/62) [86/26]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5 : butrans (59/19) [30/17]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (9/1) [8/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : butrans (31/11) [19/10]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (32/5) [15/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5 : butrans (37/17) [17/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (35/15) [12/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (50/20) [27/10]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5 : butrans (174/77) [80/34]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5 : opana (110/44) [55/27]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (190/79) [91/33]
+|   |   |   |   |   |   |   REGION >= 4.5
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5
+|   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (23/7) [7/0]
+|   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 1.5 : opana (82/37) [35/12]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (19/0) [14/1]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5 : butrans (8/1) [4/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (8/2) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5 : opana (26/9) [14/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : opana (11/3) [4/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : butrans (3/0) [2/1]
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5 : opana (33/4) [13/0]
+|   |   |   |   |   ADMTYP >= 3.5
+|   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5
+|   |   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5
+|   |   |   |   |   |   |   |   |   |   AGEGRP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 1.5 : opana (9/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 1.5 : butrans (7/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   AGEGRP >= 1.5 : opana (88/26) [52/12]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5 : opana (8/4) [4/2]
+|   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   Total Knee Replacement < 0.5
+|   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5 : opana (524/243) [258/114]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : butrans (48/20) [27/8]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (119/41) [72/27]
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 4.5 : opana (9/0) [3/0]
+|   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : opana (3/0) [2/0]
+|   |   |   |   |   |   |   |   |   Total Knee Replacement >= 0.5 : butrans (6/1) [2/0]
+|   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5 : opana (54/11) [25/7]
+|   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   REFILL+AF8-COUNT < 2.5 : butrans (1870/581) [928/264]
+|   |   |   |   |   |   |   REFILL+AF8-COUNT >= 2.5
+|   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5 : butrans (27/4) [12/2]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (9/4) [7/3]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : butrans (17/6) [5/1]
+|   |   |   |   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 4.5 : butrans (88/26) [36/7]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 4.5 : opana (6/3) [4/0]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5 : opana (22/7) [14/5]
+|   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5 : butrans (54/22) [30/11]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5 : opana (34/9) [30/13]
+|   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5 : opana (37/4) [14/3]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5 : butrans (20/6) [17/3]
+|   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : butrans (214/62) [110/39]
+|   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty < 0.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : butrans (59/14) [34/9]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 4.5 : opana (19/9) [7/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 4.5 : butrans (11/3) [9/4]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5 : opana (5/1) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : opana (36/16) [14/6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : butrans (17/8) [8/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 4.5 : butrans (17/6) [10/5]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 4.5 : butrans (29/8) [11/2]
+|   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty >= 0.5 : butrans (4/0) [3/0]
+|   |   |   |   REFILL+AF8-COUNT >= 5.5
+|   |   |   |   |   Total Knee Arthrolplasty < 0.5
+|   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (66/5) [32/2]
+|   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5
+|   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 7.5
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 6.5 : butrans (4/1) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 6.5 : opana (6/3) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (3/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 7.5 : butrans (31/12) [9/5]
+|   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5 : opana (14/5) [6/4]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5 : opana (19/0) [8/0]
+|   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 8.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 7.5 : opana (75/33) [30/14]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 7.5 : butrans (20/5) [13/3]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 8.5 : opana (18/6) [10/2]
+|   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (28/9) [9/2]
+|   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5 : opana (253/77) [156/63]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (8/2) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : butrans (23/11) [13/6]
+|   |   |   |   |   |   |   |   |   ADMTYP >= 2.5
+|   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5 : butrans (8/0) [3/0]
+|   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5 : opana (94/40) [40/14]
+|   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 6.5
+|   |   |   |   |   |   |   |   |   ADMTYP < 3.5
+|   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (150/47) [73/35]
+|   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (20/9) [6/0]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5 : opana (41/20) [17/7]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : butrans (4/0) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (72/36) [29/11]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (44/12) [15/7]
+|   |   |   |   |   |   |   |   |   ADMTYP >= 3.5 : opana (29/5) [13/6]
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 6.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 7.5
+|   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (13/0) [7/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : butrans (20/5) [13/6]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : opana (189/49) [110/29]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : butrans (33/13) [20/6]
+|   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5 : butrans (44/14) [18/4]
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (6/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5 : butrans (6/0) [1/0]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 7.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 8.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (141/41) [55/19]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (144/66) [63/15]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 8.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (30/4) [33/2]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : opana (48/16) [29/12]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (33/13) [25/6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : butrans (23/8) [13/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (40/7) [27/5]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5 : butrans (62/21) [36/16]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (2/0) [6/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : opana (4/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5 : opana (46/19) [24/11]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : butrans (12/5) [14/4]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5 : opana (55/16) [28/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5 : butrans (9/1) [4/1]
+|   |   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   |   ADMTYP < 3.5
+|   |   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   |   AGEGRP < 1.5 : butrans (12/2) [6/2]
+|   |   |   |   |   |   |   |   |   |   AGEGRP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 7.5
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (45/22) [24/8]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : opana (314/106) [141/50]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (106/49) [46/17]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : opana (143/57) [86/32]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : opana (142/54) [51/19]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (326/158) [139/74]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 6.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : butrans (95/51) [54/22]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : butrans (42/19) [22/10]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 6.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : butrans (45/20) [23/9]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : opana (19/7) [7/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : butrans (3/1) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (259/121) [139/59]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg >= 0.5 : butrans (5/2) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (26/2) [20/4]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 7.5
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : opana (53/12) [29/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : butrans (8/3) [14/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 8.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (49/17) [24/6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (105/41) [57/25]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 8.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5 : opana (124/45) [74/22]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : butrans (2/0) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 8.5 : opana (7/1) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 8.5 : butrans (17/0) [15/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (89/21) [32/9]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (17/5) [9/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : butrans (31/4) [9/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (82/27) [43/15]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : butrans (17/5) [10/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (10/5) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (32/4) [15/4]
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 8.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (25/9) [14/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : opana (80/24) [34/15]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 8.5 : opana (93/31) [51/18]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (133/44) [62/21]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5 : opana (134/51) [63/24]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (20/10) [6/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg >= 0.5 : butrans (2/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 8.5 : butrans (72/32) [32/11]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 8.5 : opana (89/33) [48/20]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5 : opana (127/40) [48/23]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5 : butrans (38/17) [18/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5 : opana (86/13) [55/9]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : butrans (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   REGION >= 4.5
+|   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (25/10) [12/5]
+|   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : opana (30/2) [19/0]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 6.5 : opana (8/0) [4/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 6.5 : butrans (3/0) [1/0]
+|   |   |   |   |   |   |   |   ADMTYP >= 3.5
+|   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (97/33) [55/23]
+|   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 6.5 : butrans (33/9) [26/6]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 6.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 7.5 : opana (30/12) [16/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 7.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 8.5 : butrans (28/14) [20/9]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 8.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5 : butrans (27/9) [15/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5 : opana (10/5) [7/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 8.5 : butrans (16/3) [8/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 8.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5 : butrans (7/3) [5/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5 : opana (8/4) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : butrans (3/0) [0/0]
+|   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 6.5
+|   |   |   |   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : butrans (10/2) [6/2]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : opana (7/2) [5/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (2/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   REGION >= 4.5 : opana (21/5) [6/1]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 6.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 7.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (6/2) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : butrans (42/13) [8/2]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 7.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 9.5 : butrans (5/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 9.5 : opana (2/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : butrans (3/1) [2/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 4.5 : butrans (9/0) [5/1]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (41/12) [12/0]
+|   |   |   |   |   Total Knee Arthrolplasty >= 0.5
+|   |   |   |   |   |   REGION < 1.5 : opana (6/2) [4/2]
+|   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : butrans (2/0) [1/1]
+|   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   REGION < 2.5 : butrans (6/1) [4/1]
+|   |   |   |   |   |   |   |   |   |   REGION >= 2.5 : opana (5/2) [5/2]
+|   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (19/2) [11/2]
+|   |   |   |   |   |   |   REGION >= 3.5 : butrans (12/0) [5/2]
+|   |   OSTEOARTHROSIS primary lower leg >= 0.5 : butrans (590/0) [291/0]
+|   OSTEOARTHROSIS generalized lower leg >= 0.5 : opana (801/0) [437/0]
+REFILL+AF8-COUNT >= 10.5
+|   REFILL+AF8-COUNT < 48.5
+|   |   REFILL+AF8-COUNT < 17.5
+|   |   |   OSTEOARTHROSIS generalized lower leg < 0.5
+|   |   |   |   SEX < 1.5
+|   |   |   |   |   OSTEOARTHROSIS primary lower leg < 0.5
+|   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   ADMTYP < 1.5 : opana (308/38) [143/11]
+|   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 14.5 : opana (51/9) [27/5]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 14.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 15.5 : butrans (25/2) [11/3]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 15.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 16.5 : opana (8/0) [7/0]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 16.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 1.5 : opana (3/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 1.5 : butrans (9/4) [5/1]
+|   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 13.5
+|   |   |   |   |   |   |   |   |   |   |   REGION < 1.5 : opana (35/17) [29/8]
+|   |   |   |   |   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (23/4) [11/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 11.5 : opana (11/3) [14/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 11.5 : butrans (25/12) [20/9]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (35/3) [12/2]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 13.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 14.5 : opana (43/0) [36/4]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 14.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (37/16) [8/3]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 15.5 : opana (25/10) [8/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 15.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : opana (48/3) [24/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 16.5 : opana (27/4) [18/7]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 16.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 1.5 : butrans (3/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 1.5 : opana (11/2) [9/3]
+|   |   |   |   |   |   |   |   |   ADMTYP >= 2.5
+|   |   |   |   |   |   |   |   |   |   REGION < 1.5 : opana (110/8) [43/7]
+|   |   |   |   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : butrans (8/1) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : opana (44/2) [11/0]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 16.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 14 : butrans (10/4) [9/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 14 : opana (6/0) [4/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 16.5 : butrans (3/0) [0/0]
+|   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (229/33) [107/26]
+|   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 13.5
+|   |   |   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (131/22) [70/13]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : opana (103/27) [51/16]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 12.5 : opana (33/2) [21/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 12.5 : butrans (7/3) [5/2]
+|   |   |   |   |   |   |   |   |   |   REGION >= 4.5 : opana (12/5) [12/5]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 13.5 : opana (271/84) [155/41]
+|   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 16.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 15.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (165/51) [74/25]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 14.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 12.5 : butrans (86/38) [39/22]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 12.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 13.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : opana (29/8) [15/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : butrans (2/0) [5/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 13.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : butrans (35/15) [12/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : opana (6/1) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 4.5 : opana (2/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 14.5 : opana (27/6) [13/1]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 15.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (29/8) [10/3]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (28/10) [16/7]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 16.5 : opana (55/14) [31/6]
+|   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (70/16) [34/12]
+|   |   |   |   |   OSTEOARTHROSIS primary lower leg >= 0.5 : butrans (10/0) [2/0]
+|   |   |   |   SEX >= 1.5
+|   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   OSTEOARTHROSIS primary lower leg < 0.5
+|   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   ADMTYP < 4.5
+|   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 16.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 15.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 12.5 : opana (173/51) [80/22]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 12.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 13.5 : opana (55/2) [29/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 13.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (4/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (5/1) [5/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 14.5 : opana (30/4) [11/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 14.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (6/1) [4/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : butrans (5/1) [6/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (25/8) [7/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (46/7) [21/5]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 15.5 : opana (97/4) [44/4]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 16.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 1.5 : opana (8/0) [6/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : butrans (50/22) [17/6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (27/10) [11/4]
+|   |   |   |   |   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 15.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 11.5 : opana (127/27) [57/9]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 11.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 13.5 : butrans (19/8) [7/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 13.5 : opana (19/0) [8/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 12.5 : opana (85/28) [41/19]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 12.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 13.5 : butrans (14/2) [8/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 13.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 14.5 : opana (17/2) [7/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 14.5 : butrans (21/7) [9/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (64/26) [36/10]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty >= 0.5 : opana (2/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 14.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 12.5 : opana (49/20) [19/11]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 12.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 13.5 : butrans (28/10) [11/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 13.5 : opana (35/16) [18/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 14.5 : butrans (17/4) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 15.5 : opana (159/30) [71/10]
+|   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   AGEGRP < 1.5 : opana (6/0) [5/0]
+|   |   |   |   |   |   |   |   |   |   AGEGRP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (20/0) [19/3]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 14.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (17/3) [13/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 11.5 : opana (27/6) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 11.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 13.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 12.5 : opana (20/6) [5/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 12.5 : butrans (13/4) [4/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (24/6) [14/9]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 13.5 : opana (30/8) [15/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 13.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 11.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : butrans (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (12/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 11.5 : opana (30/0) [12/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 13.5 : opana (25/9) [6/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 14.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (34/6) [11/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 15.5 : opana (12/2) [7/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 15.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 16.5 : opana (5/2) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 16.5 : butrans (12/5) [7/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3 : butrans (19/3) [8/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 15.5 : butrans (9/3) [5/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 15.5 : opana (8/4) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 11.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5 : butrans (15/5) [13/6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5 : opana (115/47) [58/29]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (155/54) [72/27]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 11.5 : opana (1190/388) [608/195]
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 16.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 12.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (7/0) [10/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (11/4) [6/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 12.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : butrans (41/6) [25/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 13.5 : opana (3/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 13.5 : butrans (10/3) [2/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 16.5 : opana (7/0) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5 : opana (137/47) [60/14]
+|   |   |   |   |   |   |   |   ADMTYP >= 4.5 : opana (14/0) [7/0]
+|   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : butrans (28/9) [22/8]
+|   |   |   |   |   |   OSTEOARTHROSIS primary lower leg >= 0.5 : butrans (19/0) [8/0]
+|   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   REFILL+AF8-COUNT < 15.5
+|   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (29/4) [16/2]
+|   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 12.5
+|   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   REGION < 4.5 : opana (12/6) [4/0]
+|   |   |   |   |   |   |   |   |   |   |   REGION >= 4.5 : butrans (3/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : butrans (4/0) [2/0]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 12.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 14.5 : opana (31/8) [10/6]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 14.5 : butrans (11/4) [5/2]
+|   |   |   |   |   |   |   REFILL+AF8-COUNT >= 15.5 : opana (33/5) [20/6]
+|   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg < 0.5
+|   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 16.5
+|   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 13.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 12.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 11.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : butrans (9/0) [9/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (12/6) [7/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 11.5 : opana (11/4) [8/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (24/6) [18/7]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 12.5 : butrans (50/10) [21/6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 13.5 : butrans (30/13) [15/8]
+|   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : opana (5/1) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 16.5 : opana (24/3) [19/3]
+|   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 16.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 13.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 11.5 : opana (32/13) [13/6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 11.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (27/4) [13/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 12.5 : opana (18/2) [6/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 12.5 : butrans (9/3) [5/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (29/13) [12/6]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 13.5 : opana (122/61) [60/21]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 16.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (10/2) [12/4]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (46/6) [22/1]
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg >= 0.5 : opana (10/1) [2/0]
+|   |   |   |   |   |   |   |   ADMTYP >= 2.5 : butrans (49/13) [25/11]
+|   |   |   |   |   |   |   REGION >= 4.5
+|   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (5/0) [2/0]
+|   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 14.5 : opana (18/6) [8/0]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 14.5 : butrans (8/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5 : opana (36/3) [12/1]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 11.5 : butrans (5/2) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 11.5 : opana (30/5) [10/3]
+|   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (24/8) [9/3]
+|   |   |   OSTEOARTHROSIS generalized lower leg >= 0.5 : opana (115/0) [66/0]
+|   |   REFILL+AF8-COUNT >= 17.5
+|   |   |   OSTEOARTHROSIS primary lower leg < 0.5
+|   |   |   |   SEX < 1.5
+|   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   AGEGRP < 1.5 : butrans (3/0) [3/0]
+|   |   |   |   |   |   AGEGRP >= 1.5
+|   |   |   |   |   |   |   ADMTYP < 1.5 : opana (286/30) [151/19]
+|   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   REGION < 1.5 : opana (157/2) [75/0]
+|   |   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 31.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 28.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 18.5 : opana (56/0) [25/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 18.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 19.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (3/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : opana (8/1) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5 : opana (20/0) [10/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 19.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (66/0) [36/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 20.5 : opana (6/0) [5/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 20.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 27.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 22.5 : opana (33/2) [16/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 22.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 23.5 : butrans (3/1) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 23.5 : opana (27/2) [12/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 27.5 : opana (6/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (2/0) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : opana (3/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : opana (32/5) [31/4]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5 : opana (48/1) [23/0]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 28.5 : opana (36/8) [16/3]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 31.5 : opana (146/3) [88/7]
+|   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   REFILL+AF8-COUNT < 25.5
+|   |   |   |   |   |   |   REFILL+AF8-COUNT < 19.5 : opana (329/32) [124/19]
+|   |   |   |   |   |   |   REFILL+AF8-COUNT >= 19.5
+|   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   REGION < 1.5 : opana (12/0) [9/2]
+|   |   |   |   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 21.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 20.5 : opana (18/2) [9/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 20.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : opana (2/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (10/4) [7/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5 : opana (62/25) [30/8]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 21.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 22.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : opana (16/1) [8/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5 : opana (2/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5 : butrans (4/0) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : opana (8/0) [4/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 22.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : opana (115/34) [61/15]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 23.5 : opana (4/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 23.5 : butrans (12/4) [8/3]
+|   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement >= 0.5 : opana (4/0) [1/1]
+|   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5
+|   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS generalized lower leg < 0.5 : butrans (9/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS generalized lower leg >= 0.5 : opana (3/0) [2/0]
+|   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 21.5 : opana (138/14) [57/3]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 21.5
+|   |   |   |   |   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 22.5 : butrans (6/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 22.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 24.5 : opana (13/0) [11/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 24.5 : butrans (8/3) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : butrans (9/2) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 24.5 : opana (23/0) [6/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 24.5 : butrans (5/1) [4/0]
+|   |   |   |   |   |   |   |   |   |   REGION >= 1.5 : opana (180/28) [100/17]
+|   |   |   |   |   |   REFILL+AF8-COUNT >= 25.5
+|   |   |   |   |   |   |   REGION < 1.5 : opana (163/6) [86/5]
+|   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   OSTEOARTHROSIS generalized lower leg < 0.5
+|   |   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 26.5 : opana (68/4) [26/1]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 26.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 46.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 40.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 32.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 29.5 : butrans (14/6) [9/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 29.5 : opana (2/0) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (16/1) [9/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (53/1) [26/6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 28.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 27.5 : opana (27/4) [16/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 27.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (9/0) [6/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : butrans (19/3) [11/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : opana (41/3) [22/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 28.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : opana (54/2) [26/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 31.5 : opana (58/6) [30/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 31.5 : butrans (6/2) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : opana (50/14) [24/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 32.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : opana (162/9) [63/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : opana (99/10) [71/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 33.5 : opana (4/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 33.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 38
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 36
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 34.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (2/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (5/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 34.5 : opana (4/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 36 : butrans (7/2) [2/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 38 : opana (2/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 40.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 41.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (11/3) [7/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (4/0) [7/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 41.5 : opana (72/13) [38/6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 44.5 : opana (22/0) [8/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 44.5 : butrans (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 46.5 : opana (31/1) [20/2]
+|   |   |   |   |   |   |   |   |   REGION >= 4.5 : opana (22/0) [8/0]
+|   |   |   |   |   |   |   |   OSTEOARTHROSIS generalized lower leg >= 0.5 : opana (26/0) [8/0]
+|   |   |   |   SEX >= 1.5
+|   |   |   |   |   REFILL+AF8-COUNT < 29.5
+|   |   |   |   |   |   OSTEOARTHROSIS generalized lower leg < 0.5
+|   |   |   |   |   |   |   REGION < 1.5
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 28.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 25.5
+|   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (57/3) [20/1]
+|   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 20.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 18.5 : opana (11/1) [16/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 18.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : butrans (24/4) [9/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (7/3) [8/2]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 20.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 22.5 : opana (24/1) [13/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 22.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : butrans (6/1) [9/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : opana (18/1) [9/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (10/4) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3.5 : opana (81/12) [37/3]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 25.5 : opana (108/4) [58/5]
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 28.5
+|   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (7/0) [5/0]
+|   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (4/2) [3/0]
+|   |   |   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   |   |   ADMTYP < 3.5
+|   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg < 0.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 19.5 : opana (8/0) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 19.5 : butrans (8/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 18.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (9/4) [9/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (2/1) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : butrans (8/2) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : opana (19/5) [7/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (20/9) [17/8]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (4/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5 : butrans (3/1) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (57/8) [17/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (64/15) [37/7]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (67/23) [36/11]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 18.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 19.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : opana (268/46) [136/23]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : butrans (7/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : opana (24/8) [15/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 19.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 26.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5 : opana (297/62) [141/22]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 20.5 : opana (11/1) [13/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 20.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 21.5 : butrans (25/4) [9/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 21.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 25.5 : opana (31/4) [17/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 25.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (3/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : butrans (11/1) [7/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 25.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (187/68) [91/25]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 22.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 21.5 : opana (84/29) [36/14]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 21.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (8/2) [8/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (17/6) [15/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 22.5 : opana (79/17) [25/9]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (9/1) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 25.5 : opana (21/3) [8/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 23.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (55/3) [29/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 20.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 4.5 : butrans (5/2) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 4.5 : opana (3/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 20.5 : opana (34/2) [17/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 20.5 : butrans (7/1) [6/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 20.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 21.5 : opana (8/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 21.5 : butrans (3/0) [5/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 23.5 : opana (40/14) [25/9]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (166/23) [92/16]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 22.5 : opana (34/4) [33/7]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 22.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 24.5 : butrans (14/4) [10/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 24.5 : opana (32/8) [12/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 25.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 24.5 : butrans (22/8) [15/8]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 24.5 : opana (3/0) [5/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 25.5 : butrans (4/0) [2/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 26.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (21/0) [9/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 28.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (33/12) [16/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 27.5 : opana (26/0) [6/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 27.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (4/1) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (3/1) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (9/0) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 28.5 : butrans (33/13) [13/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : opana (82/10) [55/7]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 28.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (11/4) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (4/1) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (11/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 28.5 : opana (38/6) [13/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 28.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : opana (30/8) [9/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 27.5 : opana (12/3) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 27.5 : butrans (4/1) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5 : opana (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 28.5 : opana (38/5) [23/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (40/18) [27/10]
+|   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg >= 0.5 : opana (11/0) [6/0]
+|   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 25.5
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5 : opana (9/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5 : butrans (3/0) [3/1]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 25.5 : butrans (8/0) [2/1]
+|   |   |   |   |   |   |   |   ADMTYP >= 3.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 19.5 : opana (60/17) [35/5]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 19.5
+|   |   |   |   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : butrans (7/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 22.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 21.5 : opana (9/1) [3/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 21.5 : butrans (3/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 22.5 : opana (21/2) [12/2]
+|   |   |   |   |   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP < 2.5 : opana (9/2) [6/2]
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 28.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 23.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 21.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : opana (11/3) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : butrans (11/4) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : butrans (14/5) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 4.5 : butrans (7/1) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 21.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : butrans (13/2) [6/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5 : butrans (3/1) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : butrans (6/1) [1/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 23.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : opana (15/6) [5/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : butrans (7/0) [6/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 4.5 : opana (13/4) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 28.5 : opana (2/2) [2/0]
+|   |   |   |   |   |   OSTEOARTHROSIS generalized lower leg >= 0.5 : opana (52/0) [26/0]
+|   |   |   |   |   REFILL+AF8-COUNT >= 29.5
+|   |   |   |   |   |   OSTEOARTHROSIS generalized lower leg < 0.5
+|   |   |   |   |   |   |   REFILL+AF8-COUNT < 47.5
+|   |   |   |   |   |   |   |   AGEGRP < 2.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 38.5 : opana (119/5) [68/6]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 38.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 40.5 : butrans (6/1) [2/0]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 40.5 : opana (24/5) [13/1]
+|   |   |   |   |   |   |   |   AGEGRP >= 2.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 34.5
+|   |   |   |   |   |   |   |   |   |   ADMTYP < 2.5
+|   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 30.5 : opana (18/1) [11/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 30.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 31.5 : butrans (19/8) [9/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 31.5 : opana (72/18) [20/3]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (282/43) [156/34]
+|   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 30.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5 : butrans (4/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 30.5 : opana (53/9) [30/1]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (31/13) [12/4]
+|   |   |   |   |   |   |   |   |   |   ADMTYP >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (5/0) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 33 : opana (10/1) [6/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 33 : butrans (5/0) [5/2]
+|   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : butrans (8/1) [3/1]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 34.5
+|   |   |   |   |   |   |   |   |   |   REGION < 4.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 40.5 : opana (424/58) [224/25]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 40.5
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 46.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 44.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 43.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 42.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP < 3.5 : opana (21/1) [10/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5 : opana (6/1) [7/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 41.5 : opana (2/0) [4/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 41.5 : butrans (8/3) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5 : opana (8/0) [4/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 42.5 : opana (16/0) [5/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 43.5 : opana (31/10) [15/6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 43.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION < 3.5 : opana (57/18) [15/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION >= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP < 3 : butrans (10/2) [5/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP >= 3 : opana (3/0) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 43.5 : opana (22/2) [9/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 44.5 : opana (60/9) [36/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye >= 0.5 : butrans (2/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP >= 4.5 : opana (126/16) [69/18]
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 46.5 : opana (54/5) [20/1]
+|   |   |   |   |   |   |   |   |   |   REGION >= 4.5 : opana (33/1) [16/1]
+|   |   |   |   |   |   |   REFILL+AF8-COUNT >= 47.5
+|   |   |   |   |   |   |   |   AGEGRP < 3.5
+|   |   |   |   |   |   |   |   |   REGION < 2.5 : butrans (4/0) [3/0]
+|   |   |   |   |   |   |   |   |   REGION >= 2.5 : opana (17/7) [3/1]
+|   |   |   |   |   |   |   |   AGEGRP >= 3.5 : opana (12/0) [3/0]
+|   |   |   |   |   |   OSTEOARTHROSIS generalized lower leg >= 0.5 : opana (40/0) [21/0]
+|   |   |   OSTEOARTHROSIS primary lower leg >= 0.5 : butrans (56/0) [16/0]
+|   REFILL+AF8-COUNT >= 48.5
+|   |   REFILL+AF8-COUNT < 62.5
+|   |   |   REFILL+AF8-COUNT < 50.5 : opana (151/9) [95/4]
+|   |   |   REFILL+AF8-COUNT >= 50.5
+|   |   |   |   SEX < 1.5 : opana (336/1) [138/1]
+|   |   |   |   SEX >= 1.5
+|   |   |   |   |   REGION < 1.5 : opana (27/3) [11/1]
+|   |   |   |   |   REGION >= 1.5
+|   |   |   |   |   |   AGEGRP < 4.5
+|   |   |   |   |   |   |   REGION < 3.5
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 59.5
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 58.5
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 55.5
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 54.5
+|   |   |   |   |   |   |   |   |   |   |   |   REGION < 2.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 52.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT < 51.5 : opana (3/0) [4/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 51.5 : butrans (2/0) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 52.5 : opana (12/0) [9/0]
+|   |   |   |   |   |   |   |   |   |   |   |   REGION >= 2.5 : opana (48/0) [29/0]
+|   |   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 54.5 : opana (13/2) [4/0]
+|   |   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 55.5 : opana (50/0) [25/0]
+|   |   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 58.5 : opana (13/2) [6/0]
+|   |   |   |   |   |   |   |   REFILL+AF8-COUNT >= 59.5 : opana (29/0) [18/2]
+|   |   |   |   |   |   |   REGION >= 3.5 : opana (58/0) [22/0]
+|   |   |   |   |   |   AGEGRP >= 4.5 : opana (119/0) [46/0]
+|   |   REFILL+AF8-COUNT >= 62.5 : opana (703/0) [354/0]
+
+Size of the tree : 1613
+
+Time taken to build model: 1.89 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       71170               64.5059 %
+Incorrectly Classified Instances     39161               35.4941 %
+Kappa statistic                          0.2615
+Mean absolute error                      0.4176
+Root mean squared error                  0.4604
+Relative absolute error                 85.716  %
+Root relative squared error             93.2803 %
+Total Number of Instances           110331     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.730    0.472    0.681      0.730    0.705      0.262    0.702     0.779     opana
+                 0.528    0.270    0.586      0.528    0.556      0.262    0.702     0.614     butrans
+Weighted Avg.    0.645    0.387    0.641      0.645    0.642      0.262    0.702     0.710     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 46685 17302 |     a = opana
+ 21859 24485 |     b = butrans
+
+

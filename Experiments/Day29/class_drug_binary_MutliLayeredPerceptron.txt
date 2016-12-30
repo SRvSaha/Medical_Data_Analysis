@@ -1,0 +1,160 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     join_opana_butrans_final
+Instances:    110331
+Attributes:   12
+              SEX
+              AGEGRP
+              REGION
+              REFILL+AF8-COUNT
+              ADMTYP
+              Total Knee Arthrolplasty
+              OSTEOARTHROSIS secondary lower leg
+              Removal of Foreign Body from Eye
+              Total Knee Replacement
+              OSTEOARTHROSIS primary lower leg
+              OSTEOARTHROSIS generalized lower leg
+              Class+AF8-Drug
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    0.20237827854433388
+    Node 2    1.2501341302448998
+    Node 3    0.7134102879942491
+    Node 4    2.682452647182388
+    Node 5    0.7455838519224122
+    Node 6    -2.0993389917210927
+    Node 7    0.5007371424788813
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -0.2023782785443338
+    Node 2    -1.2501341302448998
+    Node 3    -0.7134102879942491
+    Node 4    -2.682452647182386
+    Node 5    -0.7455838519224122
+    Node 6    2.0993389917210927
+    Node 7    -0.5007371424788813
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -2.974077550407854
+    Attrib SEX    -2.238712100022411
+    Attrib AGEGRP    -2.058040386362462
+    Attrib REGION    -19.96992122422478
+    Attrib REFILL+AF8-COUNT    4.423835723289833
+    Attrib ADMTYP    15.536218035917397
+    Attrib Total Knee Arthrolplasty    4.4994370573476985
+    Attrib OSTEOARTHROSIS secondary lower leg    -1.0817913887451518
+    Attrib Removal of Foreign Body from Eye    1.6890405461157698
+    Attrib Total Knee Replacement    -0.7442271157784461
+    Attrib OSTEOARTHROSIS primary lower leg    -9.272239033120478
+    Attrib OSTEOARTHROSIS generalized lower leg    24.17476903421725
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    14.498703727980809
+    Attrib SEX    -5.192422991949387
+    Attrib AGEGRP    -3.007628816901616
+    Attrib REGION    -2.033475988719963
+    Attrib REFILL+AF8-COUNT    58.382625002943264
+    Attrib ADMTYP    -5.80125197659338
+    Attrib Total Knee Arthrolplasty    8.40728314362192
+    Attrib OSTEOARTHROSIS secondary lower leg    -11.763488705780318
+    Attrib Removal of Foreign Body from Eye    1.4691755255409518
+    Attrib Total Knee Replacement    -8.108141310277457
+    Attrib OSTEOARTHROSIS primary lower leg    -16.424260298242427
+    Attrib OSTEOARTHROSIS generalized lower leg    -9.918882926810047
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    10.046644816822313
+    Attrib SEX    -1.789538039362064
+    Attrib AGEGRP    -1.451112520382057
+    Attrib REGION    1.952143901185576
+    Attrib REFILL+AF8-COUNT    18.026757955664195
+    Attrib ADMTYP    1.0591871551856045
+    Attrib Total Knee Arthrolplasty    0.8694106820847347
+    Attrib OSTEOARTHROSIS secondary lower leg    -0.23488657534921234
+    Attrib Removal of Foreign Body from Eye    -2.2771966897558356
+    Attrib Total Knee Replacement    2.8406518246784604
+    Attrib OSTEOARTHROSIS primary lower leg    -10.9956198153976
+    Attrib OSTEOARTHROSIS generalized lower leg    9.421016210681085
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    5.387212575229584
+    Attrib SEX    -1.1964568780661815
+    Attrib AGEGRP    -0.09216729319265574
+    Attrib REGION    -8.643907790972065
+    Attrib REFILL+AF8-COUNT    36.83456219816493
+    Attrib ADMTYP    -12.680462871565894
+    Attrib Total Knee Arthrolplasty    1.2795622396684012
+    Attrib OSTEOARTHROSIS secondary lower leg    2.099588141703458
+    Attrib Removal of Foreign Body from Eye    -3.2136599185737897
+    Attrib Total Knee Replacement    -5.9527396406681445
+    Attrib OSTEOARTHROSIS primary lower leg    -6.777684080980616
+    Attrib OSTEOARTHROSIS generalized lower leg    2.521154966835868
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -21.536658936071795
+    Attrib SEX    1.0993110793909437
+    Attrib AGEGRP    -1.0475781854770656
+    Attrib REGION    0.6085291269710401
+    Attrib REFILL+AF8-COUNT    -42.20511104911661
+    Attrib ADMTYP    4.456044203121714
+    Attrib Total Knee Arthrolplasty    1.1083281423123013
+    Attrib OSTEOARTHROSIS secondary lower leg    -0.7175332324742614
+    Attrib Removal of Foreign Body from Eye    -0.49596460305596834
+    Attrib Total Knee Replacement    1.6199805146630402
+    Attrib OSTEOARTHROSIS primary lower leg    25.3330015045048
+    Attrib OSTEOARTHROSIS generalized lower leg    -2.850801563235328
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    12.495033475026194
+    Attrib SEX    0.014146454191196534
+    Attrib AGEGRP    -0.7905757572187576
+    Attrib REGION    -1.5192803605677188
+    Attrib REFILL+AF8-COUNT    71.07427153082601
+    Attrib ADMTYP    -0.39310696384781835
+    Attrib Total Knee Arthrolplasty    -10.692891869207429
+    Attrib OSTEOARTHROSIS secondary lower leg    -0.07980968698122727
+    Attrib Removal of Foreign Body from Eye    -8.550837502103327
+    Attrib Total Knee Replacement    -10.52231201780725
+    Attrib OSTEOARTHROSIS primary lower leg    -13.369618837346476
+    Attrib OSTEOARTHROSIS generalized lower leg    -8.264521031894878
+Class opana
+    Input
+    Node 0
+Class butrans
+    Input
+    Node 1
+
+
+Time taken to build model: 92.43 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       66743               60.4934 %
+Incorrectly Classified Instances     43588               39.5066 %
+Kappa statistic                          0.1366
+Mean absolute error                      0.442 
+Root mean squared error                  0.4748
+Relative absolute error                 90.7158 %
+Root relative squared error             96.1994 %
+Total Number of Instances           110331     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.819    0.691    0.621      0.819    0.706      0.149    0.649     0.742     opana
+                 0.309    0.181    0.553      0.309    0.396      0.149    0.649     0.535     butrans
+Weighted Avg.    0.605    0.477    0.592      0.605    0.576      0.149    0.649     0.655     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 52427 11560 |     a = opana
+ 32028 14316 |     b = butrans
+
+
