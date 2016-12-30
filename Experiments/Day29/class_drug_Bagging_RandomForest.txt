@@ -1,0 +1,54 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.Bagging -P 100 -S 1 -num-slots 1 -I 10 -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     join_opana_butrans_final
+Instances:    110331
+Attributes:   12
+              SEX
+              AGEGRP
+              REGION
+              REFILL+AF8-COUNT
+              ADMTYP
+              Total Knee Arthrolplasty
+              OSTEOARTHROSIS secondary lower leg
+              Removal of Foreign Body from Eye
+              Total Knee Replacement
+              OSTEOARTHROSIS primary lower leg
+              OSTEOARTHROSIS generalized lower leg
+              Class+AF8-Drug
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bagging with 10 iterations and base learner
+
+weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+
+Time taken to build model: 532.88 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       71898               65.1657 %
+Incorrectly Classified Instances     38433               34.8343 %
+Kappa statistic                          0.2808
+Mean absolute error                      0.4021
+Root mean squared error                  0.4534
+Relative absolute error                 82.5236 %
+Root relative squared error             91.8592 %
+Total Number of Instances           110331     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.715    0.436    0.694      0.715    0.704      0.281    0.720     0.798     opana
+                 0.564    0.285    0.589      0.564    0.576      0.281    0.720     0.635     butrans
+Weighted Avg.    0.652    0.372    0.650      0.652    0.651      0.281    0.720     0.730     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 45749 18238 |     a = opana
+ 20195 26149 |     b = butrans
+
+
