@@ -1,0 +1,58 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.Bagging -P 100 -S 1 -num-slots 1 -I 10 -W weka.classifiers.trees.J48 -- -C 0.25 -M 2
+Relation:     join_3_classes
+Instances:    115916
+Attributes:   15
+              SEX
+              AGEGRP
+              REGION
+              REFILL_COUNT
+              ADMTYP
+              A
+              B
+              C
+              D
+              E
+              F
+              G
+              H
+              I
+              Class_Drug
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bagging with 10 iterations and base learner
+
+weka.classifiers.trees.J48 -C 0.25 -M 2
+
+Time taken to build model: 71.74 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       72198               62.2848 %
+Incorrectly Classified Instances     43718               37.7152 %
+Kappa statistic                          0.2621
+Mean absolute error                      0.3006
+Root mean squared error                  0.3878
+Relative absolute error                 84.5868 %
+Root relative squared error             91.9914 %
+Total Number of Instances           115916     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.726    0.450    0.665      0.726    0.694      0.280    0.722     0.781     opana
+                 0.544    0.288    0.558      0.544    0.551      0.258    0.710     0.607     butrans
+                 0.095    0.003    0.623      0.095    0.165      0.231    0.916     0.336     both
+Weighted Avg.    0.623    0.364    0.620      0.623    0.611      0.269    0.727     0.690     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 46436 17385   166 |     a = opana
+ 20957 25232   155 |     b = butrans
+  2426  2629   530 |     c = both
+
