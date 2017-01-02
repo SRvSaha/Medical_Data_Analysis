@@ -1,0 +1,57 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.ZeroR 
+Relation:     join_3_classes
+Instances:    115916
+Attributes:   15
+              SEX
+              AGEGRP
+              REGION
+              REFILL_COUNT
+              ADMTYP
+              A
+              B
+              C
+              D
+              E
+              F
+              G
+              H
+              I
+              Class_Drug
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+ZeroR predicts class value: opana
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       63987               55.2012 %
+Incorrectly Classified Instances     51929               44.7988 %
+Kappa statistic                          0     
+Mean absolute error                      0.3554
+Root mean squared error                  0.4216
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances           115916     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.552      1.000    0.711      0.000    0.500     0.552     opana
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.400     butrans
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.048     both
+Weighted Avg.    0.552    0.552    0.305      0.552    0.393      0.000    0.500     0.467     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 63987     0     0 |     a = opana
+ 46344     0     0 |     b = butrans
+  5585     0     0 |     c = both
+
+

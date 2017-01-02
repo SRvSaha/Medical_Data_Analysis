@@ -1,0 +1,97 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     join_3_classes
+Instances:    115916
+Attributes:   15
+              SEX
+              AGEGRP
+              REGION
+              REFILL_COUNT
+              ADMTYP
+              A
+              B
+              C
+              D
+              E
+              F
+              G
+              H
+              I
+              Class_Drug
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                Class
+Variable                        opana                butrans
+============================================================
+SEX                           -0.2363                 0.2223
+AGEGRP                         0.1624                 0.1989
+REGION                        -0.0919                  0.018
+REFILL_COUNT                   0.1472                 0.0902
+ADMTYP                        -0.1332                -0.0234
+A                            144.8286               144.9343
+B                             34.0305                 34.167
+C                             49.0455                49.1773
+D                             23.1907                23.4626
+E                             -2.8792                17.6429
+F                             60.6324                37.5498
+G                            -80.9453               -91.9938
+H                            -78.2856               -47.4449
+I                             58.2735               -14.0437
+Intercept                      2.0373                 0.6797
+
+
+Odds Ratios...
+                                Class
+Variable                        opana                butrans
+============================================================
+SEX                            0.7896                  1.249
+AGEGRP                         1.1763                   1.22
+REGION                         0.9122                 1.0181
+REFILL_COUNT                   1.1585                 1.0944
+ADMTYP                         0.8753                 0.9769
+A                7.911760574629602E62   8.793875877652116E62
+B                6.015219908794559E14   6.894807450039939E14
+C                1.996040094340559E21  2.2773583159003896E21
+D               1.1792736966435877E10   1.547646052402009E10
+E                              0.0562          45941546.6478
+F               2.1494307029662774E26   2.030860246632814E16
+G                                   0                      0
+H                                   0                      0
+I               2.0317253033334007E25                      0
+
+
+Time taken to build model: 23.69 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       67778               58.4717 %
+Incorrectly Classified Instances     48138               41.5283 %
+Kappa statistic                          0.1696
+Mean absolute error                      0.3258
+Root mean squared error                  0.4037
+Relative absolute error                 91.6799 %
+Root relative squared error             95.7617 %
+Total Number of Instances           115916     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.740    0.560    0.620      0.740    0.674      0.189    0.663     0.732     opana
+                 0.439    0.274    0.516      0.439    0.475      0.171    0.646     0.533     butrans
+                 0.015    0.000    1.000      0.015    0.029      0.119    0.665     0.085     both
+Weighted Avg.    0.585    0.419    0.597      0.585    0.563      0.178    0.656     0.621     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 47344 16643     0 |     a = opana
+ 25993 20351     0 |     b = butrans
+  3082  2420    83 |     c = both
+
+

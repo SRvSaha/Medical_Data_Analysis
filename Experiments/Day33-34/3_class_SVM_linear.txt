@@ -1,0 +1,128 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     join_3_classes
+Instances:    115916
+Attributes:   15
+              SEX
+              AGEGRP
+              REGION
+              REFILL_COUNT
+              ADMTYP
+              A
+              B
+              C
+              D
+              E
+              F
+              G
+              H
+              I
+              Class_Drug
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: opana, butrans
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0003 * (normalized) SEX
+ +       0.0002 * (normalized) AGEGRP
+ +       0.0006 * (normalized) REGION
+ +      -0.0065 * (normalized) REFILL_COUNT
+ +       0.0007 * (normalized) ADMTYP
+ +       0.0007 * (normalized) A
+ +       0.0002 * (normalized) B
+ +       0.0003 * (normalized) C
+ +       1.9987 * (normalized) D
+ +       1.9998 * (normalized) E
+ +      -2.0012 * (normalized) F
+ -       1.0003
+
+Number of kernel evaluations: 614657561 (38.345% cached)
+
+Classifier for classes: opana, both
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.0002 * (normalized) SEX
+ +      -0.0005 * (normalized) AGEGRP
+ +       0.0005 * (normalized) REGION
+ +      -0.0021 * (normalized) REFILL_COUNT
+ +      -0.0003 * (normalized) ADMTYP
+ +      -0.0003 * (normalized) A
+ +       0      * (normalized) B
+ +      -0.0004 * (normalized) C
+ +      -0.0003 * (normalized) D
+ +       0      * (normalized) F
+ +       1.4996 * (normalized) G
+ +       2      * (normalized) H
+ +       0.4996 * (normalized) I
+ -       0.9996
+
+Number of kernel evaluations: 102076395 (45.92% cached)
+
+Classifier for classes: butrans, both
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0      * (normalized) SEX
+ +      -0.0004 * (normalized) AGEGRP
+ +      -0.0001 * (normalized) REGION
+ +       0.0036 * (normalized) REFILL_COUNT
+ +       0.0003 * (normalized) ADMTYP
+ +       0      * (normalized) B
+ +       0      * (normalized) C
+ +      -0.0001 * (normalized) D
+ +       0      * (normalized) E
+ +       1.5005 * (normalized) G
+ +       2      * (normalized) H
+ +       0.5005 * (normalized) I
+ -       1.0002
+
+Number of kernel evaluations: 38193799 (48.244% cached)
+
+
+
+Time taken to build model: 264.16 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       65208               56.2545 %
+Incorrectly Classified Instances     50708               43.7455 %
+Kappa statistic                          0.03  
+Mean absolute error                      0.33  
+Root mean squared error                  0.4264
+Relative absolute error                 92.8441 %
+Root relative squared error            101.1543 %
+Total Number of Instances           115916     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.993    0.968    0.558      0.993    0.715      0.094    0.513     0.558     opana
+                 0.034    0.006    0.783      0.034    0.065      0.104    0.514     0.413     butrans
+                 0.015    0.000    1.000      0.015    0.029      0.119    0.508     0.062     both
+Weighted Avg.    0.563    0.537    0.670      0.563    0.422      0.099    0.513     0.476     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 63552   435     0 |     a = opana
+ 44771  1573     0 |     b = butrans
+  5502     0    83 |     c = both
+
+

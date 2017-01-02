@@ -1,0 +1,147 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     join_3_classes
+Instances:    115916
+Attributes:   15
+              SEX
+              AGEGRP
+              REGION
+              REFILL_COUNT
+              ADMTYP
+              A
+              B
+              C
+              D
+              E
+              F
+              G
+              H
+              I
+              Class_Drug
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                 Class
+Attribute        opana butrans    both
+                (0.55)   (0.4)  (0.05)
+=======================================
+SEX
+  mean           1.5901  1.6939  1.6467
+  std. dev.      0.4918  0.4609   0.478
+  weight sum      63987   46344    5585
+  precision           1       1       1
+
+AGEGRP
+  mean           3.8072  3.8067  3.5465
+  std. dev.      1.0363  1.0693  1.0261
+  weight sum      63987   46344    5585
+  precision           1       1       1
+
+REGION
+  mean           2.6808   2.782  2.7649
+  std. dev.      0.9659  0.9263  0.9254
+  weight sum      63987   46344    5585
+  precision           1       1       1
+
+REFILL_COUNT
+  mean          10.1755  4.7493  2.4468
+  std. dev.     15.0898  6.2517  2.6214
+  weight sum      63987   46344    5585
+  precision      1.5968  1.5968  1.5968
+
+ADMTYP
+  mean           1.8466  1.9466  1.9722
+  std. dev.      0.8753  0.9399  0.9724
+  weight sum      63987   46344    5585
+  precision           1       1       1
+
+A
+  mean           0.0256  0.0288       0
+  std. dev.      0.1667  0.1673  0.1667
+  weight sum      63987   46344    5585
+  precision           1       1       1
+
+B
+  mean           0.0248  0.0262       0
+  std. dev.      0.1667  0.1667  0.1667
+  weight sum      63987   46344    5585
+  precision           1       1       1
+
+C
+  mean           0.0295  0.0315       0
+  std. dev.      0.1693  0.1748  0.1667
+  weight sum      63987   46344    5585
+  precision           1       1       1
+
+D
+  mean           0.0287  0.0321       0
+  std. dev.      0.1669  0.1762  0.1667
+  weight sum      63987   46344    5585
+  precision           1       1       1
+
+E
+  mean                0  0.0215       0
+  std. dev.      0.1667  0.1667  0.1667
+  weight sum      63987   46344    5585
+  precision           1       1       1
+
+F
+  mean           0.0268       0       0
+  std. dev.      0.1667  0.1667  0.1667
+  weight sum      63987   46344    5585
+  precision           1       1       1
+
+G
+  mean                0       0  0.0132
+  std. dev.      0.1667  0.1667  0.1667
+  weight sum      63987   46344    5585
+  precision           1       1       1
+
+H
+  mean                0       0  0.0134
+  std. dev.      0.1667  0.1667  0.1667
+  weight sum      63987   46344    5585
+  precision           1       1       1
+
+I
+  mean                0       0  0.0138
+  std. dev.      0.1667  0.1667  0.1667
+  weight sum      63987   46344    5585
+  precision           1       1       1
+
+
+
+Time taken to build model: 0.38 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       59184               51.0577 %
+Incorrectly Classified Instances     56732               48.9423 %
+Kappa statistic                          0.1421
+Mean absolute error                      0.3488
+Root mean squared error                  0.4284
+Relative absolute error                 98.1466 %
+Root relative squared error            101.6267 %
+Total Number of Instances           115916     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.276    0.095    0.781      0.276    0.408      0.227    0.650     0.712     opana
+                 0.896    0.744    0.445      0.896    0.595      0.187    0.616     0.493     butrans
+                 0.000    0.000    1.000      0.000    0.000      0.013    0.708     0.104     both
+Weighted Avg.    0.511    0.350    0.657      0.511    0.463      0.201    0.639     0.595     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 17672 46315     0 |     a = opana
+  4833 41511     0 |     b = butrans
+   126  5458     1 |     c = both
+
+
