@@ -1,0 +1,122 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     join_freq_opana_butrans
+Instances:    110331
+Attributes:   12
+              SEX
+              AGEGRP
+              REGION
+              ADMTYP
+              Total Knee Arthrolplasty
+              OSTEOARTHROSIS secondary lower leg
+              Removal of Foreign Body from Eye
+              Total Knee Replacement
+              OSTEOARTHROSIS primary lower leg
+              OSTEOARTHROSIS generalized lower leg
+              Class_Drug
+              Class_Freq
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                                         Class
+Attribute                                   NF       F
+                                        (0.54)  (0.46)
+=======================================================
+SEX
+  mean                                   1.6347  1.6326
+  std. dev.                              0.4815  0.4821
+  weight sum                              59215   51116
+  precision                                   1       1
+
+AGEGRP
+  mean                                   3.7729  3.8465
+  std. dev.                              1.0708  1.0245
+  weight sum                              59215   51116
+  precision                                   1       1
+
+REGION
+  mean                                   2.7184   2.729
+  std. dev.                              0.9469  0.9551
+  weight sum                              59215   51116
+  precision                                   1       1
+
+ADMTYP
+  mean                                   1.9007  1.8747
+  std. dev.                              0.9067  0.9015
+  weight sum                              59215   51116
+  precision                                   1       1
+
+Total Knee Arthrolplasty
+  mean                                   0.0272  0.0266
+  std. dev.                              0.1667  0.1667
+  weight sum                              59215   51116
+  precision                                   1       1
+
+OSTEOARTHROSIS secondary lower leg
+  mean                                    0.026  0.0248
+  std. dev.                              0.1667  0.1667
+  weight sum                              59215   51116
+  precision                                   1       1
+
+Removal of Foreign Body from Eye
+  mean                                   0.0314  0.0292
+  std. dev.                              0.1743  0.1685
+  weight sum                              59215   51116
+  precision                                   1       1
+
+Total Knee Replacement
+  mean                                   0.0308  0.0293
+  std. dev.                              0.1728  0.1686
+  weight sum                              59215   51116
+  precision                                   1       1
+
+OSTEOARTHROSIS primary lower leg
+  mean                                   0.0094  0.0086
+  std. dev.                              0.1667  0.1667
+  weight sum                              59215   51116
+  precision                                   1       1
+
+OSTEOARTHROSIS generalized lower leg
+  mean                                    0.016  0.0151
+  std. dev.                              0.1667  0.1667
+  weight sum                              59215   51116
+  precision                                   1       1
+
+Class_Drug
+  opana                                 32337.0 31652.0
+  butrans                               26880.0 19466.0
+  [total]                               59217.0 51118.0
+
+
+
+Time taken to build model: 0.28 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       59852               54.2477 %
+Incorrectly Classified Instances     50479               45.7523 %
+Kappa statistic                          0.0606
+Mean absolute error                      0.4932
+Root mean squared error                  0.4972
+Relative absolute error                 99.1732 %
+Root relative squared error             99.7076 %
+Total Number of Instances           110331     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.704    0.645    0.559      0.704    0.623      0.063    0.546     0.572     NF
+                 0.355    0.296    0.509      0.355    0.419      0.063    0.546     0.496     F
+Weighted Avg.    0.542    0.483    0.536      0.542    0.528      0.063    0.546     0.537     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 41685 17530 |     a = NF
+ 32949 18167 |     b = F
+
