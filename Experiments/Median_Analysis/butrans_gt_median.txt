@@ -1,0 +1,6 @@
+Count_LEFT  :  26879
+Left %      :  58.0
+Median      :  2.0
+Count_RIGHT :  19465
+Right %     :  42.0
+DATA ITEMS  :  46344
