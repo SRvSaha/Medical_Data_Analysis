@@ -1,0 +1,54 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.Bagging -P 100 -S 1 -num-slots 1 -I 10 -W weka.classifiers.trees.J48 -- -C 0.25 -M 2
+Relation:     join_freq_opana_butrans
+Instances:    110331
+Attributes:   12
+              SEX
+              AGEGRP
+              REGION
+              ADMTYP
+              Total Knee Arthrolplasty
+              OSTEOARTHROSIS secondary lower leg
+              Removal of Foreign Body from Eye
+              Total Knee Replacement
+              OSTEOARTHROSIS primary lower leg
+              OSTEOARTHROSIS generalized lower leg
+              Class_Drug
+              Class_Freq
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bagging with 10 iterations and base learner
+
+weka.classifiers.trees.J48 -C 0.25 -M 2
+
+Time taken to build model: 54.44 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       62253               56.4239 %
+Incorrectly Classified Instances     48078               43.5761 %
+Kappa statistic                          0.1075
+Mean absolute error                      0.4864
+Root mean squared error                  0.4938
+Relative absolute error                 97.8079 %
+Root relative squared error             99.0286 %
+Total Number of Instances           110331     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.709    0.603    0.576      0.709    0.636      0.111    0.580     0.604     NF
+                 0.397    0.291    0.540      0.397    0.458      0.111    0.580     0.532     F
+Weighted Avg.    0.564    0.459    0.560      0.564    0.553      0.111    0.580     0.571     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 41964 17251 |     a = NF
+ 30827 20289 |     b = F
+
+

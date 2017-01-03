@@ -1,0 +1,86 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     join_freq_opana_butrans
+Instances:    110331
+Attributes:   12
+              SEX
+              AGEGRP
+              REGION
+              ADMTYP
+              Total Knee Arthrolplasty
+              OSTEOARTHROSIS secondary lower leg
+              Removal of Foreign Body from Eye
+              Total Knee Replacement
+              OSTEOARTHROSIS primary lower leg
+              OSTEOARTHROSIS generalized lower leg
+              Class_Drug
+              Class_Freq
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                          Class
+Variable                                     NF
+===============================================
+SEX                                     -0.0298
+AGEGRP                                  -0.0697
+REGION                                  -0.0205
+ADMTYP                                   0.0171
+Total Knee Arthrolplasty                -0.2878
+OSTEOARTHROSIS secondary lower leg       0.0116
+Removal of Foreign Body from Eye         0.1534
+Total Knee Replacement                   0.1399
+OSTEOARTHROSIS primary lower leg        -0.0455
+OSTEOARTHROSIS generalized lower leg     0.2024
+Class_Drug=butrans                       0.3117
+Intercept                                0.3505
+
+
+Odds Ratios...
+                                          Class
+Variable                                     NF
+===============================================
+SEX                                      0.9707
+AGEGRP                                   0.9327
+REGION                                   0.9797
+ADMTYP                                   1.0173
+Total Knee Arthrolplasty                 0.7499
+OSTEOARTHROSIS secondary lower leg       1.0117
+Removal of Foreign Body from Eye         1.1658
+Total Knee Replacement                   1.1501
+OSTEOARTHROSIS primary lower leg         0.9555
+OSTEOARTHROSIS generalized lower leg     1.2244
+Class_Drug=butrans                       1.3658
+
+
+Time taken to build model: 2.98 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       59488               53.9178 %
+Incorrectly Classified Instances     50843               46.0822 %
+Kappa statistic                          0.0452
+Mean absolute error                      0.4938
+Root mean squared error                  0.4969
+Relative absolute error                 99.2931 %
+Root relative squared error             99.6519 %
+Total Number of Instances           110331     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.757    0.713    0.551      0.757    0.638      0.050    0.547     0.579     NF
+                 0.287    0.243    0.505      0.287    0.366      0.050    0.547     0.493     F
+Weighted Avg.    0.539    0.495    0.530      0.539    0.512      0.050    0.547     0.539     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 44830 14385 |     a = NF
+ 36458 14658 |     b = F
+
+
