@@ -1,0 +1,23 @@
+Attributes:   8,Test Mode ,Prediction Class,ML Algorithm,Correct Classified %,Error %
+              SEX,10-fold Cross Validation,Type of Patient : F/NF,Naive Bayes,97.1271 %,99.7005 %
+              AGEGRP,,F: Frequent,Naive Bayes Updatable,97.1271 %,99.7005 %
+              REGION,,NF : Non-Frequent,Logistic Regression,97.1272 %,96.535  %
+              Category,,,Decision Table,97.1498 %,71.4311 %
+              ADMTYP,,,Multilayer Perceptron,97.1271 %,71.3631 %
+              EGEOLOC,,,Voted Perceptron,97.0859 %,52.218  %
+              drug_class,,,SMO(linear),97.1271 %,51.478  %
+              refill_freq_class,,,SGD,97.1271 %,51.478  %
+,,,Simple Logistic,97.1272 %,114.2338 %
+,,,BayesNet,94.2295 %,108.7341 %
+,,,ZeroR(BASELINE),97.1271 %,100      %
+,,,Naive Bayes Multinomial Text,97.1271 %,100      %
+,,,Decision Tree (j48),,
+,,,Random Forest,,
+,,,Ibk,,
+,,,SGD Text,,
+,,,Kstar,,
+,,,Decision Stump,97.1271%,72.0318%
+,,,Hoeffding Tree,97.1125%,120.7806%
+,,,Random Tree,,
+,,,REP Tree,97.1271 %,99.9983 %
+,,,LMT,,

@@ -1,0 +1,51 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     data-weka.filters.unsupervised.attribute.Remove-R1,8
+Instances:    111059
+Attributes:   7
+              SEX
+              AGEGRP
+              REGION
+              Category
+              refill_count
+              ADMTYP
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 27.6 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       71437               64.3235 %
+Incorrectly Classified Instances     39622               35.6765 %
+Kappa statistic                          0.2446
+Mean absolute error                      0.4078
+Root mean squared error                  0.4571
+Relative absolute error                 83.7075 %
+Root relative squared error             92.6117 %
+Total Number of Instances           111059     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.772    0.535    0.666      0.772    0.715      0.249    0.703     0.777     opana
+                 0.465    0.228    0.596      0.465    0.522      0.249    0.703     0.637     butrans
+Weighted Avg.    0.643    0.406    0.637      0.643    0.634      0.249    0.703     0.718     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 49766 14662 |     a = opana
+ 24960 21671 |     b = butrans
+
+

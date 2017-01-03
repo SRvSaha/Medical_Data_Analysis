@@ -1,0 +1,45 @@
+Attributes:   8,Test Mode,Predicting Class,ML Algorithm,Correct Classify %,Error %
+              SEX,10-fold Cross Validation,Class Drug : Butrans/Opana,Random Forest,71.32%,70.17%
+              AGEGRP,,,Ibk,70.90%,69.34%
+              REGION,,,Decision Tree (j48),69.67%,76.35%
+              Category,,,Decision Table,66.36%,84.90%
+              refill_count,,,Kstar,65.83%,90.86%
+              ADMTYP,,,BayesNet,64.51%,85.96%
+              EGEOLOC,,,Logistic Regression,62.50%,88.95%
+              class,,,Simple Logistic,62.47%,89.13%
+,,,SGD,61.35%,79.33%
+,,,SMO(linear),61.33%,79.38%
+,,,Voted Perceptron,60.77%,80.53%
+,,,Multilayer Perceptron,60.06%,90.62%
+,,,SGD Text,58.01%,86.19%
+,,,ZeroR(BASELINE),58.01%,100.00%
+,,,Naive Bayes Multinomial Text,58.01%,86.19%
+,,,Naive Bayes,55.53%,90.36%
+,,,Naive Bayes Updatable,55.53%,90.36%
+,,,LWL,61.33%,91.36%
+,,,AdaBoostM1,61.33%,93.69%
+,,,AttributeSelectedClassfier,66.52%,83.51%
+,,,Bagging,70.49%,75.92%
+,,,ClassificationViaRegression,65.78%,84.42%
+,,,CVParameterSelection,58.01%,100.00%
+,,,FilteredClasssifier,66.06%,84.94%
+,,,IterativeClassifierOptimizer,62.42%,88.68%
+,,,LogitBoost,62.42%,88.68%
+,,,MultiClassClassifier,62.50%,88.95%
+,,,MultiClassClassifierUpdatable,61.35%,79.33%
+,,,MultiScheme,58.01%,100.00%
+,,,RandomCommittee,71.32%,69.00%
+,,,RandomizableCommitteeFilteredClassifier,70.83%,69.64%
+,,,RandomSubspace,66.22%,89.90%
+,,,Stacking,58.01%,100.00%
+,,,Vote,58.01%,100.00%
+,,,WeightedInstancesHandlerWrapper,58.01%,100.00%
+,,,InputMappedClassifier,58.01%,100.00%
+,,,Jrip,63.17%,92.77%
+,,,OneR,61.33%,79.38%
+,,,PART,64.83%,82.26%
+,,,Decision Stump,61.33%,95.27%
+,,,Hoeffding Tree,63.19%,88.28%
+,,,LMT,70.17%,73.06%
+,,,Random Tree,71.06%,69.07%
+,,,REP Tree,69.37%,76.66%

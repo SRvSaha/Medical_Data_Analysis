@@ -1,0 +1,9 @@
+Test Mode,Predicting Class,Attributes:   8,ML Algorithm,Correct Classify %,Error %,Attributes:   7,ML Algorithm,Correct Classify %,Error %
+10-fold Cross Validation,Class Drug : Butrans/Opana,              SEX,Random Forest,71.32%,70.17%,              SEX,Random Forest,64.32%,83.71%
+,,              AGEGRP,Decision Tree (j48),69.67%,76.35%,              AGEGRP,Decision Tree (j48),64.22%,86.57%
+,,              REGION,Logistic Regression,62.50%,88.95%,              REGION,Logistic Regression,62.03%,89.05%
+,,              Category,SMO(linear),61.33%,79.38%,              Category,SMO(linear),61.33%,79.38%
+,,              refill_count,,,,              refill_count,,,
+,,              ADMTYP,,,,              ADMTYP,,,
+,,              EGEOLOC,,,,              class,,,
+,,              class,,,,,,,
