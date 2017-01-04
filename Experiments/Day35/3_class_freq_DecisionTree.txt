@@ -1,0 +1,628 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     join_freq_3_classes
+Instances:    115916
+Attributes:   15
+              SEX
+              AGEGRP
+              REGION
+              ADMTYP
+              Total Knee Arthrolplasty
+              OSTEOARTHROSIS secondary lower leg
+              Removal of Foreign Body from Eye
+              Total Knee Replacement
+              OSTEOARTHROSIS primary lower leg
+              OSTEOARTHROSIS generalized lower leg
+              TOTAL HIP ANTHROPLASTY
+              FASCIOLOPSIASIS
+              TOTAL HIP REPLACEMENT
+              Class_Drug
+              Class_Freq
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Class_Drug = opana
+|   REGION <= 4
+|   |   Removal of Foreign Body from Eye <= 0
+|   |   |   AGEGRP <= 2
+|   |   |   |   ADMTYP <= 1
+|   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   REGION <= 1: NF (106.0/34.0)
+|   |   |   |   |   |   |   REGION > 1: F (313.0/104.0)
+|   |   |   |   |   |   SEX > 1: F (477.0/165.0)
+|   |   |   |   |   REGION > 2
+|   |   |   |   |   |   REGION <= 3: F (1322.0/651.0)
+|   |   |   |   |   |   REGION > 3: NF (486.0/189.0)
+|   |   |   |   ADMTYP > 1
+|   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   AGEGRP <= 1: F (43.0/10.0)
+|   |   |   |   |   |   AGEGRP > 1
+|   |   |   |   |   |   |   REGION <= 1: NF (473.0/186.0)
+|   |   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   |   ADMTYP <= 2: NF (1837.0/860.0)
+|   |   |   |   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   |   |   REGION <= 2: F (24.0/4.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 3: NF (12.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 3: F (7.0/1.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   |   |   REGION <= 2: NF (48.0/19.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 3: F (99.0/34.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 3: NF (47.0/22.0)
+|   |   |   |   |   SEX > 1
+|   |   |   |   |   |   REGION <= 3: NF (3165.0/1188.0)
+|   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   ADMTYP <= 2: NF (562.0/260.0)
+|   |   |   |   |   |   |   ADMTYP > 2: F (79.0/27.0)
+|   |   |   AGEGRP > 2
+|   |   |   |   OSTEOARTHROSIS generalized lower leg <= 0
+|   |   |   |   |   Total Knee Arthrolplasty <= 0
+|   |   |   |   |   |   Total Knee Replacement <= 0
+|   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   |   |   |   |   SEX <= 1: F (124.0/57.0)
+|   |   |   |   |   |   |   |   |   |   |   SEX > 1: NF (173.0/71.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 1: F (1014.0/418.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 1: F (622.0/284.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 1: NF (774.0/322.0)
+|   |   |   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: NF (543.0/245.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: F (220.0/104.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 2: F (988.0/447.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 2: NF (32.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: F (83.0/31.0)
+|   |   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   |   REGION <= 3: NF (2326.0/1059.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1: F (241.0/113.0)
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1: NF (430.0/174.0)
+|   |   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 3: F (1316.0/639.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 3: NF (396.0/190.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 2: NF (2288.0/1049.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 2: F (393.0/188.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: F (756.0/358.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: NF (74.0/22.0)
+|   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   ADMTYP <= 4
+|   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 3: F (6518.0/2984.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 3: NF (1231.0/606.0)
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 2: NF (1685.0/816.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 2: F (1965.0/926.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 2: F (2463.0/1201.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 2: NF (2853.0/1331.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   SEX <= 1: NF (713.0/336.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   SEX > 1: F (804.0/355.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 2: F (567.0/240.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: NF (67.0/16.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 3: NF (247.0/95.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 3: F (52.0/23.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 1: NF (333.0/161.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 3: F (105.0/38.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 3: NF (31.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: F (576.0/249.0)
+|   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0
+|   |   |   |   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1: F (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1: NF (18.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 1: F (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 1: NF (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1: F (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 2: NF (2.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   |   |   |   |   SEX <= 1: NF (1300.0/574.0)
+|   |   |   |   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1: F (368.0/156.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1: NF (1064.0/499.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: F (1742.0/769.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: NF (76.0/33.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 3: NF (1710.0/797.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 3: F (516.0/242.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1: F (2241.0/1036.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 2: NF (363.0/156.0)
+|   |   |   |   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 2: NF (2499.0/1132.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 2: F (4148.0/2006.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 2: NF (327.0/146.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: NF (1635.0/771.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: F (99.0/43.0)
+|   |   |   |   |   |   |   |   ADMTYP > 4
+|   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 2: F (2.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 2: NF (2.0)
+|   |   |   |   |   |   |   |   |   |   SEX > 1: NF (2.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 4: F (39.0/9.0)
+|   |   |   |   |   |   Total Knee Replacement > 0
+|   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0: NF (11.0/5.0)
+|   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0
+|   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1: F (2.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1: NF (10.0/1.0)
+|   |   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   |   REGION <= 3: F (14.0/4.0)
+|   |   |   |   |   |   |   |   |   REGION > 3: NF (17.0/6.0)
+|   |   |   |   |   Total Knee Arthrolplasty > 0
+|   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0
+|   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   AGEGRP <= 4: NF (5.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 4: F (3.0/1.0)
+|   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   AGEGRP <= 4: F (6.0/1.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 4: NF (6.0/2.0)
+|   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0
+|   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   AGEGRP <= 3: NF (3.0/1.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 3: F (20.0/3.0)
+|   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   REGION <= 2: F (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 2: NF (13.0/3.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1: F (16.0/6.0)
+|   |   |   |   |   |   ADMTYP > 3: NF (5.0/1.0)
+|   |   |   |   OSTEOARTHROSIS generalized lower leg > 0
+|   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   Total Knee Replacement <= 0: NF (33.0/15.0)
+|   |   |   |   |   |   |   |   |   Total Knee Replacement > 0: F (38.0/17.0)
+|   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   Total Knee Replacement <= 0: F (8.0/1.0)
+|   |   |   |   |   |   |   |   |   Total Knee Replacement > 0
+|   |   |   |   |   |   |   |   |   |   SEX <= 1: F (2.0)
+|   |   |   |   |   |   |   |   |   |   SEX > 1: NF (2.0)
+|   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0
+|   |   |   |   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0: F (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty > 0: NF (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 1: NF (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 1: NF (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 1: F (10.0/3.0)
+|   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0
+|   |   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0: NF (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty > 0: F (8.0/2.0)
+|   |   |   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0: F (28.0/6.0)
+|   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0
+|   |   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement <= 0: F (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   SEX <= 1: NF (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   SEX > 1: F (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty > 0: NF (3.0)
+|   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0: NF (9.0)
+|   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty > 0
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: NF (2.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 3: F (2.0)
+|   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0
+|   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   REGION <= 1: F (3.0)
+|   |   |   |   |   |   |   |   |   REGION > 1: NF (41.0/12.0)
+|   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0
+|   |   |   |   |   |   |   |   |   |   Total Knee Replacement <= 0: NF (48.0/19.0)
+|   |   |   |   |   |   |   |   |   |   Total Knee Replacement > 0
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 1: NF (2.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 3: F (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 3: NF (2.0)
+|   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty > 0: NF (6.0/1.0)
+|   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0
+|   |   |   |   |   |   |   |   Total Knee Replacement <= 0: F (9.0/3.0)
+|   |   |   |   |   |   |   |   Total Knee Replacement > 0
+|   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 2: NF (11.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 2: F (11.0/4.0)
+|   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty > 0
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 2: F (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 2: NF (7.0/2.0)
+|   |   |   |   |   |   |   |   |   REGION > 3: NF (6.0/1.0)
+|   |   |   |   |   ADMTYP > 2: NF (58.0/16.0)
+|   |   Removal of Foreign Body from Eye > 0
+|   |   |   REGION <= 2
+|   |   |   |   AGEGRP <= 4
+|   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   Total Knee Arthrolplasty <= 0
+|   |   |   |   |   |   |   OSTEOARTHROSIS generalized lower leg <= 0
+|   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   REGION <= 1: NF (3.0/1.0)
+|   |   |   |   |   |   |   |   |   REGION > 1: F (5.0/1.0)
+|   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   REGION <= 1: F (3.0/1.0)
+|   |   |   |   |   |   |   |   |   REGION > 1: NF (7.0/2.0)
+|   |   |   |   |   |   |   OSTEOARTHROSIS generalized lower leg > 0: NF (7.0/1.0)
+|   |   |   |   |   |   Total Knee Arthrolplasty > 0
+|   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   REGION <= 1: NF (6.0/1.0)
+|   |   |   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0: NF (14.0/4.0)
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0: F (21.0/7.0)
+|   |   |   |   |   |   |   SEX > 1: F (54.0/21.0)
+|   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   AGEGRP <= 3: F (5.0)
+|   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0: NF (10.0/2.0)
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0: F (16.0/7.0)
+|   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0: F (13.0/5.0)
+|   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0: NF (31.0/10.0)
+|   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   ADMTYP <= 3: NF (22.0/3.0)
+|   |   |   |   |   |   |   |   ADMTYP > 3: F (3.0)
+|   |   |   |   |   |   |   AGEGRP > 3: NF (139.0/48.0)
+|   |   |   |   AGEGRP > 4: NF (416.0/132.0)
+|   |   |   REGION > 2
+|   |   |   |   OSTEOARTHROSIS generalized lower leg <= 0
+|   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   Total Knee Arthrolplasty <= 0
+|   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0
+|   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   AGEGRP <= 3: F (5.0/1.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: NF (30.0/5.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1: F (11.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1: NF (14.0/2.0)
+|   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: F (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4: NF (21.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement > 0: NF (2.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement <= 0: NF (29.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   Total Knee Replacement > 0: F (4.0/1.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 2: F (5.0/1.0)
+|   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0
+|   |   |   |   |   |   |   |   ADMTYP <= 1: NF (4.0/1.0)
+|   |   |   |   |   |   |   |   ADMTYP > 1: F (11.0/4.0)
+|   |   |   |   |   |   Total Knee Arthrolplasty > 0
+|   |   |   |   |   |   |   SEX <= 1: NF (56.0/23.0)
+|   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0: NF (12.0/3.0)
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0: F (23.0/9.0)
+|   |   |   |   |   |   |   |   AGEGRP > 4: NF (37.0/7.0)
+|   |   |   |   |   REGION > 3
+|   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0
+|   |   |   |   |   |   |   AGEGRP <= 3: NF (6.0/1.0)
+|   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0: F (47.0/17.0)
+|   |   |   |   |   |   |   |   Total Knee Arthrolplasty > 0
+|   |   |   |   |   |   |   |   |   SEX <= 1: NF (5.0)
+|   |   |   |   |   |   |   |   |   SEX > 1: F (4.0/1.0)
+|   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0
+|   |   |   |   |   |   |   ADMTYP <= 2: NF (35.0/12.0)
+|   |   |   |   |   |   |   ADMTYP > 2: F (2.0)
+|   |   |   |   OSTEOARTHROSIS generalized lower leg > 0
+|   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   Total Knee Replacement <= 0
+|   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0: NF (23.0/9.0)
+|   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0: F (5.0)
+|   |   |   |   |   |   Total Knee Replacement > 0
+|   |   |   |   |   |   |   REGION <= 3: F (235.0/97.0)
+|   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1: F (7.0/1.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1: NF (12.0/3.0)
+|   |   |   |   |   |   |   |   SEX > 1: F (45.0/13.0)
+|   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   SEX <= 1: NF (134.0/50.0)
+|   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0: NF (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty > 0: F (26.0/11.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0: F (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty > 0: NF (24.0/5.0)
+|   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0
+|   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0: NF (9.0/3.0)
+|   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty > 0: F (149.0/69.0)
+|   |   |   |   |   |   |   ADMTYP > 2: NF (15.0/3.0)
+|   REGION > 4
+|   |   ADMTYP <= 1
+|   |   |   SEX <= 1
+|   |   |   |   AGEGRP <= 4: F (30.0/11.0)
+|   |   |   |   AGEGRP > 4: NF (6.0/1.0)
+|   |   |   SEX > 1: F (57.0/7.0)
+|   |   ADMTYP > 1
+|   |   |   AGEGRP <= 3
+|   |   |   |   SEX <= 1
+|   |   |   |   |   ADMTYP <= 2: NF (56.0/11.0)
+|   |   |   |   |   ADMTYP > 2: F (100.0/32.0)
+|   |   |   |   SEX > 1
+|   |   |   |   |   ADMTYP <= 2: F (149.0/44.0)
+|   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   ADMTYP <= 3: NF (35.0/7.0)
+|   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   AGEGRP <= 2: F (38.0/17.0)
+|   |   |   |   |   |   |   AGEGRP > 2: NF (55.0/24.0)
+|   |   |   AGEGRP > 3: F (803.0/306.0)
+Class_Drug = butrans
+|   AGEGRP <= 2
+|   |   REGION <= 4
+|   |   |   AGEGRP <= 1
+|   |   |   |   SEX <= 1: NF (54.0/12.0)
+|   |   |   |   SEX > 1
+|   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   ADMTYP <= 1: NF (36.0/10.0)
+|   |   |   |   |   |   ADMTYP > 1: F (81.0/25.0)
+|   |   |   |   |   ADMTYP > 3: NF (17.0)
+|   |   |   AGEGRP > 1: NF (6967.0/2440.0)
+|   |   REGION > 4
+|   |   |   SEX <= 1
+|   |   |   |   ADMTYP <= 2
+|   |   |   |   |   ADMTYP <= 1: F (3.0)
+|   |   |   |   |   ADMTYP > 1: NF (21.0/2.0)
+|   |   |   |   ADMTYP > 2: F (13.0/3.0)
+|   |   |   SEX > 1
+|   |   |   |   ADMTYP <= 2
+|   |   |   |   |   ADMTYP <= 1: NF (18.0/2.0)
+|   |   |   |   |   ADMTYP > 1: F (18.0/6.0)
+|   |   |   |   ADMTYP > 2: NF (93.0/13.0)
+|   AGEGRP > 2
+|   |   REGION <= 1
+|   |   |   OSTEOARTHROSIS primary lower leg <= 0: NF (4244.0/1579.0)
+|   |   |   OSTEOARTHROSIS primary lower leg > 0
+|   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0
+|   |   |   |   |   Total Knee Arthrolplasty <= 0
+|   |   |   |   |   |   Total Knee Replacement <= 0
+|   |   |   |   |   |   |   Removal of Foreign Body from Eye <= 0: F (9.0/3.0)
+|   |   |   |   |   |   |   Removal of Foreign Body from Eye > 0: NF (6.0/2.0)
+|   |   |   |   |   |   Total Knee Replacement > 0: NF (3.0)
+|   |   |   |   |   Total Knee Arthrolplasty > 0: F (48.0/15.0)
+|   |   |   |   OSTEOARTHROSIS secondary lower leg > 0: NF (67.0/28.0)
+|   |   REGION > 1
+|   |   |   REGION <= 2
+|   |   |   |   SEX <= 1
+|   |   |   |   |   ADMTYP <= 3: NF (2252.0/882.0)
+|   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   AGEGRP <= 3: F (54.0/22.0)
+|   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   AGEGRP <= 4: NF (70.0/23.0)
+|   |   |   |   |   |   |   AGEGRP > 4: F (112.0/51.0)
+|   |   |   |   SEX > 1
+|   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   OSTEOARTHROSIS primary lower leg <= 0: F (3381.0/1614.0)
+|   |   |   |   |   |   OSTEOARTHROSIS primary lower leg > 0
+|   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0: NF (14.0/2.0)
+|   |   |   |   |   |   |   Total Knee Arthrolplasty > 0
+|   |   |   |   |   |   |   |   AGEGRP <= 3: F (10.0/3.0)
+|   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye <= 0: F (5.0/1.0)
+|   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye > 0: NF (31.0/11.0)
+|   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   Removal of Foreign Body from Eye <= 0: NF (1941.0/859.0)
+|   |   |   |   |   |   Removal of Foreign Body from Eye > 0
+|   |   |   |   |   |   |   OSTEOARTHROSIS primary lower leg <= 0
+|   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0
+|   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0: F (25.0/8.0)
+|   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty > 0: NF (12.0/5.0)
+|   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0
+|   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0: NF (5.0/1.0)
+|   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty > 0: F (68.0/32.0)
+|   |   |   |   |   |   |   OSTEOARTHROSIS primary lower leg > 0: NF (52.0/20.0)
+|   |   |   REGION > 2
+|   |   |   |   AGEGRP <= 4
+|   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   Total Knee Arthrolplasty <= 0: NF (11822.0/4812.0)
+|   |   |   |   |   |   Total Knee Arthrolplasty > 0
+|   |   |   |   |   |   |   Removal of Foreign Body from Eye <= 0
+|   |   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   SEX <= 1: NF (3.0)
+|   |   |   |   |   |   |   |   |   |   SEX > 1: F (4.0/1.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 3: F (25.0/7.0)
+|   |   |   |   |   |   |   |   ADMTYP > 3: NF (5.0/1.0)
+|   |   |   |   |   |   |   Removal of Foreign Body from Eye > 0
+|   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS primary lower leg <= 0: NF (17.0/6.0)
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS primary lower leg > 0: F (32.0/11.0)
+|   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1: NF (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS primary lower leg <= 0: NF (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS primary lower leg > 0: F (4.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 3: F (2.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS primary lower leg <= 0
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1: F (12.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1: NF (29.0/5.0)
+|   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS primary lower leg > 0: NF (75.0/33.0)
+|   |   |   |   |   REGION > 3
+|   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   REGION <= 4: NF (1069.0/417.0)
+|   |   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   AGEGRP <= 3: NF (9.0/3.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 3: F (15.0/1.0)
+|   |   |   |   |   |   |   |   ADMTYP > 1: NF (159.0/42.0)
+|   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   Removal of Foreign Body from Eye <= 0
+|   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1: F (279.0/130.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1: NF (961.0/401.0)
+|   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 1: NF (542.0/234.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: F (891.0/412.0)
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: NF (179.0/77.0)
+|   |   |   |   |   |   |   |   |   REGION > 4: F (159.0/59.0)
+|   |   |   |   |   |   |   Removal of Foreign Body from Eye > 0
+|   |   |   |   |   |   |   |   REGION <= 4: NF (63.0/19.0)
+|   |   |   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS primary lower leg <= 0: F (8.0/2.0)
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS primary lower leg > 0: NF (4.0/1.0)
+|   |   |   |   AGEGRP > 4
+|   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   Removal of Foreign Body from Eye <= 0
+|   |   |   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   |   |   SEX <= 1: NF (2927.0/1357.0)
+|   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   REGION <= 3: NF (3993.0/1731.0)
+|   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 1: F (646.0/299.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 1: NF (781.0/303.0)
+|   |   |   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   |   SEX <= 1: F (82.0/23.0)
+|   |   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   |   REGION <= 3: F (48.0/17.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 3: NF (22.0/8.0)
+|   |   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   |   SEX <= 1: NF (362.0/128.0)
+|   |   |   |   |   |   |   |   |   SEX > 1: F (504.0/244.0)
+|   |   |   |   |   |   Removal of Foreign Body from Eye > 0
+|   |   |   |   |   |   |   OSTEOARTHROSIS primary lower leg <= 0
+|   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0
+|   |   |   |   |   |   |   |   |   |   Total Knee Replacement <= 0
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: NF (31.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: F (2.0)
+|   |   |   |   |   |   |   |   |   |   Total Knee Replacement > 0
+|   |   |   |   |   |   |   |   |   |   |   SEX <= 1: F (2.0)
+|   |   |   |   |   |   |   |   |   |   |   SEX > 1: NF (9.0/3.0)
+|   |   |   |   |   |   |   |   |   Total Knee Arthrolplasty > 0: F (112.0/50.0)
+|   |   |   |   |   |   |   |   REGION > 3: F (67.0/23.0)
+|   |   |   |   |   |   |   OSTEOARTHROSIS primary lower leg > 0
+|   |   |   |   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0: NF (93.0/31.0)
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 3: NF (100.0/37.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   |   |   |   SEX <= 1: F (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   SEX > 1: NF (14.0/5.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   SEX <= 1: NF (27.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   SEX > 1: F (57.0/23.0)
+|   |   |   |   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0
+|   |   |   |   |   |   |   |   |   |   REGION <= 3: F (14.0/4.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 3: NF (6.0/1.0)
+|   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0: F (23.0/9.0)
+|   |   |   |   |   REGION > 4
+|   |   |   |   |   |   Total Knee Replacement <= 0
+|   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   SEX <= 1
+|   |   |   |   |   |   |   |   |   ADMTYP <= 2: F (15.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 2: NF (2.0)
+|   |   |   |   |   |   |   |   SEX > 1
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1: F (6.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0: NF (27.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0: F (2.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 2: F (4.0)
+|   |   |   |   |   |   |   ADMTYP > 3: F (227.0/98.0)
+|   |   |   |   |   |   Total Knee Replacement > 0
+|   |   |   |   |   |   |   ADMTYP <= 3: F (2.0)
+|   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   OSTEOARTHROSIS primary lower leg <= 0
+|   |   |   |   |   |   |   |   |   SEX <= 1: NF (2.0)
+|   |   |   |   |   |   |   |   |   SEX > 1: F (8.0/2.0)
+|   |   |   |   |   |   |   |   OSTEOARTHROSIS primary lower leg > 0
+|   |   |   |   |   |   |   |   |   SEX <= 1: F (3.0/1.0)
+|   |   |   |   |   |   |   |   |   SEX > 1: NF (8.0/1.0)
+Class_Drug = both: NF (5585.0/1229.0)
+
+Number of Leaves  : 	285
+
+Size of the tree : 	568
+
+
+Time taken to build model: 5.89 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       66553               57.4149 %
+Incorrectly Classified Instances     49363               42.5851 %
+Kappa statistic                          0.1199
+Mean absolute error                      0.4796
+Root mean squared error                  0.491 
+Relative absolute error                 96.8309 %
+Root relative squared error             98.6605 %
+Total Number of Instances           115916     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.720    0.602    0.592      0.720    0.650      0.124    0.592     0.634     NF
+                 0.398    0.280    0.539      0.398    0.457      0.124    0.592     0.526     F
+Weighted Avg.    0.574    0.457    0.568      0.574    0.563      0.124    0.592     0.586     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 45740 17831 |     a = NF
+ 31532 20813 |     b = F
+
