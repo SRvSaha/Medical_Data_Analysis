@@ -1,0 +1,58 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     join_freq_3_classes
+Instances:    115916
+Attributes:   15
+              SEX
+              AGEGRP
+              REGION
+              ADMTYP
+              Total Knee Arthrolplasty
+              OSTEOARTHROSIS secondary lower leg
+              Removal of Foreign Body from Eye
+              Total Knee Replacement
+              OSTEOARTHROSIS primary lower leg
+              OSTEOARTHROSIS generalized lower leg
+              TOTAL HIP ANTHROPLASTY
+              FASCIOLOPSIASIS
+              TOTAL HIP REPLACEMENT
+              Class_Drug
+              Class_Freq
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 42.8 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       66639               57.489  %
+Incorrectly Classified Instances     49277               42.511  %
+Kappa statistic                          0.1228
+Mean absolute error                      0.4756
+Root mean squared error                  0.4901
+Relative absolute error                 96.021  %
+Root relative squared error             98.4779 %
+Total Number of Instances           115916     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.713    0.593    0.594      0.713    0.648      0.126    0.598     0.647     NF
+                 0.407    0.287    0.539      0.407    0.464      0.126    0.598     0.533     F
+Weighted Avg.    0.575    0.455    0.569      0.575    0.565      0.126    0.598     0.595     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 45317 18254 |     a = NF
+ 31023 21322 |     b = F
+
