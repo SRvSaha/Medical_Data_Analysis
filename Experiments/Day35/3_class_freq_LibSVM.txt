@@ -1,0 +1,54 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LibSVM -S 0 -K 2 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.001 -P 0.1 -model "C:\\Program Files" -seed 1
+Relation:     join_freq_3_classes
+Instances:    115916
+Attributes:   15
+              SEX
+              AGEGRP
+              REGION
+              ADMTYP
+              Total Knee Arthrolplasty
+              OSTEOARTHROSIS secondary lower leg
+              Removal of Foreign Body from Eye
+              Total Knee Replacement
+              OSTEOARTHROSIS primary lower leg
+              OSTEOARTHROSIS generalized lower leg
+              TOTAL HIP ANTHROPLASTY
+              FASCIOLOPSIASIS
+              TOTAL HIP REPLACEMENT
+              Class_Drug
+              Class_Freq
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+LibSVM wrapper, original code by Yasser EL-Manzalawy (= WLSVM)
+
+Time taken to build model: 1250.59 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       64536               55.6748 %
+Incorrectly Classified Instances     51380               44.3252 %
+Kappa statistic                          0.0757
+Mean absolute error                      0.4433
+Root mean squared error                  0.6658
+Relative absolute error                 89.4897 %
+Root relative squared error            133.7832 %
+Total Number of Instances           115916     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.744    0.671    0.574      0.744    0.648      0.080    0.537     0.567     NF
+                 0.329    0.256    0.514      0.329    0.401      0.080    0.537     0.472     F
+Weighted Avg.    0.557    0.483    0.547      0.557    0.537      0.080    0.537     0.524     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 47321 16250 |     a = NF
+ 35130 17215 |     b = F
+
