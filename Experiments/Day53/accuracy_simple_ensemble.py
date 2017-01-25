@@ -20,7 +20,8 @@ import sys
 count_match = total = 0
 
 with open(sys.argv[1]) as f:
-    for line in f.readlines()[1:]:
+    # for line in f.readlines()[1:]:
+    for line in f.readlines():
         total += 1
         line = line.strip().split(',')
         if(line[0] == line[1]):
