@@ -1,0 +1,21 @@
+To optimize the performance of Decision Tree ( Tested by 10-fold Cross-Validation)
+===================================================================================
+
+weka.classifiers.trees.J48 -S -C 0.49 -M 1 -J
+
+ 1. Confidence for Pruning (C): J48 gives Threshold Accuracy when C = 0.49
+ 2. Minimum number of Instances per leaf (M): Best Result when set to 1
+*3. Sub-Tree Raising (Pruning an interior node and raise the sub-tree beneath one-level up) (S): False
+    BUT this is a dependent one. Cause when it was set to TRUE, it gave good results on our ORIGINAL
+    DATASET using 10 fold CV but for 10 fold CV on our 80% of data (training set), it gave good
+    results when set to FALSE and also when TESTED against 20% of data (test set).
+ 4. Reduced Error Pruning : False
+ 5. Unpruned : FALSE (Pruning based on C4.5 Prune technique)
+ 6. UseLaplace for smoothening at leaves for predicted probability(-A): FALSE (Correctly Classified
+    Remains same but the error increases)
+ 7. UseMDLCorrection (-J) for info gain on numeric attributes : FALSE
+
+* : It denotes that these parameters are inconsistent i.e, they vary when tested on different datasets
+    like Original Dataset vs 80 % of Original Dataset (Training Set)
+
+
