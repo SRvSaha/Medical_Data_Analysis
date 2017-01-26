@@ -1,0 +1,790 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     incorrect_j48_from_test_set
+Instances:    8694
+Attributes:   15
+              SEX
+              AGEGRP
+              REGION
+              REFILL_COUNT
+              ADMTYP
+              Total Knee Arthrolplasty
+              OSTEOARTHROSIS secondary lower leg
+              Removal of Foreign Body from Eye
+              Total Knee Replacement
+              OSTEOARTHROSIS primary lower leg
+              OSTEOARTHROSIS generalized lower leg
+              TOTAL HIP ANTHROPLASTY
+              IRIDECTOMY
+              TOTAL HIP REPLACEMENT
+              Class_Drug
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+REFILL_COUNT <= 1
+|   SEX <= 1
+|   |   ADMTYP <= 3
+|   |   |   AGEGRP <= 4
+|   |   |   |   AGEGRP <= 2
+|   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   ADMTYP <= 1: butrans (2.0)
+|   |   |   |   |   |   |   ADMTYP > 1: opana (24.0/1.0)
+|   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   ADMTYP <= 1: opana (18.0)
+|   |   |   |   |   |   |   ADMTYP > 1: butrans (19.0)
+|   |   |   |   |   REGION > 2: butrans (111.0)
+|   |   |   |   AGEGRP > 2: butrans (517.0/7.0)
+|   |   |   AGEGRP > 4
+|   |   |   |   REGION <= 2: butrans (126.0/1.0)
+|   |   |   |   REGION > 2
+|   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   REGION <= 3: butrans (60.0)
+|   |   |   |   |   |   REGION > 3: opana (26.0)
+|   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   |   Removal of Foreign Body from Eye <= 0: opana (111.0)
+|   |   |   |   |   |   |   Removal of Foreign Body from Eye > 0: butrans (4.0/1.0)
+|   |   |   |   |   |   ADMTYP > 2: butrans (5.0)
+|   |   ADMTYP > 3
+|   |   |   REGION <= 1
+|   |   |   |   AGEGRP <= 3
+|   |   |   |   |   AGEGRP <= 2: butrans (6.0)
+|   |   |   |   |   AGEGRP > 2: opana (10.0)
+|   |   |   |   AGEGRP > 3: butrans (20.0)
+|   |   |   REGION > 1
+|   |   |   |   REGION <= 3
+|   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   AGEGRP <= 3: butrans (3.0)
+|   |   |   |   |   |   AGEGRP > 3: opana (16.0)
+|   |   |   |   |   REGION > 2: opana (61.0)
+|   |   |   |   REGION > 3
+|   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   AGEGRP <= 3: butrans (7.0/1.0)
+|   |   |   |   |   |   AGEGRP > 3: opana (7.0)
+|   |   |   |   |   REGION > 4
+|   |   |   |   |   |   AGEGRP <= 3: opana (3.0)
+|   |   |   |   |   |   AGEGRP > 3: butrans (9.0)
+|   SEX > 1
+|   |   AGEGRP <= 2
+|   |   |   REGION <= 3
+|   |   |   |   REGION <= 1
+|   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   ADMTYP <= 1: butrans (3.0)
+|   |   |   |   |   |   ADMTYP > 1: opana (21.0)
+|   |   |   |   |   ADMTYP > 3: butrans (7.0)
+|   |   |   |   REGION > 1: opana (273.0/1.0)
+|   |   |   REGION > 3
+|   |   |   |   ADMTYP <= 1: butrans (22.0)
+|   |   |   |   ADMTYP > 1
+|   |   |   |   |   OSTEOARTHROSIS secondary lower leg <= 0: opana (43.0)
+|   |   |   |   |   OSTEOARTHROSIS secondary lower leg > 0: butrans (2.0)
+|   |   AGEGRP > 2
+|   |   |   REGION <= 1
+|   |   |   |   ADMTYP <= 3: opana (150.0/1.0)
+|   |   |   |   ADMTYP > 3
+|   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   AGEGRP <= 3: butrans (10.0)
+|   |   |   |   |   |   AGEGRP > 3: opana (22.0)
+|   |   |   |   |   AGEGRP > 4: butrans (15.0)
+|   |   |   REGION > 1
+|   |   |   |   AGEGRP <= 4
+|   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   AGEGRP <= 3: butrans (29.0)
+|   |   |   |   |   |   |   |   AGEGRP > 3: opana (58.0/1.0)
+|   |   |   |   |   |   |   REGION > 2: opana (216.0)
+|   |   |   |   |   |   REGION > 3: butrans (59.0)
+|   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   ADMTYP <= 3: butrans (464.0/5.0)
+|   |   |   |   |   |   |   ADMTYP > 3: opana (50.0)
+|   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   REGION <= 4: opana (94.0/1.0)
+|   |   |   |   |   |   |   REGION > 4: butrans (12.0/1.0)
+|   |   |   |   AGEGRP > 4
+|   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   Removal of Foreign Body from Eye <= 0: butrans (76.0)
+|   |   |   |   |   |   |   Removal of Foreign Body from Eye > 0: opana (3.0/1.0)
+|   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   Total Knee Replacement <= 0: opana (131.0)
+|   |   |   |   |   |   |   |   Total Knee Replacement > 0: butrans (5.0/1.0)
+|   |   |   |   |   |   |   REGION > 3: butrans (49.0/1.0)
+|   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   ADMTYP <= 2: opana (230.0/3.0)
+|   |   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   |   ADMTYP <= 3: butrans (8.0)
+|   |   |   |   |   |   |   ADMTYP > 3: opana (37.0/1.0)
+REFILL_COUNT > 1
+|   REFILL_COUNT <= 3
+|   |   SEX <= 1
+|   |   |   REFILL_COUNT <= 2
+|   |   |   |   AGEGRP <= 3
+|   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   ADMTYP <= 1: butrans (5.0/2.0)
+|   |   |   |   |   |   |   |   ADMTYP > 1: opana (6.0)
+|   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   ADMTYP <= 1: both (2.0)
+|   |   |   |   |   |   |   |   ADMTYP > 1: butrans (11.0/2.0)
+|   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   REGION <= 2: both (10.0/4.0)
+|   |   |   |   |   |   |   |   REGION > 2: butrans (84.0/38.0)
+|   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   AGEGRP <= 2: both (48.0/20.0)
+|   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   REGION <= 2: butrans (23.0/7.0)
+|   |   |   |   |   |   |   |   |   REGION > 2: both (53.0/25.0)
+|   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   REGION <= 1: opana (8.0/2.0)
+|   |   |   |   |   |   REGION > 1: butrans (27.0/10.0)
+|   |   |   |   AGEGRP > 3
+|   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   REGION <= 2: both (17.0/6.0)
+|   |   |   |   |   |   |   REGION > 2: opana (77.0/22.0)
+|   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   |   ADMTYP <= 3: opana (24.0/9.0)
+|   |   |   |   |   |   |   |   ADMTYP > 3: butrans (4.0)
+|   |   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye <= 0: both (86.0/40.0)
+|   |   |   |   |   |   |   |   |   Removal of Foreign Body from Eye > 0: butrans (3.0)
+|   |   |   |   |   |   |   |   REGION > 3: butrans (27.0/6.0)
+|   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1: both (6.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1: butrans (20.0/6.0)
+|   |   |   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1: butrans (13.0/1.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1: opana (20.0/6.0)
+|   |   |   |   |   |   |   REGION > 2: butrans (132.0/41.0)
+|   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   Removal of Foreign Body from Eye <= 0: both (6.0/2.0)
+|   |   |   |   |   |   |   |   Removal of Foreign Body from Eye > 0: opana (2.0)
+|   |   |   |   |   |   |   REGION > 2: opana (14.0/3.0)
+|   |   |   REFILL_COUNT > 2
+|   |   |   |   AGEGRP <= 4
+|   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   ADMTYP <= 1: opana (15.0/2.0)
+|   |   |   |   |   |   |   ADMTYP > 1: butrans (19.0)
+|   |   |   |   |   |   AGEGRP > 2: butrans (113.0/17.0)
+|   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   |   |   AGEGRP <= 2: butrans (3.0/1.0)
+|   |   |   |   |   |   |   |   AGEGRP > 2: both (7.0/2.0)
+|   |   |   |   |   |   |   REGION > 4: opana (2.0)
+|   |   |   |   |   |   AGEGRP > 3: opana (12.0/3.0)
+|   |   |   |   AGEGRP > 4
+|   |   |   |   |   ADMTYP <= 1: butrans (26.0/1.0)
+|   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   REGION <= 1: opana (10.0/5.0)
+|   |   |   |   |   |   |   |   REGION > 1: butrans (9.0)
+|   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   REGION <= 3: opana (30.0/1.0)
+|   |   |   |   |   |   |   |   REGION > 3: butrans (5.0/1.0)
+|   |   |   |   |   |   ADMTYP > 3: butrans (10.0/1.0)
+|   |   SEX > 1
+|   |   |   REGION <= 2
+|   |   |   |   REGION <= 1
+|   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   REFILL_COUNT <= 2
+|   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   AGEGRP <= 2: opana (17.0/9.0)
+|   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1: both (25.0/12.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: butrans (21.0/8.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 3: both (26.0/6.0)
+|   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   AGEGRP <= 2: both (4.0/1.0)
+|   |   |   |   |   |   |   |   AGEGRP > 2: butrans (12.0/3.0)
+|   |   |   |   |   |   REFILL_COUNT > 2
+|   |   |   |   |   |   |   ADMTYP <= 3: butrans (26.0/4.0)
+|   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   AGEGRP <= 3: opana (7.0/2.0)
+|   |   |   |   |   |   |   |   AGEGRP > 3: both (5.0/2.0)
+|   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   REFILL_COUNT <= 2: butrans (13.0/6.0)
+|   |   |   |   |   |   |   REFILL_COUNT > 2: opana (3.0/1.0)
+|   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   REFILL_COUNT <= 2: opana (44.0/10.0)
+|   |   |   |   |   |   |   REFILL_COUNT > 2: butrans (5.0/1.0)
+|   |   |   |   REGION > 1
+|   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   REFILL_COUNT <= 2
+|   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   AGEGRP <= 2: opana (7.0/2.0)
+|   |   |   |   |   |   |   |   AGEGRP > 2: both (11.0/1.0)
+|   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   ADMTYP <= 2: butrans (52.0/15.0)
+|   |   |   |   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 3: both (6.0/2.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 2: butrans (9.0/2.0)
+|   |   |   |   |   |   REFILL_COUNT > 2
+|   |   |   |   |   |   |   ADMTYP <= 3: opana (36.0/3.0)
+|   |   |   |   |   |   |   ADMTYP > 3: both (2.0)
+|   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   ADMTYP <= 1: butrans (111.0/28.0)
+|   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   REFILL_COUNT <= 2
+|   |   |   |   |   |   |   |   AGEGRP <= 4: butrans (42.0/8.0)
+|   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   ADMTYP <= 2: opana (26.0/6.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (4.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 3: opana (4.0/2.0)
+|   |   |   |   |   |   |   REFILL_COUNT > 2: butrans (51.0/7.0)
+|   |   |   REGION > 2
+|   |   |   |   REGION <= 3
+|   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   REFILL_COUNT <= 2
+|   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   ADMTYP <= 1: butrans (21.0/5.0)
+|   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   ADMTYP <= 2: opana (55.0/19.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (4.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 3: both (13.0/3.0)
+|   |   |   |   |   |   |   AGEGRP > 2: opana (167.0/71.0)
+|   |   |   |   |   |   REFILL_COUNT > 2
+|   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1: butrans (10.0/3.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1: opana (26.0/2.0)
+|   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1: opana (22.0/9.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1: butrans (44.0/11.0)
+|   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   AGEGRP <= 2: both (11.0/3.0)
+|   |   |   |   |   |   |   |   AGEGRP > 2: opana (10.0/1.0)
+|   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   REFILL_COUNT <= 2
+|   |   |   |   |   |   |   ADMTYP <= 1: opana (172.0/50.0)
+|   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   AGEGRP <= 4: both (168.0/78.0)
+|   |   |   |   |   |   |   |   AGEGRP > 4: opana (81.0/31.0)
+|   |   |   |   |   |   REFILL_COUNT > 2: opana (148.0/36.0)
+|   |   |   |   REGION > 3
+|   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   REFILL_COUNT <= 2
+|   |   |   |   |   |   |   AGEGRP <= 2: both (7.0/2.0)
+|   |   |   |   |   |   |   AGEGRP > 2: butrans (67.0/15.0)
+|   |   |   |   |   |   REFILL_COUNT > 2: butrans (22.0/7.0)
+|   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 2
+|   |   |   |   |   |   |   |   |   AGEGRP <= 2: both (35.0/14.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (25.0/7.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 3: both (34.0/14.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 2
+|   |   |   |   |   |   |   |   |   ADMTYP <= 2: opana (40.0/6.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 2: butrans (3.0)
+|   |   |   |   |   |   |   REGION > 4: opana (20.0/4.0)
+|   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 2
+|   |   |   |   |   |   |   |   |   REGION <= 4: opana (32.0/5.0)
+|   |   |   |   |   |   |   |   |   REGION > 4: both (3.0/1.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 2
+|   |   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (7.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 3: opana (9.0/2.0)
+|   |   |   |   |   |   |   Total Knee Arthrolplasty > 0: butrans (2.0)
+|   REFILL_COUNT > 3
+|   |   SEX <= 1
+|   |   |   ADMTYP <= 2
+|   |   |   |   AGEGRP <= 4
+|   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   REFILL_COUNT <= 11
+|   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 10: butrans (87.0/4.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 10
+|   |   |   |   |   |   |   |   |   AGEGRP <= 2: both (7.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 2: butrans (3.0)
+|   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 7
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 6: butrans (76.0/16.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 6
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 2: opana (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 2: butrans (8.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 2: butrans (3.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 2: opana (8.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 7: butrans (40.0/2.0)
+|   |   |   |   |   |   REFILL_COUNT > 11
+|   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   ADMTYP <= 1: butrans (4.0/1.0)
+|   |   |   |   |   |   |   |   ADMTYP > 1: opana (10.0/3.0)
+|   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   Removal of Foreign Body from Eye <= 0
+|   |   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 1: butrans (7.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 29
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: butrans (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 29: butrans (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 14: opana (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 14: butrans (19.0)
+|   |   |   |   |   |   |   |   |   REGION > 2: butrans (65.0/3.0)
+|   |   |   |   |   |   |   |   Removal of Foreign Body from Eye > 0
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 17: butrans (2.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 17: opana (2.0)
+|   |   |   |   |   REGION > 3
+|   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   REFILL_COUNT <= 6
+|   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 5: butrans (4.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 5: opana (4.0)
+|   |   |   |   |   |   |   |   AGEGRP > 2: opana (11.0)
+|   |   |   |   |   |   |   REFILL_COUNT > 6: butrans (12.0/2.0)
+|   |   |   |   |   |   AGEGRP > 3: butrans (37.0/3.0)
+|   |   |   |   AGEGRP > 4
+|   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   ADMTYP <= 1: butrans (6.0/1.0)
+|   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 5: opana (5.0/2.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 5
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 11
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 9: butrans (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 9: opana (2.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 11: butrans (5.0)
+|   |   |   |   |   |   REGION > 1: butrans (54.0)
+|   |   |   |   |   REGION > 2
+|   |   |   |   |   |   REFILL_COUNT <= 7
+|   |   |   |   |   |   |   REFILL_COUNT <= 6
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 5
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 4
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 3: opana (9.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 3: butrans (3.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 1: butrans (13.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 4
+|   |   |   |   |   |   |   |   |   |   REGION <= 3: butrans (23.0/2.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 3: opana (4.0/1.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 5
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   REGION <= 3: butrans (7.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 3: opana (6.0/1.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   REGION <= 3: opana (11.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 3: butrans (2.0/1.0)
+|   |   |   |   |   |   |   REFILL_COUNT > 6: opana (22.0)
+|   |   |   |   |   |   REFILL_COUNT > 7
+|   |   |   |   |   |   |   REFILL_COUNT <= 10: butrans (50.0/7.0)
+|   |   |   |   |   |   |   REFILL_COUNT > 10
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 11: opana (9.0/1.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 11
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 13: butrans (15.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 13
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 14: opana (6.0)
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 14: butrans (42.0/8.0)
+|   |   |   ADMTYP > 2
+|   |   |   |   REGION <= 1
+|   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   REFILL_COUNT <= 4: butrans (2.0)
+|   |   |   |   |   |   REFILL_COUNT > 4: opana (2.0)
+|   |   |   |   |   AGEGRP > 2: butrans (14.0)
+|   |   |   |   REGION > 1
+|   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   ADMTYP <= 3: opana (4.0/1.0)
+|   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 9
+|   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 5: butrans (4.0)
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 5: opana (2.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 8
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 7
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 4: opana (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 5: butrans (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 6: opana (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 6: butrans (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 3: butrans (2.0)
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 7: both (2.0)
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 8: opana (3.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 9: butrans (14.0/3.0)
+|   |   |   |   |   |   |   REGION > 4
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 9: butrans (4.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 9: opana (6.0/1.0)
+|   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   REFILL_COUNT <= 8
+|   |   |   |   |   |   |   REGION <= 3: opana (13.0/1.0)
+|   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   REGION <= 4: butrans (4.0/1.0)
+|   |   |   |   |   |   |   |   REGION > 4: opana (4.0/1.0)
+|   |   |   |   |   |   REFILL_COUNT > 8
+|   |   |   |   |   |   |   REGION <= 2: opana (5.0/2.0)
+|   |   |   |   |   |   |   REGION > 2: butrans (14.0/1.0)
+|   |   SEX > 1
+|   |   |   REFILL_COUNT <= 8
+|   |   |   |   REGION <= 1
+|   |   |   |   |   REFILL_COUNT <= 7
+|   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   AGEGRP <= 2: butrans (7.0)
+|   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 6
+|   |   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (8.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 4: opana (2.0)
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 4: butrans (2.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 6: opana (5.0/1.0)
+|   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   AGEGRP <= 4: butrans (28.0)
+|   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 6
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 5
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 4
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: opana (4.0)
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: butrans (3.0)
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 4: butrans (7.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 5: opana (2.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 6: butrans (6.0)
+|   |   |   |   |   REFILL_COUNT > 7
+|   |   |   |   |   |   ADMTYP <= 3: opana (4.0/1.0)
+|   |   |   |   |   |   ADMTYP > 3: butrans (2.0)
+|   |   |   |   REGION > 1
+|   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   REFILL_COUNT <= 5
+|   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 2: both (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 2: butrans (16.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 4: opana (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 4: butrans (6.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 2: opana (30.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 4: opana (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 4: butrans (5.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 2: butrans (43.0/6.0)
+|   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: opana (33.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 4: opana (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 4: butrans (2.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: opana (15.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: butrans (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 2: butrans (57.0/4.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 3: opana (3.0)
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 4: opana (12.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 2: opana (66.0/7.0)
+|   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 4: opana (48.0/6.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 4
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1: opana (13.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: opana (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2: butrans (14.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: butrans (2.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2: opana (3.0)
+|   |   |   |   |   |   REFILL_COUNT > 5
+|   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 6: opana (13.0)
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 6
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 7: butrans (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 7: opana (7.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 7: butrans (21.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 7
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: butrans (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (3.0/1.0)
+|   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 7
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 6
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION <= 2: butrans (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION > 2: opana (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2: butrans (45.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 6
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 2: butrans (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 2: opana (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: opana (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2: butrans (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (14.0/1.0)
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 7: butrans (27.0)
+|   |   |   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 7
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 6: opana (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 6: butrans (3.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (7.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 6
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: butrans (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 6
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (4.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 7: butrans (9.0/1.0)
+|   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 7
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 6
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 3: butrans (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 3: opana (2.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (2.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 6
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 2: butrans (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 2: opana (2.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (11.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 7: opana (13.0/2.0)
+|   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 5
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 4: opana (7.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 4: butrans (9.0/1.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 5: opana (17.0)
+|   |   |   |   |   |   |   REGION > 2: opana (81.0/3.0)
+|   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   ADMTYP <= 2
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 4
+|   |   |   |   |   |   |   |   |   REGION <= 3: opana (22.0)
+|   |   |   |   |   |   |   |   |   REGION > 3: butrans (2.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 4
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 6
+|   |   |   |   |   |   |   |   |   |   REGION <= 2: opana (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 3: butrans (32.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 3: opana (6.0/1.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 6
+|   |   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 7: opana (7.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 7: butrans (2.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION > 2: opana (32.0/3.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 3: butrans (6.0)
+|   |   |   |   |   |   |   ADMTYP > 2
+|   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 4: butrans (12.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 4
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 3: butrans (4.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 6: opana (3.0)
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 6: butrans (4.0/1.0)
+|   |   |   |   |   |   |   |   REGION > 3: opana (6.0)
+|   |   |   REFILL_COUNT > 8
+|   |   |   |   ADMTYP <= 2
+|   |   |   |   |   AGEGRP <= 2
+|   |   |   |   |   |   ADMTYP <= 1: butrans (17.0/2.0)
+|   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   REFILL_COUNT <= 10
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 9: opana (4.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 9: butrans (9.0/2.0)
+|   |   |   |   |   |   |   REFILL_COUNT > 10: opana (30.0/8.0)
+|   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   REGION <= 2
+|   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   REGION <= 1: butrans (10.0/5.0)
+|   |   |   |   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 9: opana (5.0)
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 9
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 16: butrans (21.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 16
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 18: opana (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 18: butrans (9.0/1.0)
+|   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   AGEGRP <= 4: butrans (70.0/8.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 9: opana (7.0)
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 9
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 14: butrans (32.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 14
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 16: opana (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 17: butrans (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 17
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 18: opana (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 18: butrans (25.0/4.0)
+|   |   |   |   |   |   |   REGION > 2
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 9: butrans (40.0/4.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 9
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 10
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (2.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4: opana (4.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: butrans (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (11.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4: butrans (4.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 10
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 12: butrans (63.0/3.0)
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 12
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 16
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 13: opana (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 13: butrans (18.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 15
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 13
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: butrans (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: opana (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 13: butrans (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4: butrans (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 15
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3: opana (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3: butrans (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4: opana (9.0)
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 16
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 23
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 20: butrans (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 20: opana (13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 23: butrans (30.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ADMTYP > 1: butrans (41.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 45: butrans (38.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 45: opana (3.0)
+|   |   |   |   |   |   REGION > 3
+|   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   REGION <= 4
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 9: butrans (3.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 9
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 15: opana (9.0)
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 15: butrans (8.0/2.0)
+|   |   |   |   |   |   |   |   REGION > 4: butrans (2.0)
+|   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 12
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 10: butrans (14.0/3.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 10
+|   |   |   |   |   |   |   |   |   |   ADMTYP <= 1
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 4: both (2.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 4: opana (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   ADMTYP > 1: butrans (10.0/3.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 12
+|   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 25: opana (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 25: butrans (8.0)
+|   |   |   |   |   |   |   |   |   AGEGRP > 4: butrans (25.0/6.0)
+|   |   |   |   ADMTYP > 2
+|   |   |   |   |   AGEGRP <= 2: butrans (12.0/2.0)
+|   |   |   |   |   AGEGRP > 2
+|   |   |   |   |   |   REGION <= 1
+|   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   AGEGRP <= 3: opana (4.0)
+|   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 17: butrans (4.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 17: opana (2.0)
+|   |   |   |   |   |   |   AGEGRP > 4: opana (7.0)
+|   |   |   |   |   |   REGION > 1
+|   |   |   |   |   |   |   ADMTYP <= 3
+|   |   |   |   |   |   |   |   REFILL_COUNT <= 10: butrans (2.0)
+|   |   |   |   |   |   |   |   REFILL_COUNT > 10: opana (6.0/1.0)
+|   |   |   |   |   |   |   ADMTYP > 3
+|   |   |   |   |   |   |   |   Total Knee Arthrolplasty <= 0
+|   |   |   |   |   |   |   |   |   REFILL_COUNT <= 9
+|   |   |   |   |   |   |   |   |   |   REGION <= 2: butrans (2.0)
+|   |   |   |   |   |   |   |   |   |   REGION > 2: opana (7.0)
+|   |   |   |   |   |   |   |   |   REFILL_COUNT > 9
+|   |   |   |   |   |   |   |   |   |   AGEGRP <= 4
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 18: butrans (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 18: opana (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   AGEGRP > 3
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 2: opana (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 2: butrans (18.0/3.0)
+|   |   |   |   |   |   |   |   |   |   AGEGRP > 4
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 19
+|   |   |   |   |   |   |   |   |   |   |   |   REGION <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT <= 16: butrans (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 16: opana (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION > 3: opana (5.0)
+|   |   |   |   |   |   |   |   |   |   |   REFILL_COUNT > 19: butrans (7.0)
+|   |   |   |   |   |   |   |   Total Knee Arthrolplasty > 0: opana (3.0/1.0)
+
+Number of Leaves  : 	364
+
+Size of the tree : 	727
+
+
+Time taken to build model: 0.18 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        7311               84.0925 %
+Incorrectly Classified Instances      1383               15.9075 %
+Kappa statistic                          0.7222
+Mean absolute error                      0.137 
+Root mean squared error                  0.2772
+Relative absolute error                 34.6451 %
+Root relative squared error             62.3474 %
+Total Number of Instances             8694     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.938    0.129    0.870      0.938    0.903      0.809    0.955     0.938     butrans
+                 0.901    0.108    0.850      0.901    0.875      0.786    0.952     0.921     opana
+                 0.231    0.031    0.493      0.231    0.315      0.282    0.875     0.432     both
+Weighted Avg.    0.841    0.109    0.818      0.841    0.823      0.739    0.945     0.872     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 3911  144  115 |    a = butrans
+  221 3166  126 |    b = opana
+  361  416  234 |    c = both
+
+

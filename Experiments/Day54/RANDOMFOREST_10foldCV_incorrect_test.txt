@@ -1,0 +1,61 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     incorrect_j48_from_test_set
+Instances:    8694
+Attributes:   15
+              SEX
+              AGEGRP
+              REGION
+              REFILL_COUNT
+              ADMTYP
+              Total Knee Arthrolplasty
+              OSTEOARTHROSIS secondary lower leg
+              Removal of Foreign Body from Eye
+              Total Knee Replacement
+              OSTEOARTHROSIS primary lower leg
+              OSTEOARTHROSIS generalized lower leg
+              TOTAL HIP ANTHROPLASTY
+              IRIDECTOMY
+              TOTAL HIP REPLACEMENT
+              Class_Drug
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 2.07 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        7450               85.6913 %
+Incorrectly Classified Instances      1244               14.3087 %
+Kappa statistic                          0.7524
+Mean absolute error                      0.1224
+Root mean squared error                  0.2559
+Relative absolute error                 30.9458 %
+Root relative squared error             57.5446 %
+Total Number of Instances             8694     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.939    0.102    0.894      0.939    0.916      0.836    0.976     0.967     butrans
+                 0.917    0.094    0.868      0.917    0.892      0.817    0.975     0.960     opana
+                 0.308    0.038    0.515      0.308    0.385      0.340    0.878     0.448     both
+Weighted Avg.    0.857    0.092    0.840      0.857    0.845      0.771    0.964     0.904     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 3916  122  132 |    a = butrans
+  129 3223  161 |    b = opana
+  334  366  311 |    c = both
+
+
